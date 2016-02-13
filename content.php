@@ -16,8 +16,7 @@
 
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
-			<p class="entry-metadata"><i class="icon icon-time"></i><a href="<?php the_date();?>">
-			<time datetime="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></a></p>
+			<p class="entry-metadata"><i class="icon icon-time"></i><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></a></p>
 			<p><i class="icon icon-folder"></i><?php the_category(' '); ?></a></p>
 		</header>
 

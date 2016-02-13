@@ -4,7 +4,8 @@
 			$footer_class = "site-footer";
 		}
 ?>
-	<footer class="<?php echo $footer_class; ?>">
+
+<footer class="<?php echo $footer_class; ?>">
 
 	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a></p>
 	<p>Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
@@ -36,14 +37,6 @@ function hideMenu(){
 
 showMenuBtn.removeAttribute('href');
 showMenuBtn.addEventListener('click',showMenu);
-
-// AFontGarde( 'icomoon', '\uE600\uE601\uE602\uE605' );
-AFontGarde( 'icomoon', {
-	glyphs: '\uE600\uE601\uE602\uE605',
-	success: function() { console.log( 'success' ); },
-	error: function() { console.log( 'timeout error' ); },
-	timeout: 10000
-});
 
 </script>
 
