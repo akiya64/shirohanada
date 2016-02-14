@@ -125,10 +125,10 @@ li + li
         margin-top .6rem
 
 .icon
-        margin-right .2rem
+        margin-right .4rem
 
 .icon-angle-right
-        margin-left .2rem
+        margin-left .4rem
 
 .site-description
         margin-right .5rem
@@ -256,8 +256,8 @@ a.button:hover
                 color white   // site-logo is top-page link
 
         .page-title
-            padding 1rem 0
-            margin initial
+                padding 1rem 0
+                margin initial
 
         .share-links
                 width 80%
@@ -266,14 +266,26 @@ a.button:hover
 
         .site-header > p
         .site-footer
-                padding 0 0.5rem
+                padding .5rem .8rem
 
         .site-header > p
                 margin-bottom 0
 
         article
-                border-bottom solid 1px hai
-                padding-bottom .8rem
+                margin-bottom 0
+                padding 0 .5rem 1rem
+
+        article + article
+                padding-top 1rem
+                border-top solid 1px #777
+
+        article img
+                width 100%
+                max-width 100%
+                height auto
+
+        .articles
+                margin-bottom 1rem
 
 /* Web Service Brand Colors for icon font */
 @import "_icon-color"
@@ -317,55 +329,54 @@ ul.list-style-none
                 caption
                         text-align left
 
-/* comment */
-/* Avatar */
-.comment-author 
-	.avatar
-		width 42px
-		height 42px
-		border-radius 50%
-		float left
-		margin-right 1rem
+/* comment section*/
+.comment-author
+        .avatar
+                width 42px
+                height 42px
+                border-radius 50%
+                float left
+                margin-right 1rem
 
-	.fn
-		font-style initial
-		font-weight bold
+        .fn
+                font-style initial
+                font-weight bold
 
 .comment-meta
 .reply
-	font-size .8rem
+        font-size .8rem
 
 .comment-body > p
-	margin 1rem 0
+        margin 1rem 0
 
 input[type="submit"]
 .comment-reply-link
-	border-radius 2px
-	padding .3rem .5rem
-	border solid 1px hai
+        border-radius 2px
+        padding .3rem .5rem
+        border solid 1px hai
 
 input[type="submit"]
-	background #eee
+        background #eee
 
 .comment-reply-link:hover
-	border solid 1px bright-h
+        border solid 1px bright-h
 
 textarea[name="comment"]
 .comment-reply-link:hover
-	background-color white
+        background-color white
 
 textarea[name="comment"]
-	margin .75rem 0
-	padding .3rem
-	width 90%
-	height 10em
+        margin .75rem 0
+        padding .3rem
+        width 90%
+        height 10em
 
 .comment-reply-link:link
 .comment-reply-link:visited
 .comment-reply-link:hover
 .comment-reply-link:active
-	color bright-h
-	text-decoration none
+        color bright-h
+        text-decoration none
 
 /*! bottun */
 .show-menu
@@ -383,7 +394,7 @@ textarea[name="comment"]
         color nakano-h
 
 .show-menu
-        top 2.5rem
+        top 3.8rem
         right .8rem
 
 .hide-menu-button
@@ -410,7 +421,7 @@ textarea[name="comment"]
         display flex
         flex-flow column wrap
 
-.top-banner
+.top-banner-box
         width 75%
         max-width 722px
 
@@ -445,6 +456,11 @@ textarea[name="comment"]
                 margin-top .2rem
                 border none
 
+.top-page-footer
+        margin-top 1rem
+        padding-left 1rem
+        padding-top .5rem
+
 /* top skin  */
 .content-link > li
         color bright-h !important //only over write color in content-link
@@ -461,23 +477,22 @@ textarea[name="comment"]
 .top-page-footer
         color hai
         border-top solid 1px shirohanada
-        padding-left 1em
-        padding-top 0.5em
 
 /* layout for small display ;1column layout */
 
 @media screen and (max-width: 960px)
         .top-page-header
-        .top-page-footer
         .top-flex-container
+        .top-banner-box
         .dropdown-part
         .front.widget-area ul
                 width initial
-                margin initial
                 height initial
+                max-width initial
                 max-height initial
 
         .top-flex-container
+        .top-banner-box
                 width 100%
 
         .top-flex-container
@@ -487,41 +502,42 @@ textarea[name="comment"]
                 order 1
                 margin-right .3rem
 
-        .top-banner
+        .top-banner-box
                 order 2
-                width 100%
-                height auto
 
         .dropdown-part
                 order 3
 
         .dropdown-part
-                padding 0 1rem
+                padding 0 .5rem
 
         .dropdown-part h2
                 margin 0.8rem 0
 
         .top-page-footer
-                padding-left 1rem
+                padding .5rem 1rem
 
 /* For Only TwitterWidget */
 
 .widget_twitter
-   span.entry-content:after
-        content "\A"
-        white-space pre
+       span.entry-content:after
+                content "\A"
+                white-space pre
 
-    .follow-button
-        text-align right
+        .follow-button
+                text-align right
 
-    .twitter-avatar
-        text-align center
-        margin-bottom .5rem
+        .twitter-avatar
+                text-align center
+                margin-bottom .5rem
 
-    ul
-        font-size .8rem
-        line-height 1.8
+        ul
+                font-size .8rem
+                line-height 1.8
 
-    li + li
-        border none
-        margin-top .2rem
+        li + li
+                border none
+                margin-top .2rem
+
+        .twitter-avatar img
+                border-radius 6px

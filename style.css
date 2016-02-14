@@ -278,7 +278,7 @@ i {
 .icon-wordpress:before {
   content: "\e60a";
 }
-.icon-tumblr:befre {
+.icon-tumblr:before {
   content: "\e802";
 }
 .icon-html5:before {
@@ -410,10 +410,10 @@ li + li {
   margin-top: 0.6rem;
 }
 .icon {
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
 }
 .icon-angle-right {
-  margin-left: 0.2rem;
+  margin-left: 0.4rem;
 }
 .site-description {
   margin-right: 0.5rem;
@@ -550,14 +550,26 @@ a.button:hover {
   }
   .site-header > p,
   .site-footer {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.8rem;
   }
   .site-header > p {
     margin-bottom: 0;
   }
   article {
-    border-bottom: solid 1px #777;
-    padding-bottom: 0.8rem;
+    margin-bottom: 0;
+    padding: 0 0.5rem 1rem;
+  }
+  article + article {
+    padding-top: 1rem;
+    border-top: solid 1px #777;
+  }
+  article img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .articles {
+    margin-bottom: 1rem;
   }
 }
 /* Web Service Brand Colors for icon font */
@@ -630,8 +642,7 @@ ul.list-style-none {
 .sidebar #wp-calendar caption {
   text-align: left;
 }
-/* comment */
-/* Avatar */
+/* comment section*/
 .comment-author .avatar {
   width: 42px;
   height: 42px;
@@ -698,7 +709,7 @@ textarea[name="comment"] {
   color: #436fb4;
 }
 .show-menu {
-  top: 2.5rem;
+  top: 3.8rem;
   right: 0.8rem;
 }
 .hide-menu-button {
@@ -736,7 +747,7 @@ textarea[name="comment"] {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-.top-banner {
+.top-banner-box {
   width: 75%;
   max-width: 722px;
 }
@@ -772,6 +783,11 @@ textarea[name="comment"] {
   margin-top: 0.2rem;
   border: none;
 }
+.top-page-footer {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
 /* top skin  */
 .content-link > li {
   color: #257bcc !important;
@@ -788,22 +804,21 @@ textarea[name="comment"] {
 .top-page-footer {
   color: #777;
   border-top: solid 1px #a3d8f6;
-  padding-left: 1em;
-  padding-top: 0.5em;
 }
 /* layout for small display ;1column layout */
 @media screen and (max-width: 960px) {
   .top-page-header,
-  .top-page-footer,
   .top-flex-container,
+  .top-banner-box,
   .dropdown-part,
   .front.widget-area ul {
     width: initial;
-    margin: initial;
     height: initial;
+    max-width: initial;
     max-height: initial;
   }
-  .top-flex-container {
+  .top-flex-container,
+  .top-banner-box {
     width: 100%;
   }
   .top-flex-container {
@@ -818,15 +833,13 @@ textarea[name="comment"] {
     order: 1;
     margin-right: 0.3rem;
   }
-  .top-banner {
+  .top-banner-box {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -o-box-ordinal-group: 2;
     -ms-flex-order: 2;
     -webkit-order: 2;
     order: 2;
-    width: 100%;
-    height: auto;
   }
   .dropdown-part {
     -webkit-box-ordinal-group: 3;
@@ -837,13 +850,13 @@ textarea[name="comment"] {
     order: 3;
   }
   .dropdown-part {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
   .dropdown-part h2 {
     margin: 0.8rem 0;
   }
   .top-page-footer {
-    padding-left: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 /* For Only TwitterWidget */
@@ -865,6 +878,10 @@ textarea[name="comment"] {
 .widget_twitter li + li {
   border: none;
   margin-top: 0.2rem;
+}
+.widget_twitter .twitter-avatar img {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 
 /*# sourceMappingURL=style.css.map */
