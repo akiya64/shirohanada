@@ -8,10 +8,9 @@ Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: gray, right-sidebar, fixed-layout, responsive-layout, custom-menu, 
-Text Domain: twentysixteen
+Text Domain:
 */
 /* major breakpoint ; minorpoint 960px */
-/* postCSS library */
 /* sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,
 textarea {
