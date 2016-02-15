@@ -818,8 +818,12 @@ textarea[name="comment"] {
     max-height: initial;
   }
   .top-flex-container,
-  .top-banner-box {
+  .top-banner-box,
+  .top-banner {
     width: 100%;
+  }
+  .top-banner {
+    height: auto;
   }
   .top-flex-container {
     margin: 0 auto;
