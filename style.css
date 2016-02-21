@@ -481,6 +481,9 @@ h3,
 .share-links {
   font-size: 1.62rem;
 }
+.entry-content {
+  font-size: 0.875rem;
+}
 /* color ShiroHanada #a3d8f6 */
 h3,
 .entry-title,
@@ -557,6 +560,9 @@ a.button:hover {
   article {
     margin-bottom: 0;
     padding: 0 0.5rem 1rem;
+  }
+  .entry-content {
+    font-size: initial;
   }
   article + article {
     padding-top: 1rem;
@@ -875,8 +881,8 @@ textarea[name="comment"] {
   margin-bottom: 0.5rem;
 }
 .widget_twitter ul {
-  font-size: 0.8rem;
-  line-height: 1.8;
+  font-size: 0.75rem;
+  line-height: 1.6;
 }
 .widget_twitter li + li {
   border: none;
