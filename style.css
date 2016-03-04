@@ -555,7 +555,7 @@ a.button:hover {
     color: #fff;
   }
   .page-title {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     margin: initial;
   }
   .entry-date {
