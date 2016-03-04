@@ -368,9 +368,7 @@ article img {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-  }
-  .articles {
-    padding: 0 1rem;
+    padding: 0.7rem 1rem;
   }
   .main-contents {
     margin: 0 auto;
@@ -418,16 +416,16 @@ li + li {
   margin-right: 0.5rem;
 }
 article {
-  margin-bottom: 2rem;
-}
-.page-title {
   margin-bottom: 1rem;
 }
+section,
 .entry-header,
-.section,
 .entry-content p,
 .page-content p {
   margin-bottom: 0.6rem;
+}
+.page-title {
+  margin-bottom: 0.7rem;
 }
 .contents-link-title,
 .entry-title,
@@ -444,15 +442,15 @@ article ul {
 p ~ h3 {
   margin: 1.2rem 0 0.5rem;
 }
-.articles,
-.page-content {
+.page-content,
+.page-title {
   padding: 0 0.5rem;
 }
 .entry-content {
   padding-top: 0.5rem;
 }
 .share-links {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 .sidebar {
   padding: 0 1.5rem 1rem;
@@ -507,9 +505,9 @@ h2 {
   color: #777;
 }
 .sidebar,
-.articles,
-.secondary,
-.page-content {
+.page-content,
+.page-title,
+article {
   background-color: #f8fafa;
 }
 .site-name,
@@ -529,8 +527,23 @@ a.button:hover {
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
+  .sidebar.show {
+    -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+    top: 5px;
+    right: 3px;
+    width: 60%;
+  }
+  .share-links {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .site-name {
     font-size: 2.8rem;
+  }
+  .entry-content {
+    font-size: initial;
   }
   .site-header .site-name {
     text-align: center;
@@ -542,34 +555,28 @@ a.button:hover {
     color: #fff;
   }
   .page-title {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
     margin: initial;
   }
-  .share-links {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  .entry-date {
+    margin-right: 1rem;
   }
   .site-header > p,
   .site-footer {
     padding: 0.5rem 0.8rem;
   }
-  .site-header > p {
+  .site-header > p,
+  article {
     margin-bottom: 0;
   }
   article {
-    margin-bottom: 0;
     padding: 0 0.5rem 1rem;
-  }
-  .entry-content {
-    font-size: initial;
   }
   article + article {
     padding-top: 1rem;
     border-top: solid 1px #777;
   }
   article img {
-    width: 100%;
     max-width: 100%;
     height: auto;
   }
@@ -618,6 +625,11 @@ ul.list-style-none {
 }
 /* End Main Section */
 /* Parts Section */
+/* gravatar */
+img[src^="http://www.gravatar.com/avatar/"] {
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
 /* Side Bar */
 /* inside sidebar skin */
 .sidebar .widget {
@@ -701,12 +713,6 @@ textarea[name="comment"] {
 .show-menu,
 .show {
   position: absolute;
-}
-.show {
-  -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-  box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-  top: 5px;
-  right: 3px;
 }
 .button {
   font-size: 1.8rem;
