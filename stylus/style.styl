@@ -243,8 +243,16 @@ a.button:hover
 
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
+        .share-links
+                width 80%
+                margin-left auto
+                margin-right auto
+
         .site-name
                 font-size 2.8rem
+
+        .entry-content
+                font-size initial
 
         /* Header is white logo above "shirohanada" */
         .site-header .site-name
@@ -260,24 +268,19 @@ a.button:hover
                 padding 1rem 0
                 margin initial
 
-        .share-links
-                width 80%
-                margin-left auto
-                margin-right auto
+        .entry-date
+                margin-right 1rem
 
         .site-header > p
         .site-footer
                 padding .5rem .8rem
 
         .site-header > p
+        article
                 margin-bottom 0
 
         article
-                margin-bottom 0
                 padding 0 .5rem 1rem
-
-        .entry-content
-                font-size initial
 
         article + article
                 padding-top 1rem
