@@ -243,6 +243,12 @@ a.button:hover
 
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
+        .sidebar.show
+                box-shadow -1px 1px 1px 2px rgba(0,0,0,0.2)
+                top 5px
+                right 3px
+                width 60%
+
         .share-links
                 width 80%
                 margin-left auto
@@ -389,11 +395,6 @@ textarea[name="comment"]
 .show-menu
 .show
         position absolute
-
-.show
-        box-shadow -1px 1px 1px 2px rgba(0,0,0,0.2)
-        top 5px
-        right 3px
 
 .button
         font-size 1.8rem
