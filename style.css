@@ -560,6 +560,7 @@ a.button:hover {
   .page-title {
     padding: 1rem 0.5rem;
     margin: initial;
+    font-size: 1.62rem;
   }
   .entry-date {
     margin-right: 1rem;
