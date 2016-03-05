@@ -445,7 +445,6 @@ article ul {
 p ~ h3 {
   margin: 1.2rem 0 0.5rem;
 }
-.page-content,
 .page-title {
   padding: 0 0.5rem;
 }
@@ -558,7 +557,7 @@ a.button:hover {
     color: #fff;
   }
   .page-title {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     margin: initial;
     font-size: 1.62rem;
   }
