@@ -14,7 +14,7 @@
 
 	<h2 class="page-title">
 		<?php if( is_category() ) {
-				single_cat_title( 'Category : ', true );
+				single_cat_title( '', true );
 			}else{
 				echo 'Archive ' . get_the_time('Y') . '.' . get_the_time('m');
 			}
