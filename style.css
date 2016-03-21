@@ -406,7 +406,10 @@ article img {
 }
 /*  Margin Padding */
 .comments,
-li + li {
+li + li,
+ul,
+ol,
+dl {
   margin-top: 0.6rem;
 }
 .icon {
@@ -436,8 +439,15 @@ section,
   margin-bottom: 0.3rem;
 }
 .page-content ul,
-article ul {
+article ul,
+.page-content ol,
+article ol,
+.page-content dl,
+article dl {
   margin-left: 1rem;
+}
+dd {
+  margin-left: 2rem;
 }
 .site-footer {
   margin: 0.5rem 1rem;
@@ -448,14 +458,14 @@ p ~ h3 {
 .page-title {
   padding: 0 0.5rem;
 }
-.entry-content {
-  padding-top: 0.5rem;
-}
 .share-links {
   padding-top: 1rem;
 }
 .sidebar {
   padding: 0 1.5rem 1rem;
+}
+blockquote {
+  padding: 1rem 1.5rem;
 }
 .paging {
   text-align: center;
@@ -465,6 +475,9 @@ p ~ h3 {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 .site-description,
 .root-contents {
   font-family: 'Ubuntu', sans-serif;
@@ -474,21 +487,39 @@ h3,
 .page-title {
   font-size: 2.4rem;
 }
-h3,
 .contents-link-title,
 .entry-title,
 .widget-title,
-.share-links {
+.share-links,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
   font-size: 1.62rem;
 }
 .entry-content {
   font-size: 0.875rem;
 }
 /* color ShiroHanada #a3d8f6 */
-h3,
 .entry-title,
-a:link {
+a:link,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
   color: #257bcc;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin-bottom: 0.5rem;
 }
 a:visited {
   color: #af3381;
@@ -511,6 +542,10 @@ h2 {
 .page-title,
 article {
   background-color: #f8fafa;
+}
+blockquote {
+  border-left: solid 3px #777;
+  background-color: #f1f1f1;
 }
 .site-name,
 a.share-button,
