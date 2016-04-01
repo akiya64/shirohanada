@@ -13,5 +13,5 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 fi
 
 git branch -r
-git checkout -b release origin/release
+git checkout -b release
 git branch

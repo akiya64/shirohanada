@@ -6,9 +6,6 @@ branches:
   only:
     - master
 
-before_install:
-  - git fetch --unshallow
-
 script:
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
