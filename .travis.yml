@@ -14,5 +14,9 @@ after_success: bash ./bin/deploy.sh
 
 env:
   global:
+  - GIT_COMMITTER_NAME=travis-ci
+  - GIT_COMMITTER_EMAIL=autumnsky64@gmail.com
+  - GIT_AUTHOR_NAME=travis-ci
+  - GIT_AUTHOR_EMAIL=autumnsky64@gmail.com
   - GH_REF: github.com/akiya64/shirohanada.git
   - secure: "C3PcxqYuKMFCIwO8G8/Lf1sliEduy+pUD105EI60H/CHEDIUoBbXFt1RVoYK/to08yH1HZhZBJCm65sWuB0Kp+PsaTioNAtpWtF57yAVw3MqbcOYnryUEsW1pfGyXJELfMRo81seGy/OQnnU3cF9AV/WurEOqOQmjfgNLdSiSbixr9HtDCJEHAK0EcD+gxB79nDW1d1PgOPfqsjoje0BItaYIS3G7MrMHnu5l g4LDUmOlFxVxWDEvwLpODdW8xHAHUtAs6wFEkn0trxbcFNiQ2JCb7nXHW94siGYe+5mK1X7QUG9K9HyZlQHQTLmmU7Q6cHH1VxpafW/Y7d2Oi8MaS6B3GLT1 DOlrHYMeSlT0NnYyFqRlyYPcO9nmgX9rIkm4ZB2lSlOwdfprYDDpJrEUlRiDwIAY8vGXj+myDBbTCHqmWEbv7Mi2UQkUvdwTDRrFxH1WYNepAnkzofAEZPfm URdKBK+kuQh/ZI2B+Voje287MBmgsEJzHNSQMGcNhcpVg9YI6z0Fo0fblCwGyy82xOyFu+gsQvr2zvIoc1QlwXYMtss9l55JqX5sSdgmJaXm8M7I04d3mpno U4uPEXp4OrUxr6ufNI8kfR2hGeXmR2CutJlj2huZDnevo2o3H4fgyUvu/n+7GWIazQWfPjyWNI/rcZjWyumSbHf0OYvmjM="
