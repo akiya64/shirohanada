@@ -16,7 +16,7 @@ git checkout -b release
 
 git rm stylus -r
 git rm bin -r
-git rm .ytravis.yml
+git rm .travis.yml
 git rm README.md
 git rm gulpfile.js
 git rm package.json
