@@ -14,8 +14,6 @@ fi
 
 git checkout -b release
 
-git pull
-
 git rm stylus -r
 git rm bin -r
 git rm .travis.yml
@@ -26,4 +24,4 @@ git rm style.css.map
 
 git commit -m "Update from travis $TRAVIS_COMMIT"
 
-git push "https://${GH_TOKEN}@${GH_REF}" release
+git push -f "https://${GH_TOKEN}@${GH_REF}" release
