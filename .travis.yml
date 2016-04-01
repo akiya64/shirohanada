@@ -6,7 +6,8 @@ branches:
   only:
     - master
 
-before_script:
+before_install:
+  - git fetch --unshallow
 
 script:
   # Search for PHP syntax errors.
