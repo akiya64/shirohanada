@@ -1,24 +1,22 @@
 language: php
-
-sudo: false
-
 php:
-    - "5.6"
+- '5.6'
 
 branches:
   only:
     - master
 
-before_script:
-
 script:
-    ls -al
-    # Search for PHP syntax errors.
-    - find . \( -name '*.php' \) -exec php -lf {} \;
+  # Search for PHP syntax errors.
+  - find . \( -name '*.php' \) -exec php -lf {} \;
 
 after_success: bash ./bin/deploy.sh
 
 env:
   global:
+  - GIT_COMMITTER_NAME=travis-ci
+  - GIT_COMMITTER_EMAIL=autumnsky64@gmail.com
+  - GIT_AUTHOR_NAME=travis-ci
+  - GIT_AUTHOR_EMAIL=autumnsky64@gmail.com
   - GH_REF: github.com/akiya64/shirohanada.git
-  - secure: "C3PcxqYuKMFCIwO8G8/Lf1sliEduy+pUD105EI60H/CHEDIUoBbXFt1RVoYK/to08yH1HZhZBJCm65sWuB0Kp+PsaTioNAtpWtF57yAVw3MqbcOYnryUEsW1pfGyXJELfMRo81seGy/OQnnU3cF9AV/WurEOqOQmjfgNLdSiSbixr9HtDCJEHAK0EcD+gxB79nDW1d1PgOPfqsjoje0BItaYIS3G7MrMHnu5l g4LDUmOlFxVxWDEvwLpODdW8xHAHUtAs6wFEkn0trxbcFNiQ2JCb7nXHW94siGYe+5mK1X7QUG9K9HyZlQHQTLmmU7Q6cHH1VxpafW/Y7d2Oi8MaS6B3GLT1 DOlrHYMeSlT0NnYyFqRlyYPcO9nmgX9rIkm4ZB2lSlOwdfprYDDpJrEUlRiDwIAY8vGXj+myDBbTCHqmWEbv7Mi2UQkUvdwTDRrFxH1WYNepAnkzofAEZPfm URdKBK+kuQh/ZI2B+Voje287MBmgsEJzHNSQMGcNhcpVg9YI6z0Fo0fblCwGyy82xOyFu+gsQvr2zvIoc1QlwXYMtss9l55JqX5sSdgmJaXm8M7I04d3mpno U4uPEXp4OrUxr6ufNI8kfR2hGeXmR2CutJlj2huZDnevo2o3H4fgyUvu/n+7GWIazQWfPjyWNI/rcZjWyumSbHf0OYvmjM="
+  - secure: "NC9ILd4VHHiy9pgdHtCzGXcGd1xVwV0iJNrlBSaZrrcQKADswknS0cH2ICVU5MSWhKtqAf5LO8kBlLhlZzWsGKe3MpKHbvJvwoWaglOao76vTurL6zN9Zc//Ju7yKw2HHlLQ9lvT5mw95xq9g3xfv2t6zbtDeAH1CmMDzbAWR5+cYfu5ZK64YfD6iQFH++3CkbbVkTK2dpcdyC5XUrDUH1SQxDUI7oselloVNrNYNEzQO7aIbgzzlVYNDbEeNqXSFVoiFpt+oX9U5CblhXdtofXRukDTdIQ0yj6FxJSFLINi4yGckTzLGLbokX5Zmy6MpWfJ53JCexIEDmF4mW3MbPpnn79arbS6tqSPeqOCkcnOtd/B6sVToRV3vC25gBLBv3OYgrR2PsKCmNLEzPbRQPJbtECO2I8/CmUdshZlnq6y6XHGMpH4DbDem0HDsc+TYUzpE1sCpEqKBC8a9W61BrV5sQQAp1gi17565kOcWcJjqkJKUFg8OVctkXzdYnXJRkzowGffGHy7eAJRqmGWrzTiZlUsECCwQu1qPV0HLO97RY/QoDqqT6GU5sJP8VKES2Sil+Rewy5c01N/NhXkcdya9dBDBx3Onr2x285V4yT9mzlpvVP9bj6/cuNI8VcTn1zVsp6te1xs0JVOYJbxk+D3USXR8wNTLcaO2BRhfFE="
