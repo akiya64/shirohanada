@@ -12,4 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
+echo "stylus" > .gitignore
+git add -A
 git status
+
