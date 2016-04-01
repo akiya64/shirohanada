@@ -12,6 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-git branch -r
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+git fetch --unshallow
 git checkout -b release
 git branch
