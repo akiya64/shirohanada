@@ -12,5 +12,6 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
+git branch -r
 git checkout -b release origin/release
 git branch
