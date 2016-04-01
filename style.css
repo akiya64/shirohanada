@@ -407,9 +407,9 @@ article img {
 /*  Margin Padding */
 .comments,
 li + li,
-ul,
-ol,
-dl {
+.entry-content ul,
+.entry-content ol,
+.entry-content dl {
   margin-top: 0.6rem;
 }
 .icon {
