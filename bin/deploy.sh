@@ -24,4 +24,4 @@ git rm style.css.map
 
 git commit -m "Update from travis $TRAVIS_COMMIT"
 
-git push "https://${GH_TOKEN}@${GH_REF}" master:release
+git push "https://${GH_TOKEN}@${GH_REF}" release
