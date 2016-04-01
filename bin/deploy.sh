@@ -12,4 +12,11 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-git status
+git clone "https://${GH_REF}" release-temp
+cd release-temp
+git branch release remotes/origin/release
+git checkout release
+
+git merge "merge in travis $TRAVIS_COMMIT" master
+
+git push "https://${GH_TOKEN}@${GH_REF}" release
