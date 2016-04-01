@@ -12,11 +12,18 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-git clone "https://${GH_REF}" release-temp
-cd release-temp
-git branch release remotes/origin/release
-git checkout release
+git checkout -b release
 
-git merge "merge in travis $TRAVIS_COMMIT" master
+git rm stylus -r
+git rm bin -r
+git rm .travis.yml
+git rm README.md
+git rm gulpfile.js
+git rm package.json
+git rm style.css.map
+
+git status
+
+git commit "Travis build release $TRAVIS_COMMIT"
 
 git push "https://${GH_TOKEN}@${GH_REF}" release
