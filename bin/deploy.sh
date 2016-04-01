@@ -14,7 +14,7 @@ fi
 
 git checkout -b release
 
-git fetch origin
+git pull
 
 git rm stylus -r
 git rm bin -r
