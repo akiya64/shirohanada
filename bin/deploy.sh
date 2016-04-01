@@ -12,7 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-echo "stylus" > .gitignore
-git add -A
-git status
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+git fetch --unshallow
+git branch -r
 
