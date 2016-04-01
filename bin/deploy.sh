@@ -14,6 +14,8 @@ fi
 
 git checkout -b release
 
+git fetch origin
+
 git rm stylus -r
 git rm bin -r
 git rm .travis.yml
