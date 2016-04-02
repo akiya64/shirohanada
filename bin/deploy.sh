@@ -12,18 +12,24 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
 	exit
 fi
 
-git checkout -b release
+git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+git fetch
 
-git rm stylus -r
-git rm bin -r
-git rm .travis.yml
-git rm README.md
-git rm gulpfile.js
-git rm package.json
-git rm style.css.map
 
-git status
+git checkout master
 
-git commit "Travis build release $TRAVIS_COMMIT"
+git rm -rf stylus
+git rm -rf bin
+git rm -f .travis.yml
+git rm -f README.md
+git rm -f gulpfile.js
+git rm -f package.json
+git rm -f style.css.map
+
+git commit -m "prepare release"
+
+git checkout -b release remotes/origin/release
+
+git merge master -m "Travis build release $TRAVIS_COMMIT"
 
 git push "https://${GH_TOKEN}@${GH_REF}" release
