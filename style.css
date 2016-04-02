@@ -592,7 +592,7 @@ a.button:hover {
     color: #fff;
   }
   .page-title {
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     margin: initial;
     font-size: 1.62rem;
   }
