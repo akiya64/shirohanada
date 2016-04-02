@@ -15,8 +15,7 @@ fi
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git fetch
 
-
-git checkout master
+git checkout -b pre-release remotes/origin/master
 
 git rm -rf stylus
 git rm -rf bin
@@ -30,6 +29,6 @@ git commit -m "prepare release"
 
 git checkout -b release remotes/origin/release
 
-git merge master -m "Travis build release $TRAVIS_COMMIT"
+git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
 
 git push "https://${GH_TOKEN}@${GH_REF}" release
