@@ -31,4 +31,4 @@ git checkout -b release remotes/origin/release
 
 git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
 
-git push "https://${GH_TOKEN}@${GH_REF}" release
+git push "https://${GH_TOKEN}@${GH_REF}" release > /dev/null 2>&1
