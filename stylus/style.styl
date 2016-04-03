@@ -168,9 +168,6 @@ dd
 .site-footer
         margin 0.5rem 1rem
 
-p ~ h3 //in "page.php"
-        margin 1.2rem 0 .5rem
-
 .page-title
         padding 0 .5rem 0 1.5rem
 
@@ -181,10 +178,28 @@ p ~ h3 //in "page.php"
         padding 0 1.5rem 1rem
 
 blockquote
-        padding 1rem 1.5rem
+        padding .8rem 1rem
 
 .paging
         text-align center
+
+/* for WordPress class */
+.alignleft
+        float left
+        margin-right 1rem
+
+.alignright
+        float right
+        margin-left 1rem
+
+.aligncenter
+        margin auto
+
+.wp-caption
+        text-align center
+
+.wp-caption > p
+        padding-top .3rem
 
 /*  Typograghy  */
 /* font-family */
@@ -230,8 +245,10 @@ a:link
 .entry-content h4
 .entry-content h5
 .entry-content h6
-        margin-bottom .5rem
-        //border-bottom solid 1px bright-h
+        margin .5rem 0
+
+.entry-content > *:first-child
+        margin-top 0
 
 a:visited
         color enji
@@ -255,9 +272,20 @@ h2
 article
         background-color usu-hai
 
+thead
+        background-color #eee
+
+tr + tr
+        border-top 1px solid hai
+
+td
+        padding .2rem .5rem
+
+caption
+        text-align left
+
 blockquote
-        border-left solid 3px hai
-        background-color #f1f1f1
+        border-left solid 3px bright-h
 
 .site-name
 a.share-button
@@ -368,17 +396,8 @@ img[src^="http://www.gravatar.com/avatar/"]
 
                 th
                         font-weight normal
-
-                tr + tr
-                        border-top 1px solid hai
-
                 td
-                        padding .2rem
                         text-align center
-
-                caption
-                        text-align left
-
 /* comment section*/
 .comment-author
         .avatar
@@ -399,6 +418,11 @@ img[src^="http://www.gravatar.com/avatar/"]
 .comment-body > p
         margin 1rem 0
 
+input[type="text"]
+        background-color white
+        margin .5rem 0
+        border solid 1px shirohanada
+
 input[type="submit"]
 .comment-reply-link
         border-radius 2px
@@ -407,6 +431,12 @@ input[type="submit"]
 
 input[type="submit"]
         background #eee
+
+#searchsubmit
+        padding 0 .5rem
+
+#s
+        width 100%
 
 .comment-reply-link:hover
         border solid 1px bright-h
