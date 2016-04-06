@@ -739,7 +739,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .comment-body > p {
   margin: 1rem 0;
 }
+/*form section */
 textarea,
+input[type="search"],
 input[type="submit"],
 input[type="text"] {
   background-color: #fff;
@@ -750,8 +752,15 @@ input[type="submit"],
   padding: 0.3rem 0.5rem;
   border: solid 1px #777;
 }
-#searchsubmit {
+input[type="submit"].search-submit {
   margin: 0.2rem 0;
+}
+input[type="submit"].search-submit {
+  padding: 0 0.7rem;
+}
+input[type="search"] {
+  width: 100%;
+  padding-left: 0.5rem;
 }
 input,
 .comment-reply-link {
@@ -761,6 +770,7 @@ input,
   margin: 0.8rem 0 0.2rem;
 }
 textarea,
+input[type="search"],
 input[type="text"],
 input[type="submit"],
 .comment-reply-link {
@@ -769,12 +779,6 @@ input[type="submit"],
 }
 input[type="submit"] {
   background: #eee;
-}
-#searchsubmit {
-  padding: 0 0.5rem;
-}
-#s {
-  width: 100%;
 }
 .comment-reply-link:hover {
   border: solid 1px #257bcc;
