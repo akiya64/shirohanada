@@ -467,6 +467,12 @@ blockquote {
 .paging {
   text-align: center;
 }
+/* utility class */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
 /* for WordPress class */
 .alignleft {
   float: left;
@@ -752,11 +758,12 @@ input[type="submit"],
   padding: 0.3rem 0.5rem;
   border: solid 1px #777;
 }
-input[type="submit"].search-submit {
+input[type="submit"] {
   margin: 0.2rem 0;
 }
 input[type="submit"].search-submit {
-  padding: 0 0.7rem;
+  padding: 0 1rem;
+  float: right;
 }
 input[type="search"] {
   width: 100%;
