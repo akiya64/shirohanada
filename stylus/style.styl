@@ -378,11 +378,6 @@ a.button:hover
 /* Web Service Brand Colors for icon font */
 @import "_icon-color"
 
-/* list style */
-.commentlist
-ul.list-style-none
-        list-style-type none
-
 /* End Main Section */
 
 /* Parts Section */
@@ -412,7 +407,8 @@ img[src^="http://www.gravatar.com/avatar/"]
                         font-weight normal
                 td
                         text-align center
-/* comment section*/
+
+/* comment & form section*/
 .comment-author
         .avatar
                 border-radius 50%
@@ -425,27 +421,52 @@ img[src^="http://www.gravatar.com/avatar/"]
 
 .comment-meta
 .reply
-        font-size .8rem
+.comment-notes
+        font-size .9rem
 
-.comment-body > p
-        margin 1rem 0
-
-/*form section */
 label
         display inline-block
+
+.comment-reply-link
+        display block
+        width 4rem
+        text-align center
+
+label
+input[type="search"]
+input[name="author"]
+input[name="email"]
+input[name="url"]
+textarea[name="comment"]
         width 100%
 
 .comment-form
         width 90%
+
+.comment-reply-link:link
+.comment-reply-link:visited
+.comment-reply-link:active
+        text-decoration none
+        color black
+
+.comment-reply-link
+input[type="submit"]
+        background #eee
 
 textarea
 input
         background-color white
         border solid 1px shirohanada
 
+.comment-reply-link:hover
+input[type="submit"]:hover
+        background-color white
+        border solid 1px bright-h
+        color bright-h
+
 input[type="submit"]
 .comment-reply-link
-        padding .3rem .5rem
+        padding .1rem .5rem
         border solid 1px hai
 
 input[type="submit"]
@@ -455,45 +476,35 @@ input[type="submit"].search-submit
         padding 0 1rem
         float right
 
-input[type="search"]
-        width 100%
+input
+textarea
         padding-left .5rem
 
+.comment-notes
 input
-.comment-reply-link
-        margin .3rem 0
+        margin .3rem 0 .8rem
+
+input.search-field
+        margin-bottom .2rem
 
 .comment-reply-title
 .comments-header
+.reply
         margin .8rem 0 .4rem
+
+.comment-body > p
+li.comment + li.comment
+        margin-top 1rem
 
 textarea
 input
 .comment-reply-link
         border-radius 2px
 
-input[type="submit"]
-        background #eee
-
-.comment-reply-link:hover
-        border solid 1px bright-h
-
 textarea[name="comment"]
-.comment-reply-link:hover
-        background-color white
-
-textarea[name="comment"]
-        margin .75rem 0
+        margin-bottom .75rem
         padding .3rem
-        width 90%
         height 10em
-
-.comment-reply-link:link
-.comment-reply-link:visited
-.comment-reply-link:hover
-.comment-reply-link:active
-        color bright-h
-        text-decoration none
 
 /*! bottun */
 .show-menu
