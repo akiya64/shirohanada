@@ -473,6 +473,10 @@ blockquote {
   display: block;
   clear: both;
 }
+.no-marker {
+  list-style-type: none;
+  margin-left: 0;
+}
 /* for WordPress class */
 .alignleft {
   float: left;
@@ -517,7 +521,9 @@ h6,
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 {
+.entry-content h6,
+.comment-reply-title,
+.comments-header {
   font-size: 1.62rem;
 }
 .entry-content {
@@ -552,7 +558,9 @@ a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
-h2 {
+h2,
+.comments-header,
+.comment-reply-title {
   color: #436fb4;
 }
 .entry-header i,
@@ -727,8 +735,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 /* comment section*/
 .comment-author .avatar {
-  width: 42px;
-  height: 42px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   float: left;
@@ -746,10 +752,15 @@ img[src^="http://www.gravatar.com/avatar/"] {
   margin: 1rem 0;
 }
 /*form section */
+label {
+  display: inline-block;
+  width: 100%;
+}
+.comment-form {
+  width: 90%;
+}
 textarea,
-input[type="search"],
-input[type="submit"],
-input[type="text"] {
+input {
   background-color: #fff;
   border: solid 1px #a3d8f6;
 }
@@ -773,13 +784,12 @@ input,
 .comment-reply-link {
   margin: 0.3rem 0;
 }
-.comments h3 {
-  margin: 0.8rem 0 0.2rem;
+.comment-reply-title,
+.comments-header {
+  margin: 0.8rem 0 0.4rem;
 }
 textarea,
-input[type="search"],
-input[type="text"],
-input[type="submit"],
+input,
 .comment-reply-link {
   -webkit-border-radius: 2px;
   border-radius: 2px;

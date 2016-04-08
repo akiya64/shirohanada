@@ -189,6 +189,10 @@ blockquote
         display block
         clear both
 
+.no-marker
+        list-style-type none
+        margin-left 0
+
 /* for WordPress class */
 .alignleft
         float left
@@ -229,6 +233,8 @@ h1,h2,h3,h4,h5,h6
 .entry-content h4
 .entry-content h5
 .entry-content h6
+.comment-reply-title
+.comments-header
         font-size 1.62rem
 
 .entry-content
@@ -264,6 +270,8 @@ a:hover
         text-decoration-style dashed
 
 h2
+.comments-header
+.comment-reply-title
         color nakano-h
 
 .entry-header i
@@ -407,8 +415,6 @@ img[src^="http://www.gravatar.com/avatar/"]
 /* comment section*/
 .comment-author
         .avatar
-                width 42px
-                height 42px
                 border-radius 50%
                 float left
                 margin-right 1rem
@@ -425,10 +431,15 @@ img[src^="http://www.gravatar.com/avatar/"]
         margin 1rem 0
 
 /*form section */
+label
+        display inline-block
+        width 100%
+
+.comment-form
+        width 90%
+
 textarea
-input[type="search"]
-input[type="submit"]
-input[type="text"]
+input
         background-color white
         border solid 1px shirohanada
 
@@ -452,13 +463,12 @@ input
 .comment-reply-link
         margin .3rem 0
 
-.comments h3
-        margin .8rem 0 .2rem
+.comment-reply-title
+.comments-header
+        margin .8rem 0 .4rem
 
 textarea
-input[type="search"]
-input[type="text"]
-input[type="submit"]
+input
 .comment-reply-link
         border-radius 2px
 

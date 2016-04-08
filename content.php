@@ -37,7 +37,7 @@
 		<?php if(is_single()): ?>
 			<div class="entry-margin"></div>
 			<div class="comments">
-				<?php comments_template();?>
+				<?php comments_template(); ?>
 			</div>
 		<?php endif ?>
 
