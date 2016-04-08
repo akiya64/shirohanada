@@ -473,6 +473,10 @@ blockquote {
   display: block;
   clear: both;
 }
+.no-marker {
+  list-style-type: none;
+  margin-left: 0;
+}
 /* for WordPress class */
 .alignleft {
   float: left;
@@ -517,7 +521,9 @@ h6,
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 {
+.entry-content h6,
+.comment-reply-title,
+.comments-header {
   font-size: 1.62rem;
 }
 .entry-content {
@@ -552,7 +558,9 @@ a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
-h2 {
+h2,
+.comments-header,
+.comment-reply-title {
   color: #436fb4;
 }
 .entry-header i,
@@ -691,11 +699,6 @@ a[href^="http://k-akiya.deviantart.com/"] > i {
 a[href*=".tumblr.com"] > i {
   color: #35465c;
 }
-/* list style */
-.commentlist,
-ul.list-style-none {
-  list-style-type: none;
-}
 /* End Main Section */
 /* Parts Section */
 /* gravatar */
@@ -725,10 +728,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .sidebar #wp-calendar td {
   text-align: center;
 }
-/* comment section*/
+/* comment & form section*/
 .comment-author .avatar {
-  width: 42px;
-  height: 42px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   float: left;
@@ -739,23 +740,53 @@ img[src^="http://www.gravatar.com/avatar/"] {
   font-weight: bold;
 }
 .comment-meta,
-.reply {
-  font-size: 0.8rem;
+.reply,
+.comment-notes {
+  font-size: 0.9rem;
 }
-.comment-body > p {
-  margin: 1rem 0;
+label {
+  display: inline-block;
 }
-/*form section */
-textarea,
+.comment-reply-link {
+  display: block;
+  width: 4rem;
+  text-align: center;
+}
+label,
 input[type="search"],
-input[type="submit"],
-input[type="text"] {
+input[name="author"],
+input[name="email"],
+input[name="url"],
+textarea[name="comment"] {
+  width: 100%;
+}
+.comment-form {
+  width: 90%;
+}
+.comment-reply-link:link,
+.comment-reply-link:visited,
+.comment-reply-link:active {
+  text-decoration: none;
+  color: #000;
+}
+.comment-reply-link,
+input[type="submit"] {
+  background: #eee;
+}
+textarea,
+input {
   background-color: #fff;
   border: solid 1px #a3d8f6;
 }
+.comment-reply-link:hover,
+input[type="submit"]:hover {
+  background-color: #fff;
+  border: solid 1px #257bcc;
+  color: #257bcc;
+}
 input[type="submit"],
 .comment-reply-link {
-  padding: 0.3rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   border: solid 1px #777;
 }
 input[type="submit"] {
@@ -765,47 +796,36 @@ input[type="submit"].search-submit {
   padding: 0 1rem;
   float: right;
 }
-input[type="search"] {
-  width: 100%;
+input,
+textarea {
   padding-left: 0.5rem;
 }
-input,
-.comment-reply-link {
-  margin: 0.3rem 0;
+.comment-notes,
+input {
+  margin: 0.3rem 0 0.8rem;
 }
-.comments h3 {
-  margin: 0.8rem 0 0.2rem;
+input.search-field {
+  margin-bottom: 0.2rem;
+}
+.comment-reply-title,
+.comments-header,
+.reply {
+  margin: 0.8rem 0 0.4rem;
+}
+.comment-body > p,
+li.comment + li.comment {
+  margin-top: 1rem;
 }
 textarea,
-input[type="search"],
-input[type="text"],
-input[type="submit"],
+input,
 .comment-reply-link {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-input[type="submit"] {
-  background: #eee;
-}
-.comment-reply-link:hover {
-  border: solid 1px #257bcc;
-}
-textarea[name="comment"],
-.comment-reply-link:hover {
-  background-color: #fff;
-}
 textarea[name="comment"] {
-  margin: 0.75rem 0;
+  margin-bottom: 0.75rem;
   padding: 0.3rem;
-  width: 90%;
   height: 10em;
-}
-.comment-reply-link:link,
-.comment-reply-link:visited,
-.comment-reply-link:hover,
-.comment-reply-link:active {
-  color: #257bcc;
-  text-decoration: none;
 }
 /* bottun */
 .show-menu,
