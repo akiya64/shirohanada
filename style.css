@@ -411,7 +411,7 @@ li + li,
 .entry-content ul,
 .entry-content ol,
 .entry-content dl {
-  margin-top: 0.6rem;
+  margin: 0.6rem 0 0.6rem 0.5rem;
 }
 .icon {
   margin-right: 0.4rem;
@@ -536,38 +536,42 @@ h6,
   font-size: 0.875rem;
 }
 /* color ShiroHanada #a3d8f6 */
+.site-name,
+a.share-button,
+a.link-top:link,
+a.link-top:visited,
+a.link-top:hover {
+  color: #a3d8f6;
+}
 .entry-title,
-a:link,
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6 {
+a:link {
   color: #257bcc;
 }
+h2,
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,
 .entry-content h5,
-.entry-content h6 {
-  margin: 0.5rem 0;
-}
-.entry-content > *:first-child {
-  margin-top: 0;
+.entry-content h6,
+.comments-header,
+.comment-reply-title {
+  color: #436fb4;
 }
 a:visited {
   color: #af3381;
 }
+.site-name,
+a.share-button,
+a.link-top:link,
+a.link-top:visited,
+a.link-top:hover,
+a.button:hover {
+  text-decoration: none;
+}
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
-}
-h2,
-.comments-header,
-.comment-reply-title {
-  color: #436fb4;
 }
 .entry-header i,
 .icon-share,
@@ -595,21 +599,6 @@ caption {
 }
 blockquote {
   border-left: solid 3px #777;
-}
-.site-name,
-a.share-button,
-a.link-top:link,
-a.link-top:visited,
-a.link-top:hover {
-  color: #a3d8f6;
-}
-.site-name,
-a.share-button,
-a.link-top:link,
-a.link-top:visited,
-a.link-top:hover,
-a.button:hover {
-  text-decoration: none;
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {

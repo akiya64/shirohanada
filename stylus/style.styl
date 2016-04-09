@@ -128,7 +128,7 @@ li + li
 .entry-content ul
 .entry-content ol
 .entry-content dl
-        margin-top .6rem
+        margin .6rem 0 .6rem .5rem
 
 .icon
         margin-right .4rem
@@ -185,6 +185,20 @@ blockquote
 
 blockquote
         margin .8rem 0
+
+.entry-content h1
+.entry-content h2
+.entry-content h3
+.entry-content h4
+.entry-content h5
+.entry-content h6
+        margin 1rem 0 .8rem
+        padding-left 1rem
+        border-left solid 3px
+
+.entry-content > *:first-child
+        margin-top 0
+
 
 .paging
         text-align center
@@ -247,38 +261,42 @@ h1,h2,h3,h4,h5,h6
         font-size .875rem
 
 /* color ShiroHanada #a3d8f6 */
+.site-name
+a.share-button
+a.link-top:link
+a.link-top:visited
+a.link-top:hover
+        color shirohanada
+
 .entry-title
 a:link
-.entry-content h1
-.entry-content h2
-.entry-content h3
-.entry-content h4
-.entry-content h5
-.entry-content h6
         color bright-h
 
+h2
 .entry-content h1
 .entry-content h2
 .entry-content h3
 .entry-content h4
 .entry-content h5
 .entry-content h6
-        margin .5rem 0
-
-.entry-content > *:first-child
-        margin-top 0
+.comments-header
+.comment-reply-title
+        color nakano-h
 
 a:visited
         color enji
 
+.site-name
+a.share-button
+a.link-top:link
+a.link-top:visited
+a.link-top:hover
+a.button:hover
+        text-decoration none
+
 a:hover
         text-decoration underline
         text-decoration-style dashed
-
-h2
-.comments-header
-.comment-reply-title
-        color nakano-h
 
 .entry-header i
 .icon-share
@@ -307,20 +325,7 @@ caption
 blockquote
         border-left solid 3px hai
 
-.site-name
-a.share-button
-a.link-top:link
-a.link-top:visited
-a.link-top:hover
-        color shirohanada
 
-.site-name
-a.share-button
-a.link-top:link
-a.link-top:visited
-a.link-top:hover
-a.button:hover
-        text-decoration none
 
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
