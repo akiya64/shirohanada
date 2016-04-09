@@ -426,9 +426,7 @@ article {
   margin-bottom: 1rem;
 }
 section,
-.entry-header,
-.entry-content p,
-.page-content p {
+.entry-header {
   margin-bottom: 0.6rem;
 }
 .page-title {
@@ -438,6 +436,10 @@ section,
 .entry-title,
 .entry-header p {
   margin-bottom: 0.3rem;
+}
+.entry-content p,
+.page-content p {
+  margin: 0.5rem 0;
 }
 .page-content ul,
 article ul,
@@ -460,10 +462,13 @@ dd {
   padding-top: 1rem;
 }
 .sidebar {
-  padding: 0 1.5rem 1rem;
+  padding: 0.8rem 1rem;
 }
 blockquote {
-  padding: 0.8rem 1rem;
+  padding: 0.2rem 0.75rem;
+}
+blockquote {
+  margin: 0.8rem 0;
 }
 .paging {
   text-align: center;
@@ -589,7 +594,7 @@ caption {
   text-align: left;
 }
 blockquote {
-  border-left: solid 3px #257bcc;
+  border-left: solid 3px #777;
 }
 .site-name,
 a.share-button,
