@@ -479,12 +479,15 @@ blockquote {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  margin: 1rem 0 0.8rem;
-  padding-left: 0.5rem;
+  margin: 1.5rem 0 0.8rem;
+  padding-left: 0.75rem;
   border-left: solid 3px;
 }
 .entry-content > *:first-child {
   margin-top: 0;
+}
+blockquote {
+  border-left: solid 3px #bbb;
 }
 /*  Typograghy  */
 /* font-family */
@@ -580,9 +583,6 @@ tr + tr {
 }
 .entry-content caption {
   text-align: left;
-}
-.entry-content blockquote {
-  border-left: solid 3px #777;
 }
 /* utility class */
 .clearfix:after {
@@ -814,7 +814,7 @@ input[type="submit"].search-submit {
 }
 input,
 textarea {
-  padding-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
 .comment-notes,
 input {
