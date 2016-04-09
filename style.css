@@ -600,19 +600,20 @@ a:hover {
 article {
   background-color: #f8fafa;
 }
-thead {
-  background-color: #eee;
-}
 tr + tr {
   border-top: 1px solid #777;
 }
-td {
+.entry-content thead {
+  background-color: #eee;
+}
+.entry-content td,
+.entry-content th {
   padding: 0.2rem 0.5rem;
 }
-caption {
+.entry-content caption {
   text-align: left;
 }
-blockquote {
+.entry-content blockquote {
   border-left: solid 3px #777;
 }
 /* over write for mobile */
@@ -734,8 +735,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 .sidebar #wp-calendar th {
   font-weight: normal;
+  background-color: none;
 }
 .sidebar #wp-calendar td {
+  padding: 0.1rem 0.3rem;
   text-align: center;
 }
 /* comment & form section*/

@@ -311,20 +311,22 @@ a:hover
 article
         background-color usu-hai
 
-thead
-        background-color #eee
-
 tr + tr
-        border-top 1px solid hai
+                border-top 1px solid hai
 
-td
-        padding .2rem .5rem
+.entry-content
+        thead
+                background-color #eee
 
-caption
-        text-align left
+        td
+        th
+                padding .2rem .5rem
 
-blockquote
-        border-left solid 3px hai
+        caption
+                text-align left
+
+        blockquote
+                border-left solid 3px hai
 
 
 
@@ -417,7 +419,9 @@ img[src^="http://www.gravatar.com/avatar/"]
 
                 th
                         font-weight normal
+                        background-color none
                 td
+                        padding .1rem .3rem
                         text-align center
 
 /* comment & form section*/
