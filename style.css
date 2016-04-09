@@ -176,13 +176,14 @@ table {
 */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?tmlx19");
-  src: url("fonts/icomoon.eot?tmlx19#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?tmlx19") format('truetype'), url("fonts/icomoon.woff?tmlx19") format('woff'), url("fonts/icomoon.svg?tmlx19#icomoon") format('svg');
+  src: url("fonts/icomoon.eot?40c2va");
+  src: url("fonts/icomoon.eot?40c2va#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?40c2va") format('truetype'), url("fonts/icomoon.woff?40c2va") format('woff'), url("fonts/icomoon.svg?40c2va#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 i {
-  font-family: 'icomoon';
+/* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -193,41 +194,17 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-share-google-plus:before {
+.icon-search:before {
   content: "\e900";
 }
-.icon-get-hatebu:before {
-  content: "\e805";
+.icon-checkmark:before {
+  content: "\e901";
 }
-.icon-illust:before {
-  content: "\e804";
+.icon-eject:before {
+  content: "\e902";
 }
-.icon-photo:before {
-  content: "\f083";
-}
-.icon-fighter-jet:before {
-  content: "\f0fb";
-}
-.icon-angle-left:before {
-  content: "\f104";
-}
-.icon-angle-right:before {
-  content: "\f105";
-}
-.icon-ellipsis-v:before {
-  content: "\f142";
-}
-.icon-instagram:before {
-  content: "\f16d";
-}
-.icon-flickr:before {
-  content: "\f16e";
-}
-.icon-deviantart:before {
-  content: "\f1bd";
-}
-.icon-get-pocket:before {
-  content: "\f265";
+.icon-share-google-plus:before {
+  content: "\e903";
 }
 .icon-list:before {
   content: "\f061";
@@ -251,7 +228,7 @@ i {
   content: "\e601";
 }
 .icon-comment:before {
-  content: "\e803";
+  content: "\e800";
 }
 .icon-terminal:before {
   content: "\e612";
@@ -286,11 +263,38 @@ i {
 .icon-css3:before {
   content: "\e60d";
 }
-.icon-comment2:before {
-  content: "\e800";
+.icon-hatebu:before {
+  content: "\e804";
 }
-.icon-exit:before {
-  content: "\e806";
+.icon-illust:before {
+  content: "\e803";
+}
+.icon-photo:before {
+  content: "\f083";
+}
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-ellipsis-v:before {
+  content: "\f142";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-deviantart:before {
+  content: "\f1bd";
+}
+.icon-get-pocket:before {
+  content: "\f265";
 }
 /* Main Section
    Follow Architecture Every Declaration Just Once
@@ -299,11 +303,13 @@ i {
 body {
   font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   letter-spacing: 0.05rem;
+  line-height: 1.6;
   margin: 0 auto;
   width: 100%;
   max-width: 1140px;
 }
-article ul {
+article u,
+line-height 1.6l {
   list-style-type: square;
 }
 /* Layout */
@@ -339,6 +345,9 @@ article img {
   max-width: 600px;
   height: auto;
 }
+.entry-title {
+  width: 100%;
+}
 .entry-header > p,
 .site-footer > p {
   display: inline;
@@ -372,7 +381,7 @@ article img {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 1rem 1rem;
   }
   .main-contents {
     margin: 0 auto;
@@ -407,11 +416,8 @@ article img {
 }
 /*  Margin Padding */
 .comments,
-li + li,
-.entry-content ul,
-.entry-content ol,
-.entry-content dl {
-  margin: 0.6rem 0 0.6rem 0.5rem;
+li + li {
+  margin-top: 0.6rem;
 }
 .icon {
   margin-right: 0.4rem;
@@ -426,28 +432,25 @@ article {
   margin-bottom: 1rem;
 }
 section,
-.entry-header {
+.entry-header,
+.entry-title {
   margin-bottom: 0.6rem;
 }
 .page-title {
   margin-bottom: 0.7rem;
 }
 .contents-link-title,
-.entry-title,
 .entry-header p {
   margin-bottom: 0.3rem;
 }
 .entry-content p,
 .page-content p {
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
-.page-content ul,
 article ul,
-.page-content ol,
 article ol,
-.page-content dl,
 article dl {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 dd {
   margin-left: 2rem;
@@ -476,43 +479,15 @@ blockquote {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  margin: 1rem 0 0.8rem;
-  padding-left: 1rem;
+  margin: 1.5rem 0 0.8rem;
+  padding-left: 0.75rem;
   border-left: solid 3px;
 }
 .entry-content > *:first-child {
   margin-top: 0;
 }
-.paging {
-  text-align: center;
-}
-/* utility class */
-.clearfix:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-.no-marker {
-  list-style-type: none;
-  margin-left: 0;
-}
-/* for WordPress class */
-.alignleft {
-  float: left;
-  margin-right: 1rem;
-}
-.alignright {
-  float: right;
-  margin-left: 1rem;
-}
-.aligncenter {
-  margin: auto;
-}
-.wp-caption {
-  text-align: center;
-}
-.wp-caption > p {
-  padding-top: 0.3rem;
+blockquote {
+  border-left: solid 3px #bbb;
 }
 /*  Typograghy  */
 /* font-family */
@@ -545,9 +520,6 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
-.entry-content {
-  font-size: 0.875rem;
-}
 /* color ShiroHanada #a3d8f6 */
 .site-name,
 a.share-button,
@@ -572,7 +544,7 @@ h2,
   color: #436fb4;
 }
 a:visited {
-  color: #af3381;
+  color: #800000;
 }
 .site-name,
 a.share-button,
@@ -598,20 +570,54 @@ a:hover {
 article {
   background-color: #f8fafa;
 }
-thead {
-  background-color: #eee;
-}
+/* Table in Entry */
 tr + tr {
   border-top: 1px solid #777;
 }
-td {
+.entry-content thead {
+  background-color: #eee;
+}
+.entry-content td,
+.entry-content th {
   padding: 0.2rem 0.5rem;
 }
-caption {
+.entry-content caption {
   text-align: left;
 }
-blockquote {
-  border-left: solid 3px #777;
+/* utility class */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.no-marker {
+  list-style-type: none;
+  margin-left: 0;
+}
+.point {
+  border-left: solid 3px #a3d8f6;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+/* for WordPress class */
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+}
+.alignright {
+  float: right;
+  margin-left: 1rem;
+}
+.aligncenter {
+  margin: auto;
+}
+.wp-caption {
+  text-align: center;
+}
+.wp-caption > p {
+  padding-top: 0.3rem;
+}
+.paging {
+  text-align: center;
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
@@ -732,8 +738,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 .sidebar #wp-calendar th {
   font-weight: normal;
+  background-color: none;
 }
 .sidebar #wp-calendar td {
+  padding: 0.1rem 0.3rem;
   text-align: center;
 }
 /* comment & form section*/
@@ -806,7 +814,7 @@ input[type="submit"].search-submit {
 }
 input,
 textarea {
-  padding-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
 .comment-notes,
 input {
