@@ -176,13 +176,14 @@ table {
 */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?tmlx19");
-  src: url("fonts/icomoon.eot?tmlx19#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?tmlx19") format('truetype'), url("fonts/icomoon.woff?tmlx19") format('woff'), url("fonts/icomoon.svg?tmlx19#icomoon") format('svg');
+  src: url("fonts/icomoon.eot?40c2va");
+  src: url("fonts/icomoon.eot?40c2va#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?40c2va") format('truetype'), url("fonts/icomoon.woff?40c2va") format('woff'), url("fonts/icomoon.svg?40c2va#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 i {
-  font-family: 'icomoon';
+/* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -193,41 +194,17 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-share-google-plus:before {
+.icon-search:before {
   content: "\e900";
 }
-.icon-get-hatebu:before {
-  content: "\e805";
+.icon-checkmark:before {
+  content: "\e901";
 }
-.icon-illust:before {
-  content: "\e804";
+.icon-eject:before {
+  content: "\e902";
 }
-.icon-photo:before {
-  content: "\f083";
-}
-.icon-fighter-jet:before {
-  content: "\f0fb";
-}
-.icon-angle-left:before {
-  content: "\f104";
-}
-.icon-angle-right:before {
-  content: "\f105";
-}
-.icon-ellipsis-v:before {
-  content: "\f142";
-}
-.icon-instagram:before {
-  content: "\f16d";
-}
-.icon-flickr:before {
-  content: "\f16e";
-}
-.icon-deviantart:before {
-  content: "\f1bd";
-}
-.icon-get-pocket:before {
-  content: "\f265";
+.icon-share-google-plus:before {
+  content: "\e903";
 }
 .icon-list:before {
   content: "\f061";
@@ -251,7 +228,7 @@ i {
   content: "\e601";
 }
 .icon-comment:before {
-  content: "\e803";
+  content: "\e800";
 }
 .icon-terminal:before {
   content: "\e612";
@@ -286,11 +263,38 @@ i {
 .icon-css3:before {
   content: "\e60d";
 }
-.icon-comment2:before {
-  content: "\e800";
+.icon-hatebu:before {
+  content: "\e804";
 }
-.icon-exit:before {
-  content: "\e806";
+.icon-illust:before {
+  content: "\e803";
+}
+.icon-photo:before {
+  content: "\f083";
+}
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-ellipsis-v:before {
+  content: "\f142";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-deviantart:before {
+  content: "\f1bd";
+}
+.icon-get-pocket:before {
+  content: "\f265";
 }
 /* Main Section
    Follow Architecture Every Declaration Just Once
@@ -489,6 +493,10 @@ blockquote {
 .no-marker {
   list-style-type: none;
   margin-left: 0;
+}
+.point {
+  border-left: solid 3px #a3d8f6;
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 /* for WordPress class */
 .alignleft {
