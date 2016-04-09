@@ -24,6 +24,7 @@ git rm -f README.md
 git rm -f gulpfile.js
 git rm -f package.json
 git rm -f style.css.map
+git rm -f fonts/icon_font.zip
 
 git commit -m "prepare release"
 
