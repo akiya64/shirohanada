@@ -199,42 +199,6 @@ blockquote
 .entry-content > *:first-child
         margin-top 0
 
-
-.paging
-        text-align center
-
-/* utility class */
-.clearfix:after
-        content " "
-        display block
-        clear both
-
-.no-marker
-        list-style-type none
-        margin-left 0
-
-.point
-        border-left solid 3px shirohanada
-        padding .5rem 0 .5rem 1rem
-
-/* for WordPress class */
-.alignleft
-        float left
-        margin-right 1rem
-
-.alignright
-        float right
-        margin-left 1rem
-
-.aligncenter
-        margin auto
-
-.wp-caption
-        text-align center
-
-.wp-caption > p
-        padding-top .3rem
-
 /*  Typograghy  */
 /* font-family */
 h1,h2,h3,h4,h5,h6
@@ -311,6 +275,7 @@ a:hover
 article
         background-color usu-hai
 
+/* Table in Entry */
 tr + tr
                 border-top 1px solid hai
 
@@ -328,7 +293,40 @@ tr + tr
         blockquote
                 border-left solid 3px hai
 
+/* utility class */
+.clearfix:after
+        content " "
+        display block
+        clear both
 
+.no-marker
+        list-style-type none
+        margin-left 0
+
+.point
+        border-left solid 3px shirohanada
+        padding .5rem 0 .5rem 1rem
+
+/* for WordPress class */
+.alignleft
+        float left
+        margin-right 1rem
+
+.alignright
+        float right
+        margin-left 1rem
+
+.aligncenter
+        margin auto
+
+.wp-caption
+        text-align center
+
+.wp-caption > p
+        padding-top .3rem
+
+.paging
+        text-align center
 
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
