@@ -407,11 +407,8 @@ article img {
 }
 /*  Margin Padding */
 .comments,
-li + li,
-.entry-content ul,
-.entry-content ol,
-.entry-content dl {
-  margin: 0.6rem 0 0.6rem 0.5rem;
+li + li {
+  margin-top: 0.6rem;
 }
 .icon {
   margin-right: 0.4rem;
@@ -441,13 +438,10 @@ section,
 .page-content p {
   margin: 0.5rem 0;
 }
-.page-content ul,
 article ul,
-.page-content ol,
 article ol,
-.page-content dl,
 article dl {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 dd {
   margin-left: 2rem;
@@ -477,7 +471,7 @@ blockquote {
 .entry-content h5,
 .entry-content h6 {
   margin: 1rem 0 0.8rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   border-left: solid 3px;
 }
 .entry-content > *:first-child {
