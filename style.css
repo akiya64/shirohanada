@@ -297,8 +297,9 @@ i {
    ref 'https://developers.google.com/speed/articles/optimizing-css' */
 /* Base */
 body {
+  font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  letter-spacing: 0.05rem;
   margin: 0 auto;
-  letter-spacing: 0.07rem;
   width: 100%;
   max-width: 1140px;
 }
