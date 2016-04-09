@@ -550,9 +550,6 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
-.entry-content {
-  font-size: 0.875rem;
-}
 /* color ShiroHanada #a3d8f6 */
 .site-name,
 a.share-button,
@@ -577,7 +574,7 @@ h2,
   color: #436fb4;
 }
 a:visited {
-  color: #af3381;
+  color: #800000;
 }
 .site-name,
 a.share-button,
