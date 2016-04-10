@@ -352,6 +352,20 @@ article img {
 .site-footer > p {
   display: inline;
 }
+/* apply style for h tag once for POST and Page
+ * some class h ovewrite another section */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.62rem;
+  color: #436fb4;
+  margin: 1.5rem 0 0.8rem;
+  padding-left: 0.75rem;
+  border-left: solid 3px #436fb4;
+}
 /* Layout for Large Display ; looks 2 column in Article */
 @media (min-width: 768px) {
   .entries h1,
@@ -415,6 +429,23 @@ article img {
   }
 }
 /*  Margin Padding */
+h1.site-name {
+  margin: 0;
+}
+h2.page-title,
+h1.entry-title {
+  margin: 0 0 0.7rem 0;
+}
+h2.page-title {
+  padding: 0 0.5rem 0 1.5rem;
+}
+h1.entry-title {
+  padding: 0;
+}
+h3.comments-header,
+h3.comment-reply-title {
+  padding-left: 0;
+}
 .comments,
 li + li {
   margin-top: 0.6rem;
@@ -436,10 +467,6 @@ section,
 .entry-title {
   margin-bottom: 0.6rem;
 }
-.page-title {
-  margin-bottom: 0.7rem;
-}
-.contents-link-title,
 .entry-header p {
   margin-bottom: 0.3rem;
 }
@@ -458,9 +485,6 @@ article ul {
 .site-footer {
   margin: 0.5rem 1rem;
 }
-.page-title {
-  padding: 0 0.5rem 0 1.5rem;
-}
 .share-links {
   padding-top: 1rem;
 }
@@ -472,28 +496,20 @@ blockquote {
   padding: 0.2rem 0.75rem;
   overflow-wrap: break-word;
 }
-.entry-content h1,
-.page-content h1,
-.entry-content h2,
-.page-content h2,
-.entry-content h3,
-.page-content h3,
-.entry-content h4,
-.page-content h4,
-.entry-content h5,
-.page-content h5,
-.entry-content h6,
-.page-content h6 {
-  margin: 1.5rem 0 0.8rem;
-  padding-left: 0.75rem;
-  border-left: solid 3px;
-}
 .page-content > *:first-child,
 .entry-content > *:first-child {
   margin-top: 0;
 }
 blockquote {
   border-left: solid 3px #bbb;
+}
+h1.site-name,
+h2.page-title,
+h1.entry-title,
+h2.widget-title,
+h3.comments-header,
+h3.comment-reply-title {
+  border-left: none;
 }
 /*  Typograghy  */
 /* font-family */
@@ -520,21 +536,6 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
-.entry-content h1,
-.page-content h1,
-.entry-content h2,
-.page-content h2,
-.entry-content h3,
-.page-content h3,
-.entry-content h4,
-.page-content h4,
-.entry-content h5,
-.page-content h5,
-.entry-content h6,
-.page-content h6 {
-  font-size: 1.62rem;
-  color: #436fb4;
-}
 /* text color ShiroHanada #a3d8f6 */
 .site-name,
 a.share-button,
@@ -543,19 +544,21 @@ a.link-top:visited,
 a.link-top:hover {
   color: #a3d8f6;
 }
-.entry-title,
-a:link {
+a,
+.entry-title {
   color: #257bcc;
 }
 .contents-link-title,
 .page-title,
-.comments-header,
-.comment-reply-title,
 .widget-title {
   color: #436fb4;
 }
 a:visited {
   color: #800000;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
 }
 .site-name,
 a.share-button,
@@ -564,10 +567,6 @@ a.link-top:visited,
 a.link-top:hover,
 a.button:hover {
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-  text-decoration-style: dashed;
 }
 .entry-header i,
 .icon-share,
@@ -733,6 +732,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 /* Side Bar */
 /* inside sidebar skin */
+h2.widget-title {
+  margin: 0;
+  padding-left: 0;
+}
 .sidebar .widget {
   margin-bottom: 1rem;
 }
@@ -946,6 +949,11 @@ textarea[name="comment"] {
   padding-top: 0.5rem;
 }
 /* top skin  */
+h2.contents-link-title {
+  margin: 0 0 0.3rem 0;
+  padding-left: 0;
+  border-left: 0;
+}
 .content-link > li {
   color: #257bcc !important;
   display: block;
