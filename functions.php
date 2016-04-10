@@ -37,16 +37,6 @@ function top_menu() {
 add_action( 'init', 'top_menu' );
 
 /**
- * Register load Java Script
- *
- */
-function load_afontgarde() {
-    wp_enqueue_script( 'afontgarde', get_template_directory_uri() . '/js/afontgarde.js' );
-}
-
-add_action( 'wp_enqueue_scripts', 'load_afontgarde');
-
-/**
  * remove header
  *
  */
