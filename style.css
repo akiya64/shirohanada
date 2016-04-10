@@ -468,10 +468,9 @@ article ul {
   padding: 0.8rem 1rem;
 }
 blockquote {
-  padding: 0.2rem 0.75rem;
-}
-blockquote {
   margin: 0.8rem 0;
+  padding: 0.2rem 0.75rem;
+  overflow-wrap: break-word;
 }
 .entry-content h1,
 .page-content h1,
