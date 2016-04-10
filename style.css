@@ -548,9 +548,11 @@ a.link-top:hover {
 a:link {
   color: #257bcc;
 }
+.contents-link-title,
 .page-title,
 .comments-header,
-.comment-reply-title {
+.comment-reply-title,
+.widget-title {
   color: #436fb4;
 }
 a:visited {
