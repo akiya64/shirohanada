@@ -468,10 +468,9 @@ article ul {
   padding: 0.8rem 1rem;
 }
 blockquote {
-  padding: 0.2rem 0.75rem;
-}
-blockquote {
   margin: 0.8rem 0;
+  padding: 0.2rem 0.75rem;
+  overflow-wrap: break-word;
 }
 .entry-content h1,
 .page-content h1,
@@ -1023,6 +1022,9 @@ textarea[name="comment"] {
   }
 }
 /* For Only TwitterWidget */
+.widget_twitter {
+  font-size: 0.875rem;
+}
 .widget_twitter span.entry-content:after {
   content: "\A";
   white-space: pre;
@@ -1033,10 +1035,6 @@ textarea[name="comment"] {
 .widget_twitter .twitter-avatar {
   text-align: center;
   margin-bottom: 0.5rem;
-}
-.widget_twitter ul {
-  font-size: 0.75rem;
-  line-height: 1.6;
 }
 .widget_twitter li + li {
   border: none;
