@@ -76,6 +76,15 @@ article img
 .site-footer > p
         display inline
 
+/* apply style for h tag once for POST and Page
+ * some class h ovewrite another section */
+h1,h2,h3,h4,h5,h6
+        font-size 1.62rem
+        color nakano-h
+        margin 1.5rem 0 .8rem
+        padding-left .75rem
+        border-left solid 3px nakano-h
+
 /* Layout for Large Display ; looks 2 column in Article */
 @media (min-width:breakpoint)
         .entries
@@ -128,6 +137,22 @@ article img
                 display none
 
 /*  Margin Padding */
+h1.site-name
+        margin 0
+
+h2.page-title
+h1.entry-title
+        margin 0 0 .7rem 0
+
+h2.page-title
+        padding 0 .5rem 0 1.5rem
+
+h1.entry-title
+        padding 0
+
+h3.comments-header
+h3.comment-reply-title
+        padding-left 0
 
 .comments
 li + li
@@ -150,10 +175,6 @@ section
 .entry-title
         margin-bottom .6rem
 
-.page-title
-        margin-bottom .7rem
-
-.contents-link-title
 .entry-header p
         margin-bottom .3rem
 
@@ -174,9 +195,6 @@ article ul
 .site-footer
         margin 0.5rem 1rem
 
-.page-title
-        padding 0 .5rem 0 1.5rem
-
 .share-links
         padding-top 1rem
 
@@ -188,18 +206,6 @@ blockquote
         padding .2rem .75rem
         overflow-wrap break-word
 
-.entry-content
-.page-content
-        h1
-        h2
-        h3
-        h4
-        h5
-        h6
-                margin 1.5rem 0 .8rem
-                padding-left .75rem
-                border-left solid 3px
-
 .page-content
 .entry-content
         > *:first-child
@@ -208,9 +214,13 @@ blockquote
 blockquote
         border-left solid 3px #bbb
 
-/* apply style for h tag once
- * some class h ovewrite another section */
-
+h1.site-name
+h2.page-title
+h1.entry-title
+h2.widget-title
+h3.comments-header
+h3.comment-reply-title
+        border-left none
 
 /*  Typograghy  */
 /* font-family */
@@ -231,17 +241,6 @@ h1,h2,h3,h4,h5,h6
 .comments-header
         font-size 1.62rem
 
-.entry-content
-.page-content
-        h1
-        h2
-        h3
-        h4
-        h5
-        h6
-                font-size 1.62rem
-                color nakano-h
-
 /* text color ShiroHanada #a3d8f6 */
 .site-name
 a.share-button
@@ -250,13 +249,12 @@ a.link-top:visited
 a.link-top:hover
         color shirohanada
 
+a
 .entry-title
         color bright-h
 
 .contents-link-title
 .page-title
-.comments-header
-.comment-reply-title
 .widget-title
         color nakano-h
 
@@ -408,6 +406,10 @@ img[src^="http://www.gravatar.com/avatar/"]
 
 /* Side Bar */
 /* inside sidebar skin */
+
+h2.widget-title
+        margin 0
+        padding-left 0
 
 .sidebar
         .widget
@@ -609,6 +611,11 @@ textarea[name="comment"]
         padding-top .5rem
 
 /* top skin  */
+h2.contents-link-title
+        margin 0 0 .3rem 0
+        padding-left 0
+        border-left 0
+
 .content-link > li
         color bright-h !important //only over write color in content-link
         display block
