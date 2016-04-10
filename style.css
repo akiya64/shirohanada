@@ -495,6 +495,8 @@ blockquote {
 blockquote {
   border-left: solid 3px #bbb;
 }
+/* apply style for h tag once
+ * some class h ovewrite another section */
 /*  Typograghy  */
 /* font-family */
 h1,
@@ -543,8 +545,7 @@ a.link-top:visited,
 a.link-top:hover {
   color: #a3d8f6;
 }
-.entry-title,
-a:link {
+.entry-title {
   color: #257bcc;
 }
 .contents-link-title,
@@ -557,6 +558,10 @@ a:link {
 a:visited {
   color: #800000;
 }
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
 .site-name,
 a.share-button,
 a.link-top:link,
@@ -564,10 +569,6 @@ a.link-top:visited,
 a.link-top:hover,
 a.button:hover {
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-  text-decoration-style: dashed;
 }
 .entry-header i,
 .icon-share,
