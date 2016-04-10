@@ -452,8 +452,8 @@ article ol,
 article dl {
   margin: 1rem;
 }
-dd {
-  margin-left: 2rem;
+article ul {
+  list-style-type: square;
 }
 .site-footer {
   margin: 0.5rem 1rem;
@@ -1033,6 +1033,10 @@ textarea[name="comment"] {
 .widget_twitter .twitter-avatar img {
   -webkit-border-radius: 6px;
   border-radius: 6px;
+}
+/* For Only TwitterDigester */
+.ws_tweet_list {
+  margin-left: 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
