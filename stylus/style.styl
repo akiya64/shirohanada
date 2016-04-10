@@ -189,22 +189,25 @@ blockquote
 blockquote
         margin .8rem 0
 
-.entry-content h1
-.entry-content h2
-.entry-content h3
-.entry-content h4
-.entry-content h5
-.entry-content h6
-        margin 1.5rem 0 .8rem
-        padding-left .75rem
-        border-left solid 3px
+.entry-content
+.page-content
+        h1
+        h2
+        h3
+        h4
+        h5
+        h6
+                margin 1.5rem 0 .8rem
+                padding-left .75rem
+                border-left solid 3px
 
-.entry-content > *:first-child
-        margin-top 0
+.page-content
+.entry-content
+        > *:first-child
+                margin-top 0
 
 blockquote
         border-left solid 3px #bbb
-
 
 /*  Typograghy  */
 /* font-family */
@@ -218,21 +221,25 @@ h1,h2,h3,h4,h5,h6
 .page-title
         font-size 2.4rem
 
-.contents-link-title
-.entry-title
+.contents-link-title,.entry-title
 .widget-title
 .share-links
-.entry-content h1
-.entry-content h2
-.entry-content h3
-.entry-content h4
-.entry-content h5
-.entry-content h6
 .comment-reply-title
 .comments-header
         font-size 1.62rem
 
-/* color ShiroHanada #a3d8f6 */
+.entry-content
+.page-content
+        h1
+        h2
+        h3
+        h4
+        h5
+        h6
+                font-size 1.62rem
+                color nakano-h
+
+/* text color ShiroHanada #a3d8f6 */
 .site-name
 a.share-button
 a.link-top:link
@@ -244,13 +251,7 @@ a.link-top:hover
 a:link
         color bright-h
 
-h2
-.entry-content h1
-.entry-content h2
-.entry-content h3
-.entry-content h4
-.entry-content h5
-.entry-content h6
+.page-title
 .comments-header
 .comment-reply-title
         color nakano-h
