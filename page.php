@@ -26,6 +26,9 @@ while ( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	</div>
 
+	<p class="page-content-footer"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></p>
+	<p class="page-content-footer">Author:<?php the_author();?></p>
+
 	<div class="share-links">
 			<?php $encoded_url = urlencode(get_permalink());
 			  $share_text = get_the_title(); ?>

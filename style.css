@@ -345,6 +345,8 @@ article img {
   max-width: 600px;
   height: auto;
 }
+.page-content,
+.page-content-footer,
 .entry-title {
   width: 100%;
 }
@@ -402,8 +404,7 @@ h6 {
   }
   .articles,
   .entry-content,
-  .comments,
-  .page-content {
+  .comments {
     width: 76%;
   }
   .sidebar {
@@ -580,6 +581,9 @@ a.button:hover {
 article {
   background-color: #f8fafa;
 }
+.page-content-footer {
+  text-align: right;
+}
 /* Table in Entry */
 tr + tr {
   border-top: 1px solid #777;
@@ -620,14 +624,12 @@ tr + tr {
 .aligncenter {
   margin: auto;
 }
+.paging,
 .wp-caption {
   text-align: center;
 }
 .wp-caption > p {
   padding-top: 0.3rem;
-}
-.paging {
-  text-align: center;
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
