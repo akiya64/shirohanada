@@ -11,16 +11,7 @@ Tags: gray, right-sidebar, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 
-// Color Declaration //
-shirohanada = #a3d8f6
-nakano-h = #436fb4
-bright-h = #257bcc
-hai = #777
-usu-hai = #f8fafa
-enji = #af3381
-maroon = #800000
-
-/* major breakpoint ; minorpoint 960px */
+/* major breakpoint */
 breakpoint = 768px
 
 // postCSS library //
@@ -28,6 +19,7 @@ breakpoint = 768px
 
 @import "_sanitize"
 @import "_icon-font"
+@import "_color"
 
 /*! Main Section
    Follow Architecture Every Declaration Just Once
@@ -44,12 +36,26 @@ body
 
 /* Layout */
 /* looks 3columns but HTML is 2 Column */
+.page-content
+.page-content-footer
+.entry-title
+        width 100%
+
+article img
+        max-width 600px
+        height auto
+
+.site-footer
+.sidebar
+        margin-left 1%
+
 .share-links
         display flex
         justify-content space-around
 
+/* align right share bottun */
 .share-links
-        margin-left 60% //align right share bottun
+        margin-left 60%
 
 .wp-caption
         max-width 100%
@@ -57,25 +63,14 @@ body
 .share-links
         width 95%
 
-.site-footer
-.sidebar
-        margin-left 1%
 
-article img
-        max-width 600px
-        height auto
-
-.page-content
-.page-content-footer
-.entry-title
-        width 100%
-
-.entry-header > p //post-date and post-category looks 1row
+/* post-date and post-category looks 1row */
+.entry-header > p
 .site-footer > p
         display inline
 
 /* apply style for h tag once for POST and Page
- * some class h ovewrite another section */
+ * some h.class  ovewrite style another section */
 h1,h2,h3,h4,h5,h6
         font-size 1.62rem
         color nakano-h
@@ -86,10 +81,11 @@ h1,h2,h3,h4,h5,h6
 
 /* Layout for Large Display ; looks 2 column in Article */
 @media (min-width:breakpoint)
+
+        /* site-name and site-description looks 1row */
         .entries
                 h1,p
-                        display inline //site-name and site-description looks 1row
-
+                        display inline 
         .site-header
                 padding-right 5%
 
@@ -131,10 +127,12 @@ h1,h2,h3,h4,h5,h6
         .comments
                 min-width 560px
 
-        #menu-button  //show only less 768px
+        /* show only less 768px */
+        #menu-button
                 display none
 
 /*  Margin Padding */
+/* Over write h tags */
 h1.site-name
         margin 0
 
@@ -182,9 +180,9 @@ section
                 margin .75rem 0
 
 article
-    ul
-    ol
-    dl
+        ul
+        ol
+        dl
                 margin 1rem
 
 article ul
@@ -209,19 +207,11 @@ blockquote
         > *:first-child
                 margin-top 0
 
-blockquote
-        border-left solid 3px #bbb
-
-h1.site-name
-h2.page-title
-h1.entry-title
-h2.widget-title
-h3.comments-header
-h3.comment-reply-title
-        border-left none
+/* Text Align */
+.page-content-footer
+        align right
 
 /*  Typograghy  */
-/* font-family */
 h1,h2,h3,h4,h5,h6
 .site-description
 .root-contents
@@ -239,7 +229,8 @@ h1,h2,h3,h4,h5,h6
 .comments-header
         font-size 1.62rem
 
-/* text color ShiroHanada #a3d8f6 */
+/* Color
+ * ShiroHanada #a3d8f6 */
 .site-name
 a.share-button
 a.link-top:link
@@ -256,6 +247,21 @@ a
 .widget-title
         color nakano-h
 
+.entry-header i
+.icon-share
+.site-footer
+.site-description
+        color hai
+
+.sidebar
+.page-content
+.page-title
+article
+        background-color usu-hai
+
+@import "_icon-color"
+
+/* Text Decolation */
 a:visited
         color maroon
 
@@ -271,20 +277,18 @@ a.link-top:hover
 a.button:hover
         text-decoration none
 
-.entry-header i
-.icon-share
-.site-footer
-.site-description
-        color hai
+/* Border */
+blockquote
+        border-left solid 3px #bbb
 
-.sidebar
-.page-content
-.page-title
-article
-        background-color usu-hai
+h1.site-name
+h2.page-title
+h1.entry-title
+h2.widget-title
+h3.comments-header
+h3.comment-reply-title
+        border-left none
 
-.page-content-footer
-        text-align right
 /* Table in Entry */
 tr + tr
                 border-top 1px solid hai
@@ -393,8 +397,7 @@ tr + tr
         .articles
                 margin-bottom 1rem
 
-/* Web Service Brand Colors for icon font */
-@import "_icon-color"
+
 
 /* End Main Section */
 
@@ -432,104 +435,6 @@ h2.widget-title
                         padding .1rem .3rem
                         text-align center
 
-/* comment & form section*/
-.comment-author
-        .avatar
-                border-radius 50%
-                float left
-                margin-right 1rem
-
-        .fn
-                font-style initial
-                font-weight bold
-
-.comment-meta
-.reply
-.comment-notes
-        font-size .9rem
-
-label
-        display inline-block
-
-.comment-reply-link
-        display block
-        width 4rem
-        text-align center
-
-label
-input[type="search"]
-input[name="author"]
-input[name="email"]
-input[name="url"]
-textarea[name="comment"]
-        width 100%
-
-.comment-form
-        width 90%
-
-.comment-reply-link:link
-.comment-reply-link:visited
-.comment-reply-link:active
-        text-decoration none
-        color black
-
-.comment-reply-link
-input[type="submit"]
-        background #eee
-
-textarea
-input
-        background-color white
-        border solid 1px shirohanada
-
-.comment-reply-link:hover
-input[type="submit"]:hover
-        background-color white
-        border solid 1px bright-h
-        color bright-h
-
-input[type="submit"]
-.comment-reply-link
-        padding .1rem .5rem
-        border solid 1px hai
-
-input[type="submit"]
-        margin .2rem 0
-
-input[type="submit"].search-submit
-        padding 0 1rem
-        float right
-
-input
-textarea
-        padding .2rem .5rem
-
-.comment-notes
-input
-        margin .3rem 0 .8rem
-
-input.search-field
-        margin-bottom .2rem
-
-.comment-reply-title
-.comments-header
-.reply
-        margin .8rem 0 .4rem
-
-.comment-body > p
-li.comment + li.comment
-        margin-top 1rem
-
-textarea
-input
-.comment-reply-link
-        border-radius 2px
-
-textarea[name="comment"]
-        margin-bottom .75rem
-        padding .3rem
-        height 10em
-
 /*! bottun */
 .show-menu
 .show
@@ -553,150 +458,6 @@ textarea[name="comment"]
 .show-button
         display block
 
-/* Front-Page Section */
-
-/* layout */
-/* left-part is banner,right-part is logo , root-contents , widget area
-   in small display, 1column Logo-Banner-DropdownPart */
-
-.top-flex-container
-        margin 7vh auto
-        width 85vw
-        max-width 1200px
-        height 90vh
-        max-height 648px
-        display flex
-        flex-flow column wrap
-
-.top-banner-box
-        width 75%
-        max-width 722px
-
-.dropdown-part
-.top-page-header
-        width 25rem
-
-.top-page-header
-        height 9rem
-
-.dropdown-part
-        height 12rem
-        padding-left 1rem
-
-.root-contents
-        column-count 2
-        height 9rem
-        font-size 1.2rem
-
-.top-page-header
-        text-align right
-
-.front.widget-area ul
-        max-height 11rem
-        overflow auto
-
-.front.widget-area
-        ul
-                margin-left 1rem
-                font-size .8rem
-
-        li + li
-                margin-top .2rem
-                border none
-
-.top-page-footer
-        margin-top 1rem
-        padding-left 1rem
-        padding-top .5rem
-
-/* top skin  */
-h2.contents-link-title
-        margin 0 0 .3rem 0
-        padding-left 0
-        border-left 0
-
-.content-link > li
-        color bright-h !important //only over write color in content-link
-        display block
-        padding 0.2rem 1rem
-        border-left solid 3px #fff
-
-.content-link > li:hover
-        border-left solid 3px bright-h
-
-.content-link > li > a:hover
-             text-decoration none !important //only over write in content-link
-
-.top-page-footer
-        color hai
-        border-top solid 1px shirohanada
-
-/* layout for small display ;1column layout */
-
-@media screen and (max-width: 960px)
-        .top-page-header
-        .top-flex-container
-        .top-banner-box
-        .dropdown-part
-        .root-contents
-        .front.widget-area ul
-                width initial
-                height initial
-                max-width initial
-                max-height initial
-
-        .top-flex-container
-        .top-banner-box
-        .top-banner
-                width 100%
-
-        .top-banner
-                height auto
-
-        .top-flex-container
-                margin 0 auto
-
-        .top-page-header
-                order 1
-                margin-right .3rem
-
-        .top-banner-box
-                order 2
-
-        .dropdown-part
-                order 3
-
-        .dropdown-part
-                padding 0 .5rem
-
-        .dropdown-part h2
-                margin 0.8rem 0
-
-        .top-page-footer
-                padding .5rem 1rem
-
-/* For Only TwitterWidget */
-
-.widget_twitter
-        font-size .875rem
-        span.entry-content:after
-                content "\A"
-                white-space pre
-
-        .follow-button
-                text-align right
-
-        .twitter-avatar
-                text-align center
-                margin-bottom .5rem
-
-        li + li
-                border none
-                margin-top .2rem
-
-        .twitter-avatar img
-                border-radius 6px
-
-/* For Only TwitterDigester */
-.ws_tweet_list
-        margin-left .25rem
+@import "_comment-form"
+@import "_front-page"
+@import "_twitter-plugin"
