@@ -696,7 +696,7 @@ tr + tr {
   a.link-top:hover {
     color: #fff;
   }
-  .page-title {
+  h2.page-title {
     padding: 1rem 0.5rem;
     margin: initial;
     font-size: 1.62rem;
