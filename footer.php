@@ -35,7 +35,6 @@ function hideMenu(){
 	sideBar.classList.remove('show');
 }
 
-showMenuBtn.removeAttribute('href');
 showMenuBtn.addEventListener('click',showMenu);
 
 </script>
