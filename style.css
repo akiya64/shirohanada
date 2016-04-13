@@ -675,12 +675,8 @@ tr + tr {
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
-  .sidebar.show {
-    -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-    box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-    top: 5px;
-    right: 3px;
-    width: 60%;
+  .sidebar {
+    width: 100%;
   }
   .share-links {
     width: 80%;
@@ -768,14 +764,21 @@ h2.widget-title {
   padding: 0.1rem 0.3rem;
   text-align: center;
 }
-/* bottun */
-.show-menu,
-.show {
+.on-top {
   position: absolute;
+  -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+  top: 5px;
+  right: 3px;
+  width: 60%;
 }
+/* button */
 .button {
   font-size: 2.4rem;
   background: none;
+}
+.show-menu,
+.show-menu:visited {
   color: #fff;
 }
 .show-menu {
@@ -796,8 +799,11 @@ h2.widget-title {
   width: 100%;
   text-align: right;
 }
-.show-button {
+.show {
   display: block;
+}
+.hide {
+  display: none;
 }
 .comment-author .avatar {
   -webkit-border-radius: 50%;

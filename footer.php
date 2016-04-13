@@ -24,15 +24,18 @@ var showMenuBtn = document.getElementById('menu-button');
 var sideBar = document.getElementById('side-menu');
 
 function showMenu(){
-	sideBar.classList.add('show');
-	hideMenuBtn.classList.add('show-button');
+	sideBar.classList.add('on-top');
+	hideMenuBtn.classList.add('show');
+	showMenuBtn.classList.add('hide');
 	hideMenuBtn.addEventListener('click',hideMenu);
 	document.querySelector('div .articles').addEventListener('click',hideMenu);
 }
 
 function hideMenu(){
-	hideMenuBtn.classList.remove('show-button');
-	sideBar.classList.remove('show');
+	hideMenuBtn.classList.remove('show');
+	showMenuBtn.classList.remove('hide');
+	showMenuBtn.classList.add('show');
+	sideBar.classList.remove('on-top');
 }
 
 showMenuBtn.addEventListener('click',showMenu);
