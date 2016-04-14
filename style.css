@@ -698,10 +698,16 @@ tr + tr {
   a.link-top:hover {
     color: #fff;
   }
+  h1.entry-title.single,
   h2.page-title {
-    padding: 1rem 0.5rem;
     margin: initial;
     font-size: 1.62rem;
+  }
+  h1.entry-title.single {
+    padding: 1rem 0;
+  }
+  h2.page-title {
+    padding: 1rem 0.5rem;
   }
   .entry-date {
     margin-right: 1rem;
@@ -835,9 +841,6 @@ input[name="email"],
 input[name="url"],
 textarea[name="comment"] {
   width: 100%;
-}
-.comment-form {
-  width: 90%;
 }
 .comment-reply-link:link,
 .comment-reply-link:visited,
