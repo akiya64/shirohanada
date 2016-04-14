@@ -509,7 +509,7 @@ blockquote {
 }
 /* Text Align */
 .page-content-footer {
-  align: right;
+  text-align: right;
 }
 /*  Typograghy  */
 h1,
