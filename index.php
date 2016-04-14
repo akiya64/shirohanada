@@ -1,16 +1,5 @@
 <?php get_header(); ?>
 
-<a id="menu-button" class="button show-menu" href="#side-menu">
-	<i class="icon icon-list"></i>
-</a>
-	
-<header class="site-header entries" role="banner">
-
-<p class="site-description"><?php bloginfo('description') ; ?></p>
-
-	<h1 class="site-name"><a href="<?php bloginfo('url'); ?>" class="link-top"><?php bloginfo('name') ; ?></a></h1>
-</header>
-
 <div class="main-contents">
 
 <div class="articles">
