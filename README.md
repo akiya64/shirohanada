@@ -1,7 +1,7 @@
 # shirohanada
 
-[![Build Status](https://travis-ci.org/akiya64/shirohanada.svg?branch=master)](https://travis-ci.org/akiya64/shirohanada)
+[![Build Status](https://travis-ci.org/akiya64/shirohanada.svg?branch=master?style=flat-square)](https://travis-ci.org/akiya64/shirohanada)
 
-”’ã|i‚µ‚ë‚Í‚È‚¾j‚Æ‚¢‚¤“ú–{ŒÃ—ˆ‚ÌÂF‚Æ”’‚ğŠî’²‚É‚µ‚½ƒe[ƒ}‚Å‚·B
+ç™½ç¸¹ï¼ˆã—ã‚ã¯ãªã ï¼‰ã¨ã„ã†æ—¥æœ¬å¤æ¥ã®é’è‰²ã¨ç™½ã‚’åŸºèª¿ã«ã—ãŸãƒ†ãƒ¼ãƒã§ã™ã€‚
 
-- ƒuƒƒO: **[Autumnsky] (http://autumnsky.sakura.ne.jp "Autumnsky")**
+- ãƒ–ãƒ­ã‚°: **[Autumnsky] (http://autumnsky.sakura.ne.jp "Autumnsky")**
