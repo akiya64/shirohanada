@@ -343,15 +343,12 @@ article img {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* align right share bottun */
-.share-links {
-  margin-left: 60%;
-}
 .wp-caption {
   max-width: 100%;
 }
+.c-button-gotop,
 .share-links {
-  width: 95%;
+  width: 50%;
 }
 /* post-date and post-category looks 1row */
 .entry-header > p,
@@ -453,9 +450,18 @@ h3.comments-header,
 h3.comment-reply-title {
   padding-left: 0;
 }
+/* -contet WordPress Posted content from WordPress */
+.page-content > *:first-child,
+.entry-content > *:first-child {
+  margin-top: 0;
+}
 .comments,
 li + li {
   margin-top: 0.6rem;
+}
+.c-button-gotop,
+.share-links {
+  margin-top: 1rem;
 }
 .icon {
   margin-right: 0.4rem;
@@ -474,26 +480,24 @@ section,
 .entry-title {
   margin-bottom: 0.6rem;
 }
-.entry-header p {
-  margin-bottom: 0.3rem;
-}
 .entry-content p,
 .page-content p {
   margin: 0.75rem 0;
 }
-article ul,
-article ol,
-article dl {
+.entry-content ul,
+.page-content ul,
+.entry-content ol,
+.page-content ol,
+.entry-content dl,
+.page-content dl {
   margin: 1rem;
 }
-article ul {
+.entry-content ul,
+.page-content ul {
   list-style-type: square;
 }
 .site-footer {
   margin: 0.5rem 1rem;
-}
-.share-links {
-  padding-top: 1rem;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -503,9 +507,8 @@ blockquote {
   padding: 0.2rem 0.75rem;
   overflow-wrap: break-word;
 }
-.page-content > *:first-child,
-.entry-content > *:first-child {
-  margin-top: 0;
+.c-button-gotop {
+  padding-left: 0.5rem;
 }
 /* Text Align */
 .page-content-footer {
@@ -535,8 +538,16 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
+/* eject icon use as goto top button */
+.icon-eject {
+  font-size: 1.4rem;
+  vertical-align: -0.5rem;
+}
 /* Color
  * ShiroHanada #a3d8f6 */
+a:visited {
+  color: #800000;
+}
 .site-name,
 a.share-button,
 a.link-top:link,
@@ -545,6 +556,8 @@ a.link-top:hover {
   color: #a3d8f6;
 }
 a,
+a.gotop,
+a.gotop:visited,
 .entry-title {
   color: #257bcc;
 }
@@ -599,14 +612,12 @@ a[href*=".tumblr.com"] > i {
   color: #35465c;
 }
 /* Text Decolation */
-a:visited {
-  color: #800000;
-}
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
 .site-name,
+a.gotop,
 a.share-button,
 a.link-top:link,
 a.link-top:visited,

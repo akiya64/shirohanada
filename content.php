@@ -30,6 +30,10 @@
 			<?php the_content(); ?>
 		</div><!--end entry-content-->
 
+		<div class="c-button-gotop">
+			<a href="#top" class="gotop" title="Rturn Page Top"><i class="icon icon-eject"></i></a>
+		</div>
+		
 		<div class="share-links">
 			<?php $encoded_url = urlencode(get_permalink());
 			  $share_text = get_the_title(); ?>

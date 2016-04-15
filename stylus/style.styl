@@ -54,15 +54,12 @@ article img
         display flex
         justify-content space-around
 
-/* align right share bottun */
-.share-links
-        margin-left 60%
-
 .wp-caption
         max-width 100%
 
+.c-button-gotop
 .share-links
-        width 95%
+        width 50%
 
 
 /* post-date and post-category looks 1row */
@@ -133,6 +130,7 @@ h1,h2,h3,h4,h5,h6
                 display none
 
 /*  Margin Padding */
+
 /* Over write h tags */
 h1.site-name
         margin 0
@@ -151,9 +149,19 @@ h3.comments-header
 h3.comment-reply-title
         padding-left 0
 
+/* -contet WordPress Posted content from WordPress */
+.page-content
+.entry-content
+        > *:first-child
+                margin-top 0
+
 .comments
 li + li
         margin-top .6rem
+
+.c-button-gotop
+.share-links
+        margin-top 1rem
 
 .icon
         margin-right .4rem
@@ -172,28 +180,25 @@ section
 .entry-title
         margin-bottom .6rem
 
-.entry-header p
-        margin-bottom .3rem
-
 .entry-content
 .page-content
         p
                 margin .75rem 0
 
-article
+.entry-content
+.page-content
         ul
         ol
         dl
                 margin 1rem
 
-article ul
-        list-style-type square
+.entry-content
+.page-content
+        ul
+               list-style-type square
 
 .site-footer
         margin 0.5rem 1rem
-
-.share-links
-        padding-top 1rem
 
 .sidebar
         padding 0 1rem .8rem
@@ -202,11 +207,8 @@ blockquote
         margin .8rem 0
         padding .2rem .75rem
         overflow-wrap break-word
-
-.page-content
-.entry-content
-        > *:first-child
-                margin-top 0
+.c-button-gotop
+        padding-left .5rem
 
 /* Text Align */
 .page-content-footer
@@ -223,15 +225,24 @@ h1,h2,h3,h4,h5,h6
 .page-title
         font-size 2.4rem
 
-.contents-link-title,.entry-title
+.contents-link-title
+.entry-title
 .widget-title
 .share-links
 .comment-reply-title
 .comments-header
         font-size 1.62rem
 
+/* eject icon use as goto top button */
+.icon-eject
+        font-size 1.4rem
+        vertical-align -0.5rem
+
 /* Color
  * ShiroHanada #a3d8f6 */
+a:visited
+        color maroon
+
 .site-name
 a.share-button
 a.link-top:link
@@ -240,6 +251,8 @@ a.link-top:hover
         color shirohanada
 
 a
+a.gotop
+a.gotop:visited
 .entry-title
         color bright-h
 
@@ -263,14 +276,12 @@ article
 @import "_icon-color"
 
 /* Text Decolation */
-a:visited
-        color maroon
-
 a:hover
         text-decoration underline
         text-decoration-style dashed
 
 .site-name
+a.gotop
 a.share-button
 a.link-top:link
 a.link-top:visited
