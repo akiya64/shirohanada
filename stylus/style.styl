@@ -59,7 +59,7 @@ article img
 
 .c-button-gotop
 .share-links
-        width 50%
+        width 38%
 
 
 /* post-date and post-category looks 1row */
@@ -76,6 +76,11 @@ h1,h2,h3,h4,h5,h6
         padding-left .75rem
         border-left solid 3px nakano-h
         clear both
+
+.main-contents
+article
+        display flex
+        flex-wrap wrap
 
 /* Layout for Large Display ; looks 2 column in Article */
 @media (min-width:breakpoint)
@@ -95,8 +100,6 @@ h1,h2,h3,h4,h5,h6
 
         .main-contents
         article
-                display flex
-                flex-wrap wrap
                 padding .5rem 1rem 1rem
 
         .main-contents
@@ -149,7 +152,7 @@ h3.comments-header
 h3.comment-reply-title
         padding-left 0
 
-/* -contet WordPress Posted content from WordPress */
+/* -contet class is content body posted from WordPress */
 .page-content
 .entry-content
         > *:first-child
@@ -207,8 +210,6 @@ blockquote
         margin .8rem 0
         padding .2rem .75rem
         overflow-wrap break-word
-.c-button-gotop
-        padding-left .5rem
 
 /* Text Align */
 .page-content-footer
@@ -235,8 +236,8 @@ h1,h2,h3,h4,h5,h6
 
 /* eject icon use as goto top button */
 .icon-eject
-        font-size 1.4rem
-        vertical-align -0.5rem
+        font-size 1.5rem
+        vertical-align -0.4rem
 
 /* Color
  * ShiroHanada #a3d8f6 */
@@ -349,22 +350,26 @@ tr + tr
 .wp-caption > p
         padding-top .3rem
 
-
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
+        .articles
         .sidebar
+        .entry-title
+        .entry-header
+        .entry-content
                 width 100%
 
+        .c-button-gotop
+                width 23%
+                margin initial
+                margin-left 1rem
+
         .share-links
-                width 80%
-                margin-left auto
-                margin-right auto
+                width 72%
+                margin initial
 
         .site-name
                 font-size 2.8rem
-
-        .entry-content
-                font-size initial
 
         /* Header is white logo above "shirohanada" */
         .site-header .site-name
@@ -401,6 +406,9 @@ tr + tr
 
         article
                 padding 0 .5rem 1rem
+
+        .entry-content
+                padding-bottom .75rem
 
         article + article
                 padding-top 1rem

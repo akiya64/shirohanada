@@ -30,8 +30,9 @@
 			<?php the_content(); ?>
 		</div><!--end entry-content-->
 
+		<div class="entry-margin"></div>
 		<div class="c-button-gotop">
-			<a href="#top" class="gotop" title="Rturn Page Top"><i class="icon icon-eject"></i></a>
+			<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
 		</div>
 		
 		<div class="share-links">
