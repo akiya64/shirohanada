@@ -22,6 +22,7 @@
 			posts_nav_link(' - ',$next,$pre);
 		?>
 	</p></div>
+	<nav class="move-date">
 		<?php if(is_month()){
 			//Previous - Next Month Nav
 			$before_post_month = strtotime(get_the_time('Y-m')." -1 month");
@@ -63,9 +64,9 @@
 			echo '<a href="'.$after_day_link.'" class="next-day">'.date('Y.m.d', $after_post_day).'<i class="icon icon-angle-right"></i></a>';
 
 		}else{
-			echo '<p>page not found</p>';
+			echo '<a href="'.get_month_link('', '').'">Recent Posts</a>';
 		} ?>
-
+	</nav>
 </div><!--end articles-->
 
 <?php get_sidebar(); ?>

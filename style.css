@@ -472,6 +472,9 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
+.move-date a:first-child {
+  margin-right: 1.5rem;
+}
 .site-description {
   margin-right: 0.5rem;
 }
@@ -514,6 +517,9 @@ blockquote {
 .page-content-footer {
   text-align: right;
 }
+.move-date {
+  text-align: center;
+}
 /*  Typograghy  */
 h1,
 h2,
@@ -522,7 +528,8 @@ h4,
 h5,
 h6,
 .site-description,
-.root-contents {
+.root-contents,
+.move-date {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
@@ -538,10 +545,18 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
+.move-date {
+  font-size: 1.2rem;
+}
 /* eject icon use as goto top button */
 .icon-eject {
   font-size: 1.5rem;
   vertical-align: -0.4rem;
+}
+.move-date a > i {
+  font-size: 1.7rem;
+  vertical-align: -0.12rem;
+  margin: 0 0.5rem;
 }
 /* Color
  * ShiroHanada #a3d8f6 */
