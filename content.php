@@ -30,6 +30,11 @@
 			<?php the_content(); ?>
 		</div><!--end entry-content-->
 
+		<div class="entry-margin"></div>
+		<div class="c-button-gotop">
+			<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
+		</div>
+		
 		<div class="share-links">
 			<?php $encoded_url = urlencode(get_permalink());
 			  $share_text = get_the_title(); ?>
@@ -45,7 +50,7 @@
 			<div class="comments">
 				<?php comments_template();?>
 			</div>
-		<?php endif ?>
+		<?php endif; ?>
 
 	</article>
 

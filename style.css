@@ -343,15 +343,12 @@ article img {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* align right share bottun */
-.share-links {
-  margin-left: 60%;
-}
 .wp-caption {
   max-width: 100%;
 }
+.c-button-gotop,
 .share-links {
-  width: 95%;
+  width: 38%;
 }
 /* post-date and post-category looks 1row */
 .entry-header > p,
@@ -373,6 +370,21 @@ h6 {
   border-left: solid 3px #436fb4;
   clear: both;
 }
+.main-contents,
+article {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 /* Layout for Large Display ; looks 2 column in Article */
 @media (min-width: 768px) {
   .entries h1,
@@ -390,18 +402,6 @@ h6 {
   }
   .main-contents,
   article {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -o-box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     padding: 0.5rem 1rem 1rem;
   }
   .main-contents {
@@ -453,15 +453,27 @@ h3.comments-header,
 h3.comment-reply-title {
   padding-left: 0;
 }
+/* -contet class is content body posted from WordPress */
+.page-content > *:first-child,
+.entry-content > *:first-child {
+  margin-top: 0;
+}
 .comments,
 li + li {
   margin-top: 0.6rem;
+}
+.c-button-gotop,
+.share-links {
+  margin-top: 1rem;
 }
 .icon {
   margin-right: 0.4rem;
 }
 .icon-angle-right {
   margin-left: 0.4rem;
+}
+.move-date a:first-child {
+  margin-right: 1.5rem;
 }
 .site-description {
   margin-right: 0.5rem;
@@ -474,26 +486,24 @@ section,
 .entry-title {
   margin-bottom: 0.6rem;
 }
-.entry-header p {
-  margin-bottom: 0.3rem;
-}
 .entry-content p,
 .page-content p {
   margin: 0.75rem 0;
 }
-article ul,
-article ol,
-article dl {
+.entry-content ul,
+.page-content ul,
+.entry-content ol,
+.page-content ol,
+.entry-content dl,
+.page-content dl {
   margin: 1rem;
 }
-article ul {
+.entry-content ul,
+.page-content ul {
   list-style-type: square;
 }
 .site-footer {
   margin: 0.5rem 1rem;
-}
-.share-links {
-  padding-top: 1rem;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -503,13 +513,12 @@ blockquote {
   padding: 0.2rem 0.75rem;
   overflow-wrap: break-word;
 }
-.page-content > *:first-child,
-.entry-content > *:first-child {
-  margin-top: 0;
-}
 /* Text Align */
 .page-content-footer {
-  align: right;
+  text-align: right;
+}
+.move-date {
+  text-align: center;
 }
 /*  Typograghy  */
 h1,
@@ -519,7 +528,8 @@ h4,
 h5,
 h6,
 .site-description,
-.root-contents {
+.root-contents,
+.move-date {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
@@ -535,8 +545,24 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
+.move-date {
+  font-size: 1.2rem;
+}
+/* eject icon use as goto top button */
+.icon-eject {
+  font-size: 1.5rem;
+  vertical-align: -0.4rem;
+}
+.move-date a > i {
+  font-size: 1.7rem;
+  vertical-align: -0.12rem;
+  margin: 0 0.5rem;
+}
 /* Color
  * ShiroHanada #a3d8f6 */
+a:visited {
+  color: #800000;
+}
 .site-name,
 a.share-button,
 a.link-top:link,
@@ -545,6 +571,8 @@ a.link-top:hover {
   color: #a3d8f6;
 }
 a,
+a.gotop,
+a.gotop:visited,
 .entry-title {
   color: #257bcc;
 }
@@ -599,14 +627,12 @@ a[href*=".tumblr.com"] > i {
   color: #35465c;
 }
 /* Text Decolation */
-a:visited {
-  color: #800000;
-}
 a:hover {
   text-decoration: underline;
   text-decoration-style: dashed;
 }
 .site-name,
+a.gotop,
 a.share-button,
 a.link-top:link,
 a.link-top:visited,
@@ -675,19 +701,24 @@ tr + tr {
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
-  .sidebar {
+  .articles,
+  .sidebar,
+  .entry-title,
+  .entry-header,
+  .entry-content {
     width: 100%;
   }
+  .c-button-gotop {
+    width: 23%;
+    margin: initial;
+    margin-left: 1rem;
+  }
   .share-links {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 72%;
+    margin: initial;
   }
   .site-name {
     font-size: 2.8rem;
-  }
-  .entry-content {
-    font-size: initial;
   }
   .site-header .site-name {
     text-align: center;
@@ -722,6 +753,9 @@ tr + tr {
   }
   article {
     padding: 0 0.5rem 1rem;
+  }
+  .entry-content {
+    padding-bottom: 0.75rem;
   }
   article + article {
     padding-top: 1rem;
