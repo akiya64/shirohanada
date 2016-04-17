@@ -46,4 +46,20 @@ remove_action('wp_head', 'wlwmanifest_link');
 remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 
+/**
+ * get oldest post date for copy right
+ * ref http://nelog.jp/copyrights
+ **/
+function get_first_post_year(){
+	$year = null;
+
+	query_posts('posts_per_page=1&order=ASC');
+  
+	if ( have_posts() ) : while ( have_posts() ) : the_post();
+		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ðŽæ“¾
+	endwhile; endif;
+	wp_reset_query();
+	return $year;
+}
+
 ?>

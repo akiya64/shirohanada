@@ -6,10 +6,9 @@
 ?>
 
 <footer class="<?php echo $footer_class; ?>">
-
-	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a></p>
+	<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
+	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, </p>
 	<p>Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
-	<p>c 2015 <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a>.</p>
 </footer>
 
 <?php if (is_front_page()): ?>
