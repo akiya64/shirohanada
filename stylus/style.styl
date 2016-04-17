@@ -64,7 +64,6 @@ article img
 
 /* post-date and post-category looks 1row */
 .entry-header > p
-.site-footer > p
         display inline
 
 /* apply style for h tag once for POST and Page
@@ -88,11 +87,14 @@ article
         /* site-name and site-description looks 1row */
         .entries
                 h1,p
-                        display inline 
+                        display inline
+
         .site-header
+        .site-footer
                 padding-right 5%
 
         .site-header
+        .site-footer
                 text-align right
 
         .site-name
@@ -128,6 +130,9 @@ article
         .comments
                 min-width 560px
 
+        .site-footer p:nth-child(n + 2)
+                display inline
+
         /* show only less 768px */
         #menu-button
                 display none
@@ -161,6 +166,9 @@ h3.comment-reply-title
 .comments
 li + li
         margin-top .6rem
+
+li + li
+        border solid 1p hai
 
 .c-button-gotop
 .share-links
@@ -204,7 +212,7 @@ section
                list-style-type square
 
 .site-footer
-        margin 0.5rem 1rem
+        margin 0.5rem 1.5rem
 
 .sidebar
         padding 0 1rem .8rem
@@ -218,14 +226,14 @@ blockquote
 .page-content-footer
         text-align right
 
-.move-date
+.move-posts
         text-align center
 
 /*  Typograghy  */
 h1,h2,h3,h4,h5,h6
 .site-description
 .root-contents
-.move-date
+.move-posts
         font-family 'Ubuntu' , sans-serif
         font-weight normal
 
@@ -241,15 +249,15 @@ h1,h2,h3,h4,h5,h6
 .comments-header
         font-size 1.62rem
 
-.move-date
+.move-posts
         font-size 1.2rem
 
 /* eject icon use as goto top button */
 .icon-eject
         font-size 1.5rem
-        vertical-align -0.4rem
+        vertical-align -0.42rem
 
-.move-date a > i
+.move-posts a > i
         font-size 1.7rem
         vertical-align -0.12rem
         margin 0 .5rem
@@ -294,7 +302,7 @@ article
 /* Text Decolation */
 a:hover
         text-decoration underline
-        text-decoration-style dashed
+        text-decoration-style dotted
 
 .site-name
 a.gotop
@@ -436,6 +444,8 @@ tr + tr
         .articles
                 margin-bottom 1rem
 
+        .site-footer
+                text-align center
 /* End Main Section */
 
 /* Parts Section */
@@ -458,8 +468,8 @@ h2.widget-title
                 list-style-type none
 
         li + li
-                padding-top .4rem
-                margin-top .4rem
+                padding-top .5rem
+                margin-top .2rem
                 border-top solid 1px hai
 
         #wp-calendar
@@ -489,7 +499,7 @@ h2.widget-title
         color white
 
 .show-menu
-        bottom 0.75rem
+        bottom 1rem
         padding .4rem .7rem 0 .7rem
         position fixed
         background-color shirohanada

@@ -351,8 +351,7 @@ article img {
   width: 38%;
 }
 /* post-date and post-category looks 1row */
-.entry-header > p,
-.site-footer > p {
+.entry-header > p {
   display: inline;
 }
 /* apply style for h tag once for POST and Page
@@ -391,10 +390,12 @@ article {
   .entries p {
     display: inline;
   }
-  .site-header {
+  .site-header,
+  .site-footer {
     padding-right: 5%;
   }
-  .site-header {
+  .site-header,
+  .site-footer {
     text-align: right;
   }
   .site-name {
@@ -430,6 +431,9 @@ article {
   .comments {
     min-width: 560px;
   }
+  .site-footer p:nth-child(n + 2) {
+    display: inline;
+  }
   #menu-button {
     display: none;
   }
@@ -461,6 +465,9 @@ h3.comment-reply-title {
 .comments,
 li + li {
   margin-top: 0.6rem;
+}
+li + li {
+  border: solid 1p #777;
 }
 .c-button-gotop,
 .share-links {
@@ -503,7 +510,7 @@ section,
   list-style-type: square;
 }
 .site-footer {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 1.5rem;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -517,7 +524,7 @@ blockquote {
 .page-content-footer {
   text-align: right;
 }
-.move-date {
+.move-posts {
   text-align: center;
 }
 /*  Typograghy  */
@@ -529,7 +536,7 @@ h5,
 h6,
 .site-description,
 .root-contents,
-.move-date {
+.move-posts {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
@@ -545,15 +552,15 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
-.move-date {
+.move-posts {
   font-size: 1.2rem;
 }
 /* eject icon use as goto top button */
 .icon-eject {
   font-size: 1.5rem;
-  vertical-align: -0.4rem;
+  vertical-align: -0.42rem;
 }
-.move-date a > i {
+.move-posts a > i {
   font-size: 1.7rem;
   vertical-align: -0.12rem;
   margin: 0 0.5rem;
@@ -629,7 +636,7 @@ a[href*=".tumblr.com"] > i {
 /* Text Decolation */
 a:hover {
   text-decoration: underline;
-  text-decoration-style: dashed;
+  text-decoration-style: dotted;
 }
 .site-name,
 a.gotop,
@@ -768,6 +775,9 @@ tr + tr {
   .articles {
     margin-bottom: 1rem;
   }
+  .site-footer {
+    text-align: center;
+  }
 }
 /* End Main Section */
 /* Parts Section */
@@ -789,8 +799,8 @@ h2.widget-title {
   list-style-type: none;
 }
 .sidebar li + li {
-  padding-top: 0.4rem;
-  margin-top: 0.4rem;
+  padding-top: 0.5rem;
+  margin-top: 0.2rem;
   border-top: solid 1px #777;
 }
 .sidebar #wp-calendar {
@@ -822,7 +832,7 @@ h2.widget-title {
   color: #fff;
 }
 .show-menu {
-  bottom: 0.75rem;
+  bottom: 1rem;
   padding: 0.4rem 0.7rem 0 0.7rem;
   position: fixed;
   background-color: #a3d8f6;
@@ -929,6 +939,10 @@ input.search-field {
 li.comment + li.comment {
   margin-top: 1rem;
 }
+li.comment + li.comment {
+  border-top: solid 1px #777;
+  padding-top: 1rem;
+}
 textarea,
 input,
 .comment-reply-link {
@@ -993,16 +1007,11 @@ textarea[name="comment"] {
 }
 .front.widget-area ul {
   margin-left: 1rem;
-  font-size: 0.8rem;
-}
-.front.widget-area li + li {
-  margin-top: 0.2rem;
-  border: none;
 }
 .top-page-footer {
   margin-top: 1rem;
   padding-left: 1rem;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 h2.contents-link-title {
   margin: 0 0 0.3rem 0;
@@ -1099,7 +1108,6 @@ h2.contents-link-title {
 }
 .widget_twitter li + li {
   border: none;
-  margin-top: 0.2rem;
 }
 .widget_twitter .twitter-avatar img {
   -webkit-border-radius: 6px;
