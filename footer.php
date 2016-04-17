@@ -6,8 +6,8 @@
 ?>
 
 <footer class="<?php echo $footer_class; ?>">
-	<p>c 2015 <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a><br>
-	Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>,Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
+	<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a><br>
+	Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
 </footer>
 
 <?php if (is_front_page()): ?>
