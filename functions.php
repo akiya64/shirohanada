@@ -31,10 +31,12 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  * CustomMenu for Front Page
  *
  */
-function top_menu() {
-  register_nav_menu('top-menu',__( 'Contents Link' ));
+
+function register_root_menu(){
+	register_nav_menu( 'root-menu','Front Page Menu' );
 }
-add_action( 'init', 'top_menu' );
+
+add_action( 'after_setup_theme', 'register_root_menu' );
 
 /**
  * remove header

@@ -14,18 +14,7 @@
 		<h2 class="contents-link-title">Contents</h2>
 
 		<nav class="root-contents" role="menu">
-			<ul class="content-link">
-				<!--Nav height is 7.6em / 2column
-					Contents List first child is "About" if is exist -->
-				<li><a href="<?php echo get_page_link($page->ID); ?>">About</a></li>
-				
-				<!--Put Category List first 4 -->
-				<?php wp_list_categories($catlist_args); ?>
-
-				<!--List Lastchild is Archive-->
-				<li><a href="<?php echo get_month_link('', ''); ?>">Archive</a></li>
-
-			</ul>
+			<?php wp_nav_menu( array( 'theme_location' => 'root-menu' , 'container' => '' ) ); ?>
 		</nav>
 
 		<?php if ( is_active_sidebar( 'front-widgets' ) ) : ?>
