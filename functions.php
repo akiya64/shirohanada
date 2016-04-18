@@ -3,7 +3,7 @@
  * Register our sidebars and widgetized areas.
  *
  */
-function arphabet_widgets_init() {
+function shirohanada_widgets_init() {
 
 	register_sidebar( array(
 		'name' => 'Front Page Widget',
@@ -25,7 +25,7 @@ function arphabet_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'arphabet_widgets_init' );
+add_action( 'widgets_init', 'shirohanada_widgets_init' );
 
 /**
  * CustomMenu for Front Page
