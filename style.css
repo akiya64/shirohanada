@@ -1018,17 +1018,17 @@ h2.contents-link-title {
   padding-left: 0;
   border-left: 0;
 }
-.content-link > li {
+.menu-item {
   color: #257bcc !important;
   display: block;
   padding: 0.2rem 1rem;
   border-left: solid 3px #fff;
 }
-.content-link > li:hover {
+.menu-item:hover {
   border-left: solid 3px #257bcc;
 }
-.content-link > li > a:hover {
-  text-decoration: none !important;
+.menu-item a:hover {
+  text-decoration: none;
 }
 .top-page-footer {
   color: #777;
