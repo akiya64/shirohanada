@@ -19,6 +19,7 @@ git checkout -b pre-release remotes/origin/master
 
 git rm -rf stylus
 git rm -rf bin
+git rm -f .gitignore
 git rm -f .travis.yml
 git rm -f README.md
 git rm -f gulpfile.js

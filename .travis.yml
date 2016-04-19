@@ -10,7 +10,7 @@ script:
   # Search for PHP syntax errors.
   - find . \( -name '*.php' \) -exec php -lf {} \;
 
-after_success: bash ./bin/deploy.sh
+after_success: bash ./bin/make-release.sh
 
 env:
   global:
