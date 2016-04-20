@@ -684,6 +684,9 @@ tr + tr {
   list-style-type: none;
   margin-left: 0;
 }
+.width-half {
+  width: 50%;
+}
 .point {
   border-left: solid 3px #a3d8f6;
   padding: 0.5rem 0 0.5rem 1rem;
