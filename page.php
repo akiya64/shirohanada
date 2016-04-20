@@ -21,7 +21,11 @@ while ( have_posts() ) : the_post(); ?>
 	<p class="page-content-footer"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></p>
 	<p class="page-content-footer">Author:<?php the_author();?></p>
 
-	<div class="share-links">
+	<div class="c-button-gotop width-half">
+		<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
+	</div>
+
+	<div class="share-links width-half">
 			<?php $encoded_url = urlencode(get_permalink());
 			  $share_text = get_the_title(); ?>
 			<a class="share-button" href="<?php the_permalink(); ?>" title="この投稿にコメントする。"><i class="icon icon-comment"></i></a>

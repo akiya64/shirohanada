@@ -479,7 +479,8 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.move-date a:first-child {
+.move-month a:first-child,
+.move-day a:first-child {
   margin-right: 1.5rem;
 }
 .site-description {
@@ -682,6 +683,9 @@ tr + tr {
 .no-marker {
   list-style-type: none;
   margin-left: 0;
+}
+.width-half {
+  width: 50%;
 }
 .point {
   border-left: solid 3px #a3d8f6;
