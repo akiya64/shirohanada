@@ -5,14 +5,16 @@
 		}
 ?>
 
-<footer class="<?php echo $footer_class; ?>">
-	<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
-	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, </p>
-	<p>Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
-</footer>
+	<footer class="<?php echo $footer_class; ?>">
+		<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
+		<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, </p>
+		<p>Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
+	</footer>
 
 <?php if (is_front_page()): ?>
-	</div><!--End DropDownPart--!>
+	</div><!--End DropDownPart-->
+
+</div><!--End Top Flex Container-->
 <?php else: ?>
 
 <script type="text/javascript">
@@ -42,8 +44,6 @@ showMenuBtn.addEventListener('click',showMenu);
 </script>
 
 <?php endif ?>
-
-</div><!--End contents container-->
 
 <?php wp_footer(); ?>
 
