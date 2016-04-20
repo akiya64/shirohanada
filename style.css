@@ -479,7 +479,8 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.move-date a:first-child {
+.move-month a:first-child,
+.move-day a:first-child {
   margin-right: 1.5rem;
 }
 .site-description {
