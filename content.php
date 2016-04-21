@@ -8,10 +8,6 @@
  */
 ?>
 
-	<?php
-	// Start the loop.:
-	while ( have_posts() ) : the_post(); ?>
-
 	<article id="<?php the_ID(); ?>">
 
 		<?php if(is_single()): ?>
@@ -44,14 +40,14 @@
 			<a class="share-button" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" title="+1 GooglePlus"><i class="icon icon-share-google-plus"></i></a>
 			<a class="share-button" href="https://getpocket.com/edit?url=<?php the_permalink(); ?>" title="Get Pocket"><i class="icon icon-get-pocket"></i></a>
 		</div>
-
-		<?php if(is_single()): ?>
-			<div class="entry-margin"></div>
-			<div class="comments">
-				<?php comments_template();?>
-			</div>
-		<?php endif; ?>
+	
+	<?php if(is_single()): ?>
+		<div class="entry-margin"></div>
+		<div class="comments">
+			<?php comments_template();?>
+		</div>
+	<?php endif; ?>
 
 	</article>
 
-	<?php endwhile; ?>
+

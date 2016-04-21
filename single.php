@@ -4,12 +4,18 @@
 
 <div class="articles">
 
-	<?php get_template_part( 'content' ); ?>
+	<?php
+		// Start the loop.:
+		while ( have_posts() ) : the_post(); ?>
+	
+		<?php get_template_part( 'content' ); ?>
 
-	<div class="paging">
+	<?php endwhile; ?>
+
+	<nav class="move-post">
 		<p><?php previous_post_link('Next:%link'); ?></p>
 		<p><?php next_post_link('Previous:%link'); ?></p>
-	</div>
+	</nav>
 
 </div><!--end articles-->
 

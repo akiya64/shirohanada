@@ -13,9 +13,15 @@
 		?>
 	</h2>
 
+	<?php
+		// Start the loop.:
+		while ( have_posts() ) : the_post(); ?>
+
 	<?php get_template_part( 'content' ); ?>
 
-	<nav class="move-posts">
+	<?php endwhile; ?>
+
+	<nav class="text-centering">
 		<p>
 
 		<?php
