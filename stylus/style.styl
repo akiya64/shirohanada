@@ -81,7 +81,11 @@ article
         display flex
         flex-wrap wrap
 
-/* Layout for Large Display ; looks 2 column in Article */
+/* pubdate and header column is nothing in 404.php article */
+.page-notfound
+        display block
+
+/* LayLarge Display ; looks 2 column in Article */
 @media (min-width:breakpoint)
 
         /* site-name and site-description looks 1row */
@@ -160,6 +164,7 @@ h3.comment-reply-title
 /* -contet class is content body posted from WordPress */
 .page-content
 .entry-content
+.page-notfound
         > *:first-child
                 margin-top 0
 
@@ -352,6 +357,9 @@ tr + tr
 .no-marker
         list-style-type none
         margin-left 0
+
+.margin-left_2rem
+        margin-left 2rem
 
 .width-half
         width 50%
