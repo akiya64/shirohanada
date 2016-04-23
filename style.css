@@ -384,7 +384,11 @@ article {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* Layout for Large Display ; looks 2 column in Article */
+/* pubdate and header column is nothing in 404.php article */
+.page-notfound {
+  display: block;
+}
+/* LayLarge Display ; looks 2 column in Article */
 @media (min-width: 768px) {
   .entries h1,
   .entries p {
@@ -459,7 +463,8 @@ h3.comment-reply-title {
 }
 /* -contet class is content body posted from WordPress */
 .page-content > *:first-child,
-.entry-content > *:first-child {
+.entry-content > *:first-child,
+.page-notfound > *:first-child {
   margin-top: 0;
 }
 .comments,
@@ -479,8 +484,10 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.move-month a:first-child,
-.move-day a:first-child {
+.page-numbers + .page-numbers {
+  margin-left: 0.5rem;
+}
+.move-posts a:first-child {
   margin-right: 1.5rem;
 }
 .site-description {
@@ -488,6 +495,9 @@ li + li {
 }
 article {
   margin-bottom: 1rem;
+}
+.move-posts {
+  margin-top: 0.5rem;
 }
 section,
 .entry-header,
@@ -538,7 +548,8 @@ h5,
 h6,
 .site-description,
 .root-contents,
-.move-posts {
+.move-posts,
+.pagenation {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
@@ -554,17 +565,19 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
+.pagenation,
 .move-posts {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 /* eject icon use as goto top button */
 .icon-eject {
   font-size: 1.5rem;
-  vertical-align: -0.42rem;
+  margin-left: 0.25rem;
+  vertical-align: -0.475rem;
 }
 .move-posts a > i {
   font-size: 1.7rem;
-  vertical-align: -0.12rem;
+  vertical-align: -0.1rem;
   margin: 0 0.5rem;
 }
 /* Color
@@ -587,7 +600,8 @@ a.gotop:visited,
 }
 .contents-link-title,
 .page-title,
-.widget-title {
+.widget-title,
+.pagenation {
   color: #436fb4;
 }
 .entry-header i,
@@ -599,7 +613,8 @@ a.gotop:visited,
 .sidebar,
 .page-content,
 .page-title,
-article {
+article,
+nav {
   background-color: #f8fafa;
 }
 a[href^="https://github.com/"] > i {
@@ -637,8 +652,7 @@ a[href*=".tumblr.com"] > i {
 }
 /* Text Decolation */
 a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration: underline dotted;
 }
 .site-name,
 a.gotop,
@@ -648,6 +662,9 @@ a.link-top:visited,
 a.link-top:hover,
 a.button:hover {
   text-decoration: none;
+}
+.page-numbers.current {
+  text-decoration: underline solid;
 }
 /* Border */
 blockquote {
@@ -684,6 +701,9 @@ tr + tr {
 .no-marker {
   list-style-type: none;
   margin-left: 0;
+}
+.margin-left_2rem {
+  margin-left: 2rem;
 }
 .width-half {
   width: 50%;
@@ -1002,8 +1022,8 @@ textarea[name="comment"] {
 .top-page-header {
   text-align: right;
 }
-.front.widget-area ul {
-  max-height: 11rem;
+.front.widget-area h2 ~ * {
+  max-height: 10rem;
   overflow: auto;
 }
 .front.widget-area ul {
@@ -1020,7 +1040,7 @@ h2.contents-link-title {
   border-left: 0;
 }
 .menu-item {
-  color: #257bcc !important;
+  color: #257bcc;
   display: block;
   padding: 0.2rem 1rem;
   border-left: solid 3px #fff;
