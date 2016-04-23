@@ -487,8 +487,7 @@ li + li {
 .page-numbers + .page-numbers {
   margin-left: 0.5rem;
 }
-.move-month a:first-child,
-.move-day a:first-child {
+.move-posts a:first-child {
   margin-right: 1.5rem;
 }
 .site-description {
@@ -578,7 +577,7 @@ h6,
 }
 .move-posts a > i {
   font-size: 1.7rem;
-  vertical-align: -0.12rem;
+  vertical-align: -0.1rem;
   margin: 0 0.5rem;
 }
 /* Color
@@ -602,14 +601,13 @@ a.gotop:visited,
 .contents-link-title,
 .page-title,
 .widget-title,
-.nav-page-title {
+.pagenation {
   color: #436fb4;
 }
 .entry-header i,
 .icon-share,
 .site-footer,
-.site-description,
-.page-numbers.current {
+.site-description {
   color: #777;
 }
 .sidebar,
@@ -654,8 +652,7 @@ a[href*=".tumblr.com"] > i {
 }
 /* Text Decolation */
 a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration: underline dotted;
 }
 .site-name,
 a.gotop,
@@ -665,6 +662,9 @@ a.link-top:visited,
 a.link-top:hover,
 a.button:hover {
   text-decoration: none;
+}
+.page-numbers.current {
+  text-decoration: underline solid;
 }
 /* Border */
 blockquote {

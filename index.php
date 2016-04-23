@@ -28,7 +28,7 @@
 	<nav class="pagenation text-centering">
 		<p>
 		<?php
-			echo '<span class="nav-page-title">'.$current_page_title.' : </span>';
+			echo "$current_page_title : ";
 
 			//page number//
 			global $wp_query;
