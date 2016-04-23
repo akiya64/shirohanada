@@ -613,8 +613,9 @@ a.gotop:visited,
 .sidebar,
 .page-content,
 .page-title,
-article,
-nav {
+.pagenation,
+.move-posts,
+article {
   background-color: #f8fafa;
 }
 a[href^="https://github.com/"] > i {
@@ -707,6 +708,11 @@ tr + tr {
 }
 .width-half {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .width-half {
+    width: 100%;
+  }
 }
 .point {
   border-left: solid 3px #a3d8f6;
