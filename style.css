@@ -484,6 +484,9 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
+.page-numbers + .page-numbers {
+  margin-left: 0.5rem;
+}
 .move-month a:first-child,
 .move-day a:first-child {
   margin-right: 1.5rem;
@@ -493,6 +496,9 @@ li + li {
 }
 article {
   margin-bottom: 1rem;
+}
+.move-posts {
+  margin-top: 0.5rem;
 }
 section,
 .entry-header,
@@ -543,7 +549,8 @@ h5,
 h6,
 .site-description,
 .root-contents,
-.move-posts {
+.move-posts,
+.pagenation {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
@@ -559,8 +566,9 @@ h6,
 .comments-header {
   font-size: 1.62rem;
 }
+.pagenation,
 .move-posts {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 /* eject icon use as goto top button */
 .icon-eject {
@@ -593,19 +601,22 @@ a.gotop:visited,
 }
 .contents-link-title,
 .page-title,
-.widget-title {
+.widget-title,
+.nav-page-title {
   color: #436fb4;
 }
 .entry-header i,
 .icon-share,
 .site-footer,
-.site-description {
+.site-description,
+.page-numbers.current {
   color: #777;
 }
 .sidebar,
 .page-content,
 .page-title,
-article {
+article,
+nav {
   background-color: #f8fafa;
 }
 a[href^="https://github.com/"] > i {

@@ -1,16 +1,20 @@
 <?php get_header(); ?>
 
+<?php 
+	//Current CatName or Date //
+	if( is_category() ) {
+		$current_page_title = single_cat_title("", False );
+	}else{
+		$current_page_title = 'Archive ' . get_the_time('Y') . '.' . get_the_time('m');
+	}
+?>
+
 <div class="main-contents">
 
 <div class="articles">
 
 	<h2 class="page-title">
-		<?php if( is_category() ) {
-				single_cat_title( '', true );
-			}else{
-				echo 'Archive ' . get_the_time('Y') . '.' . get_the_time('m');
-			}
-		?>
+		<?php echo $current_page_title; ?>
 	</h2>
 
 	<?php
@@ -21,24 +25,28 @@
 
 	<?php endwhile; ?>
 
-	<nav class="text-centering">
+	<nav class="pagenation text-centering">
 		<p>
-
 		<?php
-		global $wp_query;
+			echo '<span class="nav-page-title">'.$current_page_title.' : </span>';
 
-		$big = 999999999; // need an unlikely integer
+			//page number//
+			global $wp_query;
 
-		echo paginate_links( array(
-			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-			'format' => '?paged=%#%',
-			'current' => max( 1, get_query_var('paged') ),
-			'total' => $wp_query->max_num_pages,
-			'prev_next' => False
-			) );
-		?>
+			$big = 999999999; // need an unlikely integer
+
+			echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $wp_query->max_num_pages,
+				'prev_next' => False
+				) );
+			?>
 		</p>
-
+	</nav>
+		
+	<nav class="move-posts text-centering">
 		<?php if(is_month()){
 			//Previous - Next Month Nav//
 			$before_post_month = strtotime(get_the_time('Y-m')." -1 month");
@@ -54,10 +62,8 @@
 			);
 			$after_month_link = get_month_link($after_month['year'], $after_month['month']);
 
-			echo '<p class="move-month">';
 			echo '<a href="'.$before_month_link.'"><i class="icon icon-angle-left"></i>Older '.date('Y.m', $before_post_month).'</a>';
 			echo '<a href="'.$after_month_link.'">'.date('Y.m', $after_post_month).' Newer<i class="icon icon-angle-right"></i></a>';
-			echo '</p>';
 
 		}elseif(is_date()){
 			//Previous - Next Month Nav
@@ -76,20 +82,14 @@
 			);
 			$after_day_link = get_day_link($after_day['year'], $after_day['month'], $after_day['day']);
 
-			echo '<p class="move-day">';
 			echo '<a href="'.$before_day_link.'" class="previous-day"><i class="icon icon-angle-left"></i>'.date('Y.m.d', $before_post_day).'</a>';
 			echo '<a href="'.$after_day_link.'" class="next-day">'.date('Y.m.d', $after_post_day).'<i class="icon icon-angle-right"></i></a>';
-			echo '</p>';
 
 		}else{
 			//show move recent entries ,in category page
-			echo '<p class="move-recent-posts">';
 			echo '<a href="'.get_month_link('', '').'">Recent Posts</a>';
-			echo '<p>';
 		}
 		?>
-		</p>
-
 	</nav>
 
 </div><!--end articles-->
