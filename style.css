@@ -565,7 +565,8 @@ h6,
 /* eject icon use as goto top button */
 .icon-eject {
   font-size: 1.5rem;
-  vertical-align: -0.42rem;
+  margin-left: 0.25rem;
+  vertical-align: -0.475rem;
 }
 .move-posts a > i {
   font-size: 1.7rem;
