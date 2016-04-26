@@ -1,0 +1,12 @@
+@import url( 'style.css' );
+
+body#tinymce {
+	/* overwrite for WordPress default */
+	padding : 0 0.5rem !important;
+}
+.mce-content-body *:first-child{
+	margin-top: 0.5rem;
+}
+.mce-content-body ul,.mce-content-body ol{
+	padding : 0.5rem 2rem 1rem 2rem;
+}

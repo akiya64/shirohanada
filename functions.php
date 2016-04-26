@@ -64,4 +64,12 @@ function get_first_post_year(){
 	return $year;
 }
 
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
 ?>
