@@ -488,6 +488,9 @@ h2.widget-title
         padding-left 0
 
 .sidebar
+        /* sidebar is narrow, prevent overflow text */
+        word-break break-all
+
         .widget
                 margin-bottom 1rem
 
@@ -501,6 +504,7 @@ h2.widget-title
 
         #wp-calendar
                 font-size .8rem
+                word-break keep-all //date should not break
 
                 th
                         font-weight normal

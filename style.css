@@ -819,6 +819,10 @@ h2.widget-title {
   margin: 0 0 0.25rem 0;
   padding-left: 0;
 }
+.sidebar {
+/* sidebar is narrow, prevent overflow text */
+  word-break: break-all;
+}
 .sidebar .widget {
   margin-bottom: 1rem;
 }
@@ -832,6 +836,7 @@ h2.widget-title {
 }
 .sidebar #wp-calendar {
   font-size: 0.8rem;
+  word-break: keep-all;
 }
 .sidebar #wp-calendar th {
   font-weight: normal;
