@@ -22,11 +22,11 @@
 		// Start the loop.:
 		while ( have_posts() ) {
 			the_post();
-			get_template_part( 'content' );
+			get_template_part( 'template-parts/content' );
 		}
 
-		get_template_part( 'nav', 'pagenate' );
-		get_template_part( 'nav', 'posts' );
+		get_template_part( 'template-parts/nav', 'pagenate' );
+		get_template_part( 'template-parts/nav', 'posts' );
 	?>
 
 </div><!--end articles-->
