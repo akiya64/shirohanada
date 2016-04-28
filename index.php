@@ -2,20 +2,20 @@
 
 <?php 
 	//Current CatName or Date //
-	if( is_category() ) {
-		$current_page_title = single_cat_title("", False );
-	}else{
-		$current_page_title = 'Archive ' . get_the_time('Y') . '.' . get_the_time('m');
-	}
+	if( is_category() ) :
+		$current_page_title = '<h2 class="page-title">'.single_cat_title("", False ).'</h2>';
+	elseif ( is_single ) :
+		$current_page_title = '' ;
+	else :
+		$current_page_title =  '<h2 class="page-title">Archives '.get_the_time('Y.m').'</h2>';
+	endif ;
 ?>
 
 <div class="main-contents">
 
 <div class="articles">
 
-	<h2 class="page-title">
-		<?php echo $current_page_title; ?>
-	</h2>
+	<?php echo $current_page_title; ?>
 
 	<?php
 		// Display posts

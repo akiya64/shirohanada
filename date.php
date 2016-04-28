@@ -13,9 +13,18 @@
 
 <div class="articles">
 
-	<h2 class="page-title">
-		<?php echo $current_page_title; ?>
-	</h2>
+<?php
+		/* default is year.month. Switch year or day */
+		if ( is_day() ) :
+			$archive_date = get_the_date( 'Y.m.d' );
+		elseif ( is_year() ) :
+			$archive_date = get_the_date( 'Y' );
+		else :
+			$archive_date = get_the_date( 'Y.m' );
+		endif ;
+	?>
+
+	<h2 class="page-title">Archives <?php echo $archive_date; ?></h2>
 
 	<?php
 		// Display posts
