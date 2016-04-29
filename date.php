@@ -27,10 +27,22 @@
 	<h2 class="page-title">Archives <?php echo $archive_date; ?></h2>
 
 	<?php
-		// Display posts
-		// Start the loop.:
-		while ( have_posts() ) {
-			the_post();
+		/* Set query */
+		$arg = array(
+			'order' => 'ASC',
+			'date_query' => array(
+				array(
+					'year' => get_the_date('Y'),
+					'month' => get_the_date('m')
+					),
+				),
+			);
+		$date_query = new WP_Query($arg);
+
+		/* Display posts
+			Start the loop.*/
+		while ( $date_query->have_posts() ) {
+			$date_query->the_post();
 			get_template_part( 'template-parts/content' );
 		}
 

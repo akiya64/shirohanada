@@ -4,7 +4,7 @@
 	//Current CatName or Date //
 	if( is_category() ) :
 		$current_page_title = '<h2 class="page-title">'.single_cat_title("", False ).'</h2>';
-	elseif ( is_single ) :
+	elseif ( is_single() ) :
 		$current_page_title = '' ;
 	else :
 		$current_page_title =  '<h2 class="page-title">Archives '.get_the_time('Y.m').'</h2>';
