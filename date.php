@@ -1,46 +1,55 @@
 <?php get_header(); ?>
 
-<?php 
-	//Current CatName or Date //
-	if( is_category() ) {
-		$current_page_title = single_cat_title("", False );
-	}else{
-		$current_page_title = 'Archive ' . get_the_time('Y') . '.' . get_the_time('m');
-	}
-?>
-
 <div class="main-contents">
 
 <div class="articles">
 
 <?php
-		/* default is year.month. Switch year or day */
-		if ( is_day() ) :
-			$archive_date = get_the_date( 'Y.m.d' );
-		elseif ( is_year() ) :
-			$archive_date = get_the_date( 'Y' );
-		else :
-			$archive_date = get_the_date( 'Y.m' );
-		endif ;
-	?>
+	/* default is year.month. Switch year or day 
+		build title and query args */
+	if ( is_day() ) :
+		$title_date_part = get_the_date( 'Y.m.d' );
+		$posts_piriod = array(
+			array(
+				'year' => get_the_date('Y'),
+				'month' => get_the_date('m'),
+				'day' => get_the_date('d')
+				),
+			);
 
-	<h2 class="page-title">Archives <?php echo $archive_date; ?></h2>
+	elseif ( is_year() ) :
+		$title_date_part = get_the_date( 'Y' );
+		$posts_piriod = array(
+			array(
+				'year' => get_the_date('Y'),
+				),
+			);
+
+	else :
+		$title_date_part = get_the_date( 'Y.m' );
+		$posts_piriod = array(
+			array(
+				'year' => get_the_date('Y'),
+				'month' => get_the_date('m'),
+				),
+			);
+
+	endif ;
+?>
+
+	<h2 class="page-title">Archives <?php echo $title_date_part; ?></h2>
 
 	<?php
 		/* Set query */
 		$arg = array(
 			'order' => 'ASC',
-			'date_query' => array(
-				array(
-					'year' => get_the_date('Y'),
-					'month' => get_the_date('m')
-					),
-				),
+			'date_query' => $posts_piriod,
+			'ignore_sticky_posts' => 1
 			);
+		
 		$date_query = new WP_Query($arg);
 
-		/* Display posts
-			Start the loop.*/
+		/* Start the loop.*/
 		while ( $date_query->have_posts() ) {
 			$date_query->the_post();
 			get_template_part( 'template-parts/content' );
