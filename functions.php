@@ -75,8 +75,8 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 /**
  * Category icon selector
  */
-function select_category_icon($category_slag = "uncategorized" ) {
-	switch ($category_slag):
+function select_category_icon($category_slug = "uncategorized" ) {
+	switch ($category_slug):
 		case "photo":
 			$icon_name = "photo";
 			break;
