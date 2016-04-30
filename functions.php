@@ -56,7 +56,7 @@ function get_first_post_year(){
 	$year = null;
 
 	query_posts('posts_per_page=1&order=ASC');
-  
+
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ðŽæ“¾
 	endwhile; endif;
@@ -71,5 +71,29 @@ function wpdocs_theme_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+/**
+ * Category icon selector
+ */
+function select_category_icon($category_slag = "uncategorized" ) {
+	switch ($category_slag):
+		case "photo":
+			$icon_name = "photo";
+			break;
+		case "illust":
+			$icon_name = "illust";
+			break;
+		case "develop":
+			$icon_name = "terminal";
+			break;
+		case "tweets":
+			$icon_name = "quill";
+			break;
+		default:
+			$icon_name = "folder";
+	endSwitch;
+
+	echo $icon_name;
+}
 
 ?>

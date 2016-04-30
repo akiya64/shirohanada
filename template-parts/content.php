@@ -18,7 +18,7 @@
 
 	<header class="entry-header">
 		<p class="entry-date"><i class="icon icon-time"></i><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></a></p>
-		<p><i class="icon icon-folder"></i><?php the_category(' '); ?></a></p>
+		<p><i class="icon icon-<?php select_category_icon(get_the_category()[0]->slug); ?>"></i><?php the_category(' '); ?></a></p>
 		<p><?php the_tags('<i class="icon icon-tag"></i>', ',' ,''); ?></p>
 	</header>
 
