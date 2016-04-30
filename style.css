@@ -511,7 +511,8 @@ article {
 }
 section,
 .entry-header,
-.entry-title {
+.entry-title,
+.page-content-footer ~ p {
   margin-bottom: 0.6rem;
 }
 .entry-content p,
@@ -747,12 +748,12 @@ tr + tr {
     width: 100%;
   }
   .c-button-gotop {
-    width: 23%;
+    width: 23% !important;
     margin: initial;
     margin-left: 1rem;
   }
   .share-links {
-    width: 72%;
+    width: 72% !important;
     margin: initial;
   }
   .site-name {
