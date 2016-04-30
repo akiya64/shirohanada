@@ -21,7 +21,9 @@
 
 ?>
 
+<?php if(!is_page()): ?>
 <div class="entry-margin"></div>
+<?php endif; ?>
 
 <div class="c-button-gotop">
 	<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
