@@ -1,13 +1,18 @@
 <?php get_header(); ?>
 
-<?php
-	$page = get_page_by_title('About');
-	$catlist_args = array(
-		'title_li' => '',
-		'echo' => '1',
-		'number' => '5'
-	);
-?>
+<div class="top-flex-container">
+
+	<div class="top-banner-box">
+		<img src="<?php header_image(); ?>" alt="top banner" class="top-banner">
+
+		<!--img class="top-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/top_banner.jpg" -->
+	</div>
+
+	<header class="top-page-header">
+		<h1 class="site-name"><?php bloginfo('name') ; ?></h1>
+		<p class="site-description"><?php bloginfo('description') ; ?></p>
+	</header>
+
 
 	<div class="dropdown-part">
 

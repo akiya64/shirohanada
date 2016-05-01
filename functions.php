@@ -39,6 +39,20 @@ function register_root_menu(){
 add_action( 'after_setup_theme', 'register_root_menu' );
 
 /**
+ * Custom header for Front Page
+ *
+ */
+$custom_header_args = array(
+	'width' => 722,
+	'flex-width' => true,
+	'height' => 648,
+	'flex-height' => true,
+	'default-image' => get_template_directory_uri() . '/top_banner.jpg'
+);
+
+add_theme_support( 'custom-header', $custom_header_args );
+
+/**
  * remove header
  *
  */
@@ -47,6 +61,14 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 /**
  * get oldest post date for copy right
@@ -58,19 +80,11 @@ function get_first_post_year(){
 	query_posts('posts_per_page=1&order=ASC');
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ğæ“¾
+		$year = intval(get_the_time('Y'));//æœ€åˆã®æŠ•ç¨¿ã®å¹´ã‚’å–å¾—
 	endwhile; endif;
 	wp_reset_query();
 	return $year;
 }
-
-/**
- * Registers an editor stylesheet for the theme.
- */
-function wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
-}
-add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 /**
  * Category icon selector

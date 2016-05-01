@@ -503,7 +503,8 @@ li + li {
 .site-description {
   margin-right: 0.5rem;
 }
-article {
+article,
+.page-content-footer ~ p {
   margin-bottom: 1rem;
 }
 .move-posts {
@@ -511,8 +512,7 @@ article {
 }
 section,
 .entry-header,
-.entry-title,
-.page-content-footer ~ p {
+.entry-title {
   margin-bottom: 0.6rem;
 }
 .entry-content p,
@@ -996,7 +996,6 @@ textarea[name="comment"] {
   width: 85vw;
   max-width: 1200px;
   height: 90vh;
-  max-height: 648px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1015,7 +1014,14 @@ textarea[name="comment"] {
 }
 .top-banner-box {
   width: 75%;
+}
+.top-banner-box,
+.top-banner {
   max-width: 722px;
+}
+.top-banner,
+.top-flex-container {
+  max-height: 648px;
 }
 .dropdown-part,
 .top-page-header {
