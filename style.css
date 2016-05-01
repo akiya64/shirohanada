@@ -1024,14 +1024,14 @@ textarea[name="comment"] {
 }
 .dropdown-part,
 .top-page-header {
-  width: 25rem;
+  width: 380px;
 }
 .top-page-header {
   height: 9rem;
 }
 .dropdown-part {
   height: 12rem;
-  margin-left: 1.25rem;
+  margin-left: 3%;
 }
 .root-contents {
   -webkit-column-count: 2;

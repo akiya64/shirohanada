@@ -43,9 +43,9 @@ add_action( 'after_setup_theme', 'register_root_menu' );
  *
  */
 $custom_header_args = array(
-	'width' => 722,
+	'width' => 800,
 	'flex-width' => true,
-	'height' => 648,
+	'height' => 800,
 	'flex-height' => true,
 	'default-image' => get_template_directory_uri() . '/top_banner.jpg'
 );
