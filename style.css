@@ -1015,8 +1015,10 @@ textarea[name="comment"] {
 .top-banner {
   max-width: 800px;
 }
-.top-banner,
-.top-flex-container {
+.top-banner-box {
+  height: 800px;
+}
+.top-banner {
   max-height: 800px;
 }
 .dropdown-part,
