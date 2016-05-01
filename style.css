@@ -312,7 +312,7 @@ body {
   line-height: 1.6;
   margin: 0 auto;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1200px;
 }
 /* Layout */
 /* looks 3columns but HTML is 2 Column */
@@ -322,7 +322,7 @@ body {
   width: 100%;
 }
 article img {
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
 }
 .site-footer,
@@ -993,7 +993,6 @@ textarea[name="comment"] {
 }
 .top-flex-container {
   margin: 7vh auto;
-  width: 85vw;
   max-width: 1200px;
   height: 90vh;
   display: -webkit-box;
@@ -1013,15 +1012,15 @@ textarea[name="comment"] {
   flex-flow: column wrap;
 }
 .top-banner-box {
-  width: 75%;
+  width: 100%;
 }
 .top-banner-box,
 .top-banner {
-  max-width: 722px;
+  max-width: 800px;
 }
 .top-banner,
 .top-flex-container {
-  max-height: 648px;
+  max-height: 800px;
 }
 .dropdown-part,
 .top-page-header {
@@ -1032,7 +1031,7 @@ textarea[name="comment"] {
 }
 .dropdown-part {
   height: 12rem;
-  padding-left: 1rem;
+  margin-left: 1.25rem;
 }
 .root-contents {
   -webkit-column-count: 2;
@@ -1126,6 +1125,7 @@ h2.contents-link-title {
     order: 3;
   }
   .dropdown-part {
+    margin: initial;
     padding: 0 0.5rem;
   }
   .dropdown-part h2 {
