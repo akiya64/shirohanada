@@ -994,7 +994,7 @@ textarea[name="comment"] {
 .top-flex-container {
   margin: 7vh auto;
   max-width: 1200px;
-  height: 90vh;
+  height: 800px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1010,9 +1010,6 @@ textarea[name="comment"] {
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
-}
-.top-banner-box {
-  width: 100%;
 }
 .top-banner-box,
 .top-banner {
