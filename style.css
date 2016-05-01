@@ -350,6 +350,10 @@ article img {
 .share-links {
   width: 38%;
 }
+.page .c-button-gotop,
+.page .share-links {
+  width: 50%;
+}
 /* post-date and post-category looks 1row */
 .entry-header > p {
   display: inline;
@@ -429,6 +433,9 @@ article {
     margin-right: 1%;
   }
   .entry-header > p {
+    margin-bottom: 0.3rem;
+  }
+  .entry-header > p {
     display: block;
   }
   .entry-content,
@@ -496,7 +503,8 @@ li + li {
 .site-description {
   margin-right: 0.5rem;
 }
-article {
+article,
+.page-content-footer ~ p {
   margin-bottom: 1rem;
 }
 .move-posts {
@@ -740,12 +748,12 @@ tr + tr {
     width: 100%;
   }
   .c-button-gotop {
-    width: 23%;
+    width: 23% !important;
     margin: initial;
     margin-left: 1rem;
   }
   .share-links {
-    width: 72%;
+    width: 72% !important;
     margin: initial;
   }
   .site-name {
@@ -988,7 +996,6 @@ textarea[name="comment"] {
   width: 85vw;
   max-width: 1200px;
   height: 90vh;
-  max-height: 648px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1007,7 +1014,14 @@ textarea[name="comment"] {
 }
 .top-banner-box {
   width: 75%;
+}
+.top-banner-box,
+.top-banner {
   max-width: 722px;
+}
+.top-banner,
+.top-flex-container {
+  max-height: 648px;
 }
 .dropdown-part,
 .top-page-header {

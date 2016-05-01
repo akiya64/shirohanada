@@ -21,21 +21,7 @@ while ( have_posts() ) : the_post(); ?>
 	<p class="page-content-footer"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></p>
 	<p class="page-content-footer">Author:<?php the_author();?></p>
 
-	<div class="c-button-gotop width-half-inlarge">
-		<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
-	</div>
-
-	<div class="share-links width-half-inlarge">
-			<?php $encoded_url = urlencode(get_permalink());
-			  $share_text = get_the_title(); ?>
-			<a class="share-button" href="<?php the_permalink(); ?>" title="この投稿にコメントする。"><i class="icon icon-comment"></i></a>
-			<a class="share-button" href="https://twitter.com/intent/tweet?url=<?php echo $encoded_url.'&text='.$share_text.'&via=K_akiya'; ?>" title="share Twitter"><i class="icon icon-share-twitter"></i></a>
-			<a class="share-button" href="https://facebook.com/sharer.php?u=<?php echo $encoded_url.'&amp;t='.$share_text; ?>" title="share Facebook"  rel="nofollow" target="_blank"><i class="icon icon-share-facebook"></i></a>
-			<a class="share-button" href="https://plus.google.com/share?url=<?php echo $encoded_url; ?>" title="+1 GooglePlus"><i class="icon icon-share-google-plus"></i></a>
-			<a class="share-button" href="https://getpocket.com/edit?url=<?php the_permalink(); ?>" title="Get Pocket"><i class="icon icon-get-pocket"></i></a>
-	</div>
-
-	</article>
+	<?php get_template_part( 'template-parts/content', 'article_footer' ); ?>
 
 <?php endwhile; ?>
 

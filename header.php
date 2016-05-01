@@ -12,19 +12,7 @@
 </head>
 <body>
 
-<?php if(is_front_page()): ?>
-<div class="top-flex-container">
-
-	<div class="top-banner-box">
-		<img class="top-banner" src="<?php echo get_stylesheet_directory_uri(); ?>/top_banner.jpg">
-	</div>
-
-	<header class="top-page-header">
-		<h1 class="site-name"><?php bloginfo('name') ; ?></h1>
-		<p class="site-description"><?php bloginfo('description') ; ?></p>
-	</header>
-
-<?php else: ?>
+<?php if(!is_front_page()): ?>
 <a id="menu-button" class="button show-menu" href="#side-menu">
 	<i class="icon icon-list"></i>
 </a>
