@@ -42,12 +42,35 @@ add_action( 'after_setup_theme', 'register_root_menu' );
  * Custom header for Front Page
  *
  */
+register_default_headers( array(
+		'cherry_blossom' => array(
+			'url' => get_template_directory_uri().'/images/cherry_blossom.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/cherry_blossom.jpg',
+			/* translators: header image description */
+			'description' => 'cherry_blossom'
+		),
+		'from_skytree' => array(
+			'url' => get_template_directory_uri().'/images/from_skytree.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/from_skytree.jpg',
+			/* translators: header image description */
+			'description' => 'from_skytree'
+		),
+		'tram_station' => array(
+			'url' => get_template_directory_uri().'/images/tram_station.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/tram_station.jpg',
+			/* translators: header image description */
+			'description' => 'tram_station'
+		),
+	) 
+);
+
 $custom_header_args = array(
 	'width' => 800,
 	'flex-width' => true,
 	'height' => 800,
 	'flex-height' => true,
-	'default-image' => get_template_directory_uri() . '/top_banner.jpg'
+	'upload' => true,
+	'random-default' => true
 );
 
 add_theme_support( 'custom-header', $custom_header_args );
