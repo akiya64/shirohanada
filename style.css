@@ -421,9 +421,7 @@ article {
   .comments {
     width: 76%;
   }
-  .sidebar {
-    width: 20%;
-  }
+  .sidebar,
   .entry-margin,
   .entry-header {
     width: 23%;
@@ -992,9 +990,8 @@ textarea[name="comment"] {
   height: 10em;
 }
 .top-flex-container {
-  margin: 4vh auto 0;
-  max-width: 100%;
-  height: 800px;
+  margin: 9vh auto 0;
+  height: 700px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -1013,24 +1010,23 @@ textarea[name="comment"] {
 }
 .top-banner-box,
 .top-banner {
-  max-width: 800px;
+  max-width: 700px;
 }
 .top-banner-box {
-  height: 800px;
+  height: 700px;
 }
 .top-banner {
-  max-height: 800px;
+  max-height: 700px;
 }
 .dropdown-part,
 .top-page-header {
-  width: 420px;
+  width: 460px;
 }
 .top-page-header {
   height: 9rem;
 }
 .dropdown-part {
   height: 12rem;
-  margin-left: 2.5%;
 }
 .root-contents {
   -webkit-column-count: 2;

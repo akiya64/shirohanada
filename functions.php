@@ -49,11 +49,11 @@ register_default_headers( array(
 			/* translators: header image description */
 			'description' => 'cherry_blossom'
 		),
-		'from_skytree' => array(
-			'url' => get_template_directory_uri().'/images/from_skytree.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/from_skytree.jpg',
+		'coast' => array(
+			'url' => get_template_directory_uri().'/images/ochi_ishi.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/ochi_ishi.jpg',
 			/* translators: header image description */
-			'description' => 'from_skytree'
+			'description' => 'coast'
 		),
 		'tram_station' => array(
 			'url' => get_template_directory_uri().'/images/tram_station.jpg',
@@ -103,7 +103,7 @@ function get_first_post_year(){
 	query_posts('posts_per_page=1&order=ASC');
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-		$year = intval(get_the_time('Y'));//æœ€åˆã®æŠ•ç¨¿ã®å¹´ã‚’å–å¾—
+		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ğæ“¾
 	endwhile; endif;
 	wp_reset_query();
 	return $year;
