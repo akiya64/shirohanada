@@ -5,41 +5,50 @@
    in small display, 1column Logo-Banner-DropdownPart */
 
 .top-flex-container
-        margin 9vh auto 0
+        width 1240px
         height 700px
+        margin 9vh auto 0
         display flex
         flex-flow column wrap
 
 .top-banner-box
-.top-banner
-        max-width 700px
+        height 700px
 
 .top-banner-box
-        height 700px
+.top-banner
+        max-width 700px
 
 .top-banner
         max-height 700px
 
 .dropdown-part
 .top-page-header
-        width 460px
-
+        width 480px
+/*
 .top-page-header
         height 9rem
 
 .dropdown-part
         height 12rem
-
+*/
 .root-contents
-        column-count 2
-        height 9rem
-        font-size 1.2rem
+        .menu
+                font-size 1.2rem
+                margin-bottom 1rem
+                -moz-columns 2 10rem
+                -webkit-columns 2 10rem
+                columns 2 10rem
+                max-height 180px
 
 .top-page-header
         text-align right
 
+.top-page-header
+.front.widget-area h2
+        margin-bottom .5rem
+
 .front.widget-area h2 ~ *
-        max-height 10rem
+        max-height 140px
         overflow auto
 
 .front.widget-area
