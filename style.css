@@ -736,6 +736,9 @@ tr + tr {
 .wp-caption > p {
   padding-top: 0.3rem;
 }
+.sticky {
+  border: solid 1px #a3d8f6;
+}
 /* over write for mobile */
 @media screen and (max-width: 768px) {
   .articles,
