@@ -1022,8 +1022,9 @@ textarea[name="comment"] {
 .top-banner {
   max-height: 700px;
 }
+.top-page-header,
 .dropdown-part,
-.top-page-header {
+.top-page-footer {
   width: 480px;
 }
 .root-contents .menu {
@@ -1032,6 +1033,10 @@ textarea[name="comment"] {
   -moz-columns: 2 10rem;
   -webkit-columns: 2 10rem;
   columns: 2 10rem;
+}
+.front.widget-area h2 ~ *,
+.root-contents .menu {
+  height: auto;
   max-height: 180px;
 }
 .top-page-header {
@@ -1042,7 +1047,6 @@ textarea[name="comment"] {
   margin-bottom: 0.5rem;
 }
 .front.widget-area h2 ~ * {
-  max-height: 140px;
   overflow: auto;
 }
 .front.widget-area ul {
@@ -1074,6 +1078,9 @@ h2.contents-link-title {
   color: #777;
   border-top: solid 1px #a3d8f6;
 }
+.top-page-footer > p:nth-child(-n+2) {
+  display: inline;
+}
 @media screen and (max-width: 960px) {
   .top-page-header,
   .top-flex-container,
@@ -1096,6 +1103,9 @@ h2.contents-link-title {
   }
   .top-flex-container {
     margin: 0 auto;
+  }
+  .top-page-footer > p:nth-child(-n+2) {
+    display: block;
   }
   .top-page-header {
     -webkit-box-ordinal-group: 1;
