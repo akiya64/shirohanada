@@ -7,8 +7,7 @@
 
 	<footer class="<?php echo $footer_class; ?>">
 		<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
-		<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, </p>
-		<p>Hosting by <a href="http://www.sakura.ad.jp/">さくらインターネット</a></p>
+		<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Theme <a href="https://github.com/akiya64/shirohanada"><i class="icon icon-github"></i>shirohanada</a></p>
 	</footer>
 
 <?php if (is_front_page()): ?>

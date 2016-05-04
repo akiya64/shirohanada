@@ -325,7 +325,6 @@ article img {
   max-width: 100%;
   height: auto;
 }
-.site-footer,
 .sidebar {
   margin-left: 1%;
 }
@@ -398,9 +397,8 @@ article {
   .entries p {
     display: inline;
   }
-  .site-header,
-  .site-footer {
-    padding-right: 5%;
+  .site-header {
+    margin-right: 0.75rem;
   }
   .site-header,
   .site-footer {
@@ -409,12 +407,8 @@ article {
   .site-name {
     font-size: 72px;
   }
-  .main-contents,
   article {
     padding: 0.5rem 1rem 1rem;
-  }
-  .main-contents {
-    margin: 0 auto;
   }
   .articles,
   .entry-content,
@@ -440,8 +434,9 @@ article {
   .comments {
     min-width: 560px;
   }
-  .site-footer p:nth-child(n + 2) {
+  .site-footer > p {
     display: inline;
+    margin-left: 1rem;
   }
   #menu-button {
     display: none;
@@ -530,7 +525,8 @@ section,
   list-style-type: square;
 }
 .site-footer {
-  margin: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -783,8 +779,7 @@ tr + tr {
   .entry-date {
     margin-right: 1rem;
   }
-  .site-header > p,
-  .site-footer {
+  .site-header > p {
     padding: 0.5rem 0.8rem;
   }
   .site-header > p,
@@ -1078,9 +1073,6 @@ h2.contents-link-title {
   color: #777;
   border-top: solid 1px #a3d8f6;
 }
-.top-page-footer > p:nth-child(-n+2) {
-  display: inline;
-}
 @media screen and (max-width: 960px) {
   .top-page-header,
   .top-flex-container,
@@ -1103,9 +1095,6 @@ h2.contents-link-title {
   }
   .top-flex-container {
     margin: 0 auto;
-  }
-  .top-page-footer > p:nth-child(-n+2) {
-    display: block;
   }
   .top-page-header {
     -webkit-box-ordinal-group: 1;
