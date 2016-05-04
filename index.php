@@ -1,13 +1,15 @@
 <?php get_header(); ?>
 
-<?php 
-	//Current CatName or Date //
+<?php
 	if( is_category() ) :
 		$current_page_title = '<h2 class="page-title">'.single_cat_title("", False ).'</h2>';
+	elseif ( is_tag() ) :
+		$current_page_title = '<h2 class="page-title">'.single_tag_title("", False ).'</h2>' ;
 	elseif ( is_single() ) :
 		$current_page_title = '' ;
 	else :
-		$current_page_title =  '<h2 class="page-title">Archives '.get_the_time('Y.m').'</h2>';
+		/* this case is expected only RecentPost */
+		$current_page_title =  '<h2 class="page-title">Latest Posts</h2>';
 	endif ;
 ?>
 
@@ -18,12 +20,11 @@
 	<?php echo $current_page_title; ?>
 
 	<?php
-		// Display posts
-		// Start the loop.:
-		while ( have_posts() ) {
+		/* Display posts Start the loop.*/
+		while ( have_posts() ):
 			the_post();
 			get_template_part( 'template-parts/content' );
-		}
+		endwhile;
 
 		get_template_part( 'template-parts/nav', 'pagenate' );
 		get_template_part( 'template-parts/nav', 'posts' );

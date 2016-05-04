@@ -44,30 +44,30 @@ add_action( 'after_setup_theme', 'register_root_menu' );
  */
 register_default_headers( array(
 		'cherry_blossom' => array(
-			'url' => get_template_directory_uri().'/images/cherry_blossom.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/cherry_blossom.jpg',
+			'url' => get_template_directory_uri().'/images/fukuju_bridge.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/thumb_fukuju_bridge.jpg',
 			/* translators: header image description */
-			'description' => 'cherry_blossom'
+			'description' => 'cherryblossom'
 		),
-		'from_skytree' => array(
-			'url' => get_template_directory_uri().'/images/from_skytree.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/from_skytree.jpg',
+		'coast' => array(
+			'url' => get_template_directory_uri().'/images/ochi_ishi.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ochi_ishi.jpg',
 			/* translators: header image description */
-			'description' => 'from_skytree'
+			'description' => 'coast'
 		),
 		'tram_station' => array(
-			'url' => get_template_directory_uri().'/images/tram_station.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/tram_station.jpg',
+			'url' => get_template_directory_uri().'/images/ujina_station.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ujina_station.jpg',
 			/* translators: header image description */
-			'description' => 'tram_station'
+			'description' => 'station'
 		),
-	) 
+	)
 );
 
 $custom_header_args = array(
-	'width' => 800,
+	'width' => 700,
 	'flex-width' => true,
-	'height' => 800,
+	'height' => 700,
 	'flex-height' => true,
 	'upload' => true,
 	'random-default' => true
@@ -103,7 +103,7 @@ function get_first_post_year(){
 	query_posts('posts_per_page=1&order=ASC');
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-		$year = intval(get_the_time('Y'));//æœ€åˆã®æŠ•ç¨¿ã®å¹´ã‚’å–å¾—
+		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ğæ“¾
 	endwhile; endif;
 	wp_reset_query();
 	return $year;
