@@ -80,8 +80,8 @@ add_theme_support( 'custom-header', $custom_header_args );
  *
  */
 
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
 remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 
@@ -113,7 +113,7 @@ function get_first_post_year(){
  * Category icon selector
  */
 function select_category_icon($category_slug = "uncategorized" ) {
-	switch ($category_slug):
+	switch ( $category_slug ):
 		case "photo":
 			$icon_name = "photo";
 			break;
