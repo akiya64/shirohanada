@@ -17,7 +17,7 @@
 		elseif( is_archive() ):
 			$page_title = 'Archive ' . the_date( 'Y.m', '','', False ) . ' ';
 		else:
-			$page_title = 'Posts '
+			$page_title = 'Posts ';
 		endif;
 
 		echo $page_title . $paginate_links;
