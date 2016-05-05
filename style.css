@@ -429,9 +429,6 @@ article {
   .entry-header > p {
     margin-bottom: 0.3rem;
   }
-  .entry-header > p {
-    display: block;
-  }
   .entry-content,
   .comments {
     min-width: 560px;
@@ -439,6 +436,10 @@ article {
   .site-footer > p {
     display: inline;
     margin-left: 1rem;
+  }
+  .entry-header > p,
+  .site-footer.front > p {
+    display: block;
   }
   #menu-button {
     display: none;
@@ -489,8 +490,8 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.page-numbers + .page-numbers {
-  margin-left: 0.5rem;
+.pagenation > * {
+  margin-left: 0.75rem;
 }
 .move-posts a:first-child {
   margin-right: 1.5rem;
@@ -527,8 +528,7 @@ section,
   list-style-type: square;
 }
 .site-footer {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -767,6 +767,12 @@ tr + tr {
   a.link-top:hover {
     color: #fff;
   }
+  h1.site-name {
+    padding: 0.25rem 0.5rem;
+  }
+  .site-description {
+    margin: 0.25rem 0.5rem;
+  }
   h1.entry-title.single,
   h2.page-title {
     margin: initial;
@@ -781,10 +787,6 @@ tr + tr {
   .entry-date {
     margin-right: 1rem;
   }
-  .site-header > p {
-    padding: 0.5rem 0.8rem;
-  }
-  .site-header > p,
   article {
     margin-bottom: 0;
   }
@@ -806,7 +808,14 @@ tr + tr {
     margin-bottom: 1rem;
   }
   .site-footer {
-    text-align: center;
+    text-align: right;
+    width: 90%;
+    margin-left: 9%;
+  }
+  .site-footer.front {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
   }
 }
 /* End Main Section */
@@ -1045,11 +1054,6 @@ textarea[name="comment"] {
 .front.widget-area ul {
   margin-left: 1rem;
 }
-.top-page-footer {
-  margin-top: 1rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
 h2.contents-link-title {
   margin: 0 0 0.3rem 0;
   padding-left: 0;
@@ -1067,9 +1071,11 @@ h2.contents-link-title {
 .menu-item a:hover {
   text-decoration: none;
 }
-.top-page-footer {
+.site-footer.front {
   color: #777;
   border-top: solid 1px #a3d8f6;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 @media screen and (max-width: 960px) {
   .top-page-header,
@@ -1128,8 +1134,9 @@ h2.contents-link-title {
   .dropdown-part h2 {
     margin: 0.8rem 0;
   }
-  .top-page-footer {
+  .site-footer.front {
     padding: 0.5rem 1rem;
+    font-size: 0.875rem;
   }
 }
 .widget_twitter {
