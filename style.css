@@ -489,8 +489,8 @@ li + li {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.page-numbers + .page-numbers {
-  margin-left: 0.5rem;
+.pagenation > * {
+  margin-left: 0.75rem;
 }
 .move-posts a:first-child {
   margin-right: 1.5rem;
