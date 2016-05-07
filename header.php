@@ -13,7 +13,7 @@
 <body>
 
 <?php if(!is_front_page()): ?>
-<a id="menu-button" class="button show-menu" href="#side-menu">
+<a id="menu-button" class="button show-menu" href="#top">
 	<i class="icon icon-list"></i>
 </a>
 	
