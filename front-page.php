@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template part for front page
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
+ */
+
+get_header(); ?>
 
 <div class="top-flex-container">
 

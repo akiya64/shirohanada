@@ -1,14 +1,24 @@
-<?php if (is_front_page()){
-			$footer_class = "front site-footer";
-		}else{
-			$footer_class = "site-footer";
-		}
+<?php
+/**
+ * The template part for displaing footer
+ * Footer contents & inline JavaScript for sidebar show-hide
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
+ */
+
+if (is_front_page()):
+		$footer_class = "front site-footer";
+	else:
+		$footer_class = "site-footer";
+	endif;
 ?>
 
-	<footer class="site-footer <?php if (is_front_page()) echo 'front'; ?>">
-		<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
-		<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Theme <a href="https://github.com/akiya64/shirohanada"><i class="icon icon-github"></i>shirohanada</a></p>
-	</footer>
+<footer class="site-footer <?php if (is_front_page()) echo 'front'; ?>">
+	<p>(c) <?php echo get_first_post_year(); ?> <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name') ; ?></a></p>
+	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Theme <a href="https://github.com/akiya64/shirohanada"><i class="icon icon-github"></i>shirohanada</a></p>
+</footer>
 
 <?php if (is_front_page()): ?>
 	</div><!--End DropDownPart-->

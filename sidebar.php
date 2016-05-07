@@ -3,8 +3,8 @@
  * The template for the sidebar containing the main widget area
  *
  * @package WordPress
- * @subpackage
- * @since
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
  */
 ?>
 
