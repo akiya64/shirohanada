@@ -34,8 +34,6 @@ body
         margin 0 auto
         width 100%
         max-width 1240px
-        word-wrap break-word
-        overflow-wrap break-word
 
 /* Layout */
 /* looks 3columns but HTML is 2 Column */
@@ -504,6 +502,8 @@ h2.widget-title
         padding-left 0
 
 .sidebar
+        /* On chrome overflow long text, example url ,1byte japanese kana */
+        word-break break-all
         .widget
                 margin-bottom 1rem
 
