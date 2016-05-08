@@ -1,22 +1,31 @@
 <?php
 /**
+ * Shirohanada functions and definitions
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
+ */
+
+/**
  * Register our sidebars and widgetized areas.
  *
+ * @since Shirohanada 0.8
  */
 function shirohanada_widgets_init() {
 
-	register_sidebar( array(
-		'name' => 'Front Page Widget',
-		'id' => 'front-widgets',
+register_sidebar( array(
+		'name' => 'Side Bar Menu',
+		'id' => 'sidebar-widgets',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title' => '<h2 class="widget-title">',
 		'after_title' => '</h2>',
 	) );
-	
+
 	register_sidebar( array(
-		'name' => 'Side Bar Menu',
-		'id' => 'sidebar-widgets',
+		'name' => 'Front Page Widget',
+		'id' => 'front-widgets',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title' => '<h2 class="widget-title">',
@@ -30,6 +39,7 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
 /**
  * CustomMenu for Front Page
  *
+ * @since Shirohanada 0.9
  */
 
 function register_root_menu(){
@@ -41,8 +51,12 @@ add_action( 'after_setup_theme', 'register_root_menu' );
 /**
  * Custom header for Front Page
  *
+ * @since Shirohanada 0.9
  */
 register_default_headers( array(
+		/*
+		 * Add 3images to default header image.
+		 */
 		'cherry_blossom' => array(
 			'url' => get_template_directory_uri().'/images/fukuju_bridge.jpg',
 			'thumbnail_url' => get_template_directory_uri().'/images/thumb_fukuju_bridge.jpg',
@@ -76,8 +90,9 @@ $custom_header_args = array(
 add_theme_support( 'custom-header', $custom_header_args );
 
 /**
- * remove header
+ * Remove header ,not using Shirohanada
  *
+ * @since Shirohanada 0.8
  */
 
 remove_action( 'wp_head', 'rsd_link' );
@@ -87,6 +102,8 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 
 /**
  * Registers an editor stylesheet for the theme.
+ *
+ * @since Shirohanada 0.9
  */
 function wpdocs_theme_add_editor_styles() {
     add_editor_style( 'editor-style.css' );
@@ -94,9 +111,11 @@ function wpdocs_theme_add_editor_styles() {
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 /**
- * get oldest post date for copy right
+ * Get oldest post date for copy right
  * ref http://nelog.jp/copyrights
- **/
+ *
+ * @since Shirohanada 0.9
+ */
 function get_first_post_year(){
 	$year = null;
 
@@ -111,6 +130,8 @@ function get_first_post_year(){
 
 /**
  * Category icon selector
+ *
+ * @since Shirohanada 0.9
  */
 function select_category_icon($category_slug = "uncategorized" ) {
 	switch ( $category_slug ):

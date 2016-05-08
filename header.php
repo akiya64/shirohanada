@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template part for header
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +22,7 @@
 <body>
 
 <?php if(!is_front_page()): ?>
+
 <a id="menu-button" class="button show-menu" href="#top">
 	<i class="icon icon-list"></i>
 </a>
@@ -26,4 +36,5 @@
 	</h1>
 
 </header>
+
 <?php endif; ?>

@@ -1,4 +1,12 @@
 <?php
+/**
+ * The template part for paginate nav
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.9
+ */
+
 	/* Build pagination by WordPress embedded method. */
 	global $wp_query;
 	$big = 999999999; // need an unlikely integer
@@ -11,7 +19,7 @@
 		'prev_next' => False
 		) );
 
-	/* Current CatName or Date */
+	/* Title is current category name or year.month */
 	if( is_category() ):
 		$page_title = single_cat_title('', False ).' ';
 	elseif( is_archive() ):

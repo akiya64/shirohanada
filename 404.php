@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying 404 pages (Not Found)
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.9
+ */
+
+get_header(); ?>
 
 <div class="main-contents">
 

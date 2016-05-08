@@ -3,8 +3,8 @@
  * The template part for displaying content
  *
  * @package WordPress
- * @subpackage shirohanada
- * @since 2016
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.9
  */
 ?>
 

@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The main template file
+ *
+ * @package WordPress
+ * @subpackage Shirohanada
+ * @since Shirohanada 0.8
+ */
+
+get_header(); ?>
 
 <?php
 	if( is_category() ) :
