@@ -48,6 +48,7 @@ function hideMenu(){
 	sideBar.classList.remove('on-top');
 }
 
+showMenuBtn.href= '#top'
 showMenuBtn.addEventListener('click',showMenu);
 
 </script>

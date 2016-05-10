@@ -23,7 +23,7 @@
 
 <?php if(!is_front_page()): ?>
 
-<a id="menu-button" class="button show-menu" href="#top">
+<a id="menu-button" class="button show-menu" href="#side-menu">
 	<i class="icon icon-list"></i>
 </a>
 	
