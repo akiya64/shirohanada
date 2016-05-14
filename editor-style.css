@@ -1,17 +1,19 @@
 /*
-Theme Name: Shirohanada
-Description: Adds supoort editor style.
+Theme Name Shirohanada
+Description Adds supoort editor style.
 */
-
-@import url( 'style.css' );
-
+@import url("style.css");
 body#tinymce {
-	/* overwrite for WordPress default */
-	padding : 0 0.5rem !important;
+/* overwrite for WordPress default */
+  padding: 0 0.5rem !important;
 }
-.mce-content-body *:first-child{
-	margin-top: 0.5rem;
+.mce-content-body *first-child {
+  margin-top: 0.5rem;
 }
-.mce-content-body ul,.mce-content-body ol{
-	padding : 0.5rem 2rem 1rem 2rem;
+.mce-content-body ul,
+.mce-content-body ol {
+  padding: 0.5rem 2rem 1rem 2rem;
+}
+.mce-content-body p {
+  margin-bottom: 1rem;
 }
