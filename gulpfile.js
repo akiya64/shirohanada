@@ -13,6 +13,14 @@ gulp.task('stylus', function() {
 		.pipe(gulp.dest(''));
 });
 
+gulp.task('build-es', function() {
+	gulp.src('stylus/editor-style.styl')
+		.pipe(stylus({
+			use: [nib()]
+			}))
+		.pipe(gulp.dest(''));
+});
+
 gulp.task('watch', function(){
 	gulp.watch('stylus/*.styl',[stylus])
 });
