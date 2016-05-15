@@ -367,7 +367,7 @@ h5,
 h6 {
   font-size: 1.62rem;
   color: #436fb4;
-  margin: 1.5rem 0 0.8rem;
+  margin: 2rem 0 1rem;
   padding-left: 0.75rem;
   border-left: solid 3px #436fb4;
   clear: both;
@@ -520,6 +520,7 @@ section,
 .entry-content dl,
 .page-content dl {
   margin: 1rem;
+  margin-left: 2rem;
 }
 .entry-content ul,
 .page-content ul {
