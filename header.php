@@ -26,6 +26,10 @@
 <a id="menu-button" class="button show-menu" href="#side-menu">
 	<i class="icon icon-list"></i>
 </a>
+
+<a id="goto-top-button" class="button show-menu" href="#side-menu">
+	<i class="icon icon-angle-top"></i>
+</a>
 	
 <header class="site-header entries" id="top" role="banner">
 
