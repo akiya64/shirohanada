@@ -56,12 +56,12 @@ article img
 .wp-caption
         max-width 100%
 
-.c-button-gotop
+.c-button-gopostheader
 .share-links
         width 38%
 
 .page
-        .c-button-gotop
+        .c-button-gopostheader
         .share-links
                 width 50%
 
@@ -181,7 +181,7 @@ li + li
 li + li
         border solid 1p hai
 
-.c-button-gotop
+.c-button-gopostheader
 .share-links
         margin-top 1rem
 
@@ -327,22 +327,23 @@ article
 @import "_icon-color"
 
 /* Text Decolation */
-a:hover
-        text-decoration underline
-        text-decoration-style dotted
+a
+        &:hover
+                text-decoration underline
+                text-decoration-style dotted
 
-.site-name
-a.gotop
-a.share-button
-a.link-top:link
-a.link-top:visited
-a.link-top:hover
-a.button:hover
-        text-decoration none
+        &.site-name
+        &.gotop-button
+        &.share-button
+        &.link-top:link
+        &.link-top:visited
+        &.link-top:hover
+        &.button:hover
+                text-decoration none
 
-.page-numbers.current
-        text-decoration underline
-        text-decoration-style solid
+        &.page-numbers.current
+                text-decoration underline
+                text-decoration-style solid
 
 /* Border */
 blockquote
@@ -411,6 +412,95 @@ tr + tr
 .sticky
         border solid 1px shirohanada
 
+/* End Main Section */
+
+/* Parts Section */
+/* gravatar */
+img[src^="http://www.gravatar.com/avatar/"]
+        border-radius .5rem
+
+/* Side Bar */
+/* inside sidebar skin */
+
+h2.widget-title
+        margin 0 0 0.25rem 0
+        padding-left 0
+
+.sidebar
+        /* On chrome overflow long text, example url ,1byte japanese kana */
+        word-break break-all
+        .widget
+                margin-bottom 1rem
+
+        ul
+                list-style-type none
+
+        li + li
+                padding-top .7rem
+                margin-top .4rem
+                border-top solid 1px hai
+
+        #wp-calendar
+                font-size .8rem
+                word-break keep-all //date should not break
+
+                th
+                        font-weight normal
+                        background-color none
+                td
+                        padding .1rem .3rem
+                        text-align center
+
+.on-top
+        position absolute
+        box-shadow -1px 1px 1px 2px rgba(0,0,0,0.2)
+        top 5px
+        right 3px
+        width 60%
+
+/*! button */
+.button
+        font-size 2.4rem
+        background none
+
+.show-menu
+.show-menu:visited
+        color white
+
+.show-menu
+        bottom 1rem
+        padding .4rem .7rem 0 .7rem
+        position fixed
+        background-color shirohanada
+        border-radius 0 .5rem .5rem 0
+        opacity 0.85
+
+.gotop-button
+        font-size 2.4em
+        bottom 3rem
+        padding .6rem .8rem 0 1rem
+        position fixed
+        border-radius 0 .5rem .5rem 0
+        background-color shirohanada
+
+.gotop-button
+.gotop-button:visited
+        color white
+        text-decoration none
+
+.hide-menu-button
+        color nakano-h
+        padding-top .5rem
+        display none
+        width 100%
+        text-align right
+
+.show
+        display block
+
+.hide
+        display none
+
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
         .articles
@@ -420,7 +510,7 @@ tr + tr
         .entry-content
                 width 100%
 
-        .c-button-gotop
+        .c-button-gopostheader
                 width 23% !important
                 margin initial
                 margin-left 1rem
@@ -493,81 +583,8 @@ tr + tr
                 width 100%
                 margin-left 0
 
-/* End Main Section */
-
-/* Parts Section */
-/* gravatar */
-img[src^="http://www.gravatar.com/avatar/"]
-        border-radius .5rem
-
-/* Side Bar */
-/* inside sidebar skin */
-
-h2.widget-title
-        margin 0 0 0.25rem 0
-        padding-left 0
-
-.sidebar
-        /* On chrome overflow long text, example url ,1byte japanese kana */
-        word-break break-all
-        .widget
-                margin-bottom 1rem
-
-        ul
-                list-style-type none
-
-        li + li
-                padding-top .7rem
-                margin-top .4rem
-                border-top solid 1px hai
-
-        #wp-calendar
-                font-size .8rem
-                word-break keep-all //date should not break
-
-                th
-                        font-weight normal
-                        background-color none
-                td
-                        padding .1rem .3rem
-                        text-align center
-
-.on-top
-        position absolute
-        box-shadow -1px 1px 1px 2px rgba(0,0,0,0.2)
-        top 5px
-        right 3px
-        width 60%
-
-/*! button */
-.button
-        font-size 2.4rem
-        background none
-
-.show-menu
-.show-menu:visited
-        color white
-
-.show-menu
-        bottom 1rem
-        padding .4rem .7rem 0 .7rem
-        position fixed
-        background-color shirohanada
-        border-radius 0 1rem 1rem 0
-        opacity 0.85
-
-.hide-menu-button
-        color nakano-h
-        padding-top .5rem
-        display none
-        width 100%
-        text-align right
-
-.show
-        display block
-
-.hide
-        display none
+        .gotop-button
+                display none
 
 @import "_comment-form"
 @import "_front-page"

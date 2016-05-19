@@ -345,11 +345,11 @@ article img {
 .wp-caption {
   max-width: 100%;
 }
-.c-button-gotop,
+.c-button-gopostheader,
 .share-links {
   width: 38%;
 }
-.page .c-button-gotop,
+.page .c-button-gopostheader,
 .page .share-links {
   width: 50%;
 }
@@ -478,7 +478,7 @@ li + li {
 li + li {
   border: solid 1p #777;
 }
-.c-button-gotop,
+.c-button-gopostheader,
 .share-links {
   margin-top: 1rem;
 }
@@ -662,8 +662,8 @@ a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
 }
-.site-name,
-a.gotop,
+a.site-name,
+a.gotop-button,
 a.share-button,
 a.link-top:link,
 a.link-top:visited,
@@ -671,7 +671,7 @@ a.link-top:hover,
 a.button:hover {
   text-decoration: none;
 }
-.page-numbers.current {
+a.page-numbers.current {
   text-decoration: underline;
   text-decoration-style: solid;
 }
@@ -741,6 +741,101 @@ tr + tr {
 .sticky {
   border: solid 1px #a3d8f6;
 }
+/* End Main Section */
+/* Parts Section */
+/* gravatar */
+img[src^="http://www.gravatar.com/avatar/"] {
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+/* Side Bar */
+/* inside sidebar skin */
+h2.widget-title {
+  margin: 0 0 0.25rem 0;
+  padding-left: 0;
+}
+.sidebar {
+/* On chrome overflow long text, example url ,1byte japanese kana */
+  word-break: break-all;
+}
+.sidebar .widget {
+  margin-bottom: 1rem;
+}
+.sidebar ul {
+  list-style-type: none;
+}
+.sidebar li + li {
+  padding-top: 0.7rem;
+  margin-top: 0.4rem;
+  border-top: solid 1px #777;
+}
+.sidebar #wp-calendar {
+  font-size: 0.8rem;
+  word-break: keep-all;
+}
+.sidebar #wp-calendar th {
+  font-weight: normal;
+  background-color: none;
+}
+.sidebar #wp-calendar td {
+  padding: 0.1rem 0.3rem;
+  text-align: center;
+}
+.on-top {
+  position: absolute;
+  -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
+  top: 5px;
+  right: 3px;
+  width: 60%;
+}
+/* button */
+.button {
+  font-size: 2.4rem;
+  background: none;
+}
+.show-menu,
+.show-menu:visited {
+  color: #fff;
+}
+.show-menu {
+  bottom: 1rem;
+  padding: 0.4rem 0.7rem 0 0.7rem;
+  position: fixed;
+  background-color: #a3d8f6;
+  -webkit-border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  opacity: 0.85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+}
+.gotop-button {
+  font-size: 2.6em;
+  bottom: 3rem;
+  padding: 0.6rem 0.8rem 0 1rem;
+  position: fixed;
+  -webkit-border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: #a3d8f6;
+}
+.gotop-button,
+.gotop-button:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.hide-menu-button {
+  color: #436fb4;
+  padding-top: 0.5rem;
+  display: none;
+  width: 100%;
+  text-align: right;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 /* over write for mobile */
 @media screen and (max-width: 768px) {
   .articles,
@@ -750,7 +845,7 @@ tr + tr {
   .entry-content {
     width: 100%;
   }
-  .c-button-gotop {
+  .c-button-gopostheader {
     width: 23% !important;
     margin: initial;
     margin-left: 1rem;
@@ -821,87 +916,12 @@ tr + tr {
     width: 100%;
     margin-left: 0;
   }
-}
-/* End Main Section */
-/* Parts Section */
-/* gravatar */
-img[src^="http://www.gravatar.com/avatar/"] {
-  -webkit-border-radius: 0.5rem;
-  border-radius: 0.5rem;
-}
-/* Side Bar */
-/* inside sidebar skin */
-h2.widget-title {
-  margin: 0 0 0.25rem 0;
-  padding-left: 0;
-}
-.sidebar {
-/* On chrome overflow long text, example url ,1byte japanese kana */
-  word-break: break-all;
-}
-.sidebar .widget {
-  margin-bottom: 1rem;
-}
-.sidebar ul {
-  list-style-type: none;
-}
-.sidebar li + li {
-  padding-top: 0.7rem;
-  margin-top: 0.4rem;
-  border-top: solid 1px #777;
-}
-.sidebar #wp-calendar {
-  font-size: 0.8rem;
-  word-break: keep-all;
-}
-.sidebar #wp-calendar th {
-  font-weight: normal;
-  background-color: none;
-}
-.sidebar #wp-calendar td {
-  padding: 0.1rem 0.3rem;
-  text-align: center;
-}
-.on-top {
-  position: absolute;
-  -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-  box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-  top: 5px;
-  right: 3px;
-  width: 60%;
-}
-/* button */
-.button {
-  font-size: 2.4rem;
-  background: none;
-}
-.show-menu,
-.show-menu:visited {
-  color: #fff;
-}
-.show-menu {
-  bottom: 1rem;
-  padding: 0.4rem 0.7rem 0 0.7rem;
-  position: fixed;
-  background-color: #a3d8f6;
-  -webkit-border-radius: 0 1rem 1rem 0;
-  border-radius: 0 1rem 1rem 0;
-  opacity: 0.85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
-}
-.hide-menu-button {
-  color: #436fb4;
-  padding-top: 0.5rem;
-  display: none;
-  width: 100%;
-  text-align: right;
-}
-.show {
-  display: block;
-}
-.hide {
-  display: none;
+  .gotop-button {
+    bottom: 7rem;
+    opacity: 0.85;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    filter: alpha(opacity=85);
+  }
 }
 .comment-author .avatar {
   -webkit-border-radius: 50%;
