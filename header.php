@@ -27,7 +27,7 @@
 	<i class="icon icon-list"></i>
 </a>
 
-<a id="goto-top-button" class="button show-menu" href="#side-menu">
+<a id="gotop-button" class="gotop-button" href="#top">
 	<i class="icon icon-angle-top"></i>
 </a>
 	
