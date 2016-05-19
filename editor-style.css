@@ -7,7 +7,7 @@ body#tinymce {
 /* overwrite for WordPress default */
   padding: 0 0.5rem !important;
 }
-.mce-content-body *first-child {
+.mce-content-body *:first-child {
   margin-top: 0.5rem;
 }
 .mce-content-body ul,

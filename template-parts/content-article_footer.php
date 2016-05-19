@@ -23,8 +23,8 @@
 <div class="entry-margin"></div>
 <?php endif; ?>
 
-<div class="c-button-gotop">
-	<a href="#top" class="gotop" title="Return Page Top"><i class="icon icon-eject"></i></a>
+<div class="c-button-gopostheader">
+	<a href="#<?php the_ID(); ?>" class="gotop" title="Return This Post Top"><i class="icon icon-eject"></i></a>
 </div>
 
 <div class="share-links">
