@@ -321,8 +321,11 @@ body {
 .entry-title {
   width: 100%;
 }
-article img {
+.entry-content img,
+.entry-content * {
   max-width: 100%;
+}
+.entry-content img {
   height: auto;
 }
 .sidebar {
