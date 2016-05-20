@@ -329,21 +329,23 @@ article
 /* Text Decolation */
 a
         &:hover
+        &.page-numbers.current
                 text-decoration underline
+
+        &:hover
                 text-decoration-style dotted
 
+        &.page-numbers.current
+                text-decoration-style solid
+
         &.site-name
-        &.gotop-button
+        &.c-button-gopostheader
         &.share-button
         &.link-top:link
         &.link-top:visited
         &.link-top:hover
         &.button:hover
                 text-decoration none
-
-        &.page-numbers.current
-                text-decoration underline
-                text-decoration-style solid
 
 /* Border */
 blockquote

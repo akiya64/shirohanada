@@ -658,22 +658,24 @@ a[href*=".tumblr.com"] > i {
   color: #35465c;
 }
 /* Text Decolation */
-a:hover {
+a:hover,
+a.page-numbers.current {
   text-decoration: underline;
+}
+a:hover {
   text-decoration-style: dotted;
 }
+a.page-numbers.current {
+  text-decoration-style: solid;
+}
 a.site-name,
-a.gotop-button,
+a.c-button-gopostheader,
 a.share-button,
 a.link-top:link,
 a.link-top:visited,
 a.link-top:hover,
 a.button:hover {
   text-decoration: none;
-}
-a.page-numbers.current {
-  text-decoration: underline;
-  text-decoration-style: solid;
 }
 /* Border */
 blockquote {
