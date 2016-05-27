@@ -842,12 +842,12 @@ h2.widget-title {
     width: 100%;
   }
   .c-button-gopostheader {
-    width: 23% !important;
+    width: 23%;
     margin: initial;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
   .share-links {
-    width: 72% !important;
+    width: 74% !important;
     margin: initial;
   }
   .site-name {
