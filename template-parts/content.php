@@ -23,11 +23,22 @@
 	</header>
 
 	<div class="entry-content">
-		<?php the_content(); ?>
+		<?php
+			if (is_single()):
+				the_content();
+			elseif(in_category( 'develop' )):
+				the_excerpt();
+			else:
+				the_content();
+			endif;
+		?>
 	</div><!--end entry-content-->
 
-	<?php get_template_part( 'template-parts/content', 'article_footer' ); ?>
-
+	<?php
+		if(! is_category( 'develop' )):
+			get_template_part( 'template-parts/content', 'article_footer' );
+		endif;
+	?>
 	<?php
 		/* show comment form in entry-content column, only single.php */
 		if(is_single()):
