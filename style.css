@@ -662,7 +662,7 @@ a[href*=".tumblr.com"] > i {
 }
 /* Text Decolation */
 a:hover,
-a.page-numbers.current {
+span.page-numbers.current {
   text-decoration: underline;
 }
 a:hover {
