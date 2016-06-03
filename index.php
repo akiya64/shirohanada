@@ -35,7 +35,13 @@ get_header(); ?>
 			get_template_part( 'template-parts/content' );
 		endwhile;
 
-		get_template_part( 'template-parts/nav', 'pagenate' );
+		/* Display page navigation */
+		if ( is_single() ) :
+			get_template_part( 'template-parts/nav', 'move_post' );
+		else:
+			get_template_part( 'template-parts/nav', 'pagenate' );
+		endif;
+
 		get_template_part( 'template-parts/nav', 'posts' );
 	?>
 
