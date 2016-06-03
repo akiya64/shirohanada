@@ -1168,29 +1168,5 @@ h2.contents-link-title {
     font-size: 0.875rem;
   }
 }
-.widget_twitter {
-  font-size: 0.875rem;
-}
-.widget_twitter span.entry-content:after {
-  content: "\A";
-  white-space: pre;
-}
-.widget_twitter .follow-button {
-  text-align: right;
-}
-.widget_twitter .twitter-avatar {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-.widget_twitter li + li {
-  border: none;
-}
-.widget_twitter .twitter-avatar img {
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-}
-.ws_tweet_list {
-  margin-left: 0.5rem;
-}
 
 /*# sourceMappingURL=style.css.map */
