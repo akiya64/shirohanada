@@ -774,15 +774,17 @@ h2.widget-title {
   border-top: solid 1px #777;
 }
 .sidebar #wp-calendar {
-  font-size: 0.8rem;
+  width: 90%;
+  margin: 0 auto;
   word-break: keep-all;
 }
 .sidebar #wp-calendar th {
+  font-size: 0.875rem;
   font-weight: normal;
   background-color: none;
 }
 .sidebar #wp-calendar td {
-  padding: 0.1rem 0.3rem;
+  padding: 0.4rem 0.3rem 0.1rem;
   text-align: center;
 }
 /* button */
