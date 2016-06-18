@@ -921,6 +921,10 @@ h2.widget-title {
     right: 3px;
     width: 60%;
   }
+  .sidebar #wp-calendar td {
+    padding: 0.4rem 0.2rem 0.1rem;
+    font-size: 0.9rem;
+  }
 }
 .comment-author .avatar {
   -webkit-border-radius: 50%;
@@ -1166,5 +1170,4 @@ h2.contents-link-title {
     font-size: 0.875rem;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
