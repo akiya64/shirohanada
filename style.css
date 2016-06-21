@@ -1067,7 +1067,10 @@ textarea[name="comment"] {
   -webkit-columns: 2 10rem;
   columns: 2 10rem;
 }
-.front.widget-area h2 ~ *,
+.front.widget-area h2 ~ * {
+  height: auto;
+  max-height: 160px;
+}
 .root-contents .menu {
   height: auto;
   max-height: 180px;
