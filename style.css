@@ -877,7 +877,9 @@ h2.widget-title {
   h2.page-title {
     padding: 1rem 0.5rem;
   }
-  .entry-date {
+  .entry-date,
+  .entry-category,
+  .entry-tags {
     margin-right: 1rem;
   }
   article {
@@ -1173,4 +1175,5 @@ h2.contents-link-title {
     font-size: 0.875rem;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
