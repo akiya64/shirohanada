@@ -441,6 +441,8 @@ article {
   #menu-button {
     display: none;
   }
+  .page .share-links,
+  .page .c-button-gopostheader,
   .width-half-inlarge {
     width: 50%;
   }
@@ -1175,5 +1177,4 @@ h2.contents-link-title {
     font-size: 0.875rem;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
