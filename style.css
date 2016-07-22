@@ -472,6 +472,7 @@ h3.comment-reply-title {
 .page-notfound > *:first-child {
   margin-top: 0;
 }
+.nav-posts,
 .comments,
 li + li {
   margin-top: 0.6rem;
@@ -498,14 +499,11 @@ li + li {
 .site-description {
   margin-right: 0.5rem;
 }
-article,
 .page-content-footer ~ p {
   margin-bottom: 1rem;
 }
-.move-posts {
-  margin-top: 0.5rem;
-}
 section,
+article,
 .entry-header,
 .entry-title {
   margin-bottom: 0.6rem;
@@ -529,6 +527,9 @@ section,
 }
 .site-footer {
   margin: 0.5rem;
+}
+.move-post * {
+  padding: 0.25rem 0;
 }
 .sidebar {
   padding: 0 1rem 0.8rem;
@@ -621,7 +622,7 @@ a.gotop:visited,
 .page-content,
 .page-title,
 .pagenation,
-.move-posts,
+.move-post *,
 article {
   background-color: #f8fafa;
 }
