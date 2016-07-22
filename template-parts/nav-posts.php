@@ -6,9 +6,7 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.9
  */
-?>
 
-<?php
 if(is_month()){
 	//Previous - Next Month Nav//
 	$before_post_month = new DateTime(get_the_time('Y-m')." -1 month");
@@ -46,6 +44,6 @@ if(is_month()){
 	}	
 ?>
 
-<nav class="move-posts text-centering">
+<p class="nav-posts">
 	<?php echo $posts_link; ?>
-</nav>
+</p>

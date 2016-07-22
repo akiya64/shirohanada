@@ -29,6 +29,6 @@
 	endif;
 ?>
 
-<nav class="pagenation text-centering">
+<p class="pagenation">
 	<?php echo $page_title . $paginate_links; ?>
-</nav>
+</p>

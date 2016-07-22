@@ -36,13 +36,18 @@ get_header(); ?>
 		endwhile;
 
 		/* Display page navigation */
-		if ( is_single() ) :
-			get_template_part( 'template-parts/nav', 'move_post' );
-		else:
-			get_template_part( 'template-parts/nav', 'pagenate' );
-		endif;
+		echo '<nav class="move-post text-centering">';
 
-		get_template_part( 'template-parts/nav', 'posts' );
+			if ( is_single() ) :
+				get_template_part( 'template-parts/nav', 'move_post' );
+			else:
+				get_template_part( 'template-parts/nav', 'pagenate' );
+			endif;
+
+			get_template_part( 'template-parts/nav', 'posts' );
+
+		echo '</nav>';
+
 	?>
 
 </div><!--end articles-->
