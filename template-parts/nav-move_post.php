@@ -8,7 +8,5 @@
  */
 ?>
 
-<nav class="move-post text-centering">
 	<p><?php previous_post_link('Next:%link'); ?></p>
 	<p><?php next_post_link('Previous:%link'); ?></p>
-<nav>
