@@ -474,11 +474,12 @@ h3.comment-reply-title {
 }
 .nav-posts,
 .comments,
-li + li {
+li + li,
+dd + dt {
   margin-top: 0.6rem;
 }
-li + li {
-  border: solid 1p #777;
+dt {
+  border-bottom: solid 1px #777;
 }
 .c-button-gopostheader,
 .share-links {
@@ -512,18 +513,30 @@ article,
 .page-content p {
   margin: 0.75rem 0;
 }
+/*List style in content */
 .entry-content ul,
 .page-content ul,
 .entry-content ol,
-.page-content ol,
-.entry-content dl,
-.page-content dl {
+.page-content ol {
   margin: 1rem;
   margin-left: 2rem;
 }
 .entry-content ul,
 .page-content ul {
   list-style-type: square;
+}
+.entry-content dl,
+.page-content dl {
+  margin-left: 0;
+}
+.entry-content dl dt,
+.page-content dl dt {
+  display: inline-block;
+}
+.entry-content dl dt + dd,
+.page-content dl dt + dd {
+  margin-top: 0.2rem;
+  padding-top: 0.2rem;
 }
 .site-footer {
   margin: 0.5rem;
