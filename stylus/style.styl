@@ -177,10 +177,11 @@ h3.comment-reply-title
 .nav-posts
 .comments
 li + li
+dd + dt
         margin-top .6rem
 
-li + li
-        border solid 1p hai
+dt
+        border-bottom solid 1px hai
 
 .c-button-gopostheader
 .share-links
@@ -216,18 +217,26 @@ article
         p
                 margin .75rem 0
 
+/*List style in content */
 .entry-content
 .page-content
         ul
         ol
-        dl
                 margin 1rem
                 margin-left 2rem
 
-.entry-content
-.page-content
         ul
                list-style-type square
+
+        dl
+                margin-left 0
+
+                dt
+                        display inline-block
+
+                dt + dd
+                        margin-top .2rem
+                        padding-top .2rem
 
 .site-footer
         margin 0.5rem
