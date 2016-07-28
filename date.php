@@ -50,7 +50,7 @@ if ( is_day() ) :
 	endif ;
 ?>
 
-	<h2 class="page-title">Archives <?php echo $title_date_part; ?></h2>
+	<h2 class="page-title">Archives <?php echo wp_kses_post( $title_date_part ); ?></h2>
 
 	<?php
 		/* Set query */

@@ -35,7 +35,7 @@ get_header(); ?>
 	<h3>Show Posts</h3>
 		<nav>
 			<p class="move-recent-posts">
-			<a href="<?php echo get_month_link( '', '' ); ?>">Recent Posts</a>
+			<a href="<?php echo esc_url( get_month_link( '', '' ) ); ?>">Recent Posts</a>
 			</p>
 		</nav>
 

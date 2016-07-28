@@ -169,7 +169,7 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
 			$icon_name = 'folder';
 	endswitch;
 
-	echo $icon_name;
+	echo esc_html( $icon_name );
 }
 
 ?>

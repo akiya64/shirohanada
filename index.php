@@ -26,7 +26,7 @@ endif ;
 
 <div class="articles">
 
-	<?php echo $current_page_title; ?>
+	<?php echo wp_kses_post( $current_page_title ); ?>
 
 	<?php
 	/* Display posts Start the loop.*/
