@@ -16,8 +16,8 @@ get_header(); ?>
 <?php
 
 	/*
-	 Default is year.month. Switch year or day
-		 build title and query args
+     Default is year.month. Switch year or day
+         build title and query args
 	*/
 
 if ( is_day() ) :
