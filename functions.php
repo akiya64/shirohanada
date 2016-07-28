@@ -134,14 +134,12 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
  */
 function get_first_post_year() {
 	$year = null;
+	$query1 = new WP_Query( 'posts_per_page=1&order=ASC' );
 
-	query_posts( 'posts_per_page=1&order=ASC' );
-
-	if ( have_posts() ) : while ( have_posts() ) : the_post();
-			$year = intval( get_the_time( 'Y' ) );
+	while ( $query1->have_posts() ) : $query1->the_post();
+		$year = intval( get_the_time( 'Y' ) );
 	endwhile;
-endif;
-	wp_reset_query();
+
 	return $year;
 }
 
