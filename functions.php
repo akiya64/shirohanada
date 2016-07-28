@@ -8,6 +8,20 @@
  */
 
 /**
+ * Register enqueue stylesheet and WebFont
+ *
+ * @since Shirohanada 0.9.1
+ */
+function shirohanada_enqueue_styles() {
+
+	wp_enqueue_style( 'shirohanada_style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ubuntu-font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
+	
+}
+
+add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
+
+/**
  * Register our sidebars and widgetized areas.
  *
  * @since Shirohanada 0.8
