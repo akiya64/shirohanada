@@ -14,9 +14,12 @@ get_header(); ?>
 <div class="articles">
 
 <?php
+
 	/*
-	 default is year.month. Switch year or day
-		build title and query args */
+	 Default is year.month. Switch year or day
+		 build title and query args
+	*/
+
 if ( is_day() ) :
 	$title_date_part = get_the_date( 'Y.m.d' );
 	$posts_piriod = array(

@@ -41,7 +41,6 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  *
  * @since Shirohanada 0.9
  */
-
 function register_root_menu() {
 	register_nav_menu( 'root-menu','Front Page Menu' );
 }
@@ -54,9 +53,11 @@ add_action( 'after_setup_theme', 'register_root_menu' );
  * @since Shirohanada 0.9
  */
 register_default_headers( array(
+
 		/*
          * Add 3images to default header image.
 		 */
+
 		'cherry_blossom' => array(
 			'url' => get_template_directory_uri().'/images/fukuju_bridge.jpg',
 			'thumbnail_url' => get_template_directory_uri().'/images/thumb_fukuju_bridge.jpg',
@@ -115,6 +116,7 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
  * ref http://nelog.jp/copyrights
  *
  * @since Shirohanada 0.9
+ * @return integer the year of oldest post
  */
 function get_first_post_year() {
 	$year = null;
@@ -122,7 +124,7 @@ function get_first_post_year() {
 	query_posts( 'posts_per_page=1&order=ASC' );
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-			$year = intval( get_the_time( 'Y' ) );// Å‰‚Ì“Še‚Ì”N‚ğæ“¾
+			$year = intval( get_the_time( 'Y' ) );
 	endwhile;
 endif;
 	wp_reset_query();
@@ -133,6 +135,7 @@ endif;
  * Category icon selector
  *
  * @since Shirohanada 0.9
+ * @param string|null $category_slug declaration in WordPress dashbord.
  */
 function select_category_icon( $category_slug = 'uncategorized' ) {
 	switch ( $category_slug ) :
@@ -154,10 +157,5 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
 
 	echo $icon_name;
 }
-
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 ?>

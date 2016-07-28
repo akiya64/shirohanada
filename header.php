@@ -6,6 +6,7 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.8
  */
+
 ?>
 <!DOCTYPE html>
 <html>

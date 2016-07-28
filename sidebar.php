@@ -6,6 +6,7 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.8
  */
+
 ?>
 
 <aside id="side-menu" class="sidebar">
