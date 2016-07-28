@@ -1,0 +1,4 @@
+#!/bin/sh
+
+wpcs/vendor/bin/phpcbf --standard=wordpress *.php
+wpcs/vendor/bin/phpcbf --standard=wordpress style.css
