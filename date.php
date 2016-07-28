@@ -14,23 +14,24 @@ get_header(); ?>
 <div class="articles">
 
 <?php
-	/* default is year.month. Switch year or day 
+	/*
+	 default is year.month. Switch year or day
 		build title and query args */
-	if ( is_day() ) :
-		$title_date_part = get_the_date( 'Y.m.d' );
-		$posts_piriod = array(
-			array(
-				'year' => get_the_date('Y'),
-				'month' => get_the_date('m'),
-				'day' => get_the_date('d')
-				),
-			);
+if ( is_day() ) :
+	$title_date_part = get_the_date( 'Y.m.d' );
+	$posts_piriod = array(
+	array(
+		'year' => get_the_date( 'Y' ),
+		'month' => get_the_date( 'm' ),
+		'day' => get_the_date( 'd' ),
+		),
+	);
 
 	elseif ( is_year() ) :
 		$title_date_part = get_the_date( 'Y' );
 		$posts_piriod = array(
 			array(
-				'year' => get_the_date('Y'),
+				'year' => get_the_date( 'Y' ),
 				),
 			);
 
@@ -38,8 +39,8 @@ get_header(); ?>
 		$title_date_part = get_the_date( 'Y.m' );
 		$posts_piriod = array(
 			array(
-				'year' => get_the_date('Y'),
-				'month' => get_the_date('m'),
+				'year' => get_the_date( 'Y' ),
+				'month' => get_the_date( 'm' ),
 				),
 			);
 
@@ -53,10 +54,10 @@ get_header(); ?>
 		$arg = array(
 			'order' => 'ASC',
 			'date_query' => $posts_piriod,
-			'ignore_sticky_posts' => 1
+			'ignore_sticky_posts' => 1,
 			);
-		
-		$date_query = new WP_Query($arg);
+
+		$date_query = new WP_Query( $arg );
 
 		/* Start the loop.*/
 		while ( $date_query->have_posts() ) {

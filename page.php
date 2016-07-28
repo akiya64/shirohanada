@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div>
 
-			<p class="page-content-footer"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></p>
+			<p class="page-content-footer"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time></p>
 			<p class="page-content-footer">Author:<?php the_author();?></p>
 
 			<?php get_template_part( 'template-parts/content', 'article_footer' ); ?>

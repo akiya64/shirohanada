@@ -14,7 +14,7 @@
  */
 function shirohanada_widgets_init() {
 
-register_sidebar( array(
+	register_sidebar( array(
 		'name' => 'Side Bar Menu',
 		'id' => 'sidebar-widgets',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -42,7 +42,7 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  * @since Shirohanada 0.9
  */
 
-function register_root_menu(){
+function register_root_menu() {
 	register_nav_menu( 'root-menu','Front Page Menu' );
 }
 
@@ -55,25 +55,25 @@ add_action( 'after_setup_theme', 'register_root_menu' );
  */
 register_default_headers( array(
 		/*
-		 * Add 3images to default header image.
+         * Add 3images to default header image.
 		 */
 		'cherry_blossom' => array(
 			'url' => get_template_directory_uri().'/images/fukuju_bridge.jpg',
 			'thumbnail_url' => get_template_directory_uri().'/images/thumb_fukuju_bridge.jpg',
 			/* translators: header image description */
-			'description' => 'cherryblossom'
+			'description' => 'cherryblossom',
 		),
 		'coast' => array(
 			'url' => get_template_directory_uri().'/images/ochi_ishi.jpg',
 			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ochi_ishi.jpg',
 			/* translators: header image description */
-			'description' => 'coast'
+			'description' => 'coast',
 		),
 		'tram_station' => array(
 			'url' => get_template_directory_uri().'/images/ujina_station.jpg',
 			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ujina_station.jpg',
 			/* translators: header image description */
-			'description' => 'station'
+			'description' => 'station',
 		),
 	)
 );
@@ -84,7 +84,7 @@ $custom_header_args = array(
 	'height' => 700,
 	'flex-height' => true,
 	'upload' => true,
-	'random-default' => true
+	'random-default' => true,
 );
 
 add_theme_support( 'custom-header', $custom_header_args );
@@ -106,7 +106,7 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
  * @since Shirohanada 0.9
  */
 function wpdocs_theme_add_editor_styles() {
-    add_editor_style( 'editor-style.css' );
+	add_editor_style( 'editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
@@ -116,14 +116,15 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
  *
  * @since Shirohanada 0.9
  */
-function get_first_post_year(){
+function get_first_post_year() {
 	$year = null;
 
-	query_posts('posts_per_page=1&order=ASC');
+	query_posts( 'posts_per_page=1&order=ASC' );
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
-		$year = intval(get_the_time('Y'));//Å‰‚Ì“Še‚Ì”N‚ğæ“¾
-	endwhile; endif;
+			$year = intval( get_the_time( 'Y' ) );// Å‰‚Ì“Še‚Ì”N‚ğæ“¾
+	endwhile;
+endif;
 	wp_reset_query();
 	return $year;
 }
@@ -133,23 +134,23 @@ function get_first_post_year(){
  *
  * @since Shirohanada 0.9
  */
-function select_category_icon($category_slug = "uncategorized" ) {
-	switch ( $category_slug ):
-		case "photo":
-			$icon_name = "photo";
+function select_category_icon( $category_slug = 'uncategorized' ) {
+	switch ( $category_slug ) :
+		case 'photo':
+			$icon_name = 'photo';
 			break;
-		case "illust":
-			$icon_name = "illust";
+		case 'illust':
+			$icon_name = 'illust';
 			break;
-		case "develop":
-			$icon_name = "terminal";
+		case 'develop':
+			$icon_name = 'terminal';
 			break;
-		case "tweets":
-			$icon_name = "quill";
+		case 'tweets':
+			$icon_name = 'quill';
 			break;
 		default:
-			$icon_name = "folder";
-	endSwitch;
+			$icon_name = 'folder';
+	endswitch;
 
 	echo $icon_name;
 }
