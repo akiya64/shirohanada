@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-stylus" : "stylus stylus/style.styl -o ../ -u nib -m -w"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,7 @@
   },
   "homepage": "https://github.com/akiya64/shirohanada#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.3.0",
-    "nib": "^1.1.0"
+    "nib": "^1.1.0",
+    "stylus": "^0.54.5"
   }
 }
