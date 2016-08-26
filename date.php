@@ -53,23 +53,32 @@ if ( is_day() ) :
 	<h2 class="page-title">Archives <?php echo wp_kses_post( $title_date_part ); ?></h2>
 
 	<?php
-		/* Set query */
-		$arg = array(
-			'order' => 'ASC',
-			'date_query' => $posts_piriod,
-			'ignore_sticky_posts' => 1,
-			);
+	/* Set query */
+	$arg = array(
+		'order' => 'ASC',
+		'date_query' => $posts_piriod,
+		'ignore_sticky_posts' => 1,
+		);
 
-		$date_query = new WP_Query( $arg );
+	$date_query = new WP_Query( $arg );
 
-		/* Start the loop.*/
-		while ( $date_query->have_posts() ) {
-			$date_query->the_post();
-			get_template_part( 'template-parts/content' );
-		}
+	/* Start the loop.*/
+	while ( $date_query->have_posts() ) {
+		$date_query->the_post();
+		get_template_part( 'template-parts/content' );
+	}
 
+	/* Display page navigation */
+	echo '<nav class="move-post text-centering">';
+
+	if ( is_single() ) :
+		get_template_part( 'template-parts/nav', 'move_post' );
+	else :
 		get_template_part( 'template-parts/nav', 'pagenate' );
-		get_template_part( 'template-parts/nav', 'posts' );
+	endif ;
+
+	echo '</nav>';
+
 	?>
 
 </div><!--end articles-->
