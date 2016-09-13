@@ -22,13 +22,17 @@
 	/* Title is current category name or year.month */
 	if( is_category() ):
 		$page_title = single_cat_title('', False ).' ';
-	elseif( is_archive() ):
-		$page_title = 'Archive ' . the_date( 'Y.m', '','', False ) . ' ';
+	elseif( is_tag() ):
+		$page_title = single_tag_title('', False ).' ';
 	else:
-		$page_title = 'Posts ';
+		$page_title = 'Archive ' . the_date( 'Y.m', '','', False ) . ' ';
 	endif;
 ?>
+
+<?php if( !is_null( $paginate_links ) ): ?>
 
 <p class="pagenation">
 	<?php echo $page_title . $paginate_links; ?>
 </p>
+
+<?php endif; ?>
