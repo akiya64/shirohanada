@@ -10,8 +10,16 @@
 	$encoded_url = urlencode(get_permalink());
 	$share_text = urlencode( get_the_title().' | Autumnsky' );
 
-	$share_url = array( 
-		'twitter' => "https://twitter.com/intent/tweet?url=$encoded_url&text=$share_text&via=K_akiya",
+	/* Twitter Via Switch */
+	$twitter_username = get_the_author_meta( "twitter" );
+	if( !Empty( $twitter_username ) ){
+		$twitter_share_url = "https://twitter.com/intent/tweet?url=$encoded_url&text=$share_text&via=$twitter_username";
+	}else{
+		$twitter_share_url = "https://twitter.com/intent/tweet?url=$encoded_url&text=$share_text";
+	}
+
+	$share_url = array(
+		'twitter' => $twitter_share_url,
 		'facebook' => "https://facebook.com/sharer.php?u=$encoded_url&amp;t=$share_text",
 		'google_plus' => "https://plus.google.com/share?url=$encoded_url",
 		'pocket' => "https://getpocket.com/edit?url=".get_permalink(),
