@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-stylus" : "stylus stylus/style.styl -o ../ -u nib -m -w"
+    "watch-stylus" : "stylus stylus/*.styl -o ../ -u nib -m -w"
   },
   "repository": {
     "type": "git",
