@@ -23,7 +23,6 @@ git rm -rf wpcs
 git rm -f .gitignore
 git rm -f .travis.yml
 git rm -f README.md
-git rm -f gulpfile.js
 git rm -f package.json
 git rm -f style.css.map
 git rm -f fonts/icomoon.zip
