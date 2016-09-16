@@ -474,8 +474,7 @@ h3.comment-reply-title {
 }
 .nav-posts,
 .comments,
-li + li,
-dd + dt {
+li + li {
 	margin-top: 0.6rem;
 }
 dt {
@@ -532,11 +531,16 @@ article,
 .entry-content dl dt,
 .page-content dl dt {
 	display: inline-block;
+	font-weight: bold;
 }
 .entry-content dl dt + dd,
 .page-content dl dt + dd {
 	margin-top: 0.2rem;
 	padding-top: 0.2rem;
+}
+.entry-content dl dd,
+.page-content dl dd {
+	margin-bottom: 1rem;
 }
 .site-footer {
 	margin: 0.5rem;
