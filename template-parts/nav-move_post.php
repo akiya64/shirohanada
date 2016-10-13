@@ -8,5 +8,5 @@
  */
 ?>
 
-	<p><?php previous_post_link('Next:%link'); ?></p>
-	<p><?php next_post_link('Previous:%link'); ?></p>
+	<?php previous_post_link('<p>Next:%link</p>'); ?>
+	<?php next_post_link('<p>Previous:%link</p>'); ?>
