@@ -20,7 +20,7 @@ if(is_month()){
 	$posts_link = '<a href="'.$before_month_link.'"><i class="icon icon-angle-left"></i>'.$before_post_month->format('Y.m').'</a>';
 	
 	if($after_post_month <= $now_month){
-		$posts_link .= '<a href="'.$after_month_link.'">'.$after_post_month->format('Y.m').'<i class="icon icon-angle-right"></i></a>';
+		$posts_link .= '&nbsp;<a href="'.$after_month_link.'">'.$after_post_month->format('Y.m').'<i class="icon icon-angle-right"></i></a>';
 		}
 
 }elseif(is_date()){
@@ -36,7 +36,7 @@ if(is_month()){
 	$posts_link = '<a href="'.$before_date_link.'"><i class="icon icon-angle-left"></i>'.$before_post_date->format('Y.m.d').'</a>';
 	
 	if($after_post_date < $now_date){
-		$posts_link .= '<a href="'.$after_date_link.'">'.$after_post_date->format('Y.m.d').'<i class="icon icon-angle-right"></i></a>';
+		$posts_link .= '&nbsp;<a href="'.$after_date_link.'">'.$after_post_date->format('Y.m.d').'<i class="icon icon-angle-right"></i></a>';
 		}
 }else{
 	/* show Link last post date archive */

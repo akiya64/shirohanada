@@ -75,6 +75,7 @@ if ( is_day() ) :
 		get_template_part( 'template-parts/nav', 'move_post' );
 	else :
 		get_template_part( 'template-parts/nav', 'pagenate' );
+		get_template_part( 'template-parts/nav', 'posts' );
 	endif ;
 
 	echo '</nav>';
