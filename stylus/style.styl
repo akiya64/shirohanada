@@ -23,8 +23,8 @@ breakpoint = 768px
 @import "_color"
 
 /*! Main Section
-   Follow Architecture Every Declaration Just Once
-   ref 'https://developers.google.com/speed/articles/optimizing-css' */
+    Every Declaration Just Once'
+    ref 'https://developers.google.com/speed/.posts/optimizing-css' */
 
 /* Base */
 body
@@ -44,7 +44,7 @@ body
 
 
 .entry-content img
-.entry-content *
+.wp-caption
         max-width 100%
 
 .entry-content img
@@ -57,11 +57,7 @@ body
         display flex
         justify-content space-around
 
-.wp-caption
-        max-width 100%
-
-
-.c-button-gopostheader
+.return-articletop
 .share-links
         width 38%
 
@@ -80,23 +76,24 @@ h1,h2,h3,h4,h5,h6
         clear both
 
 .main-contents
-article
+.post
         display flex
         flex-wrap wrap
-/* pubdate and header column is nothing in 404.php article */
+
+/* pubdate and header column is nothing in 404.php .post */
 .page-notfound
         display block
 
-/* LayLarge Display ; looks 2 column in Article */
+/* LayLarge Display ; looks 2 column in .post */
 @media (min-width:breakpoint)
 
-        /* site-name and site-description looks 1row */
-        .entries
-                h1,p
-                        display inline
 
         .site-header
                 margin-right 0.75rem
+
+                /* site-name and site-description looks 1row */
+                h1,p
+                        display inline
 
         .site-header
         .site-footer
@@ -105,7 +102,7 @@ article
         .site-name
                 font-size 72px
 
-        article
+        .post
                 padding .5rem 1rem 1rem
 
         .articles
@@ -143,7 +140,7 @@ article
                 display none
 
         .page .share-links
-        .page .c-button-gopostheader
+        .page .return-articletop
         .width-half-inlarge
                 width 50%
 
@@ -167,7 +164,7 @@ h3.comments-header
 h3.comment-reply-title
         padding-left 0
 
-/* -contet class is content body posted from WordPress */
+/* -contet class is content body posted in WordPress */
 .page-content
 .entry-content
 .page-notfound
@@ -182,7 +179,7 @@ li + li
 dt
         border-bottom solid 1px hai
 
-.c-button-gopostheader
+.return-articletop
 .share-links
         margin-top 1rem
 
@@ -205,8 +202,8 @@ dt
 .page-content-footer ~ p //margin-bottom only for second p tag
         margin-bottom 1rem
 
-section
-article
+.post
+.widget
 .entry-header
 .entry-title
         margin-bottom .6rem
@@ -264,7 +261,7 @@ blockquote
         text-align center
 
 /*  Typograghy  */
-h1,h2,h3,h4,h5,h6
+h1,h2,h3,h4,h5,h
 .site-description
 .root-contents
 .move-posts
@@ -334,7 +331,7 @@ a.gotop:visited
 .page-title
 .pagenation
 .move-post *
-article
+.post
         background-color usu-hai
 
 @import "_icon-color"
@@ -386,21 +383,12 @@ tr + tr
                 text-align left
 
 /* Utility Classes */
-.clearfix:after
-        content " "
-        display block
-        clear both
+.clearfix
+        clearfix()
 
 .no-marker
         list-style-type none
         margin-left 0
-
-.margin-left_2rem
-        margin-left 2rem
-
-.point
-        border-left solid 3px shirohanada
-        padding .5rem 0 .5rem 1rem
 
 /* for WordPress class */
 .aligncenter
@@ -520,7 +508,7 @@ h2.widget-title
         .entry-content
                 width 100%
 
-        .c-button-gopostheader
+        .return-articletop
                 width 23%
                 margin initial
                 margin-left .5rem
@@ -553,7 +541,7 @@ h2.widget-title
                 margin initial
                 font-size 1.62rem
 
-        /* In Article set less padding */
+        /* In .post set less padding */
         h1.entry-title.single
                 padding 1rem 0
 
@@ -565,24 +553,24 @@ h2.widget-title
         .entry-tags
                 margin-right 1rem
 
-        article
+        .post
                 margin-bottom 0
 
-        article
+        .post
                 padding 0 .5rem 1rem
 
         .entry-content
                 padding-bottom .75rem
 
-        article + article
+        .post + .post
                 padding-top 1rem
                 border-top solid 1px #777
 
-        article img
+        .post img
                 max-width 100%
                 height auto
 
-        .articles
+        .posts
                 margin-bottom 1rem
 
         .site-footer

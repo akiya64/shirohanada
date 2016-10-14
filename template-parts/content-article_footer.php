@@ -31,7 +31,7 @@
 <div class="entry-margin"></div>
 <?php endif; ?>
 
-<div class="c-button-gopostheader">
+<div class="return-articletop">
 	<a href="#<?php the_ID(); ?>" class="share-button gotop" title="Return This Post Top"><i class="icon icon-eject"></i></a>
 </div>
 
