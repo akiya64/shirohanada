@@ -7,7 +7,7 @@ Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANA
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-sidebar, fixed-layout, responsive-layout, custom-menu,
+Tags: blue, white, gray, right-widget-area, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 
@@ -23,8 +23,13 @@ breakpoint = 768px
 @import "_color"
 
 /*! Main Section
-    Every Declaration Just Once'
-    ref 'https://developers.google.com/speed/.posts/optimizing-css' */
+
+    'Every Declaration Just Once'
+    ref 'https://developers.google.com/speed/articles/optimizing-css'
+
+    Naming rule is 'RSCSS'
+    ref 'https://github.com/rstacruz/rscss'
+    ref 'http://rscss.io/index.html' */
 
 /* Base */
 body
@@ -50,16 +55,16 @@ body
 .entry-content img
         height auto
 
-.sidebar
+.widget-area
         margin-left 1%
 
-.share-links
-        display flex
-        justify-content space-around
 
-.return-articletop
-.share-links
+.entry-footer
         width 38%
+
+        &.-sharelinks
+                display flex
+                justify-content space-around
 
 /* post-date and post-category looks 1row */
 .entry-header > p
@@ -105,12 +110,12 @@ h1,h2,h3,h4,h5,h6
         .post
                 padding .5rem 1rem 1rem
 
-        .articles
+        .article-area
         .entry-content
         .comments
                 width 76%
 
-        .sidebar
+        .widget-area
         .entry-margin
         .entry-header
                 width 23%
@@ -244,7 +249,7 @@ dt
 .move-post *
         padding .25rem 0
 
-.sidebar
+.widget-area
         padding 0 1rem .8rem
 
 blockquote
@@ -276,7 +281,7 @@ h1,h2,h3,h4,h5,h
 .contents-link-title
 .entry-title
 .widget-title
-.share-links
+.link-icon
 .comment-reply-title
 .comments-header
         font-size 1.62rem
@@ -284,12 +289,6 @@ h1,h2,h3,h4,h5,h
 .pagenation
 .move-posts
         font-size 1.4rem
-
-/* eject icon use as goto top button */
-.icon-eject
-        font-size 1.5rem
-        margin-left .25rem
-        vertical-align -0.475rem
 
 .move-posts a > i
         font-size 1.7rem
@@ -302,7 +301,7 @@ a:visited
         color maroon
 
 .site-name
-a.share-button
+a.link-icon
 a.link-top:link
 a.link-top:visited
 a.link-top:hover
@@ -326,7 +325,7 @@ a.gotop:visited
 .site-description
         color hai
 
-.sidebar
+.widget-area
 .page-content
 .page-title
 .pagenation
@@ -348,7 +347,7 @@ a
                 text-decoration-style solid
 
         &.site-name
-        &.share-button
+        &.link-icon
         &.link-top:link
         &.link-top:visited
         &.link-top:hover
@@ -421,13 +420,13 @@ img[src^="http://www.gravatar.com/avatar/"]
         border-radius .5rem
 
 /* Side Bar */
-/* inside sidebar skin */
+/* inside widget-area skin */
 
 h2.widget-title
         margin 0 0 0.25rem 0
         padding-left 0
 
-.sidebar
+.widget-area
         /* On chrome overflow long text, example url ,1byte japanese kana */
         word-break break-all
         .widget
@@ -501,8 +500,8 @@ h2.widget-title
 
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
-        .articles
-        .sidebar
+        .article-area
+        .widget-area
         .entry-title
         .entry-header
         .entry-content
@@ -555,23 +554,17 @@ h2.widget-title
 
         .post
                 margin-bottom 0
-
-        .post
                 padding 0 .5rem 1rem
 
         .entry-content
                 padding-bottom .75rem
 
+                img
+                        max-width 100%
+                        height auto
         .post + .post
                 padding-top 1rem
                 border-top solid 1px #777
-
-        .post img
-                max-width 100%
-                height auto
-
-        .posts
-                margin-bottom 1rem
 
         .site-footer
                 text-align right
@@ -593,7 +586,7 @@ h2.widget-title
                 right 3px
                 width 60%
 
-        .sidebar #wp-calendar td
+        .widget-area #wp-calendar td
                 padding .4rem .2rem .1rem
                 font-size .9rem
 

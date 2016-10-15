@@ -7,7 +7,7 @@ Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANA
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-sidebar, fixed-layout, responsive-layout, custom-menu,
+Tags: blue, white, gray, right-widget-area, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 /* major breakpoint */
@@ -303,8 +303,13 @@ i {
   content: "\f265";
 }
 /* Main Section
-    Every Declaration Just Once'
-    ref 'https://developers.google.com/speed/.posts/optimizing-css' */
+
+    'Every Declaration Just Once'
+    ref 'https://developers.google.com/speed/articles/optimizing-css'
+
+    Naming rule is 'RSCSS'
+    ref 'https://github.com/rstacruz/rscss'
+    ref 'http://rscss.io/index.html' */
 /* Base */
 body {
   font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
@@ -328,10 +333,13 @@ body {
 .entry-content img {
   height: auto;
 }
-.sidebar {
+.widget-area {
   margin-left: 1%;
 }
-.share-links {
+.entry-footer {
+  width: 38%;
+}
+.entry-footer.-sharelinks {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -344,10 +352,6 @@ body {
   -ms-flex-pack: distribute;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-}
-.return-articletop,
-.share-links {
-  width: 38%;
 }
 /* post-date and post-category looks 1row */
 .entry-header > p {
@@ -407,12 +411,12 @@ h6 {
   .post {
     padding: 0.5rem 1rem 1rem;
   }
-  .articles,
+  .article-area,
   .entry-content,
   .comments {
     width: 76%;
   }
-  .sidebar,
+  .widget-area,
   .entry-margin,
   .entry-header {
     width: 23%;
@@ -546,7 +550,7 @@ dt {
 .move-post * {
   padding: 0.25rem 0;
 }
-.sidebar {
+.widget-area {
   padding: 0 1rem 0.8rem;
 }
 blockquote {
@@ -583,7 +587,7 @@ h,
 .contents-link-title,
 .entry-title,
 .widget-title,
-.share-links,
+.link-icon,
 .comment-reply-title,
 .comments-header {
   font-size: 1.62rem;
@@ -591,12 +595,6 @@ h,
 .pagenation,
 .move-posts {
   font-size: 1.4rem;
-}
-/* eject icon use as goto top button */
-.icon-eject {
-  font-size: 1.5rem;
-  margin-left: 0.25rem;
-  vertical-align: -0.475rem;
 }
 .move-posts a > i {
   font-size: 1.7rem;
@@ -609,7 +607,7 @@ a:visited {
   color: #800000;
 }
 .site-name,
-a.share-button,
+a.link-icon,
 a.link-top:link,
 a.link-top:visited,
 a.link-top:hover {
@@ -633,7 +631,7 @@ a.gotop:visited,
 .site-description {
   color: #777;
 }
-.sidebar,
+.widget-area,
 .page-content,
 .page-title,
 .pagenation,
@@ -686,7 +684,7 @@ a.page-numbers.current {
   text-decoration-style: solid;
 }
 a.site-name,
-a.share-button,
+a.link-icon,
 a.link-top:link,
 a.link-top:visited,
 a.link-top:hover,
@@ -766,37 +764,37 @@ img[src^="http://www.gravatar.com/avatar/"] {
   border-radius: 0.5rem;
 }
 /* Side Bar */
-/* inside sidebar skin */
+/* inside widget-area skin */
 h2.widget-title {
   margin: 0 0 0.25rem 0;
   padding-left: 0;
 }
-.sidebar {
+.widget-area {
 /* On chrome overflow long text, example url ,1byte japanese kana */
   word-break: break-all;
 }
-.sidebar .widget {
+.widget-area .widget {
   margin-bottom: 1rem;
 }
-.sidebar ul {
+.widget-area ul {
   list-style-type: none;
 }
-.sidebar li + li {
+.widget-area li + li {
   padding-top: 0.7rem;
   margin-top: 0.4rem;
   border-top: solid 1px #777;
 }
-.sidebar #wp-calendar {
+.widget-area #wp-calendar {
   width: 90%;
   margin: 0 auto;
   word-break: keep-all;
 }
-.sidebar #wp-calendar th {
+.widget-area #wp-calendar th {
   font-size: 0.875rem;
   font-weight: normal;
   background-color: none;
 }
-.sidebar #wp-calendar td {
+.widget-area #wp-calendar td {
   padding: 0.4rem 0.3rem 0.1rem;
   text-align: center;
 }
@@ -849,8 +847,8 @@ h2.widget-title {
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
-  .articles,
-  .sidebar,
+  .article-area,
+  .widget-area,
   .entry-title,
   .entry-header,
   .entry-content {
@@ -901,23 +899,18 @@ h2.widget-title {
   }
   .post {
     margin-bottom: 0;
-  }
-  .post {
     padding: 0 0.5rem 1rem;
   }
   .entry-content {
     padding-bottom: 0.75rem;
   }
-  .post + .post {
-    padding-top: 1rem;
-    border-top: solid 1px #777;
-  }
-  .post img {
+  .entry-content img {
     max-width: 100%;
     height: auto;
   }
-  .posts {
-    margin-bottom: 1rem;
+  .post + .post {
+    padding-top: 1rem;
+    border-top: solid 1px #777;
   }
   .site-footer {
     text-align: right;
@@ -940,7 +933,7 @@ h2.widget-title {
     right: 3px;
     width: 60%;
   }
-  .sidebar #wp-calendar td {
+  .widget-area #wp-calendar td {
     padding: 0.4rem 0.2rem 0.1rem;
     font-size: 0.9rem;
   }

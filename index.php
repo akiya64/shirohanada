@@ -24,7 +24,7 @@ endif ;
 
 <div class="main-contents">
 
-<div class="articles">
+<div class="article-area">
 
 	<?php echo wp_kses_post( $current_page_title ); ?>
 
@@ -50,7 +50,7 @@ endif ;
 
 	?>
 
-</div><!--end articles-->
+</div><!--end article-area-->
 
 <?php get_sidebar(); ?>
 

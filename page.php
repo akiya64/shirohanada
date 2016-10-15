@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="main-contents">
-	<div class="articles">
+	<div class="article-area">
 
 		<?php
 		// Start the loop.
@@ -33,7 +33,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-	</div><!--end articles-->
+	</div><!--end article-area-->
 
 	<?php get_sidebar(); ?>
 

@@ -3,62 +3,26 @@
 &.link-top:link
 &.link-top:visited
 &.page-numbers.current
-&.share-button
 &.site-name
-.c-button-gopostheader
-.comments
-.entry-category
-.entry-content
-.entry-date
-.entry-header
-.entry-header > p
-.entry-margin
-.entry-tags
-.entry-title
-.gotop-button
-.on-top
-.page .c-button-gopostheader
-.page .share-links
-.post
-.post + .post
-.post img
-.posts
-.share-links
-.sidebar
-.sidebar #wp-calendar td
-.site-description
-.site-footer
-.site-footer > p
-.site-footer.front
-.site-header
-.site-header .site-name
-.site-name
-.widget
-.width-half-inlarge
-/* In .post set less padding */
-a.link-top:hover
-a.link-top:link
-a.link-top:visited
-h1.entry-title.single
-h1.site-name
-h2.page-title
-
 .aligncenter
 .alignleft
 .alignright
-
+.article-area <- articles
 .button
-.c-button-gopostheader
-.clearfix:after
+.clearfix -> clearfix() by nib
 .comment-reply-title
 .comments
 .comments-header
 .contents-link-title
+.entry-category
 .entry-content
 .entry-content img
+.entry-date
 .entry-header
 .entry-header > p
 .entry-header i
+.entry-margin
+.entry-tags
 .entry-title
 .gotop-button
 .gotop-button:visited
@@ -68,49 +32,57 @@ h2.page-title
 .icon-angle-right
 .icon-eject
 .icon-share
+.link-icon <- a.share-button
 .main-contents
-.margin-left_2rem
 .move-post *
 .move-posts
 .move-posts a > i
 .nav-posts
 .no-marker
+.on-top
 .page-content
 .page-content-footer
-.page-content-footer ~ p
 .page-notfound
 .page-title
 .pagenation
 .pagenation > *
-.point
 .post
+.post + .post
+.post img
+.posts
+.return-articletop
 .root-contents
 .share-links
 .show
 .show-menu
 .show-menu:visited
-.sidebar
 .site-description
 .site-footer
+.site-footer > p
+.site-footer.front
+.site-header
+.site-header .site-name
 .site-name
 .sticky
 .text-centering
 .widget
+.widget-area <- sidebar
 .widget-title
+.width-half-inlarge
 .wp-caption
 .wp-caption > p
-
 a.gotop
 a.gotop:visited
 a.link-top:hover
 a.link-top:link
 a.link-top:visited
-a.share-button
 h1.entry-title
+h1.entry-title.single
 h1.site-name
 h2.page-title
 h2.widget-title
 h3.comment-reply-title
 h3.comments-header
 img[src^="http://www.gravatar.com/avatar/"]
+oentry-header > p
 span.page-numbers.current

@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="main-contents">
 
-<div class="articles">
+<div class="article-area">
 
 <?php
 
@@ -82,7 +82,7 @@ if ( is_day() ) :
 
 	?>
 
-</div><!--end articles-->
+</div><!--end article-area-->
 
 <?php get_sidebar(); ?>
 

@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="main-contents">
 
-<div class="articles">
+<div class="article-area">
 
 	<h2 class="page-title">
 		404 Not Found
@@ -42,7 +42,7 @@ get_header(); ?>
 </article>
 
 
-</div><!--end articles-->
+</div><!--end article-area-->
 
 <?php get_sidebar(); ?>
 
