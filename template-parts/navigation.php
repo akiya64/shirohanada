@@ -86,7 +86,7 @@ if( is_single() ):
 
 elseif( isset( $posts_link ) ):
 
-    echo '<p class="-date">';
+    echo '<p class=".movedate">';
     echo $posts_link;
     echo '</p>';
 
