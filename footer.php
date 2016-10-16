@@ -38,7 +38,7 @@ function showMenu(){
 	hideMenuBtn.classList.add('show');
 	showMenuBtn.classList.add('hide');
 	hideMenuBtn.addEventListener('click',hideMenu);
-	document.querySelector('div .articles').addEventListener('click',hideMenu);
+	document.querySelector('div .article-area').addEventListener('click',hideMenu);
 }
 
 function hideMenu(){

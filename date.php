@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="main-contents">
 
-<div class="articles">
+<div class="article-area">
 
 <?php
 
@@ -63,26 +63,17 @@ if ( is_day() ) :
 	$date_query = new WP_Query( $arg );
 
 	/* Start the loop.*/
-	while ( $date_query->have_posts() ) {
+	while ( $date_query->have_posts() ) :
 		$date_query->the_post();
 		get_template_part( 'template-parts/content' );
-	}
-
-	/* Display page navigation */
-	echo '<nav class="move-post text-centering">';
-
-	if ( is_single() ) :
-		get_template_part( 'template-parts/nav', 'move_post' );
-	else :
-		get_template_part( 'template-parts/nav', 'pagenate' );
-		get_template_part( 'template-parts/nav', 'posts' );
-	endif ;
-
-	echo '</nav>';
-
+	endwhile;
 	?>
 
-</div><!--end articles-->
+	<nav class="link-posts text-centering">
+		<?php get_template_part( 'template-parts/navigation' ); ?>
+	</nav>
+
+</div><!--end article-area-->
 
 <?php get_sidebar(); ?>
 

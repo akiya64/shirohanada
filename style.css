@@ -7,7 +7,7 @@ Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANA
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-sidebar, fixed-layout, responsive-layout, custom-menu,
+Tags: blue, white, gray, right-widget-area, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 /* major breakpoint */
@@ -215,6 +215,9 @@ i {
 .icon-eject:before {
   content: "\e902";
 }
+.icon-eject {
+  vertical-align: -2px;
+}
 .icon-list:before {
   content: "\f061";
 }
@@ -303,8 +306,13 @@ i {
   content: "\f265";
 }
 /* Main Section
-    Every Declaration Just Once'
-    ref 'https://developers.google.com/speed/.posts/optimizing-css' */
+
+    'Every Declaration Just Once'
+    ref 'https://developers.google.com/speed/articles/optimizing-css'
+
+    Naming rule is 'RSCSS'
+    ref 'https://github.com/rstacruz/rscss'
+    ref 'http://rscss.io/index.html' */
 /* Base */
 body {
   font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
@@ -316,8 +324,10 @@ body {
 }
 /* Layout */
 /* looks 3columns but HTML is 2 Column */
-.page-content,
-.page-content-footer,
+.page > .entry-content,
+.page > .footer-date,
+.page > .footer-author,
+.page-footer,
 .entry-title {
   width: 100%;
 }
@@ -328,25 +338,10 @@ body {
 .entry-content img {
   height: auto;
 }
-.sidebar {
+.widget-area {
   margin-left: 1%;
 }
-.share-links {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  -o-box-pack: distribute;
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-.return-articletop,
-.share-links {
+.entry-footer {
   width: 38%;
 }
 /* post-date and post-category looks 1row */
@@ -369,7 +364,9 @@ h6 {
   clear: both;
 }
 .main-contents,
-.post {
+.post,
+.page,
+.sharelinks {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -383,8 +380,16 @@ h6 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.sharelinks {
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
 /* pubdate and header column is nothing in 404.php .post */
-.page-notfound {
+.nomatch-contents {
   display: block;
 }
 /* LayLarge Display ; looks 2 column in .post */
@@ -404,15 +409,16 @@ h6 {
   .site-name {
     font-size: 72px;
   }
-  .post {
+  .post,
+  .page {
     padding: 0.5rem 1rem 1rem;
   }
-  .articles,
+  .article-area,
   .entry-content,
-  .comments {
+  .entry-comments {
     width: 76%;
   }
-  .sidebar,
+  .widget-area,
   .entry-margin,
   .entry-header {
     width: 23%;
@@ -425,7 +431,7 @@ h6 {
     margin-bottom: 0.3rem;
   }
   .entry-content,
-  .comments {
+  .entry-comments {
     min-width: 560px;
   }
   .site-footer > p {
@@ -439,13 +445,11 @@ h6 {
   #menu-button {
     display: none;
   }
-  .page .share-links,
-  .page .return-articletop,
-  .width-half-inlarge {
+  .page > .entry-footer {
     width: 50%;
   }
 }
-/*  Margin Padding */
+/*  Box -Margin and Padding */
 /* Over write h tags */
 h1.site-name {
   margin: 0;
@@ -460,26 +464,26 @@ h2.page-title {
 h1.entry-title {
   padding: 0;
 }
-h3.comments-header,
+h3.comments-list-header,
 h3.comment-reply-title {
   padding-left: 0;
 }
-/* -contet class is content body posted in WordPress */
-.page-content > *:first-child,
 .entry-content > *:first-child,
-.page-notfound > *:first-child {
+.nomatch-contents > *:first-child {
   margin-top: 0;
 }
-.nav-posts,
-.comments,
+.nomatch-conten/ts > .reasons {
+  margin-left: 2rem;
+}
+link-posts > .date,
+.entry-comments,
 li + li {
   margin-top: 0.6rem;
 }
 dt {
   border-bottom: solid 1px #777;
 }
-.return-articletop,
-.share-links {
+.content-footer {
   margin-top: 1rem;
 }
 .icon {
@@ -491,76 +495,61 @@ dt {
 .pagenation > * {
   margin-left: 0.75rem;
 }
-.move-posts a:first-child {
-  margin-right: 1.5rem;
+.link-posts > .movedate a:first-child {
+  margin-right: 1rem;
 }
 .site-description {
   margin-right: 0.5rem;
 }
-.page-content-footer ~ p {
+.page > .footer ~ p {
   margin-bottom: 1rem;
 }
 .post,
+.page,
 .widget,
 .entry-header,
 .entry-title {
   margin-bottom: 0.6rem;
 }
-.entry-content p,
-.page-content p {
+.entry-content p {
   margin: 0.75rem 0;
 }
 /*List style in content */
 .entry-content ul,
-.page-content ul,
-.entry-content ol,
-.page-content ol {
+.entry-content ol {
   margin: 1rem;
   margin-left: 2rem;
 }
-.entry-content ul,
-.page-content ul {
+.entry-content ul {
   list-style-type: square;
 }
-.entry-content dl,
-.page-content dl {
+.entry-content dl {
   margin-left: 0;
 }
-.entry-content dl dt,
-.page-content dl dt {
+.entry-content dl dt {
   display: inline-block;
   font-weight: bold;
 }
-.entry-content dl dt + dd,
-.page-content dl dt + dd {
+.entry-content dl dt + dd {
   margin-top: 0.2rem;
   padding-top: 0.2rem;
 }
-.entry-content dl dd,
-.page-content dl dd {
+.entry-content dl dd {
   margin-bottom: 1rem;
 }
 .site-footer {
   margin: 0.5rem;
 }
-.move-post * {
+.link-posts > * {
   padding: 0.25rem 0;
 }
-.sidebar {
+.widget-area {
   padding: 0 1rem 0.8rem;
 }
 blockquote {
   margin: 0.8rem 0;
   padding: 0.2rem 0.75rem;
   overflow-wrap: break-word;
-}
-/* Text Align */
-.page-content-footer {
-  text-align: right;
-}
-.wp-caption,
-.text-centering {
-  text-align: center;
 }
 /*  Typograghy  */
 h1,
@@ -571,7 +560,6 @@ h5,
 h,
 .site-description,
 .root-contents,
-.move-posts,
 .pagenation {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
@@ -583,46 +571,36 @@ h,
 .contents-link-title,
 .entry-title,
 .widget-title,
-.share-links,
-.comment-reply-title,
-.comments-header {
+.link-icon,
+.comments-list-header,
+.comment-reply-title {
   font-size: 1.62rem;
 }
-.pagenation,
-.move-posts {
+.pagenation {
   font-size: 1.4rem;
-}
-/* eject icon use as goto top button */
-.icon-eject {
-  font-size: 1.5rem;
-  margin-left: 0.25rem;
-  vertical-align: -0.475rem;
-}
-.move-posts a > i {
-  font-size: 1.7rem;
-  vertical-align: -0.1rem;
-  margin: 0 0.5rem;
 }
 /* Color
  * ShiroHanada #a3d8f6 */
 a:visited {
   color: #800000;
 }
-.site-name,
-a.share-button,
-a.link-top:link,
-a.link-top:visited,
-a.link-top:hover {
+.site-name {
+  color: #a3d8f6;
+}
+.link-icon:link,
+.link-top:link,
+.link-icon:visited,
+.link-top:visited,
+.link-icon:hover,
+.link-top:hover {
   color: #a3d8f6;
 }
 a,
-a.gotop,
-a.gotop:visited,
+.icon-eject,
 .entry-title {
   color: #257bcc;
 }
 .contents-link-title,
-.page-title,
 .widget-title,
 .pagenation {
   color: #436fb4;
@@ -633,11 +611,12 @@ a.gotop:visited,
 .site-description {
   color: #777;
 }
-.sidebar,
-.page-content,
+.widget-area,
 .page-title,
 .pagenation,
-.move-post *,
+.nomatch-contents,
+.link-posts > p,
+.page,
 .post {
   background-color: #f8fafa;
 }
@@ -686,10 +665,8 @@ a.page-numbers.current {
   text-decoration-style: solid;
 }
 a.site-name,
-a.share-button,
-a.link-top:link,
-a.link-top:visited,
-a.link-top:hover,
+a.link-top,
+a.link-icon,
 a.button:hover {
   text-decoration: none;
 }
@@ -701,7 +678,7 @@ h1.site-name,
 h2.page-title,
 h1.entry-title,
 h2.widget-title,
-h3.comments-header,
+h3.comments-list-header,
 h3.comment-reply-title {
   border-left: none;
 }
@@ -719,7 +696,7 @@ tr + tr {
 .entry-content caption {
   text-align: left;
 }
-/* Utility Classes */
+/* helper Classes */
 .clearfix {
   zoom: 1;
 }
@@ -731,9 +708,21 @@ tr + tr {
 .clearfix:after {
   clear: both;
 }
-.no-marker {
+._no-marker {
   list-style-type: none;
-  margin-left: 0;
+}
+._text-alignright {
+  text-align: right;
+}
+.wp-caption,
+.link-posts,
+._text-centering {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  ._halfwidth-inlarge {
+    width: 50%;
+  }
 }
 /* for WordPress class */
 .aligncenter,
@@ -766,37 +755,37 @@ img[src^="http://www.gravatar.com/avatar/"] {
   border-radius: 0.5rem;
 }
 /* Side Bar */
-/* inside sidebar skin */
+/* inside widget-area skin */
 h2.widget-title {
   margin: 0 0 0.25rem 0;
   padding-left: 0;
 }
-.sidebar {
+.widget-area {
 /* On chrome overflow long text, example url ,1byte japanese kana */
   word-break: break-all;
 }
-.sidebar .widget {
+.widget-area .widget {
   margin-bottom: 1rem;
 }
-.sidebar ul {
+.widget-area ul {
   list-style-type: none;
 }
-.sidebar li + li {
+.widget-area li + li {
   padding-top: 0.7rem;
   margin-top: 0.4rem;
   border-top: solid 1px #777;
 }
-.sidebar #wp-calendar {
+.widget-area #wp-calendar {
   width: 90%;
   margin: 0 auto;
   word-break: keep-all;
 }
-.sidebar #wp-calendar th {
+.widget-area #wp-calendar th {
   font-size: 0.875rem;
   font-weight: normal;
   background-color: none;
 }
-.sidebar #wp-calendar td {
+.widget-area #wp-calendar td {
   padding: 0.4rem 0.3rem 0.1rem;
   text-align: center;
 }
@@ -849,8 +838,8 @@ h2.widget-title {
 }
 /* over write for mobile */
 @media screen and (max-width: 768px) {
-  .articles,
-  .sidebar,
+  .article-area,
+  .widget-area,
   .entry-title,
   .entry-header,
   .entry-content {
@@ -899,25 +888,21 @@ h2.widget-title {
   .entry-tags {
     margin-right: 1rem;
   }
-  .post {
+  .post,
+  .page {
     margin-bottom: 0;
-  }
-  .post {
     padding: 0 0.5rem 1rem;
   }
   .entry-content {
     padding-bottom: 0.75rem;
   }
-  .post + .post {
-    padding-top: 1rem;
-    border-top: solid 1px #777;
-  }
-  .post img {
+  .entry-content img {
     max-width: 100%;
     height: auto;
   }
-  .posts {
-    margin-bottom: 1rem;
+  .post + .post {
+    padding-top: 1rem;
+    border-top: solid 1px #777;
   }
   .site-footer {
     text-align: right;
@@ -940,7 +925,7 @@ h2.widget-title {
     right: 3px;
     width: 60%;
   }
-  .sidebar #wp-calendar td {
+  .widget-area #wp-calendar td {
     padding: 0.4rem 0.2rem 0.1rem;
     font-size: 0.9rem;
   }
