@@ -31,8 +31,8 @@
 <div class="entry-margin"></div>
 <?php endif; ?>
 
-<div class="entry-footer">
-	<a href="#<?php the_ID(); ?>" class="link-icon -jumpcontentheader" title="Return This Post Top"><i class="icon icon-eject"></i></a>
+<div class="entry-footer _mobile-disiable">
+	<a href="#<?php the_ID(); ?>" class="link-icon " title="Return This Post Top"><i class="icon icon-eject"></i></a>
 </div>
 
 <div class="entry-footer sharelinks">
