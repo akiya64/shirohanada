@@ -7,7 +7,7 @@ Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANA
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-widget-area, fixed-layout, responsive-layout, custom-menu,
+Tags: blue, white, gray, right-side-widgets, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 /* major breakpoint */
@@ -338,7 +338,7 @@ body {
 .entry-content img {
   height: auto;
 }
-.widget-area {
+.side-widgets {
   margin-left: 1%;
 }
 .entry-footer {
@@ -418,7 +418,7 @@ h6 {
   .entry-comments {
     width: 76%;
   }
-  .widget-area,
+  .side-widgets,
   .entry-margin,
   .entry-header {
     width: 23%;
@@ -543,7 +543,7 @@ dt {
 .link-posts > * {
   padding: 0.25rem 0;
 }
-.widget-area {
+.side-widgets {
   padding: 0 1rem 0.8rem;
 }
 blockquote {
@@ -611,7 +611,7 @@ a,
 .site-description {
   color: #777;
 }
-.widget-area,
+.side-widgets,
 .page-title,
 .pagenation,
 .nomatch-contents,
@@ -755,37 +755,37 @@ img[src^="http://www.gravatar.com/avatar/"] {
   border-radius: 0.5rem;
 }
 /* Side Bar */
-/* inside widget-area skin */
+/* inside side-widgets skin */
 h2.widget-title {
   margin: 0 0 0.25rem 0;
   padding-left: 0;
 }
-.widget-area {
+.side-widgets {
 /* On chrome overflow long text, example url ,1byte japanese kana */
   word-break: break-all;
 }
-.widget-area .widget {
+.side-widgets .widget {
   margin-bottom: 1rem;
 }
-.widget-area ul {
+.side-widgets ul {
   list-style-type: none;
 }
-.widget-area li + li {
+.side-widgets li + li {
   padding-top: 0.7rem;
   margin-top: 0.4rem;
   border-top: solid 1px #777;
 }
-.widget-area #wp-calendar {
+.side-widgets #wp-calendar {
   width: 90%;
   margin: 0 auto;
   word-break: keep-all;
 }
-.widget-area #wp-calendar th {
+.side-widgets #wp-calendar th {
   font-size: 0.875rem;
   font-weight: normal;
   background-color: none;
 }
-.widget-area #wp-calendar td {
+.side-widgets #wp-calendar td {
   padding: 0.4rem 0.3rem 0.1rem;
   text-align: center;
 }
@@ -839,7 +839,7 @@ h2.widget-title {
 /* over write for mobile */
 @media screen and (max-width: 768px) {
   .article-area,
-  .widget-area,
+  .side-widgets,
   .entry-title,
   .entry-header,
   .entry-content {
@@ -850,9 +850,9 @@ h2.widget-title {
     margin: initial;
     margin-left: 0.5rem;
   }
-  .share-links {
+  .entry-footer {
     width: 74%;
-    margin: initial;
+    margin: auto;
   }
   .site-name {
     font-size: 2.8rem;
@@ -914,8 +914,12 @@ h2.widget-title {
     width: 100%;
     margin-left: 0;
   }
-  .gotop-button {
+  .gotop-button,
+  ._mobile-disiable {
     display: none;
+  }
+  .article-area {
+    margin-bottom: 1rem;
   }
   .on-top {
     position: absolute;
@@ -925,7 +929,7 @@ h2.widget-title {
     right: 3px;
     width: 60%;
   }
-  .widget-area #wp-calendar td {
+  .side-widgets #wp-calendar td {
     padding: 0.4rem 0.2rem 0.1rem;
     font-size: 0.9rem;
   }

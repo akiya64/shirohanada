@@ -7,7 +7,7 @@ Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANA
 Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-widget-area, fixed-layout, responsive-layout, custom-menu,
+Tags: blue, white, gray, right-side-widgets, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
 
@@ -57,7 +57,7 @@ body
 .entry-content img
         height auto
 
-.widget-area
+.side-widgets
         margin-left 1%
 
 
@@ -119,7 +119,7 @@ h1,h2,h3,h4,h5,h6
         .entry-comments
                 width 76%
 
-        .widget-area
+        .side-widgets
         .entry-margin
         .entry-header
                 width 23%
@@ -251,7 +251,7 @@ dt
 .link-posts > *
         padding .25rem 0
 
-.widget-area
+.side-widgets
         padding 0 1rem .8rem
 
 blockquote
@@ -313,7 +313,7 @@ a
 .site-description
         color hai
 
-.widget-area
+.side-widgets
 .page-title
 .pagenation
 .nomatch-contents
@@ -418,13 +418,13 @@ img[src^="http://www.gravatar.com/avatar/"]
         border-radius .5rem
 
 /* Side Bar */
-/* inside widget-area skin */
+/* inside side-widgets skin */
 
 h2.widget-title
         margin 0 0 0.25rem 0
         padding-left 0
 
-.widget-area
+.side-widgets
         /* On chrome overflow long text, example url ,1byte japanese kana */
         word-break break-all
         .widget
@@ -499,7 +499,7 @@ h2.widget-title
 /* over write for mobile */
 @media screen and (max-width: breakpoint)
         .article-area
-        .widget-area
+        .side-widgets
         .entry-title
         .entry-header
         .entry-content
@@ -510,9 +510,9 @@ h2.widget-title
                 margin initial
                 margin-left .5rem
 
-        .share-links
+        .entry-footer
                 width 74%
-                margin initial
+                margin auto
 
         .site-name
                 font-size 2.8rem
@@ -576,7 +576,11 @@ h2.widget-title
                 margin-left 0
 
         .gotop-button
+        ._mobile-disiable
                 display none
+
+        .article-area
+                margin-bottom 1rem
 
         .on-top
                 position absolute
@@ -585,7 +589,7 @@ h2.widget-title
                 right 3px
                 width 60%
 
-        .widget-area #wp-calendar td
+        .side-widgets #wp-calendar td
                 padding .4rem .2rem .1rem
                 font-size .9rem
 
