@@ -34,21 +34,11 @@ endif ;
 		the_post();
 		get_template_part( 'template-parts/content' );
 	endwhile;
-
-	/* Display page navigation */
-	echo '<nav class="move-post text-centering">';
-
-	if ( is_single() ) :
-		get_template_part( 'template-parts/nav', 'move_post' );
-	else :
-		get_template_part( 'template-parts/nav', 'pagenate' );
-	endif ;
-
-	get_template_part( 'template-parts/nav', 'posts' );
-
-	echo '</nav>';
-
 	?>
+
+	<nav class="link-posts text-centering">
+		<?php get_template_part( 'template-parts/navigation' ); ?>
+	</nav>
 
 </div><!--end article-area-->
 

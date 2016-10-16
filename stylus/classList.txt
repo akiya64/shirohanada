@@ -1,9 +1,8 @@
-&.button:hover
-&.link-top:hover
-&.link-top:link
-&.link-top:visited
 &.page-numbers.current
-&.site-name
+._no-marker
+._text-alignright <- new helper class
+._text-centering <-.text-centering
+._width-half-inlarge <- width-half-inlarge
 .aligncenter
 .alignleft
 .alignright
@@ -11,10 +10,10 @@
 .button
 .clearfix -> clearfix() by nib
 .comment-reply-title
-.entry-comments <- .comments
 .comments-list-header
 .contents-link-title
 .entry-category
+.entry-comments <- .comments
 .entry-content
 .entry-content img
 .entry-date
@@ -34,41 +33,32 @@
 .icon-share
 .link-icon <- a.share-button
 .main-contents
-.move-post *
-.move-posts
-.move-posts a > i
-.nav-posts
-.no-marker
+.link-posts <- .move-post
+.link-posts .-date <-.nav-posts
+.nomatch-contents <- .page-notfound
 .on-top
-.page-content
-.page-footer <- page-content-footer
-.page-notfound <-
-.page-title <-
+.entry-content <- .page-content
+.footer-date <- page-content-footer
+.footer-author <- page-content-footer
+.page-title
 .pagenation <-
-.pagenation > *
 .post
-.post + .post
-.post img
 .posts <- Delete
 .return-articletop
 .root-contents
 .share-links
 .show
 .show-menu
-.show-menu:visited
 .site-description
 .site-footer
 .site-footer > p
-.site-footer.front
+move Front.styl <- .site-footer.front
 .site-header
-.site-header .site-name
 .site-name
 .sticky
-.text-centering
 .widget
 .widget-area <- sidebar
 .widget-title
-.width-half-inlarge
 .wp-caption
 .wp-caption > p
 a.gotop
@@ -76,6 +66,7 @@ a.gotop:visited
 a.link-top:hover
 a.link-top:link
 a.link-top:visited
+entry-header > p
 h1.entry-title
 h1.entry-title.single
 h1.site-name
@@ -84,5 +75,4 @@ h2.widget-title
 h3.comment-reply-title
 h3.comments-header
 img[src^="http://www.gravatar.com/avatar/"]
-oentry-header > p
 span.page-numbers.current

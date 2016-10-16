@@ -42,7 +42,9 @@ body
 
 /* Layout */
 /* looks 3columns but HTML is 2 Column */
-.page-content
+.page > .entry-content
+.page > .footer-date
+.page > .footer-author
 .page-footer
 .entry-title
         width 100%
@@ -62,10 +64,6 @@ body
 .entry-footer
         width 38%
 
-        &.-sharelinks
-                display flex
-                justify-content space-around
-
 /* post-date and post-category looks 1row */
 .entry-header > p
         display inline
@@ -83,11 +81,15 @@ h1,h2,h3,h4,h5,h6
 .main-contents
 .post
 .page
+.sharelinks
         display flex
         flex-wrap wrap
 
+.sharelinks
+        justify-content space-around
+
 /* pubdate and header column is nothing in 404.php .post */
-.page-notfound
+.nomatch-contents
         display block
 
 /* LayLarge Display ; looks 2 column in .post */
@@ -147,10 +149,9 @@ h1,h2,h3,h4,h5,h6
                 display none
 
         .page > .entry-footer
-        ._width-half-inlarge
                 width 50%
 
-/*  Margin Padding */
+/*  Box -Margin and Padding */
 
 /* Over write h tags */
 h1.site-name
@@ -170,14 +171,16 @@ h3.comments-list-header
 h3.comment-reply-title
         padding-left 0
 
-/* -contet class is content body posted in WordPress */
-.page-content
 .entry-content
-.page-notfound
+.nomatch-contents
         > *:first-child
                 margin-top 0
 
-.nav-posts
+.nomatch-conten/ts
+        > .reasons
+                margin-left 2rem
+
+link-posts > .date
 .entry-comments
 li + li
         margin-top .6rem
@@ -197,14 +200,14 @@ dt
 .pagenation > *
         margin-left .75rem
 
-.move-posts
+.link-posts > .movedate
         a:first-child
-                margin-right 1.5rem
+                margin-right 1rem
 
 .site-description
         margin-right .5rem
 
-.page-footer ~ p //margin-bottom only for second p tag
+.page > .footer ~ p //margin-bottom only for second p tag
         margin-bottom 1rem
 
 .post
@@ -215,13 +218,11 @@ dt
         margin-bottom .6rem
 
 .entry-content
-.page-content
         p
                 margin .75rem 0
 
 /*List style in content */
 .entry-content
-.page-content
         ul
         ol
                 margin 1rem
@@ -247,7 +248,7 @@ dt
 .site-footer
         margin 0.5rem
 
-.move-post *
+.link-posts > *
         padding .25rem 0
 
 .widget-area
@@ -262,7 +263,6 @@ blockquote
 h1,h2,h3,h4,h5,h
 .site-description
 .root-contents
-.move-posts
 .pagenation
         font-family 'Ubuntu' , sans-serif
         font-weight normal
@@ -280,13 +280,7 @@ h1,h2,h3,h4,h5,h
         font-size 1.62rem
 
 .pagenation
-.move-posts
         font-size 1.4rem
-
-.move-posts a > i
-        font-size 1.7rem
-        vertical-align -0.1rem
-        margin 0 .5rem
 
 /* Color
  * ShiroHanada #a3d8f6 */
@@ -294,20 +288,21 @@ a:visited
         color maroon
 
 .site-name
-a.link-icon
-a.link-top:link
-a.link-top:visited
-a.link-top:hover
         color shirohanada
 
+.link-icon
+.link-top
+        &:link
+        &:visited
+        &:hover
+                color shirohanada
+
 a
-a.gotop
-a.gotop:visited
+.icon-eject
 .entry-title
         color bright-h
 
 .contents-link-title
-.page-title
 .widget-title
 .pagenation
         color nakano-h
@@ -321,7 +316,8 @@ a.gotop:visited
 .widget-area
 .page-title
 .pagenation
-.move-post *
+.nomatch-contents
+.link-posts > p
 .page
 .post
         background-color usu-hai
@@ -340,10 +336,8 @@ a
                 text-decoration-style solid
 
         &.site-name
+        &.link-top
         &.link-icon
-        &.link-top:link
-        &.link-top:visited
-        &.link-top:hover
         &.button:hover
                 text-decoration none
 
@@ -385,10 +379,13 @@ tr + tr
         text-align right
 
 .wp-caption
+.link-posts
 ._text-centering
         text-align center
 
-    margin-left 0
+@media (min-width:breakpoint)
+        ._halfwidth-inlarge
+                width 50%
 
 /* for WordPress class */
 .aligncenter

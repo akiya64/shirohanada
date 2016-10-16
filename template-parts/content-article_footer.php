@@ -32,10 +32,10 @@
 <?php endif; ?>
 
 <div class="entry-footer">
-	<a href="#<?php the_ID(); ?>" class="link-icon gotop" title="Return This Post Top"><i class="icon icon-eject"></i></a>
+	<a href="#<?php the_ID(); ?>" class="link-icon -jumpcontentheader" title="Return This Post Top"><i class="icon icon-eject"></i></a>
 </div>
 
-<div class="entry-footer -sharelinks">
+<div class="entry-footer sharelinks">
 	<a class="link-icon" href="<?php the_permalink(); ?>#reply-title" title="Comment this post"><i class="icon icon-comment"></i></a>
 	<a class="link-icon" href="<?php echo $share_url['twitter']; ?>" title="share Twitter" target="_blank"><i class="icon icon-share-twitter"></i></a>
 	<a class="link-icon" href="<?php echo $share_url['facebook'] ?>" title="share Facebook" rel="nofollow" target="_blank"><i class="icon icon-share-facebook"></i></a>
