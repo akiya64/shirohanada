@@ -28,7 +28,7 @@ get_header(); ?>
 	</ol>
 
 	<h3>Search Posts</h3>
-		<div class="width-half-inlarge">
+		<div class="_width-half-inlarge">
 			<?php get_search_form(); ?>
 		</div>
 

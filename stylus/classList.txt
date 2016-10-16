@@ -11,8 +11,8 @@
 .button
 .clearfix -> clearfix() by nib
 .comment-reply-title
-.comments
-.comments-header
+.entry-comments <- .comments
+.comments-list-header
 .contents-link-title
 .entry-category
 .entry-content
@@ -41,15 +41,15 @@
 .no-marker
 .on-top
 .page-content
-.page-content-footer
-.page-notfound
-.page-title
-.pagenation
+.page-footer <- page-content-footer
+.page-notfound <-
+.page-title <-
+.pagenation <-
 .pagenation > *
 .post
 .post + .post
 .post img
-.posts
+.posts <- Delete
 .return-articletop
 .root-contents
 .share-links

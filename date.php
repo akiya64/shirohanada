@@ -69,7 +69,7 @@ if ( is_day() ) :
 	}
 
 	/* Display page navigation */
-	echo '<nav class="move-post text-centering">';
+	echo '<nav class="move-post _text-centering">';
 
 	if ( is_single() ) :
 		get_template_part( 'template-parts/nav', 'move_post' );
