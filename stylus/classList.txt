@@ -57,7 +57,7 @@ move Front.styl <- .site-footer.front
 .site-name
 .sticky
 .widget
-.widget-area <- sidebar
+.side-widgets <- sidebar
 .widget-title
 .wp-caption
 .wp-caption > p

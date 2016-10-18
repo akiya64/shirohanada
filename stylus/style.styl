@@ -60,7 +60,6 @@ body
 .side-widgets
         margin-left 1%
 
-
 .entry-footer
         width 38%
 
@@ -68,15 +67,19 @@ body
 .entry-header > p
         display inline
 
-/* apply style for h tag once for POST and Page
- * some h.class  ovewrite style another section */
-h1,h2,h3,h4,h5,h6
-        font-size 1.62rem
-        color nakano-h
-        margin 2rem 0 1rem
-        padding-left .75rem
-        border-left solid 3px nakano-h
-        clear both
+.entry-content
+        & h1
+        & h2
+        & h3
+        & h4
+        & h5
+        & h6
+                font-size 1.62rem
+                color nakano-h
+                margin 2rem 0 1rem
+                padding-left .75rem
+                border-left solid 3px nakano-h
+                clear both
 
 .main-contents
 .post
@@ -154,21 +157,21 @@ h1,h2,h3,h4,h5,h6
 /*  Box -Margin and Padding */
 
 /* Over write h tags */
-h1.site-name
+.site-name
         margin 0
 
-h2.page-title
-h1.entry-title
+.page-title
+.entry-title
         margin 0 0 .7rem 0
 
-h2.page-title
+.page-title
         padding 0 .5rem 0 1.5rem
 
-h1.entry-title
+.entry-title
         padding 0
 
-h3.comments-list-header
-h3.comment-reply-title
+.comments-list-header
+.comment-reply-title
         padding-left 0
 
 .entry-content
@@ -180,7 +183,7 @@ h3.comment-reply-title
         > .reasons
                 margin-left 2rem
 
-link-posts > .date
+.link-posts > .date
 .entry-comments
 li + li
         margin-top .6rem
@@ -252,7 +255,7 @@ dt
         padding .25rem 0
 
 .side-widgets
-        padding 0 1rem .8rem
+        padding .1rem 1rem .8rem
 
 blockquote
         margin .8rem 0
@@ -260,20 +263,20 @@ blockquote
         overflow-wrap break-word
 
 /*  Typograghy  */
-h1,h2,h3,h4,h5,h
+h1,h2,h3,h4,h5,h6
 .site-description
-.root-contents
+.front-navmenu
 .pagenation
-        font-family 'Ubuntu' , sans-serif
+        font-family 'Ubuntu' ,'Meiryo' , sans-serif
         font-weight normal
 
 /*  font-size  */
 .page-title
         font-size 2.4rem
 
-.contents-link-title
+.navmenu-title
 .entry-title
-.widget-title
+.wp-widget > .title
 .link-icon
 .comments-list-header
 .comment-reply-title
@@ -302,8 +305,9 @@ a
 .entry-title
         color bright-h
 
-.contents-link-title
-.widget-title
+.navmenu-title
+.page-title
+.wp-widget > .title
 .pagenation
         color nakano-h
 
@@ -344,14 +348,6 @@ a
 /* Border */
 blockquote
         border-left solid 3px #bbb
-
-h1.site-name
-h2.page-title
-h1.entry-title
-h2.widget-title
-h3.comments-list-header
-h3.comment-reply-title
-        border-left none
 
 /* Table in Entry */
 tr + tr
@@ -418,16 +414,21 @@ img[src^="http://www.gravatar.com/avatar/"]
         border-radius .5rem
 
 /* Side Bar */
-/* inside side-widgets skin */
+/* side-widgets skin */
 
-h2.widget-title
-        margin 0 0 0.25rem 0
-        padding-left 0
+.wp-widget
+    > .title
+            margin 0 0 0.25rem 0
+            padding-left 0
+
+    > ul
+            list-style-type none
 
 .side-widgets
+
         /* On chrome overflow long text, example url ,1byte japanese kana */
         word-break break-all
-        .widget
+        .wp-widget
                 margin-bottom 1rem
 
         ul
@@ -511,7 +512,7 @@ h2.widget-title
                 margin-left .5rem
 
         .entry-footer
-                width 74%
+                width 90%
                 margin auto
 
         .site-name

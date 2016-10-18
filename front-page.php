@@ -23,15 +23,15 @@ get_header(); ?>
 
 	<div class="dropdown-part">
 
-		<h2 class="contents-link-title">Contents</h2>
+		<h2 class="navmenu-title">Contents</h2>
 
-		<nav class="root-contents" role="menu">
-			<?php wp_nav_menu( array( 'theme_location' => 'root-menu', 'container' => '' ) ); ?>
+		<nav class="front-navmenu" role="menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'front-page-menu', 'container' => '' ) ); ?>
 		</nav>
 
 		<?php if ( is_active_sidebar( 'front-widgets' ) ) : ?>
 
-		<div id="front-widgets" class="front widget-area" role="complementary">
+		<div class="front-widgets" role="complementary">
 
 			<?php dynamic_sidebar( 'front-widgets' ); ?>
 

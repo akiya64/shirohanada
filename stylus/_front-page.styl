@@ -1,7 +1,7 @@
 /* Front-Page Section */
 
 /* layout */
-/* left-part is banner,right-part is logo , root-contents , widget area
+/* left-part is banner,right-part is logo , front-navmenu , widget area
    in small display, 1column Logo-Banner-DropdownPart */
 
 .top-flex-container
@@ -32,19 +32,15 @@
 .dropdown-part
         height 12rem
 */
-.root-contents
-        .menu
-                font-size 1.2rem
-                margin-bottom 1rem
-                -moz-columns 2 10rem
-                -webkit-columns 2 10rem
-                columns 2 10rem
+.front-navmenu
+        font-size 1.2rem
+        margin-bottom 1rem
+        -moz-columns 2 10rem
+        -webkit-columns 2 10rem
+        columns 2 10rem
 
 .front.widget-area h2 ~ *
-        height auto
-        max-height 160px
-
-.root-contents .menu
+.front-navmenu
         height auto
         max-height 180px
 
@@ -52,18 +48,21 @@
         text-align right
 
 .top-page-header
-.front.widget-area h2
+.wp-widget.-front
         margin-bottom .5rem
 
 .front.widget-area h2 ~ *
-        overflow auto
+       height auto
+       max-height 160px
+       overflow auto
 
-.front.widget-area
+.front-widgets
         ul
                 margin-left 1rem
+                style none
 
 /* top skin  */
-h2.contents-link-title
+.navmenu-title
         margin 0 0 .3rem 0
         padding-left 0
         border-left 0
@@ -93,7 +92,7 @@ h2.contents-link-title
         .top-flex-container
         .top-banner-box
         .dropdown-part
-        .root-contents
+        .front-navmenu
         .front.widget-area ul
                 width initial
                 height initial

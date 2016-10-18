@@ -31,7 +31,7 @@ if ( is_front_page() ) :
 //Show and Hide Menu
 var hideMenuBtn = document.getElementById('hide-menu-button');
 var showMenuBtn = document.getElementById('menu-button');
-var sideBar = document.getElementById('side-menu');
+var sideBar = document.getElementById('side-bar');
 
 function showMenu(){
 	sideBar.classList.add('on-top');

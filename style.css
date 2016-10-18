@@ -348,14 +348,12 @@ body {
 .entry-header > p {
   display: inline;
 }
-/* apply style for h tag once for POST and Page
- * some h.class  ovewrite style another section */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
   font-size: 1.62rem;
   color: #436fb4;
   margin: 2rem 0 1rem;
@@ -451,21 +449,21 @@ h6 {
 }
 /*  Box -Margin and Padding */
 /* Over write h tags */
-h1.site-name {
+.site-name {
   margin: 0;
 }
-h2.page-title,
-h1.entry-title {
+.page-title,
+.entry-title {
   margin: 0 0 0.7rem 0;
 }
-h2.page-title {
+.page-title {
   padding: 0 0.5rem 0 1.5rem;
 }
-h1.entry-title {
+.entry-title {
   padding: 0;
 }
-h3.comments-list-header,
-h3.comment-reply-title {
+.comments-list-header,
+.comment-reply-title {
   padding-left: 0;
 }
 .entry-content > *:first-child,
@@ -475,7 +473,7 @@ h3.comment-reply-title {
 .nomatch-conten/ts > .reasons {
   margin-left: 2rem;
 }
-link-posts > .date,
+.link-posts > .date,
 .entry-comments,
 li + li {
   margin-top: 0.6rem;
@@ -544,7 +542,7 @@ dt {
   padding: 0.25rem 0;
 }
 .side-widgets {
-  padding: 0 1rem 0.8rem;
+  padding: 0.1rem 1rem 0.8rem;
 }
 blockquote {
   margin: 0.8rem 0;
@@ -557,20 +555,20 @@ h2,
 h3,
 h4,
 h5,
-h,
+h6,
 .site-description,
-.root-contents,
+.front-navmenu,
 .pagenation {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', 'Meiryo', sans-serif;
   font-weight: normal;
 }
 /*  font-size  */
 .page-title {
   font-size: 2.4rem;
 }
-.contents-link-title,
+.navmenu-title,
 .entry-title,
-.widget-title,
+.wp-widget > .title,
 .link-icon,
 .comments-list-header,
 .comment-reply-title {
@@ -600,8 +598,9 @@ a,
 .entry-title {
   color: #257bcc;
 }
-.contents-link-title,
-.widget-title,
+.navmenu-title,
+.page-title,
+.wp-widget > .title,
 .pagenation {
   color: #436fb4;
 }
@@ -673,14 +672,6 @@ a.button:hover {
 /* Border */
 blockquote {
   border-left: solid 3px #bbb;
-}
-h1.site-name,
-h2.page-title,
-h1.entry-title,
-h2.widget-title,
-h3.comments-list-header,
-h3.comment-reply-title {
-  border-left: none;
 }
 /* Table in Entry */
 tr + tr {
@@ -755,16 +746,19 @@ img[src^="http://www.gravatar.com/avatar/"] {
   border-radius: 0.5rem;
 }
 /* Side Bar */
-/* inside side-widgets skin */
-h2.widget-title {
+/* side-widgets skin */
+.wp-widget > .title {
   margin: 0 0 0.25rem 0;
   padding-left: 0;
+}
+.wp-widget > ul {
+  list-style-type: none;
 }
 .side-widgets {
 /* On chrome overflow long text, example url ,1byte japanese kana */
   word-break: break-all;
 }
-.side-widgets .widget {
+.side-widgets .wp-widget {
   margin-bottom: 1rem;
 }
 .side-widgets ul {
@@ -851,7 +845,7 @@ h2.widget-title {
     margin-left: 0.5rem;
   }
   .entry-footer {
-    width: 74%;
+    width: 90%;
     margin: auto;
   }
   .site-name {
@@ -1068,18 +1062,15 @@ textarea[name="comment"] {
 .top-page-footer {
   width: 480px;
 }
-.root-contents .menu {
+.front-navmenu {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   -moz-columns: 2 10rem;
   -webkit-columns: 2 10rem;
   columns: 2 10rem;
 }
-.front.widget-area h2 ~ * {
-  height: auto;
-  max-height: 160px;
-}
-.root-contents .menu {
+.front.widget-area h2 ~ *,
+.front-navmenu {
   height: auto;
   max-height: 180px;
 }
@@ -1087,16 +1078,19 @@ textarea[name="comment"] {
   text-align: right;
 }
 .top-page-header,
-.front.widget-area h2 {
+.wp-widget.-front {
   margin-bottom: 0.5rem;
 }
 .front.widget-area h2 ~ * {
+  height: auto;
+  max-height: 160px;
   overflow: auto;
 }
-.front.widget-area ul {
+.front-widgets ul {
   margin-left: 1rem;
+  style: none;
 }
-h2.contents-link-title {
+.navmenu-title {
   margin: 0 0 0.3rem 0;
   padding-left: 0;
   border-left: 0;
@@ -1124,7 +1118,7 @@ h2.contents-link-title {
   .top-flex-container,
   .top-banner-box,
   .dropdown-part,
-  .root-contents,
+  .front-navmenu,
   .front.widget-area ul {
     width: initial;
     height: initial;
