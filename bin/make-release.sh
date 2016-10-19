@@ -28,7 +28,7 @@ git rm -f package.json
 git rm -f style.css.map
 git rm -f fonts/icomoon.zip
 git rm -f check-all-php.sh
-git rm -f composer.json
+git rm -f composer.*
 
 git commit -m "prepare release"
 
