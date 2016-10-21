@@ -21,17 +21,11 @@
 .top-banner
         max-height 700px
 
-.top-page-header
+.site-header.-front
 .dropdown-part
 .top-page-footer
         width 480px
-/*
-.top-page-header
-        height 9rem
 
-.dropdown-part
-        height 12rem
-*/
 .front-navmenu
         font-size 1.2rem
         margin-bottom 1rem
@@ -39,27 +33,37 @@
         -webkit-columns 2 10rem
         columns 2 10rem
 
-.front.widget-area h2 ~ *
+/* front-page widget content area */
 .front-navmenu
         height auto
         max-height 180px
 
-.top-page-header
+.site-header.-front
         text-align right
 
-.top-page-header
+.site-name.-front
+.site-description.-front
+        display block
+
+.site-header.-front
 .wp-widget.-front
         margin-bottom .5rem
 
-.front.widget-area h2 ~ *
-       height auto
-       max-height 160px
-       overflow auto
+.site-name.-front
+        color shirohanada
 
-.front-widgets
+.wp-widget.-front
         ul
                 margin-left 1rem
-                style none
+
+        li + li
+                padding initial
+                margin-top .5rem
+                border none
+
+        h2 ~ *
+                max-height 160px
+                overflow auto
 
 /* top skin  */
 .navmenu-title
@@ -89,7 +93,7 @@
 /* layout for small display ;1column layout */
 
 @media screen and (max-width: 960px)
-        .top-page-header
+        .site-header.-front
         .top-flex-container
         .top-banner-box
         .dropdown-part
@@ -101,7 +105,7 @@
                 max-height initial
 
         .top-flex-container
-        .top-page-header
+        .site-header.-front
         .top-banner-box
         .top-banner
                 width 100%
@@ -109,10 +113,15 @@
         .top-banner
                 height auto
 
+        .site-name.-front
+                color shirohanada
+                text-align right
+                background-color white
+
         .top-flex-container
                 margin 0 auto
 
-        .top-page-header
+        .site-header.-front
                 order 1
                 margin-right .3rem
 

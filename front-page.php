@@ -15,9 +15,9 @@ get_header(); ?>
 		<img src="<?php header_image(); ?>" alt="top banner" class="top-banner">
 	</div>
 
-	<header class="top-page-header">
-		<h1 class="site-name"><?php bloginfo( 'name' ); ?></h1>
-		<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	<header class="site-header -front">
+		<h1 class="site-name -front"><?php bloginfo( 'name' ); ?></h1>
+		<p class="site-description -front"><?php bloginfo( 'description' ); ?></p>
 	</header>
 
 

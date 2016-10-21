@@ -344,10 +344,6 @@ body {
 .entry-footer {
   width: 38%;
 }
-/* post-date and post-category looks 1row */
-.entry-header > p {
-  display: inline;
-}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -364,7 +360,7 @@ body {
 .main-contents,
 .post,
 .page,
-.sharelinks {
+.entry-footer.-sharelinks {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -378,7 +374,7 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.sharelinks {
+.entry-footer.-sharelinks {
   -webkit-box-pack: distribute;
   -moz-box-pack: distribute;
   -o-box-pack: distribute;
@@ -394,11 +390,6 @@ body {
 @media (min-width: 768px) {
   .site-header {
     margin-right: 0.75rem;
-/* site-name and site-description looks 1row */
-  }
-  .site-header h1,
-  .site-header p {
-    display: inline;
   }
   .site-header,
   .site-footer {
@@ -425,19 +416,18 @@ body {
   .entry-header {
     margin-right: 1%;
   }
-  .entry-header > p {
+  .site-description {
     margin-bottom: 0.3rem;
   }
   .entry-content,
   .entry-comments {
     min-width: 560px;
   }
-  .site-footer > p {
-    display: inline;
+  .site-footer > .copyright,
+  .site-footer > .poweredby {
     margin-left: 1rem;
   }
-  .entry-header > p,
-  .site-footer.front > p {
+  .entry-header > p {
     display: block;
   }
   #menu-button {
@@ -573,7 +563,7 @@ h6,
 .navmenu-title,
 .entry-title,
 .wp-widget > .title,
-.link-icon,
+.entry-footer > .link,
 .comments-list-header,
 .comment-reply-title {
   font-size: 1.62rem;
@@ -583,18 +573,11 @@ h6,
 }
 /* Color
  * ShiroHanada #a3d8f6 */
-a:visited {
+:visited {
   color: #800000;
 }
-.site-name {
-  color: #a3d8f6;
-}
-.link-icon:link,
-.link-top:link,
-.link-icon:visited,
-.link-top:visited,
-.link-icon:hover,
-.link-top:hover {
+.site-name > .link,
+.entry-footer > .link {
   color: #a3d8f6;
 }
 a,
@@ -611,7 +594,6 @@ a,
   color: #436fb4;
 }
 .entry-header i,
-.icon-share,
 .site-footer,
 .site-description {
   color: #777;
@@ -661,18 +643,12 @@ a[href*=".tumblr.com"] > i {
 /* Text Decolation */
 a:hover,
 span.page-numbers.current {
-  text-decoration: underline;
-}
-a:hover {
+  text-decoration-line: underline;
   text-decoration-style: dotted;
 }
-a.page-numbers.current {
-  text-decoration-style: solid;
-}
-a.site-name,
-a.link-top,
-a.link-icon,
-a.button:hover {
+.site-name > .link,
+.entry-footer > .link,
+.button {
   text-decoration: none;
 }
 /* Border */
@@ -693,7 +669,31 @@ tr + tr {
 .entry-content caption {
   text-align: left;
 }
-/* helper Classes */
+/* End Main Section */
+/* For WordPress class */
+.aligncenter,
+.alignleft,
+.alignright {
+  display: block;
+}
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+}
+.alignright {
+  float: right;
+  margin-left: 1rem;
+}
+.aligncenter {
+  margin: auto;
+}
+.wp-caption > p {
+  padding-top: 0.3rem;
+}
+.sticky {
+  border: solid 1px #a3d8f6;
+}
+/* Helper Classes */
 .clearfix {
   zoom: 1;
 }
@@ -717,34 +717,13 @@ tr + tr {
   text-align: center;
 }
 @media (min-width: 768px) {
+  ._inline {
+    display: inline;
+  }
   ._halfwidth-inlarge {
     width: 50%;
   }
 }
-/* for WordPress class */
-.aligncenter,
-.alignleft,
-.alignright {
-  display: block;
-}
-.alignleft {
-  float: left;
-  margin-right: 1rem;
-}
-.alignright {
-  float: right;
-  margin-left: 1rem;
-}
-.aligncenter {
-  margin: auto;
-}
-.wp-caption > p {
-  padding-top: 0.3rem;
-}
-.sticky {
-  border: solid 1px #a3d8f6;
-}
-/* End Main Section */
 /* Parts Section */
 /* gravatar */
 img[src^="http://www.gravatar.com/avatar/"] {
@@ -854,13 +833,11 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name {
     font-size: 2.8rem;
   }
-  .site-header .site-name {
+  .site-name {
     text-align: center;
     background-color: #a3d8f6;
   }
-  .link-top:link,
-  .link-top:visited,
-  .link-top:hover {
+  .site-name > .link {
     color: #fff;
   }
   .site-name {
@@ -1082,9 +1059,16 @@ textarea[name="comment"] {
 .site-header.-front {
   text-align: right;
 }
+.site-name.-front,
+.site-description.-front {
+  display: block;
+}
 .site-header.-front,
 .wp-widget.-front {
   margin-bottom: 0.5rem;
+}
+.site-name.-front {
+  color: #a3d8f6;
 }
 .wp-widget.-front ul {
   margin-left: 1rem;
@@ -1141,6 +1125,11 @@ textarea[name="comment"] {
   }
   .top-banner {
     height: auto;
+  }
+  .site-name.-front {
+    color: #a3d8f6;
+    text-align: right;
+    background-color: #fff;
   }
   .top-flex-container {
     margin: 0 auto;
