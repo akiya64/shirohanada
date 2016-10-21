@@ -600,6 +600,7 @@ a,
 }
 .navmenu-title,
 .page-title,
+.comment-reply-title,
 .wp-widget > .title,
 .pagenation {
   color: #436fb4;
@@ -855,26 +856,26 @@ img[src^="http://www.gravatar.com/avatar/"] {
     text-align: center;
     background-color: #a3d8f6;
   }
-  a.link-top:link,
-  a.link-top:visited,
-  a.link-top:hover {
+  .link-top:link,
+  .link-top:visited,
+  .link-top:hover {
     color: #fff;
   }
-  h1.site-name {
+  .site-name {
     padding: 0.25rem 0.5rem;
   }
   .site-description {
     margin: 0.25rem 0.5rem;
   }
-  h1.entry-title.single,
-  h2.page-title {
+  .entry-title.single,
+  .page-title {
     margin: initial;
     font-size: 1.62rem;
   }
-  h1.entry-title.single {
+  .entry-title.single {
     padding: 1rem 0;
   }
-  h2.page-title {
+  .page-title {
     padding: 1rem 0.5rem;
   }
   .entry-date,
