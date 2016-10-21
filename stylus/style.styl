@@ -156,7 +156,6 @@ body
 
 /*  Box -Margin and Padding */
 
-/* Over write h tags */
 .site-name
         margin 0
 
@@ -210,7 +209,7 @@ dt
 .site-description
         margin-right .5rem
 
-.page > .footer ~ p //margin-bottom only for second p tag
+.footer-date
         margin-bottom 1rem
 
 .post
@@ -224,15 +223,10 @@ dt
         p
                 margin .75rem 0
 
-/*List style in content */
-.entry-content
         ul
         ol
                 margin 1rem
                 margin-left 2rem
-
-        ul
-               list-style-type square
 
         dl
                 margin-left 0
@@ -261,6 +255,16 @@ blockquote
         margin .8rem 0
         padding .2rem .75rem
         overflow-wrap break-word
+
+/*List style */
+/* in content */
+.entry-content
+       ul
+               list-style-type square
+
+.comment-reply-list
+._no-marker
+        list-style-type none
 
 /*  Typograghy  */
 h1,h2,h3,h4,h5,h6
@@ -308,6 +312,7 @@ a
 .navmenu-title
 .page-title
 .comment-reply-title
+.comments-list-header
 .wp-widget > .title
 .pagenation
         color nakano-h
@@ -333,6 +338,7 @@ a
 a:hover
 span.page-numbers.current
                 text-decoration underline
+
 a
         &:hover
                 text-decoration-style dotted
@@ -415,16 +421,6 @@ img[src^="http://www.gravatar.com/avatar/"]
         border-radius .5rem
 
 /* Side Bar */
-/* side-widgets skin */
-
-.wp-widget
-    > .title
-            margin 0 0 0.25rem 0
-            padding-left 0
-
-    > ul
-            list-style-type none
-
 .side-widgets
 
         /* On chrome overflow long text, example url ,1byte japanese kana */
@@ -432,14 +428,21 @@ img[src^="http://www.gravatar.com/avatar/"]
         .wp-widget
                 margin-bottom 1rem
 
-        ul
-                list-style-type none
+/* side-widgets skin */
+.wp-widget
+        > .title
+            margin 0 0 0.25rem 0
+            padding-left 0
+
+        > ul
+            list-style-type none
 
         li + li
                 padding-top .7rem
                 margin-top .4rem
                 border-top solid 1px hai
 
+        /* Calendar table does not use "class" propety */
         #wp-calendar
                 width 90%
                 margin 0 auto
@@ -452,8 +455,6 @@ img[src^="http://www.gravatar.com/avatar/"]
                 td
                         padding .4rem .3rem .1rem
                         text-align center
-
-
 
 /*! button */
 .button
