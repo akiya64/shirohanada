@@ -22,20 +22,20 @@
 
 <?php if ( ! is_front_page() ) : ?>
 
-<a id="menu-button" class="button show-menu" href="#side-menu">
+<a id="menu-button" class="show-menu" href="#side-menu">
 	<i class="icon icon-list"></i>
 </a>
 
-<a id="gotop-button" class="button gotop-button" href="#top">
+<a id="gotop-button" class="go-top _mobile-disiable" href="#top">
 	<i class="icon icon-angle-top"></i>
 </a>
 	
 <header class="site-header" id="top" role="banner">
 
-	<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	<p class="site-description _inline"><?php bloginfo( 'description' ); ?></p>
 
-	<h1 class="site-name">
-		<a href="<?php bloginfo( 'url' ); ?>" class="link-top"><?php bloginfo( 'name' ); ?></a>
+	<h1 class="site-name _inline">
+		<a href="<?php bloginfo( 'url' ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
 	</h1>
 
 </header>

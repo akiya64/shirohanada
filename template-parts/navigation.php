@@ -81,12 +81,12 @@ if(is_month()){
 /* Put link tag */
 if( is_single() ):
 
-	 previous_post_link('<p>Next:%link</p>');
-	 next_post_link('<p>Previous:%link</p>');
+	 previous_post_link('<p>Next:%link<br>');
+	 next_post_link('Previous:%link</p>');
 
 elseif( isset( $posts_link ) ):
 
-    echo '<p class=".movedate">';
+    echo '<p class="movedate">';
     echo $posts_link;
     echo '</p>';
 

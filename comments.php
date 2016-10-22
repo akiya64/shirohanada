@@ -11,7 +11,7 @@
 
 <?php if ( have_comments() ) : ?>
 	<h3 class="comments-list-header">Comments</h3>
-	<ul class="_no-marker">
+	<ul class="comments-list _no-marker">
 		<?php wp_list_comments( array( 'avatar_size' => 52 ) ); ?>
 	</ul>
 <?php endif; ?>

@@ -7,17 +7,11 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.8
  */
-
-if ( is_front_page() ) :
-		$footer_class = 'front site-footer';
-	else :
-		$footer_class = 'site-footer';
-	endif;
 ?>
 
-<footer class="site-footer <?php if ( is_front_page() ) { echo 'front'; } ?>">
-	<p>(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></p>
-	<p>Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Theme <a href="https://github.com/akiya64/shirohanada"><i class="icon icon-github"></i>shirohanada</a></p>
+<footer class="site-footer <?php if ( is_front_page() ) { echo '-front'; } ?>">
+<p class="copyright _inline">(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+	<p class="poweredby _inline">Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>, Theme <a href="https://github.com/akiya64/shirohanada"><i class="icon icon-github"></i>shirohanada</a></p>
 </footer>
 
 <?php if ( is_front_page() ) : ?>
@@ -31,21 +25,21 @@ if ( is_front_page() ) :
 //Show and Hide Menu
 var hideMenuBtn = document.getElementById('hide-menu-button');
 var showMenuBtn = document.getElementById('menu-button');
-var sideBar = document.getElementById('side-menu');
+var sideBar = document.getElementById('side-bar');
 
 function showMenu(){
-	sideBar.classList.add('on-top');
-	hideMenuBtn.classList.add('show');
-	showMenuBtn.classList.add('hide');
+	sideBar.classList.add('-ontop');
+	hideMenuBtn.classList.add('-show');
+	showMenuBtn.classList.add('-hide');
 	hideMenuBtn.addEventListener('click',hideMenu);
 	document.querySelector('div .article-area').addEventListener('click',hideMenu);
 }
 
 function hideMenu(){
-	hideMenuBtn.classList.remove('show');
-	showMenuBtn.classList.remove('hide');
-	showMenuBtn.classList.add('show');
-	sideBar.classList.remove('on-top');
+	hideMenuBtn.classList.remove('-show');
+	showMenuBtn.classList.remove('-hide');
+	showMenuBtn.classList.add('-show');
+	sideBar.classList.remove('-ontop');
 }
 
 showMenuBtn.href= '#top'

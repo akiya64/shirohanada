@@ -29,20 +29,20 @@ add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
 function shirohanada_widgets_init() {
 
 	register_sidebar( array(
-		'name' => 'Side Bar Menu',
+		'name' => 'Side Bar Widgets',
 		'id' => 'sidebar-widgets',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="wp-widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title' => '<h2 class="widget-title">',
+		'before_title' => '<h2 class="title">',
 		'after_title' => '</h2>',
 	) );
 
 	register_sidebar( array(
 		'name' => 'Front Page Widget',
 		'id' => 'front-widgets',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="wp-widget -front %2$s">',
 		'after_widget'  => '</section>',
-		'before_title' => '<h2 class="widget-title">',
+		'before_title' => '<h2 class="title">',
 		'after_title' => '</h2>',
 	) );
 
@@ -56,7 +56,7 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  * @since Shirohanada 0.9
  */
 function register_root_menu() {
-	register_nav_menu( 'root-menu','Front Page Menu' );
+	register_nav_menu( 'front-page-menu','Front Page Menu' );
 }
 
 add_action( 'after_setup_theme', 'register_root_menu' );
