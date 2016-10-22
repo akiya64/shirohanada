@@ -1,0 +1,31 @@
+/*
+/* major breakpoint */
+/*! Main Section
+/* Base */
+/* Layout */
+/* looks 3columns but HTML is 2 Column */
+/* pubdate and header column is nothing in 404.php .post */
+/* LayLarge Display ; looks 2 column in .post */
+        /* show only less 768px */
+/*  Box -Margin and Padding */
+/* List style */
+/* in content */
+/*  Typograghy  */
+/*  font-size  */
+/* Color
+/* Text Decolation */
+/* Border */
+/* Table in Entry */
+/* End Main Section */
+/* For WordPress classes */
+/* Helper Classes */
+/* Parts Section */
+/* gravatar */
+/* Side Bar */
+        /* On chrome overflow long text, example url ,1byte japanese kana */
+/* side-widgets skin */
+        /* Calendar table does not use "class" propety */
+/*! button */
+/* over write for mobile */
+        /* Header is white logo above "shirohanada" */
+        /* In .post set less padding */
