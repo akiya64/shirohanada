@@ -14,10 +14,10 @@ Text Domain:
 /* major breakpoint */
 breakpoint = 768px
 
-// postCSS library //
+/* Stylus Library */
 @import "nib"
 
-// import normalize,icon-font,color const module//
+/* import normalize,icon-font,color const module */
 @import "_sanitize"
 @import "_icon-font"
 @import "_color"
@@ -41,7 +41,6 @@ body
         max-width 1240px
 
 /* Layout */
-/* looks 3columns but HTML is 2 Column */
 .page > .entry-content
 .page > .footer-date
 .page > .footer-author
@@ -63,20 +62,6 @@ body
 .entry-footer
         width 38%
 
-.entry-content
-        & h1
-        & h2
-        & h3
-        & h4
-        & h5
-        & h6
-                font-size 1.62rem
-                color nakano-h
-                margin 2rem 0 1rem
-                padding-left .75rem
-                border-left solid 3px nakano-h
-                clear both
-
 .main-contents
 .post
 .page
@@ -91,59 +76,6 @@ body
 .nomatch-contents
         display block
 
-/* LayLarge Display ; looks 2 column in .post */
-@media (min-width:breakpoint)
-
-        .site-header
-                margin-right 0.75rem
-
-        .site-header
-        .site-footer
-                text-align right
-
-        .site-name
-                font-size 72px
-
-        .post
-        .page
-                padding .5rem 1rem 1rem
-
-        .article-area
-        .entry-content
-        .entry-comments
-                width 76%
-
-        .side-widgets
-        .entry-margin
-        .entry-header
-                width 23%
-
-        .entry-margin
-        .entry-header
-                margin-right 1%
-
-        .site-description
-                margin-bottom .3rem
-
-        .entry-content
-        .entry-comments
-                min-width 560px
-
-        .site-footer
-                > .copyright
-                > .poweredby
-                        margin-left 1rem
-
-        .entry-header
-                > p
-                        display block
-
-        /* show only less 768px */
-        #menu-button
-                display none
-
-        .page > .entry-footer
-                width 50%
 
 /*  Box -Margin and Padding */
 
@@ -247,16 +179,6 @@ blockquote
         padding .2rem .75rem
         overflow-wrap break-word
 
-/* List style */
-/* in content */
-.entry-content
-       ul
-               list-style-type square
-
-.comment-reply-list
-._no-marker
-        list-style-type none
-
 /*  Typograghy  */
 h1,h2,h3,h4,h5,h6
 .site-description
@@ -265,10 +187,12 @@ h1,h2,h3,h4,h5,h6
         font-family 'Ubuntu' ,'Meiryo' , sans-serif
         font-weight normal
 
+
 /*  font-size  */
 .page-title
         font-size 2.4rem
 
+h1,h2,h3,h4,h5,h6
 .navmenu-title
 .entry-title
 .wp-widget > .title
@@ -333,9 +257,10 @@ span.page-numbers.current
 blockquote
         border-left solid 3px #bbb
 
-/* Table in Entry */
+/* Table */
 tr + tr
                 border-top 1px solid hai
+
 
 .entry-content
         thead
@@ -347,6 +272,32 @@ tr + tr
 
         caption
                 text-align left
+
+
+/* List style */
+.entry-content
+       ul
+               list-style-type square
+
+.comment-reply-list
+._no-marker
+        list-style-type none
+
+/* h tags in entry-content; WordPress Post or Page content */
+.entry-content
+        & h1
+        & h2
+        & h3
+        & h4
+        & h5
+        & h6
+                font-size 1.62rem
+                color nakano-h
+                margin 2rem 0 1rem
+                padding-left .75rem
+                border-left solid 3px nakano-h
+                clear both
+
 
 /* End Main Section */
 
@@ -479,7 +430,62 @@ img[src^="http://www.gravatar.com/avatar/"]
 .hide
         display none
 
-/* over write for mobile */
+/* Medeia Query */
+/* For Large Display */
+@media (min-width:breakpoint)
+
+        .site-header
+                margin-right 0.75rem
+
+        .site-header
+        .site-footer
+                text-align right
+
+        .site-name
+                font-size 72px
+
+        .post
+        .page
+                padding .5rem 1rem 1rem
+
+        .article-area
+        .entry-content
+        .entry-comments
+                width 76%
+
+        .side-widgets
+        .entry-margin
+        .entry-header
+                width 23%
+
+        .entry-margin
+        .entry-header
+                margin-right 1%
+
+        .site-description
+                margin-bottom .3rem
+
+        .entry-content
+        .entry-comments
+                min-width 560px
+
+        .site-footer
+                > .copyright
+                > .poweredby
+                        margin-left 1rem
+
+        .entry-header
+                > p
+                        display block
+
+        /* show only less 768px */
+        #menu-button
+                display none
+
+        .page > .entry-footer
+                width 50%
+
+/* For mobile */
 @media screen and (max-width: breakpoint)
         .article-area
         .side-widgets
