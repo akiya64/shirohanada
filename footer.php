@@ -28,18 +28,18 @@ var showMenuBtn = document.getElementById('menu-button');
 var sideBar = document.getElementById('side-bar');
 
 function showMenu(){
-	sideBar.classList.add('on-top');
-	hideMenuBtn.classList.add('show');
-	showMenuBtn.classList.add('hide');
+	sideBar.classList.add('-ontop');
+	hideMenuBtn.classList.add('-show');
+	showMenuBtn.classList.add('-hide');
 	hideMenuBtn.addEventListener('click',hideMenu);
 	document.querySelector('div .article-area').addEventListener('click',hideMenu);
 }
 
 function hideMenu(){
-	hideMenuBtn.classList.remove('show');
-	showMenuBtn.classList.remove('hide');
-	showMenuBtn.classList.add('show');
-	sideBar.classList.remove('on-top');
+	hideMenuBtn.classList.remove('-show');
+	showMenuBtn.classList.remove('-hide');
+	showMenuBtn.classList.add('-show');
+	sideBar.classList.remove('-ontop');
 }
 
 showMenuBtn.href= '#top'

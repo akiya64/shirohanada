@@ -370,11 +370,11 @@ body {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
-/* pubdate and header column is nothing in 404.php .post */
+/* in 404.php article dont FlexBox */
 .nomatch-contents {
   display: block;
 }
-/*  Box -Margin and Padding */
+/* Box -Margin and Padding */
 .site-name {
   margin: 0;
 }
@@ -396,16 +396,13 @@ body {
 .nomatch-contents > *:first-child {
   margin-top: 0;
 }
-.nomatch-conten/ts > .reasons {
+.nomatch-contents > .reasons {
   margin-left: 2rem;
 }
-.link-posts > .date,
+.link-posts > p,
 .entry-comments,
 li + li {
   margin-top: 0.6rem;
-}
-dt {
-  border-bottom: solid 1px #777;
 }
 .content-footer {
   margin-top: 1rem;
@@ -413,10 +410,15 @@ dt {
 .icon {
   margin-right: 0.4rem;
 }
+.entry-date > .icon,
+.entry-category > .icon,
+.entry-tags > .icon {
+  margin-right: 0.6rem;
+}
 .icon-angle-right {
   margin-left: 0.4rem;
 }
-.pagenation > * {
+.page-numbers {
   margin-left: 0.75rem;
 }
 .link-posts > .movedate a:first-child {
@@ -449,6 +451,7 @@ dt {
 .entry-content dl dt {
   display: inline-block;
   font-weight: bold;
+  border-bottom: solid 1px #777;
 }
 .entry-content dl dt + dd {
   margin-top: 0.2rem;
@@ -460,7 +463,7 @@ dt {
 .site-footer {
   margin: 0.5rem;
 }
-.link-posts > * {
+.link-posts > p {
   padding: 0.25rem 0;
 }
 .side-widgets {
@@ -510,15 +513,17 @@ h6,
 :visited {
   color: #800000;
 }
-.site-name > .link,
-.entry-footer > .link {
-  color: #a3d8f6;
-}
 a,
 .icon-eject,
 .entry-title {
   color: #257bcc;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .navmenu-title,
 .page-title,
 .comment-reply-title,
@@ -531,6 +536,10 @@ a,
 .site-footer,
 .site-description {
   color: #777;
+}
+.site-name > .link,
+.entry-footer > .link {
+  color: #a3d8f6;
 }
 .side-widgets,
 .page-title,
@@ -576,14 +585,23 @@ a[href*=".tumblr.com"] > i {
 }
 /* Text Decolation */
 a:hover,
-span.page-numbers.current {
+page-numbers.current {
   text-decoration-line: underline;
+}
+a:hover {
   text-decoration-style: dotted;
 }
+page-numbers.current {
+  text-decoration-style: solid;
+}
 .site-name > .link,
-.entry-footer > .link,
-.button {
+.entry-footer > .link {
   text-decoration: none;
+}
+/* Text-align */
+.wp-caption,
+.link-posts {
+  text-align: center;
 }
 /* Border */
 blockquote {
@@ -607,8 +625,7 @@ tr + tr {
 .entry-content ul {
   list-style-type: square;
 }
-.comment-reply-list,
-._no-marker {
+.comment-reply-list {
   list-style-type: none;
 }
 /* h tags in entry-content; WordPress Post or Page content */
@@ -618,8 +635,6 @@ tr + tr {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  font-size: 1.62rem;
-  color: #436fb4;
   margin: 2rem 0 1rem;
   padding-left: 0.75rem;
   border-left: solid 3px #436fb4;
@@ -661,16 +676,14 @@ tr + tr {
 .clearfix:after {
   clear: both;
 }
-._no-marker {
-  list-style-type: none;
-}
 ._text-alignright {
   text-align: right;
 }
-.wp-caption,
-.link-posts,
 ._text-centering {
   text-align: center;
+}
+._no-marker {
+  list-style-type: none;
 }
 @media (min-width: 768px) {
   ._inline {
@@ -721,10 +734,20 @@ img[src^="http://www.gravatar.com/avatar/"] {
   padding: 0.4rem 0.3rem 0.1rem;
   text-align: center;
 }
-/* button */
-.button {
+/* Navigation IconButton */
+.show-menu,
+.go-top,
+.hide-menu {
   font-size: 2.4rem;
-  background: none;
+}
+.show-menu,
+.go-top {
+  color: #fff;
+  position: fixed;
+  -webkit-border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: #a3d8f6;
+  text-decoration: none !important;
 }
 .show-menu,
 .show-menu:visited {
@@ -733,39 +756,27 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .show-menu {
   bottom: 1rem;
   padding: 0.4rem 0.7rem 0 0.7rem;
-  position: fixed;
-  background-color: #a3d8f6;
   -webkit-border-radius: 0 0.5rem 0.5rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: alpha(opacity=85);
 }
-.gotop-button {
-  font-size: 2.4em;
+.go-top {
   bottom: 3rem;
   padding: 0.6rem 0.8rem 0 1rem;
-  position: fixed;
-  -webkit-border-radius: 0 0.5rem 0.5rem 0;
-  border-radius: 0 0.5rem 0.5rem 0;
-  background-color: #a3d8f6;
 }
-.gotop-button,
-.gotop-button:visited {
-  color: #fff;
-  text-decoration: none;
-}
-.hide-menu-button {
+.hide-menu {
   color: #436fb4;
   padding-top: 0.5rem;
   display: none;
   width: 100%;
   text-align: right;
 }
-.show {
+.-show {
   display: block;
 }
-.hide {
+.-hide {
   display: none;
 }
 /* Medeia Query */
@@ -810,10 +821,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-footer > .poweredby {
     margin-left: 1rem;
   }
-  .entry-header > p {
-    display: block;
-  }
-  #menu-button {
+  .show-menu {
     display: none;
   }
   .page > .entry-footer {
@@ -869,6 +877,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-category,
   .entry-tags {
     margin-right: 1rem;
+    display: inline;
   }
   .post,
   .page {
@@ -896,14 +905,13 @@ img[src^="http://www.gravatar.com/avatar/"] {
     width: 100%;
     margin-left: 0;
   }
-  .gotop-button,
   ._mobile-disiable {
     display: none;
   }
   .article-area {
     margin-bottom: 1rem;
   }
-  .on-top {
+  .-ontop {
     position: absolute;
     -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
     box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);

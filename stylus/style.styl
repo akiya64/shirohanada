@@ -72,13 +72,11 @@ body
 .entry-footer.-sharelinks
         justify-content space-around
 
-/* pubdate and header column is nothing in 404.php .post */
+/* in 404.php article dont FlexBox */
 .nomatch-contents
         display block
 
-
-/*  Box -Margin and Padding */
-
+/* Box -Margin and Padding */
 .site-name
         margin 0
 
@@ -101,17 +99,14 @@ body
         > *:first-child
                 margin-top 0
 
-.nomatch-conten/ts
+.nomatch-contents
         > .reasons
                 margin-left 2rem
 
-.link-posts > .date
+.link-posts > p
 .entry-comments
 li + li
         margin-top .6rem
-
-dt
-        border-bottom solid 1px hai
 
 .content-footer
         margin-top 1rem
@@ -119,10 +114,16 @@ dt
 .icon
         margin-right .4rem
 
+.entry-date
+.entry-category
+.entry-tags
+        > .icon
+                margin-right .6rem
+
 .icon-angle-right
         margin-left .4rem
 
-.pagenation > *
+.page-numbers
         margin-left .75rem
 
 .link-posts > .movedate
@@ -157,6 +158,8 @@ dt
                 dt
                         display inline-block
                         font-weight bold
+                        border-bottom solid 1px hai
+
 
                 dt + dd
                         margin-top .2rem
@@ -168,7 +171,7 @@ dt
 .site-footer
         margin 0.5rem
 
-.link-posts > *
+.link-posts > p
         padding .25rem 0
 
 .side-widgets
@@ -209,15 +212,12 @@ h1,h2,h3,h4,h5,h6
 :visited
         color maroon
 
-.site-name > .link
-.entry-footer > .link
-        color shirohanada
-
 a
 .icon-eject
 .entry-title
         color bright-h
 
+h1,h2,h3,h4,h5,h6
 .navmenu-title
 .page-title
 .comment-reply-title
@@ -230,6 +230,10 @@ a
 .site-footer
 .site-description
         color hai
+
+.site-name > .link
+.entry-footer > .link
+        color shirohanada
 
 .side-widgets
 .page-title
@@ -244,14 +248,23 @@ a
 
 /* Text Decolation */
 a:hover
-span.page-numbers.current
-                text-decoration-line underline
-                text-decoration-style dotted
+page-numbers.current
+        text-decoration-line underline
+
+a:hover
+        text-decoration-style dotted
+
+page-numbers.current
+        text-decoration-style solid
 
 .site-name > .link
 .entry-footer > .link
-.button
-                text-decoration none
+        text-decoration none
+
+/* Text-align */
+.wp-caption
+.link-posts
+        text-align center
 
 /* Border */
 blockquote
@@ -280,7 +293,6 @@ tr + tr
                list-style-type square
 
 .comment-reply-list
-._no-marker
         list-style-type none
 
 /* h tags in entry-content; WordPress Post or Page content */
@@ -291,8 +303,6 @@ tr + tr
         & h4
         & h5
         & h6
-                font-size 1.62rem
-                color nakano-h
                 margin 2rem 0 1rem
                 padding-left .75rem
                 border-left solid 3px nakano-h
@@ -328,16 +338,15 @@ tr + tr
 .clearfix
         clearfix()
 
-._no-marker
-        list-style-type none
-
 ._text-alignright
         text-align right
 
-.wp-caption
-.link-posts
+
 ._text-centering
         text-align center
+
+._no-marker
+        list-style-type none
 
 @media (min-width:breakpoint)
         ._inline
@@ -387,10 +396,19 @@ img[src^="http://www.gravatar.com/avatar/"]
                         padding .4rem .3rem .1rem
                         text-align center
 
-/*! button */
-.button
+/* Navigation IconButton */
+.show-menu
+.go-top
+.hide-menu
         font-size 2.4rem
-        background none
+
+.show-menu
+.go-top
+        color white
+        position fixed
+        border-radius 0 .5rem .5rem 0
+        background-color shirohanada
+        text-decoration none !important
 
 .show-menu
 .show-menu:visited
@@ -399,35 +417,25 @@ img[src^="http://www.gravatar.com/avatar/"]
 .show-menu
         bottom 1rem
         padding .4rem .7rem 0 .7rem
-        position fixed
-        background-color shirohanada
         border-radius 0 .5rem .5rem 0
         opacity 0.85
 
-.gotop-button
-        font-size 2.4em
+.go-top
         bottom 3rem
         padding .6rem .8rem 0 1rem
-        position fixed
-        border-radius 0 .5rem .5rem 0
-        background-color shirohanada
 
-.gotop-button
-.gotop-button:visited
-        color white
-        text-decoration none
 
-.hide-menu-button
+.hide-menu
         color nakano-h
         padding-top .5rem
         display none
         width 100%
         text-align right
 
-.show
+.-show
         display block
 
-.hide
+.-hide
         display none
 
 /* Medeia Query */
@@ -474,12 +482,9 @@ img[src^="http://www.gravatar.com/avatar/"]
                 > .poweredby
                         margin-left 1rem
 
-        .entry-header
-                > p
-                        display block
 
         /* show only less 768px */
-        #menu-button
+        .show-menu
                 display none
 
         .page > .entry-footer
@@ -536,6 +541,7 @@ img[src^="http://www.gravatar.com/avatar/"]
         .entry-category
         .entry-tags
                 margin-right 1rem
+                display inline
 
         .post
         .page
@@ -562,14 +568,13 @@ img[src^="http://www.gravatar.com/avatar/"]
                         width 100%
                         margin-left 0
 
-        .gotop-button
         ._mobile-disiable
                 display none
 
         .article-area
                 margin-bottom 1rem
 
-        .on-top
+        .-ontop
                 position absolute
                 box-shadow -1px 1px 1px 2px rgba(0,0,0,0.2)
                 top 5px

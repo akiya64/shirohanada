@@ -22,11 +22,11 @@
 
 <?php if ( ! is_front_page() ) : ?>
 
-<a id="menu-button" class="button show-menu" href="#side-menu">
+<a id="menu-button" class="show-menu" href="#side-menu">
 	<i class="icon icon-list"></i>
 </a>
 
-<a id="gotop-button" class="button gotop-button" href="#top">
+<a id="gotop-button" class="go-top _mobile-disiable" href="#top">
 	<i class="icon icon-angle-top"></i>
 </a>
 	
