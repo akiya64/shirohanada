@@ -24,7 +24,7 @@ get_header(); ?>
 
 <div class="main-contents">
 
-<div class="articles">
+<div class="article-area">
 
 	<?php echo $current_page_title; ?>
 
@@ -35,25 +35,24 @@ get_header(); ?>
 	?>
 	<article id="<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
 
-	<header class="entry-header">
-		<p class="entry-date"><i class="icon icon-time"></i><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></a></p>
-		<?php the_tags('<p><i class="icon icon-tag"></i>', ', ' ,'</p>'); ?>
-	</header>
+		<header class="entry-header">
+			<p class="entry-date"><i class="icon icon-time"></i><a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><time pubdate="<?php the_time('Y-n-j'); ?>"><?php the_time('Y.n.j'); ?></time></a></p>
+			<?php the_tags('<p><i class="icon icon-tag"></i>', ', ' ,'</p>'); ?>
+		</header>
 
-	<div class="entry-content">
-		<?php the_excerpt(); ?>
-	</div><!--end entry-content-->
+		<div class="entry-content">
+			<?php the_excerpt(); ?>
+		</div><!--end entry-content-->
 
-</article>
-		
-	<?php
-		endwhile;
+		</article>
+			
+		<?php endwhile; ?>
 
-		get_template_part( 'template-parts/nav', 'pagenate' );
-		get_template_part( 'template-parts/nav', 'posts' );
-	?>
+	<nav class="link-posts text-centering">
+		<?php get_template_part( 'template-parts/navigation' ); ?>
+	</nav>
 
 </div><!--end articles-->
 
