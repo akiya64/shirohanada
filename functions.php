@@ -55,11 +55,11 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  *
  * @since Shirohanada 0.9
  */
-function register_root_menu() {
+function register_front_menu() {
 	register_nav_menu( 'front-page-menu','Front Page Menu' );
 }
 
-add_action( 'after_setup_theme', 'register_root_menu' );
+add_action( 'after_setup_theme', 'register_front_menu' );
 
 /**
  * Custom header for Front Page
