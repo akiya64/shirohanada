@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-<div class="top-flex-container">
+<div class="front-main">
 
-	<div class="top-banner-box">
-		<img src="<?php header_image(); ?>" alt="top banner" class="top-banner">
+	<div class="headerimg-box">
+		<img src="<?php header_image(); ?>" alt="header image" class="headerimage">
 	</div>
 
 	<header class="site-header -front">
