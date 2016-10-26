@@ -915,14 +915,72 @@ img[src^="http://www.gravatar.com/avatar/"] {
     position: absolute;
     -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
     box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-    top: 5px;
+    top: 4px;
     right: 3px;
     width: 60%;
+    -webkit-animation-name: slideup;
+    -moz-animation-name: slideup;
+    -o-animation-name: slideup;
+    -ms-animation-name: slideup;
+    animation-name: slideup;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    animation-duration: 0.3s;
   }
   .side-widgets #wp-calendar td {
     padding: 0.4rem 0.2rem 0.1rem;
     font-size: 0.9rem;
   }
+@-moz-keyframes slideup {
+    0% {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      width: 60%;
+    }
+    100% {
+      top: 4px;
+      right: 3px;
+    }
+}
+@-webkit-keyframes slideup {
+    0% {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      width: 60%;
+    }
+    100% {
+      top: 4px;
+      right: 3px;
+    }
+}
+@-o-keyframes slideup {
+    0% {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      width: 60%;
+    }
+    100% {
+      top: 4px;
+      right: 3px;
+    }
+}
+@keyframes slideup {
+    0% {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      width: 60%;
+    }
+    100% {
+      top: 4px;
+      right: 3px;
+    }
+}
 }
 .comment-author .avatar {
   -webkit-border-radius: 50%;
