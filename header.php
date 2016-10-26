@@ -30,7 +30,7 @@
 	<i class="icon icon-angle-top"></i>
 </a>
 	
-<header class="site-header" id="top" role="banner">
+<header class="site-header" role="banner">
 
 	<p class="site-description _inline"><?php bloginfo( 'description' ); ?></p>
 
