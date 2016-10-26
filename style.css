@@ -1026,7 +1026,7 @@ textarea[name="comment"] {
 .form-submit {
   text-align: right;
 }
-.top-flex-container {
+.front-main {
   width: 1240px;
   height: 700px;
   margin: 9vh auto 0;
@@ -1046,14 +1046,14 @@ textarea[name="comment"] {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-.top-banner-box {
+.headerimg-box {
   height: 700px;
 }
-.top-banner-box,
-.top-banner {
+.headerimg-box,
+.headerimage {
   max-width: 700px;
 }
-.top-banner {
+.headerimage {
   max-height: 700px;
 }
 .site-header.-front,
@@ -1119,23 +1119,24 @@ textarea[name="comment"] {
 }
 @media screen and (max-width: 960px) {
   .site-header.-front,
-  .top-flex-container,
-  .top-banner-box,
+  .front-main,
+  .headerimg-box,
   .dropdown-part,
   .front-navmenu,
-  .front.widget-area ul {
+  .front.widget-area ul,
+  .wp-widget.-front h2 ~ * {
     width: initial;
     height: initial;
     max-width: initial;
     max-height: initial;
   }
-  .top-flex-container,
+  .front-main,
   .site-header.-front,
-  .top-banner-box,
-  .top-banner {
+  .headerimg-box,
+  .headerimage {
     width: 100%;
   }
-  .top-banner {
+  .headerimage {
     height: auto;
   }
   .site-name.-front {
@@ -1143,7 +1144,7 @@ textarea[name="comment"] {
     text-align: right;
     background-color: #fff;
   }
-  .top-flex-container {
+  .front-main {
     margin: 0 auto;
   }
   .site-header.-front {
@@ -1155,7 +1156,7 @@ textarea[name="comment"] {
     order: 1;
     margin-right: 0.3rem;
   }
-  .top-banner-box {
+  .headerimg-box {
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
     -o-box-ordinal-group: 2;
@@ -1180,7 +1181,6 @@ textarea[name="comment"] {
   }
   .site-footer.-front {
     padding: 0.5rem 1rem;
-    font-size: 0.875rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

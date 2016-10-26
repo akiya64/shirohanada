@@ -4,21 +4,21 @@
 /* left-part is banner,right-part is logo , front-navmenu , widget area
    in small display, 1column Logo-Banner-DropdownPart */
 
-.top-flex-container
+.front-main
         width 1240px
         height 700px
         margin 9vh auto 0
         display flex
         flex-flow column wrap
 
-.top-banner-box
+.headerimg-box
         height 700px
 
-.top-banner-box
-.top-banner
+.headerimg-box
+.headerimage
         max-width 700px
 
-.top-banner
+.headerimage
         max-height 700px
 
 .site-header.-front
@@ -90,23 +90,24 @@
 
 @media screen and (max-width: 960px)
         .site-header.-front
-        .top-flex-container
-        .top-banner-box
+        .front-main
+        .headerimg-box
         .dropdown-part
         .front-navmenu
         .front.widget-area ul
+        .wp-widget.-front h2 ~ *
                 width initial
                 height initial
                 max-width initial
                 max-height initial
 
-        .top-flex-container
+        .front-main
         .site-header.-front
-        .top-banner-box
-        .top-banner
+        .headerimg-box
+        .headerimage
                 width 100%
 
-        .top-banner
+        .headerimage
                 height auto
 
         .site-name.-front
@@ -114,14 +115,14 @@
                 text-align right
                 background-color white
 
-        .top-flex-container
+        .front-main
                 margin 0 auto
 
         .site-header.-front
                 order 1
                 margin-right .3rem
 
-        .top-banner-box
+        .headerimg-box
                 order 2
 
         .dropdown-part
@@ -137,4 +138,3 @@
         .site-footer
                 &.-front
                         padding .5rem 1rem
-                        font-size .875rem
