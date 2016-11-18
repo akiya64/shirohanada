@@ -19,7 +19,6 @@ git checkout -b pre-release remotes/origin/master
 
 git rm -rf stylus
 git rm -rf bin
-git rm -rf wpcs
 git rm -fr git-hooks
 git rm -f .gitignore
 git rm -f .travis.yml
@@ -27,7 +26,8 @@ git rm -f README.md
 git rm -f package.json
 git rm -f style.css.map
 git rm -f fonts/icomoon.zip
-git rm -f check-all-php.sh
+git rm -f phpcbf-all.sh
+git rm -f phpmd-all.sh
 git rm -f composer.*
 
 git commit -m "prepare release"
