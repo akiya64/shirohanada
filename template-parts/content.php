@@ -6,6 +6,7 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.9
  */
+
 ?>
 
 <article id="<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,7 +19,7 @@
 
 	<header class="entry-header">
 		<p class="entry-date">
-			<i class="icon icon-time"></i><a href="<?php echo get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ); ?>"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
+			<i class="icon icon-time"></i><a href="<?php echo esc_url( get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ) ); ?>"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
 			</a>
 		</p>
 		<p class="entry-category">
