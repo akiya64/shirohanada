@@ -11,9 +11,9 @@ get_header(); ?>
 
 <?php
 if ( is_category() ) :
-	$current_page_title = '<h2 class="page-title">'.single_cat_title( '', false ).'</h2>';
+	$current_page_title = '<h2 class="page-title">' . single_cat_title( '', false ) . '</h2>';
 elseif ( is_tag() ) :
-	$current_page_title = '<h2 class="page-title">'.single_tag_title( '', false ).'</h2>' ;
+	$current_page_title = '<h2 class="page-title">' . single_tag_title( '', false ) . '</h2>' ;
 elseif ( is_single() ) :
 	$current_page_title = '' ;
 else :
