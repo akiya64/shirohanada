@@ -3,7 +3,6 @@ node_modules/
 *~
 phpmd/
 wpcs/
-composer.json
 composer.lock
 composer.phar
 vendor/
