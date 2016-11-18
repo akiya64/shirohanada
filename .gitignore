@@ -2,3 +2,7 @@ node_modules/
 *.swp
 *~
 phpmd/
+wpcs/
+composer.json
+composer.lock
+composer.phar

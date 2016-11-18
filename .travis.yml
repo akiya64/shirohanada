@@ -1,16 +1,31 @@
 language: php
-php:
-- '5.6'
 
-branches:
-  only:
-    - master
+php: '5.6'
+php: '7.0'
 
+#branches:
+#  only:
+#    - master
+
+before_script:
+    #@link https://github.com/Automattic/_s/blob/master/.travis.yml
+    - export PHPCS_DIR=/tmp/phpcs
+    - export SNIFFS_DIR=/tmp/sniffs
+    - git clone -b master --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR
+    - git clone -b master --depth 1 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $SNIFFS_DIR
+    - $PHPCS_DIR/scripts/phpcs --config-set installed_paths $SNIFFS_DIR
+    - npm install -g jscs
+    # @link http://jshint.com/docs/
+    - npm install -g jshint
+    # Pull in the WP Core jshint rules.
+    - wget https://develop.svn.wordpress.org/trunk/.jshintrc
 script:
-  # Search for PHP syntax errors.
-  - find . \( -name '*.php' \) -exec php -lf {} \;
+    # Search for PHP syntax errors.
+    - find . \( -name '*.php' \) -exec php -lf {} \;
+    - jshint .
+    - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
 
-after_success: bash ./bin/make-release.sh
+#after_success: bash ./bin/make-release.sh
 
 env:
   global:
