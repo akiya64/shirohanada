@@ -30,7 +30,7 @@
 <?php if(!is_page()): ?>
 <div class="entry-margin"></div>
 <?php endif; ?>
-
+  
 <div class="entry-footer -jumppostheader _mobile-disiable">
 	<a href="#<?php the_ID(); ?>" class="link" title="Return This Post Top"><i class="icon icon-eject"></i></a>
 </div>

@@ -16,7 +16,7 @@ for FILE in `git diff-index --name-status $against -- | grep -E '^[AUM].*\(.css|
 
         wpcs/vendor/bin/phpcbf --standard=wordpress $FILE
         wpcs/vendor/bin/phpcs --standard=wordpress $FILE
-        git add $FILE
+        #git add $FILE
 
 done
 
