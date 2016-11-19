@@ -7,6 +7,7 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.8
  */
+
 ?>
 
 <footer class="site-footer <?php if ( is_front_page() ) { echo '-front'; } ?>">

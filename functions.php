@@ -73,20 +73,20 @@ register_default_headers( array(
 		 */
 
 		'cherry_blossom' => array(
-			'url' => get_template_directory_uri().'/images/fukuju_bridge.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/thumb_fukuju_bridge.jpg',
+			'url' => get_template_directory_uri() . '/images/fukuju_bridge.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_fukuju_bridge.jpg',
 			/* translators: header image description */
 			'description' => 'cherryblossom',
 		),
 		'coast' => array(
-			'url' => get_template_directory_uri().'/images/ochi_ishi.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ochi_ishi.jpg',
+			'url' => get_template_directory_uri() . '/images/ochi_ishi.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ochi_ishi.jpg',
 			/* translators: header image description */
 			'description' => 'coast',
 		),
 		'tram_station' => array(
-			'url' => get_template_directory_uri().'/images/ujina_station.jpg',
-			'thumbnail_url' => get_template_directory_uri().'/images/thumb_ujina_station.jpg',
+			'url' => get_template_directory_uri() . '/images/ujina_station.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ujina_station.jpg',
 			/* translators: header image description */
 			'description' => 'station',
 		),
@@ -170,4 +170,4 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
 	echo esc_html( $icon_name );
 }
 
-?>
+
