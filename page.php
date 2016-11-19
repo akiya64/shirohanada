@@ -29,7 +29,7 @@ get_header(); ?>
 				<p class="footer-date _text-alignright"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time></p>
 				<p class="footer-author _text-alignright">Author:<?php the_author();?></p>
 
-			<?php get_template_part( 'template-parts/content', 'article_footer' ); ?>
+			<?php get_template_part( 'template-parts/content', 'articlefooter' ); ?>
 
 		<?php endwhile; ?>
 

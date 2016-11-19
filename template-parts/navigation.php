@@ -6,13 +6,14 @@
  * @subpackage Shirohanada
  * @since Shirohanada 0.9
  */
+
 ?>
 
 <?php
 	/* Build pagination by WordPress embedded method. */
 	global $wp_query;
-	$big = 999999999; // need an unlikely integer
-	$paginate_links = paginate_links( array(
+	$big = 999999999; // need an unlikely integer.
+	$pagination = paginate_links( array(
 		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var( 'paged' ) ),
@@ -21,7 +22,7 @@
 		'prev_next' => false,
 	) );
 
-	/* Title is current category name or year.month */
+	/* Title is current category name or year.month. */
 	if ( is_category() ) :
 		$page_title = single_cat_title( '', false ) . ' ';
 	elseif ( is_tag() ) :
@@ -31,22 +32,22 @@
 	endif;
 ?>
 
-<?php if ( ! is_null( $paginate_links ) ) :  ?>
+<?php if ( ! empty( $pagination ) ) :  ?>
 
-<p class="pagenation">
-	<?php echo $page_title . $paginate_links; ?>
+<p class="pagination">
+	<?php echo wp_kses_post( $page_title ) . wp_kses_post( $pagination ); ?>
 </p>
 
 <?php endif; ?>
 
 <?php
 /**
- * Navigation part display links for move posts
+ * Navigation part display links for move posts.
  */
 
-/* calculate date, build link url */
+/* calculate date, build link url. */
 if ( is_month() ) {
-	// Previous - Next Month Nav//
+	/* Previous - Next Month Nav. */
 	$before_post_month = new DateTime( get_the_time( 'Y-m' ) . ' -1 month' );
 	$before_month_link = get_month_link( $before_post_month->format( 'Y' ), $before_post_month->format( 'm' ) );
 
@@ -61,7 +62,7 @@ if ( is_month() ) {
 		$posts_link .= '&nbsp;<a href="' . $after_month_link . '">' . $after_post_month->format( 'Y.m' ) . '<i class="icon icon-angle-right"></i></a>';
 	}
 } elseif ( is_date() ) {
-	// Previous - Next Date Nav//
+	/* Previous - Next Date Nav. */
 	$before_post_date = new DateTime( get_the_time( 'Y-m-d' ) . ' -1 day' );
 	$before_date_link = get_day_link( $before_post_date->format( 'Y' ), $before_post_date->format( 'm' ), $before_post_date->format( 'd' ) );
 
@@ -86,7 +87,7 @@ if ( is_single() ) :
 elseif ( isset( $posts_link ) ) :
 
 	echo '<p class="movedate">';
-	echo $posts_link;
+	echo esc_url( $posts_link );
 	echo '</p>';
 
 endif;
