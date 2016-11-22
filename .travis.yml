@@ -39,7 +39,6 @@ after_success:
     #make pre-lerease branch and rm for development file.
     - git checkout -b pre-release remotes/origin/master
     - git rm -rf stylus
-    - git rm -rf bin
     - git rm -fr git-hooks
     - git rm -f .gitignore
     - git rm -f .travis.yml
