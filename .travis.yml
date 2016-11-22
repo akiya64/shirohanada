@@ -28,7 +28,33 @@ script:
     - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=wordpress --extensions=php
     - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=wordpress --extensions=css
 
-after_success: bash ./bin/make-release.sh
+after_success:
+    - set -e
+    - if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then echo "Not deploying pull requests." ; exit ; fi
+   #only master branch
+    - if [[ "master" != "$TRAVIS_BRANCH" ]]; then echo "Not on the 'master' branch." ; exit ; fi
+    #fetch temporary origin
+    - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+    - git fetch
+    #make pre-lerease branch and rm for development file.
+    - git checkout -b pre-release remotes/origin/master
+    - git rm -rf stylus
+    - git rm -rf bin
+    - git rm -fr git-hooks
+    - git rm -f .gitignore
+    - git rm -f .travis.yml
+    - git rm -f README.md
+    - git rm -f package.json
+    - git rm -f style.css.map
+    - git rm -f fonts/icomoon.zip
+    - git rm -f phpcbf-all.sh
+    - git rm -f phpmd-all.sh
+    - git rm -f composer.*
+    - git commit -m "prepare release"
+    #marge release for deployment autumnsky.sakura.ne.jp
+    - git checkout -b release remotes/origin/release
+    - git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
+    - git push "https://${GH_TOKEN}@${GH_REF}" release > /dev/null 2>&1
 
 env:
   global:
