@@ -31,6 +31,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'articlefooter' ); ?>
 
+			</article>
+
 		<?php endwhile; ?>
 
 	</div><!--end article-area-->
