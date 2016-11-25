@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="main-contents">
 
-<div class="article-area">
+<div class="article-area" role="main" itemscope itemtype="schema.org/BlogPosting" itemprop="articleBody">
 
 	<h2 class="page-title">
 		404 Not Found
