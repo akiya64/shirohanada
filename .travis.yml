@@ -30,13 +30,14 @@ script:
 
 after_success:
     - set -e
+    #Only Push origin
     - if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then echo "Not deploying pull requests." ; exit ; fi
-   #only master branch
+    #only master branch
     - if [[ "master" != "$TRAVIS_BRANCH" ]]; then echo "Not on the 'master' branch." ; exit ; fi
     #fetch temporary origin
     - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
     - git fetch
-    #make pre-lerease branch and rm for development file.
+    #make pre-lerease branch and remove for development tools.
     - git checkout -b pre-release remotes/origin/master
     - git rm -rf stylus
     - git rm -fr git-hooks
