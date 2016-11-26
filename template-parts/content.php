@@ -20,7 +20,7 @@
 	<header class="entry-header">
 		<p class="entry-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
 			<?php echo get_avatar( get_the_author_meta( 'ID' ),'32', 'mm', 'avatar', array( 'extra_attr' => 'itemprop="image"' ) ); ?>
-			<span class="author-name" itemprop="name"><?php the_author_meta( 'display_name' ); ?>
+			<span class="vcard author author-name"><span class="fn" itemprop="name"><?php the_author_meta( 'display_name' ); ?></span></span>
 		</p>
 		<p class="entry-date">
 			<i class="icon icon-time"></i><a href="<?php echo esc_url( get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ) ); ?>"><time class="updated" pubdate="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>

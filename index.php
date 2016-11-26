@@ -22,9 +22,9 @@ else :
 endif ;
 ?>
 
-<div class="main-contents">
+<div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
 
-<div class="article-area" role="main" itemscope itemtype="schema.org/BlogPosting">
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
 
 	<?php echo wp_kses_post( $current_page_title ); ?>
 

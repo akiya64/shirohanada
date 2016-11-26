@@ -9,8 +9,9 @@
 
 get_header(); ?>
 
-<div class="main-contents">
-	<div class="article-area" role="main" itemscope itemtype="schema.org/BlogPosting">
+<div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
+
+	<div class="article-area" role="main" itemprop="mainEntityOfPage">
 
 		<?php
 		// Start the loop.
