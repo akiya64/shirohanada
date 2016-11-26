@@ -38,7 +38,7 @@
 		<?php the_content(); ?>
 	</div><!--end entry-content-->
 
-	<?php get_template_part( 'template-parts/content', 'articlefooter' ); ?>
+	<?php get_template_part( 'components/articlefooter' ); ?>
 
 	<?php
 		/* show comment form in entry-content column, only single.php */

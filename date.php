@@ -65,12 +65,12 @@ if ( is_day() ) :
 	/* Start the loop.*/
 	while ( $date_query->have_posts() ) :
 		$date_query->the_post();
-		get_template_part( 'template-parts/content' );
+		get_template_part( 'components/content' );
 	endwhile;
 	?>
 
 	<nav class="link-posts text-centering">
-		<?php get_template_part( 'template-parts/navigation' ); ?>
+		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 
 </div><!--end article-area-->
