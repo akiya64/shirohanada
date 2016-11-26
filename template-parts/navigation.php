@@ -87,7 +87,7 @@ if ( is_single() ) :
 elseif ( isset( $posts_link ) ) :
 
 	echo '<p class="movedate">';
-	echo esc_url( $posts_link );
+	echo wp_kses_post( $posts_link );
 	echo '</p>';
 
 endif;

@@ -9,10 +9,17 @@
 
 ?>
 
-<form role="search" method="get" class="search-form clearfix" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<div itemscope itemtype="http://schema.org/WebSite">
+<meta itemprop="url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-	   <label>
-				<input type="search" class="search-field" placeholder="Search for:" value="" name="s" />
-		</label>
-		<input type="submit" class="search-submit" value="Find" />
+<form role="search" method="get" class="search-form clearfix" action="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+	
+	<meta itemprop="target" content="<?php echo esc_url( home_url( '/' ) ); ?>?s={search_term}">
+	<label>
+		<input type="search" class="search-field" placeholder="Search for:" value="" name="search_term" itemprop="query-input" required>
+	</label>
+
+	<input type="submit" class="search-submit" value="Find">
+
 </form>
+</div>
