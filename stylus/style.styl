@@ -359,6 +359,9 @@ tr + tr
 img[src^="http://www.gravatar.com/avatar/"]
         border-radius .5rem
 
+.entry-author > .avatar
+        border-radius 50%
+
 /* Side Bar */
 .side-widgets
 
@@ -472,6 +475,12 @@ img[src^="http://www.gravatar.com/avatar/"]
         .site-description
                 margin-bottom .3rem
 
+        .entry-author
+                margin-bottom .75rem
+
+        .author-name
+                vertical-align -3px
+
         .entry-content
         .entry-comments
                 min-width 560px
@@ -480,7 +489,6 @@ img[src^="http://www.gravatar.com/avatar/"]
                 > .copyright
                 > .poweredby
                         margin-left 1rem
-
 
         /* show only less 768px */
         .show-menu
@@ -539,6 +547,7 @@ img[src^="http://www.gravatar.com/avatar/"]
         .entry-date
         .entry-category
         .entry-tags
+        .entry-author
                 margin-right 1rem
                 display inline
 
