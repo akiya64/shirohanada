@@ -18,8 +18,11 @@
 	<?php endif; ?>
 
 	<header class="entry-header">
+		<p class="entry-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+			<?php echo get_avatar( get_the_author_meta( 'ID' ),'32', 'mm', 'avatar', array( 'extra_attr' => 'itemprop="image"' ) ); ?>
+			<span class="author-name" itemprop="name"><?php the_author_meta( 'display_name' ); ?>
+		</p>
 		<p class="entry-date">
-			
 			<i class="icon icon-time"></i><a href="<?php echo esc_url( get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ) ); ?>"><time class="updated" pubdate="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
 			<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>">
 			</a>
@@ -28,12 +31,6 @@
 			<i class="icon icon-<?php select_category_icon( get_the_category()[0]->slug ); ?>"></i><?php the_category( ',' ); ?>
 		</p>
 		<?php the_tags( '<p class="entry-tags"><i class="icon icon-tag"></i>', ', ' ,'</p>' ); ?>
-
-		<meta itemprop="image" content="<?php the_post_thumbnail(); ?>">
-		<p itemprop="author" itemscope itemtype="https://schema.org/Person">
-			<span itemprop="name"><?php the_author_meta( 'display_name' ); ?>
-			<span itemprop="image"><?php echo get_avatar( get_the_author_meta( 'ID' ),'24', 'mm', 'avatar', array( 'extra_attr' => 'itemprop="image"' ) ); ?></span>
-		</p>
 
 	</header>
 
