@@ -16,7 +16,7 @@
 	
 	<meta itemprop="target" content="<?php echo esc_url( home_url( '/' ) ); ?>?s={search_term}">
 	<label>
-		<input type="search" class="search-field" placeholder="Search for:" value="" name="search_term" itemprop="query-input" required>
+		<input type="search" class="search-field" placeholder="Search for:" value="" name="s" itemprop="query-input" required>
 	</label>
 
 	<input type="submit" class="search-submit" value="Find">
