@@ -9,10 +9,6 @@
 
 get_header(); ?>
 
-<div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
-
-	<div class="article-area" role="main" itemprop="mainEntityOfPage">
-
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post(); ?>
@@ -35,11 +31,5 @@ get_header(); ?>
 			</article>
 
 		<?php endwhile; ?>
-
-	</div><!--end article-area-->
-
-	<?php get_sidebar(); ?>
-
-</div><!--end main contents-->
 
 <?php get_footer(); ?>

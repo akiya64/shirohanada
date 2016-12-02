@@ -10,17 +10,28 @@
 
 ?>
 
-<footer class="site-footer <?php if ( is_front_page() ) { echo '-front'; } ?>">
+<?php if ( is_front_page() ) : ?>
+
+		<footer class="site-footer -front">
+			<p class="copyright">
+				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
+			</p>
+		</footer>
+	</div><!--End DropDownPart-->
+	</div><!--End Top Flex Container--> 
+
+<?php else : ?>
+
+	</div><!--end article-area-->
+
+	<?php get_sidebar(); ?>
+
+	</div><!--end main contents-->
+	<footer class="site-footer">
 	<p class="copyright">
 		(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
 	</p>
 </footer>
-
-<?php if ( is_front_page() ) : ?>
-	</div><!--End DropDownPart-->
-
-</div><!--End Top Flex Container-->
-<?php else : ?>
 
 <script type="text/javascript">
 
