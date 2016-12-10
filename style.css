@@ -895,8 +895,11 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.entry-content {
 	padding-bottom: 0.75rem;
 	}
-	.entry-content img {
+	.entry-content img,
+	.entry-content iframe {
 	max-width: 100%;
+	}
+	.entry-content img {
 	height: auto;
 	}
 	.post + .post {
