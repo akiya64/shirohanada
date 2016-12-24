@@ -11,27 +11,45 @@ Tags: blue, white, gray, right-side-widgets, fixed-layout, responsive-layout, cu
 Text Domain:
 */
 
+/*
+'Every Declaration Just Once'
+ref 'https://developers.google.com/speed/articles/optimizing-css'
+
+Naming rule is 'RSCSS'
+ref 'https://github.com/rstacruz/rscss'
+ref 'http://rscss.io/index.html'
+
+>>> Table of Contents
+# IconFont
+# Color Declaration
+# Normarize
+# Layout
+# Margin and Padding 
+# Typograghy
+# For HTMLTags
+# WordPress Classes
+# Helper Classes
+# Widget
+# IconButton
+# Medeia Query
+    # For Large Display
+    # For Mobile
+# Comment
+# Forms
+# Front Page
+*/
+
 /* major breakpoint */
 breakpoint = 768px
 
 /* Stylus Library */
 @import "nib"
 
-/* import normalize,icon-font,color const module */
+/**
+ * # Normarize 
+ */
 @import "_sanitize"
-@import "_icon-font"
-@import "_color"
 
-/*! Main Section
-
-    'Every Declaration Just Once'
-    ref 'https://developers.google.com/speed/articles/optimizing-css'
-
-    Naming rule is 'RSCSS'
-    ref 'https://github.com/rstacruz/rscss'
-    ref 'http://rscss.io/index.html' */
-
-/* Base */
 body
         font-family Hiragino Kaku Gothic ProN,Meiryo,sans-serif
         line-height 1.8
@@ -39,7 +57,16 @@ body
         width 100%
         max-width 1240px
 
-/* Layout */
+/**
+ * Color variant.
+ */
+
+@import "_color"
+@import "_icon-font"
+
+/**
+ * # Layout
+ */
 .page > .entry-content
 .page > .footer-date
 .page > .footer-author
@@ -75,7 +102,9 @@ body
 .nomatch-contents
         display block
 
-/* Box Margin and Padding */
+/**
+ * # Margin and Padding 
+ */
 .site-name
         margin 0
 
@@ -184,7 +213,9 @@ blockquote
         padding .2rem .75rem
         overflow-wrap break-word
 
-/*  Typograghy  */
+/**
+ * # Typograghy
+ */
 h1,h2,h3,h4,h5,h6
 .site-description
 .front-navmenu
@@ -209,8 +240,7 @@ h1,h2,h3,h4,h5,h6
 .pagination
         font-size 1.4rem
 
-/* Color
- * ShiroHanada #a3d8f6 */
+/* Color ShiroHanada #a3d8f6 */
 :visited
         color maroon
 
@@ -266,12 +296,15 @@ page-numbers.current
 .author-name
         vertical-align -3px
 
-/* Text-align */
 .wp-caption
 .link-posts
         text-align center
 
-/* Border */
+/**
+ * # For HTMLTags
+ */
+
+/* Quates */
 blockquote
         border-left solid 3px #bbb
 
@@ -292,7 +325,7 @@ tr + tr
                 text-align left
 
 
-/* List style */
+/* List */
 .entry-content
        ul
                list-style-type square
@@ -300,7 +333,7 @@ tr + tr
 .comment-reply-list
         list-style-type none
 
-/* h tags in entry-content; WordPress Post or Page content */
+/* H tags in entry-content; WordPress Post or Page content */
 .entry-content
         & h1
         & h2
@@ -313,10 +346,9 @@ tr + tr
                 border-left solid 3px nakano-h
                 clear both
 
-
-/* End Main Section */
-
-/* For WordPress classes */
+/**
+ * # WordPress Classes
+ */
 .aligncenter
 .alignleft
 .alignright
@@ -339,7 +371,9 @@ tr + tr
 .sticky
         border solid 1px shirohanada
 
-/* Helper Classes */
+/**
+ * # Helper Classes
+ */
 .clearfix
         clearfix()
 
@@ -368,7 +402,9 @@ img[src^="http://www.gravatar.com/avatar/"]
 .entry-author > .avatar
         border-radius 50%
 
-/* Side Bar */
+/**
+ * # Widget
+ */
 .side-widgets
 
         /* On chrome overflow long text, example url ,1byte japanese kana */
@@ -404,7 +440,9 @@ img[src^="http://www.gravatar.com/avatar/"]
                         padding .4rem .3rem .1rem
                         text-align center
 
-/* Navigation IconButton */
+/**
+ * # IconButton
+ */
 .show-menu
 .go-top
 .hide-menu
@@ -446,8 +484,10 @@ img[src^="http://www.gravatar.com/avatar/"]
 .-hide
         display none
 
-/* Medeia Query */
-/* For Large Display */
+/**
+ * # Medeia Query
+ *    # For Large Display
+ */
 @media (min-width:breakpoint)
 
         .site-header
@@ -496,7 +536,9 @@ img[src^="http://www.gravatar.com/avatar/"]
         .page > .entry-footer
                 width 50%
 
-/* For mobile */
+/**
+ *    # For mobile 
+ */
 @media screen and (max-width: breakpoint)
         .article-area
         .side-widgets
