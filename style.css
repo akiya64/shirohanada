@@ -38,8 +38,6 @@ ref 'http://rscss.io/index.html'
 # Forms
 # Front Page
 */
-/* major breakpoint */
-/* Stylus Library */
 /**
  * # Normarize
  */
@@ -537,7 +535,7 @@ h6,
 .pagination {
 	font-size: 1.4rem;
 }
-/* Font Color*/
+/* Font Color */
 :visited {
 	color: #800000;
 }
