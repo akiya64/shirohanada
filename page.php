@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
 
-			<article id="<?php the_ID(); ?>" <?php post_class(); ?> itemprop="articleBody">
+			<article id="<?php the_ID(); ?>" <?php post_class( 'is-pagetemplate' ); ?> itemprop="articleBody">
 
 				<div class="entry-content">
 					<?php the_content(); ?>

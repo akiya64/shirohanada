@@ -22,6 +22,7 @@ ref 'http://rscss.io/index.html'
 >>> Table of Contents
 # IconFont
 # Color Declaration
+    # Link Color
 # Normarize
 # Layout
 # Margin and Padding 
@@ -111,7 +112,6 @@ body
 .page-title
 .entry-title
         margin 0 0 .7rem 0
-
 .page-title
         padding 0 .5rem 0 1.5rem
 
@@ -240,7 +240,7 @@ h1,h2,h3,h4,h5,h6
 .pagination
         font-size 1.4rem
 
-/* Color ShiroHanada #a3d8f6 */
+/* Font Color*/
 :visited
         color maroon
 
@@ -276,7 +276,8 @@ h1,h2,h3,h4,h5,h6
 .post
         background-color usu-hai
 
-@import "_icon-color"
+/* SNS Symbolcolor for share links */
+@import "_sns-color"
 
 /* Text Decolation */
 a:hover
@@ -533,7 +534,7 @@ img[src^="http://www.gravatar.com/avatar/"]
         .show-menu
                 display none
 
-        .page > .entry-footer
+        .is-pagetemplate > .entry-footer
                 width 50%
 
 /**
