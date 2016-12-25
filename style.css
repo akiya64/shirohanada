@@ -10,9 +10,39 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blue, white, gray, right-side-widgets, fixed-layout, responsive-layout, custom-menu,
 Text Domain:
 */
+/*
+'Every Declaration Just Once'
+ref 'https://developers.google.com/speed/articles/optimizing-css'
+
+Naming rule is 'RSCSS'
+ref 'https://github.com/rstacruz/rscss'
+ref 'http://rscss.io/index.html'
+
+>>> Table of Contents
+# IconFont
+# Color Declaration
+    # Link Color
+# Normarize
+# Layout
+# Margin and Padding
+# Typograghy
+# For HTMLTags
+# WordPress Classes
+# Helper Classes
+# Widget
+# IconButton
+# Medeia Query
+    # For Large Display
+    # For Mobile
+# Comment
+# Forms
+# Front Page
+*/
 /* major breakpoint */
 /* Stylus Library */
-/* import normalize,icon-font,color const module */
+/**
+ * # Normarize
+ */
 /* sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 pre,
 textarea {
@@ -173,9 +203,16 @@ table {
 [hidden][aria-hidden=false]:focus {
 	clip: auto;
 }
-/*
-* Icon-font Section Powered by Icomoon 'https://icomoon.io/'
-*/
+body {
+	font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+	line-height: 1.8;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1240px;
+}
+/**
+ * Color variant.
+ */
 @font-face {
 	font-family: 'icomoon';
 	src: url("fonts/icomoon.eot?40c2va");
@@ -307,23 +344,9 @@ i {
 .icon-get-pocket:before {
 	content: "\f265";
 }
-/* Main Section
-
-    'Every Declaration Just Once'
-    ref 'https://developers.google.com/speed/articles/optimizing-css'
-
-    Naming rule is 'RSCSS'
-    ref 'https://github.com/rstacruz/rscss'
-    ref 'http://rscss.io/index.html' */
-/* Base */
-body {
-	font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
-	line-height: 1.8;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1240px;
-}
-/* Layout */
+/**
+ * # Layout
+ */
 .page > .entry-content,
 .page > .footer-date,
 .page > .footer-author,
@@ -373,7 +396,9 @@ body {
 .nomatch-contents {
 	display: block;
 }
-/* Box Margin and Padding */
+/**
+ * # Margin and Padding
+ */
 .site-name {
 	margin: 0;
 }
@@ -476,7 +501,9 @@ blockquote {
 	padding: 0.2rem 0.75rem;
 	overflow-wrap: break-word;
 }
-/*  Typograghy  */
+/**
+ * # Typograghy
+ */
 h1,
 h2,
 h3,
@@ -510,8 +537,7 @@ h6,
 .pagination {
 	font-size: 1.4rem;
 }
-/* Color
- * ShiroHanada #a3d8f6 */
+/* Font Color*/
 :visited {
 	color: #800000;
 }
@@ -552,6 +578,7 @@ h6,
 .post {
 	background-color: #f8fafa;
 }
+/* SNS Symbolcolor for share links */
 a[href^="https://github.com/"] > i {
 	color: #333;
 }
@@ -603,12 +630,14 @@ page-numbers.current {
 .author-name {
 	vertical-align: -3px;
 }
-/* Text-align */
 .wp-caption,
 .link-posts {
 	text-align: center;
 }
-/* Border */
+/**
+ * # For HTMLTags
+ */
+/* Quates */
 blockquote {
 	border-left: solid 3px #bbb;
 }
@@ -626,14 +655,14 @@ tr + tr {
 .entry-content caption {
 	text-align: left;
 }
-/* List style */
+/* List */
 .entry-content ul {
 	list-style-type: square;
 }
 .comment-reply-list {
 	list-style-type: none;
 }
-/* h tags in entry-content; WordPress Post or Page content */
+/* H tags in entry-content; WordPress Post or Page content */
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -645,8 +674,9 @@ tr + tr {
 	border-left: solid 3px #436fb4;
 	clear: both;
 }
-/* End Main Section */
-/* For WordPress classes */
+/**
+ * # WordPress Classes
+ */
 .aligncenter,
 .alignleft,
 .alignright {
@@ -669,7 +699,9 @@ tr + tr {
 .sticky {
 	border: solid 1px #a3d8f6;
 }
-/* Helper Classes */
+/**
+ * # Helper Classes
+ */
 .clearfix {
 	zoom: 1;
 }
@@ -708,7 +740,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 }
-/* Side Bar */
+/**
+ * # Widget
+ */
 .side-widgets {
 /* On chrome overflow long text, example url ,1byte japanese kana */
 	word-break: break-all;
@@ -743,7 +777,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	padding: 0.4rem 0.3rem 0.1rem;
 	text-align: center;
 }
-/* Navigation IconButton */
+/**
+ * # IconButton
+ */
 .show-menu,
 .go-top,
 .hide-menu {
@@ -788,8 +824,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .-hide {
 	display: none;
 }
-/* Medeia Query */
-/* For Large Display */
+/**
+ * # Medeia Query
+ *    # For Large Display
+ */
 @media (min-width: 768px) {
 	.site-header {
 	margin-right: 0.75rem;
@@ -832,11 +870,13 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.show-menu {
 	display: none;
 	}
-	.page > .entry-footer {
+	.is-pagetemplate > .entry-footer {
 	width: 50%;
 	}
 }
-/* For mobile */
+/**
+ *    # For mobile
+ */
 @media screen and (max-width: 768px) {
 	.article-area,
 	.side-widgets,
