@@ -20,8 +20,16 @@
 .headerimage
         max-width 700px
 
-.headerimage
-        max-height 700px
+@media (min-width:breakpoint)
+        .front-main
+                border-radius 20px
+                border solid 1px #ccc
+                box-sizing content-box
+                box-shadow 9px 12px 9px 0px rgba(180, 180, 180, 0.8)
+
+        .headerimage
+        .headerimg-box
+                border-radius 20px 0 0 20px
 
 .site-header.-front
 .dropdown-part
