@@ -1160,8 +1160,22 @@ textarea[name="comment"] {
 .headerimage {
 	max-width: 700px;
 }
-.headerimage {
-	max-height: 700px;
+@media (min-width: 768px) {
+	.front-main {
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: solid 1px #999;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-box-shadow: 9px 12px 9px 0px rgba(180,180,180,0.8);
+	box-shadow: 9px 12px 9px 0px rgba(180,180,180,0.8);
+	}
+	.headerimage,
+	.headerimg-box {
+	-webkit-border-radius: 20px 0 0 20px;
+	border-radius: 20px 0 0 20px;
+	}
 }
 .site-header.-front,
 .dropdown-part,
