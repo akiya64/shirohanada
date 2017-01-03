@@ -1164,7 +1164,7 @@ textarea[name="comment"] {
 	.front-main {
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-	border: solid 1px #ccc;
+	border: solid 1px #999;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
