@@ -26,7 +26,7 @@ ref 'http://rscss.io/index.html'
 # Layout
 # Margin and Padding
 # Typograghy
-# For HTMLTags
+# HTMLTags in Post
 # WordPress Classes
 # Helper Classes
 # Widget
@@ -1136,7 +1136,12 @@ textarea[name="comment"] {
 .front-main {
 	width: 1240px;
 	height: 700px;
-	margin: 9vh auto 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -webkit-flex;
