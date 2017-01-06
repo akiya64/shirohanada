@@ -19,6 +19,7 @@ ref 'https://github.com/rstacruz/rscss'
 ref 'http://rscss.io/index.html'
 
 >>> Table of Contents
+# BreakPoint Declaration
 # IconFont
 # Color Declaration
     # Link Color
@@ -38,6 +39,9 @@ ref 'http://rscss.io/index.html'
 # Forms
 # Front Page
 */
+/*
+ * BreakPoint Declaration
+ */
 /**
  * # Normarize
  */
@@ -1134,14 +1138,6 @@ textarea[name="comment"] {
 	text-align: right;
 }
 .front-main {
-	width: 1240px;
-	height: 700px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto auto;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -webkit-flex;
@@ -1165,8 +1161,16 @@ textarea[name="comment"] {
 .headerimage {
 	max-width: 700px;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
 	.front-main {
+	width: 1240px;
+	height: 700px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
 	border: solid 1px #999;
