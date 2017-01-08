@@ -2,13 +2,29 @@
 Theme Name Shirohanada
 Description Adds supoort editor style.
 */
-@import url("style.css");
-body#tinymce {
-/* overwrite for WordPress default */
-	padding: 0 0.5rem !important;
+.mce-content-body {
+	font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+	line-height: 1.8;
+	width: 695px;
+	margin: 0 auto;
+	padding: 0 0.5rem;
 }
 .mce-content-body *:first-child {
 	margin-top: 0.5rem;
+}
+.mce-content-body h1,
+.mce-content-body h2,
+.mce-content-body h3,
+.mce-content-body h4,
+.mce-content-body h5 {
+	font-family: 'Ubuntu', 'Meiryo', sans-serif;
+	font-weight: normal;
+	color: #436fb4;
+	font-size: 1.62rem;
+	margin: 2rem 0 1rem;
+	padding-left: 0.75rem;
+	border-left: solid 3px #436fb4;
+	clear: both;
 }
 .mce-content-body ul,
 .mce-content-body ol {
@@ -17,3 +33,4 @@ body#tinymce {
 .mce-content-body p {
 	margin-bottom: 1rem;
 }
+/*# sourceMappingURL=editor-style.css.map */
