@@ -46,6 +46,7 @@ after_success:
     - git rm -f README.md
     - git rm -f package.json
     - git rm -f style.css.map
+    - git rm -f editor-style.css.map
     - git rm -f fonts/icomoon.zip
     - git rm -f phpcbf-all.sh
     - git rm -f phpmd-all.sh
