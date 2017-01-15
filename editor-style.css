@@ -6,8 +6,10 @@ Description Adds supoort editor style.
 	font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
 	line-height: 1.8;
 	width: 695px;
-	margin: 0 auto;
+	margin: 0 1rem auto;
 	padding: 0 0.5rem;
+/* Table Style */
+/* Definition list */
 }
 .mce-content-body *:first-child {
 	margin-top: 0.5rem;
@@ -26,11 +28,49 @@ Description Adds supoort editor style.
 	border-left: solid 3px #436fb4;
 	clear: both;
 }
-.mce-content-body ul,
-.mce-content-body ol {
-	padding: 0.5rem 2rem 1rem 2rem;
+.mce-content-body a {
+	color: #257bcc;
+}
+.mce-content-body a:hover {
+	text-decoration: dotted;
+	text-decoration-line: underline;
+}
+.mce-content-body a:visited {
+	color: #800000;
 }
 .mce-content-body p {
+	margin: 0.75rem 0;
+}
+.mce-content-body blockquote {
+	border-left: solid 3px #bbb;
+	margin: 0.8rem 0;
+	padding: 0.2rem 0.75rem;
+	overflow-wrap: break-word;
+}
+.mce-content-body ul {
+	list-style-type: square;
+}
+.mce-content-body td,
+.mce-content-body th {
+	padding: 0.2rem 0.5rem;
+}
+.mce-content-body tr + tr {
+	border-top: 1px solid #777;
+}
+.mce-content-body dl {
+	margin-left: 0;
+}
+.mce-content-body dt {
+	display: inline-block;
+	font-weight: bold;
+	border-bottom: solid 1px #bbb;
+}
+.mce-content-body dt + dd {
+	margin-top: 0.2rem;
+	padding-top: 0.2rem;
+}
+.mce-content-body dd {
 	margin-bottom: 1rem;
+	margin-left: 0;
 }
 /*# sourceMappingURL=editor-style.css.map */
