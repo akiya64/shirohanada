@@ -120,10 +120,7 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
  *
  * @since Shirohanada 0.9
  */
-function wpdocs_theme_add_editor_styles() {
-	add_editor_style( 'editor-style.css' );
-}
-add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+add_editor_style();
 
 /**
  * Get oldest post date for copy right
