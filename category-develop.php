@@ -22,10 +22,12 @@ get_header(); ?>
 	endif ;
 ?>
 
-<div class="main-contents">
 
-<div class="article-area">
-
+<?php
+$tid = get_query_var( 'cat' );
+$is_show_excerpt = get_option( "cat_$tid_show_excerpt");
+echo $is_show_excerpt;
+?>
 	<?php echo $current_page_title; ?>
 
 	<?php
@@ -53,11 +55,5 @@ get_header(); ?>
 	<nav class="link-posts text-centering">
 		<?php get_template_part( 'template-parts/navigation' ); ?>
 	</nav>
-
-</div><!--end articles-->
-
-<?php get_sidebar(); ?>
-
-</div><!--end main contents-->
 
 <?php get_footer(); ?>
