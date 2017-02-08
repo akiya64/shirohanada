@@ -32,11 +32,12 @@ add_filter('excerpt_more', 'new_excerpt_more');
  */
 add_action ( 'edit_category_form_fields', 'extra_category_fields');
 function extra_category_fields( $tag ) {
-	$tid = $tag->term_id;
-	$is_show_excerpt = get_option( "cat_$tid_show_excerpt");
+	$cid =  get_query_var( 'term_id' );
+	$key = "cat_$cid_show_excerpt";
+	$is_show_excerpt = get_option( '$key' );
 ?>
 	<tr class="form-field">
-	<th><label for="extra_text">抜粋を表示</label></th>
+	<th><label for="extra_text">抜粋を表示<br></label></th>
 	<td>
 		<select name="show_excerpt" id="show_excerpt">
 		<?php if($is_show_excerpt): ?>
@@ -47,7 +48,7 @@ function extra_category_fields( $tag ) {
 			<option value="no" selected>いいえ</option>
 		<?php endif; ?>
 		</select>
-		<p class="description">カテゴリーページの時、抜粋を表示します。
+		<p class="description">カテゴリーページの時、抜粋を表示します。<?php echo $tag; ?></p>
 	</td>
 	</tr>
 
