@@ -172,18 +172,18 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
  *
  * @since shirohanada 0.10.0
  */
-function new_excerpt_more( $more ) {
+function new_excerpt_more() {
 	global $post;
 	return '<a class="moretag" href="' . get_permalink( $post->ID ) . '">[...]</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 /**
- * add switch show excerpt or content
+ * Add switch show excerpt or content.
  *
+ * @param array $tag term.php in WordPress core class passes.
  * @since shirohanada 0.10.0
  */
-add_action( 'category_edit_form_fields', 'extra_category_fields' );
 function extra_category_fields( $tag ) {
 	$c_id = $tag -> term_id;
 	$flags = get_option( 'shirohanada-category-flag' );
@@ -192,7 +192,7 @@ function extra_category_fields( $tag ) {
 	}
 ?>
 	<tr class="form-field">
-	<th><label for="extra_text">抜粋を表示<br></label></th>
+	<th><label for="extra_text">抜粋を表示</label></th>
 	<td>
 		<select name="show_excerpt" id="show_excerpt">
 		<?php if ( $is_show_excerpt ) : ?>
@@ -202,31 +202,31 @@ function extra_category_fields( $tag ) {
 			<option value="yes">はい</option>
 			<option value="no" selected>いいえ</option>
 		<?php endif; ?>
+		<p>カテゴリー表示の時、抜粋を表示します。</p>
 		</select>
-		<p class="description">カテゴリーページの時、抜粋を表示します。<?php echo $c_id; ?></p>
 	</td>
 	</tr>
 
 <?php
 }
+add_action( 'category_edit_form_fields', 'extra_category_fields' );
 
 /**
- * Save flag show excerpt or content
+ * Save flag show excerpt or content.
  *
+ * @param integer $term_id WordPress core passes.
  * @since shirohanada 0.10.0
  */
-add_action( 'edited_category', 'save_category_show_excerpt' );
 function save_category_show_excerpt( $term_id ) {
-	if ( isset( $_POST['show_excerpt'] ) ) {
-		if ( $_POST['show_excerpt'] == 'yes' ) {
-			$flags = get_option( 'shirohanada_category_flag' );
-			if ( isset( $flags ) ) {
-				$flags[ $term_id ] = true;
-			} else {
-				$flags = array( $term_id => true );
-			}
+	if ( ! empty( $_POST['show_excerpt'] ) && 'yes' === sanitize_key( $_POST['show_excerpt'] ) ) {
+		$flags = get_option( 'shirohanada_category_flag' );
+		if ( ! empty( $flags ) ) {
+			$flags[ $term_id ] = true;
+		} else {
+			$flags = array( $term_id => true );
 		}
 		update_option( 'shirohanada_category_flag', $flags );
 	}
 }
+add_action( 'edited_category', 'save_category_show_excerpt' );
 ?>
