@@ -183,11 +183,13 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
  *
  * @since shirohanada 0.10.0
  */
-add_action( 'edit_category_form_fields', 'extra_category_fields' );
+add_action( 'category_edit_form_fields', 'extra_category_fields' );
 function extra_category_fields( $tag ) {
-	$cid = get_query_var( 'term_id' );
-	$key = "cat_$cid_show_excerpt";
-	$is_show_excerpt = get_option( '$key' );
+	$c_id = $tag -> term_id;
+	$flags = get_option( 'shirohanada-category-flag' );
+	if ( isset( $flags ) ) {
+		$is_show_excerpt = $flags[ $c_id ];
+	}
 ?>
 	<tr class="form-field">
 	<th><label for="extra_text">抜粋を表示<br></label></th>
@@ -201,7 +203,7 @@ function extra_category_fields( $tag ) {
 			<option value="no" selected>いいえ</option>
 		<?php endif; ?>
 		</select>
-		<p class="description">カテゴリーページの時、抜粋を表示します。<?php echo $tag; ?></p>
+		<p class="description">カテゴリーページの時、抜粋を表示します。<?php echo $c_id; ?></p>
 	</td>
 	</tr>
 
@@ -209,19 +211,22 @@ function extra_category_fields( $tag ) {
 }
 
 /**
- * Store flag show excerpt or allcontent
+ * Save flag show excerpt or content
  *
  * @since shirohanada 0.10.0
  */
-add_action( 'edited_term', 'save_category_show_excerpt' );
+add_action( 'edited_category', 'save_category_show_excerpt' );
 function save_category_show_excerpt( $term_id ) {
 	if ( isset( $_POST['show_excerpt'] ) ) {
-		$tid = $term_id;
-		$posted = $_POST['show_excerpt'];
-		if ( $posted == 'yes' ) {
-			$is_show_excerpt = true;
+		if ( $_POST['show_excerpt'] == 'yes' ) {
+			$flags = get_option( 'shirohanada_category_flag' );
+			if ( isset( $flags ) ) {
+				$flags[ $term_id ] = true;
+			} else {
+				$flags = array( $term_id => true );
+			}
 		}
-		update_option( "cat_$tid_show_excerpt", $is_show_excerpt );
+		update_option( 'shirohanada_category_flag', $flags );
 	}
 }
 ?>

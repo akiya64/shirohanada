@@ -13,8 +13,8 @@ get_header();
 	<h2 class="page-title"><?php echo single_cat_title( '', false ); ?></h2>
 
 		<?php
-			 $tid = get_query_var( 'cat' );
-			 $is_show_excerpt = get_option( "cat_$tid_show_excerpt" );
+			 $excerpt_flags = get_option( 'shirohanada_category_flag' );
+			 $is_show_excerpt = $excerpt_flags[ get_query_var( 'cat' ) ];
 
 		if ( $is_show_excerpt ) : ?>
 	
