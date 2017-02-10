@@ -194,6 +194,7 @@ function extra_category_fields( $tag ) {
 	<tr class="form-field">
 	<th><label for="extra_text">抜粋を表示</label></th>
 	<td>
+		<input type="hidden" id="show_excerpt_nonce" name="show_excerpt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'post_excerpt_flag' ) ); ?>">
 		<select name="show_excerpt" id="show_excerpt">
 		<?php if ( $is_show_excerpt ) : ?>
 			<option value="yes" selected>はい</option>
@@ -202,8 +203,8 @@ function extra_category_fields( $tag ) {
 			<option value="yes">はい</option>
 			<option value="no" selected>いいえ</option>
 		<?php endif; ?>
-		<p>カテゴリー表示の時、抜粋を表示します。</p>
 		</select>
+		<p class="description">カテゴリー表示の時、抜粋を表示します。</p>
 	</td>
 	</tr>
 
@@ -218,14 +219,26 @@ add_action( 'category_edit_form_fields', 'extra_category_fields' );
  * @since shirohanada 0.10.0
  */
 function save_category_show_excerpt( $term_id ) {
-	if ( ! empty( $_POST['show_excerpt'] ) && 'yes' === sanitize_key( $_POST['show_excerpt'] ) ) {
-		$flags = get_option( 'shirohanada_category_flag' );
-		if ( ! empty( $flags ) ) {
-			$flags[ $term_id ] = true;
-		} else {
-			$flags = array( $term_id => true );
+	/* Chekc Nonce value. */
+	if ( ! wp_verify_nonce( sanitize_key( $_POST['show_excerpt_nonce'] ), 'post_excerpt_flag' ) ) {
+		var_dump($_POST);
+		exit( 'check-security' );
+	} else {
+
+	/* Check show_excerpt value. */
+		if ( ! empty( $_POST['show_excerpt'] )  ) {
+			$flags = get_option( 'shirohanada_category_flag' );
+			if ( empty( $flags ) ) {
+
+			}
+
+			if('yes' === sanitize_key( $_POST['show_excerpt'] ) ) {
+				$flags[ $term_id ] = true;
+			} else {
+				$flags[ $term_id ] = false;
+			}
+			update_option( 'shirohanada_category_flag', $flags );
 		}
-		update_option( 'shirohanada_category_flag', $flags );
 	}
 }
 add_action( 'edited_category', 'save_category_show_excerpt' );
