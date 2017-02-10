@@ -10,11 +10,12 @@
 get_header();
 ?>
 
-	<h2 class="page-title"><?php echo single_cat_title( '', false ); ?></h2>
+	<h2 class="page-title"><?php single_cat_title(); ?></h2>
 
 		<?php
-			 $excerpt_flags = get_option( 'shirohanada_category_flag' );
-			 $is_show_excerpt = $excerpt_flags[ get_query_var( 'cat' ) ];
+			$excerpt_flags = get_option( 'shirohanada_category_flags' );
+			$key =  'cat_'.get_query_var( 'cat' );
+			$is_show_excerpt = get_theme_mods( $key );
 
 		if ( $is_show_excerpt ) : ?>
 	

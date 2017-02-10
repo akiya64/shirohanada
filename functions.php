@@ -185,10 +185,12 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
  * @since shirohanada 0.10.0
  */
 function extra_category_fields( $tag ) {
-	$c_id = $tag -> term_id;
-	$flags = get_option( 'shirohanada-category-flag' );
+	$flags = get_option( 'shirohanada_category_flags' );
+
 	if ( isset( $flags ) ) {
-		$is_show_excerpt = $flags[ $c_id ];
+		$cid = $tag -> term_id;
+		$key = "cat_$cid";
+		$is_show_excerpt = get_theme_mod( $key );
 	}
 ?>
 	<tr class="form-field">
@@ -219,25 +221,24 @@ add_action( 'category_edit_form_fields', 'extra_category_fields' );
  * @since shirohanada 0.10.0
  */
 function save_category_show_excerpt( $term_id ) {
-	/* Chekc Nonce value. */
-	if ( ! wp_verify_nonce( sanitize_key( $_POST['show_excerpt_nonce'] ), 'post_excerpt_flag' ) ) {
-		var_dump($_POST);
+	/* Check Nonce value. */
+	if ( isset( $_POST['show_excerpt_nonce'], $_POST['show_excerpt'] ) && ! wp_verify_nonce( sanitize_key( $_POST['show_excerpt_nonce'] ), 'post_excerpt_flag' ) ) {
+
 		exit( 'check-security' );
+
 	} else {
 
-	/* Check show_excerpt value. */
-		if ( ! empty( $_POST['show_excerpt'] )  ) {
-			$flags = get_option( 'shirohanada_category_flag' );
-			if ( empty( $flags ) ) {
+		/* Check show_excerpt value. */
+		if ( ! empty( $_POST['show_excerpt'] ) ) {
+			$flag = sanitize_key( $_POST['show_excerpt'] );
+		}
 
-			}
+		$cat_id = "cat_$term_id";
 
-			if('yes' === sanitize_key( $_POST['show_excerpt'] ) ) {
-				$flags[ $term_id ] = true;
-			} else {
-				$flags[ $term_id ] = false;
-			}
-			update_option( 'shirohanada_category_flag', $flags );
+		if ( 'yes' == $flag ) {
+			set_theme_mod( $cat_id, true );
+		} else {
+			set_theme_mod( $cat_id, false );
 		}
 	}
 }
