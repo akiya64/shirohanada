@@ -14,7 +14,7 @@ get_header();
 
 		<?php
 			$excerpt_flags = get_option( 'shirohanada_category_flags' );
-			$key =  'cat_'.get_query_var( 'cat' );
+			$key = 'cat_' . get_query_var( 'cat' );
 			$is_show_excerpt = get_theme_mods( $key );
 
 		if ( $is_show_excerpt ) : ?>
@@ -30,7 +30,7 @@ get_header();
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
 
 			<header class="entry-header">
-				<p class="entry-date"><i class="icon icon-time"></i><a href="<?php echo get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ); ?>"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time></a></p>
+				<p class="entry-date"><i class="icon icon-time"></i><a href="<?php echo esc_url( get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ) ); ?>"><time pubdate="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time></a></p>
 				<?php the_tags( '<p><i class="icon icon-tag"></i>', ', ' ,'</p>' ); ?>
 			</header>
 
