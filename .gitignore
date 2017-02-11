@@ -6,3 +6,4 @@ wpcs/
 composer.lock
 composer.phar
 vendor/
+node_modules/
