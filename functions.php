@@ -2,9 +2,9 @@
 /**
  * Shirohanada functions and definitions
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Shirohanada
- * @since Shirohanada 0.8
+ * @since      Shirohanada 0.8
  */
 
 /**
@@ -28,23 +28,27 @@ add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
  */
 function shirohanada_widgets_init() {
 
-	register_sidebar( array(
+	register_sidebar(
+		array(
 		'name' => 'Side Bar Widgets',
 		'id' => 'sidebar-widgets',
 		'before_widget' => '<section id="%1$s" class="wp-widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title' => '<h2 class="title">',
 		'after_title' => '</h2>',
-	) );
+		)
+	);
 
-	register_sidebar( array(
+	register_sidebar(
+		array(
 		'name' => 'Front Page Widget',
 		'id' => 'front-widgets',
 		'before_widget' => '<section id="%1$s" class="wp-widget -front %2$s">',
 		'after_widget'  => '</section>',
 		'before_title' => '<h2 class="title">',
 		'after_title' => '</h2>',
-	) );
+		)
+	);
 
 }
 
@@ -56,7 +60,7 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
  * @since Shirohanada 0.9
  */
 function register_front_menu() {
-	register_nav_menu( 'front-page-menu','Front Page Menu' );
+	register_nav_menu( 'front-page-menu', 'Front Page Menu' );
 }
 
 add_action( 'after_setup_theme', 'register_front_menu' );
@@ -66,11 +70,12 @@ add_action( 'after_setup_theme', 'register_front_menu' );
  *
  * @since Shirohanada 0.9
  */
-register_default_headers( array(
+register_default_headers(
+	array(
 
 		/*
          * Add 3images to default header image.
-		 */
+    */
 
 		'cherry_blossom' => array(
 			'url' => get_template_directory_uri() . '/images/fukuju_bridge.jpg',
@@ -126,7 +131,7 @@ add_editor_style();
  * Get oldest post date for copy right
  * ref http://nelog.jp/copyrights
  *
- * @since Shirohanada 0.9
+ * @since  Shirohanada 0.9
  * @return integer the year of oldest post
  */
 function get_first_post_year() {
@@ -150,16 +155,16 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
 	switch ( $category_slug ) :
 		case 'photo':
 			$icon_name = 'photo';
-			break;
+		break;
 		case 'illust':
 			$icon_name = 'illust';
-			break;
+		break;
 		case 'develop':
 			$icon_name = 'terminal';
-			break;
+		break;
 		case 'tweets':
 			$icon_name = 'quill';
-			break;
+		break;
 		default:
 			$icon_name = 'folder';
 	endswitch;
@@ -198,13 +203,13 @@ function extra_category_fields( $tag ) {
 	<td>
 		<input type="hidden" id="show_excerpt_nonce" name="show_excerpt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'post_excerpt_flag' ) ); ?>">
 		<select name="show_excerpt" id="show_excerpt">
-		<?php if ( $is_show_excerpt ) : ?>
+	<?php if ( $is_show_excerpt ) : ?>
 			<option value="yes" selected>はい</option>
 			<option value="no">いいえ</option>
-		<?php else : ?>
+	<?php else : ?>
 			<option value="yes">はい</option>
 			<option value="no" selected>いいえ</option>
-		<?php endif; ?>
+	<?php endif; ?>
 		</select>
 		<p class="description">カテゴリー表示の時、抜粋を表示します。</p>
 	</td>
@@ -226,21 +231,21 @@ function save_category_show_excerpt( $term_id ) {
 
 		exit( 'check-security' );
 
-	} else {
-
-		/* Check show_excerpt value. */
-		if ( ! empty( $_POST['show_excerpt'] ) ) {
-			$flag = sanitize_key( $_POST['show_excerpt'] );
-		}
-
-		$cat_id = "cat_$term_id";
-
-		if ( 'yes' == $flag ) {
-			set_theme_mod( $cat_id, true );
-		} else {
-			set_theme_mod( $cat_id, false );
-		}
 	}
+
+	/* Check show_excerpt value. */
+	if ( ! empty( $_POST['show_excerpt'] ) ) {
+		$flag = sanitize_key( $_POST['show_excerpt'] );
+	}
+
+	$cat_id = "cat_$term_id";
+
+	if ( 'yes' === $flag ) {
+		set_theme_mod( $cat_id, true );
+	} else {
+		set_theme_mod( $cat_id, false );
+	}
+
 }
 add_action( 'edited_category', 'save_category_show_excerpt' );
 ?>
