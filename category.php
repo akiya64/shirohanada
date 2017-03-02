@@ -32,10 +32,8 @@ get_header();
 	endif;
 	?>
 
-	
-
 	<nav class="link-posts text-centering">
-		<?php get_template_part( 'template-parts/navigation' ); ?>
+		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 
 <?php get_footer(); ?>
