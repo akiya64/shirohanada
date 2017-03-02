@@ -29,7 +29,7 @@ get_header();
 			get_template_part( 'components/content' );
 			endwhile;
 
-		endif;
+	endif;
 	?>
 
 	
