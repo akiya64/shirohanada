@@ -616,13 +616,13 @@ a[href*=".tumblr.com"] > i {
 }
 /* Text Decolation */
 a:hover,
-page-numbers.current {
+.page-numbers.current {
 	text-decoration-line: underline;
 }
 a:hover {
 	text-decoration-style: dotted;
 }
-page-numbers.current {
+.page-numbers.current {
 	text-decoration-style: solid;
 }
 .site-name > .link,
