@@ -503,6 +503,10 @@ blockquote {
 	padding: 0.2rem 0.75rem;
 	overflow-wrap: break-word;
 }
+hr {
+	margin: 2rem 0;
+	border-top: 1px solid #bbb;
+}
 /**
  * # Typograghy
  */
@@ -700,6 +704,9 @@ ul {
 }
 .comment-reply-list {
 	list-style-type: none;
+}
+.screen-reader-text {
+	display: none;
 }
 /**
  * # Helper Classes
@@ -1063,7 +1070,8 @@ input[type="search"],
 input[name="author"],
 input[name="email"],
 input[name="url"],
-textarea[name="comment"] {
+textarea[name="comment"],
+select {
 	width: 100%;
 }
 .comment-reply-link:link,
@@ -1076,6 +1084,7 @@ textarea[name="comment"] {
 input[type="submit"] {
 	background: #eee;
 }
+select,
 textarea,
 input {
 	background-color: #fff;
@@ -1099,6 +1108,7 @@ input[type="submit"].search-submit {
 	padding: 4px 1rem 0 1rem;
 	float: right;
 }
+select,
 input,
 textarea {
 	padding: 0.2rem 0.5rem;
