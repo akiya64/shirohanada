@@ -11,7 +11,9 @@
 
 <header class="entry-header">
 	<p class="entry-author vcard author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ),'32', 'mm', 'avatar', array( 'extra_attr' => 'itemprop="image"' ) ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'ID' ),'32', 'mm', 'avatar', array(
+				'extra_attr' => 'itemprop="image"',
+			) ); ?>
 			<span class="author-name fn" itemprop="name"><?php the_author_meta( 'display_name' ); ?></span>
 		</p>
 		<p class="entry-date">
