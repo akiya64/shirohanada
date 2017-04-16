@@ -17,16 +17,20 @@
 
 	
 	<?php if ( has_post_thumbnail() ) : ?>
+
 		<div class='entry-excerpt _with-thumbnail'>
 			<?php the_excerpt(); ?>
 		</div><!--end entry-content-->
-		<?php the_post_thumbnail( 'large', array(
-			'class' => 'excerpt-thumbnail',
-		) ); ?>
+		<div class="excerpt-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</div>
+
 	<?php else : ?>
+
 		<div class='entry-excerpt'>
 			<?php the_excerpt(); ?>
 		</div><!--end entry-content-->
+
 	<?php endif ?>
 
 </article>
