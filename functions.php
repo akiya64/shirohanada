@@ -22,6 +22,14 @@ function shirohanada_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
 
 /**
+ * Enable post thumnails.
+ *
+ * @since Shirohanada 0.9.1
+ */
+
+add_theme_support( 'post-thumbnails' );
+
+/**
  * Register our sidebars and widgetized areas.
  *
  * @since Shirohanada 0.8
