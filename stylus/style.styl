@@ -84,6 +84,7 @@ body
 .wp-caption
         max-width 100%
 
+.excerpt-thumbnail
 .entry-content img
         height auto
 
@@ -518,6 +519,7 @@ img[src^="http://www.gravatar.com/avatar/"]
         .article-area
         .entry-content
         .entry-comments
+        .entry-excerpt
                 width 76%
 
         .side-widgets
@@ -525,9 +527,16 @@ img[src^="http://www.gravatar.com/avatar/"]
         .entry-header
                 width 23%
 
+        .entry-excerpt._with-thumbnail
+        .excerpt-thumbnail
+                width 37%
+
         .entry-margin
         .entry-header
                 margin-right 1%
+
+        .excerpt-thumbnail
+                margin-left 1%
 
         .site-description
                 margin-bottom .3rem
@@ -613,9 +622,6 @@ img[src^="http://www.gravatar.com/avatar/"]
                 img
                 iframe
                         max-width 100%
-
-                img
-                        height auto
 
         .post + .post
                 padding-top 1rem

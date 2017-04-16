@@ -15,12 +15,18 @@
 
 	<?php get_template_part( 'components/articleheader' ); ?>
 
-	<div class='entry-content'>
-		<?php the_excerpt(); ?>
-	</div><!--end entry-content-->
-
-	<?php if( has_post_thumbnail() ) :
-			the_post_thumbnail();
-	endif ?>
+	
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class='entry-excerpt _with-thumbnail'>
+			<?php the_excerpt(); ?>
+		</div><!--end entry-content-->
+		<?php the_post_thumbnail( 'large', array(
+			'class' => 'excerpt-thumbnail',
+		) ); ?>
+	<?php else : ?>
+		<div class='entry-excerpt'>
+			<?php the_excerpt(); ?>
+		</div><!--end entry-content-->
+	<?php endif ?>
 
 </article>
