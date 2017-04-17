@@ -356,12 +356,13 @@ i {
 .entry-title {
 	width: 100%;
 }
-.entry-content img,
+.excerpt-thumbnail > img,
+.entry-content > img,
 .wp-caption {
 	max-width: 100%;
 }
-.excerpt-thumbnail,
-.entry-content img {
+.excerpt-thumbnail > img,
+.entry-content > img {
 	height: auto;
 }
 .side-widgets {
@@ -466,6 +467,10 @@ li + li {
 .entry-header,
 .entry-title {
 	margin-bottom: 0.6rem;
+}
+.excerpt-thumbnail > img {
+	margin: 0 auto;
+	display: block;
 }
 .entry-content p {
 	margin: 0.75rem 0;
@@ -870,7 +875,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	}
 	.entry-excerpt._with-thumbnail > img,
 	.excerpt-thumbnail > img {
-	height: auto;
 	max-width: 100%;
 	margin: 0 auto;
 	display: block;
@@ -915,6 +919,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	margin: initial;
 	margin-left: 0.5rem;
 	}
+	.excerpt-thumbnail,
 	.entry-footer {
 	width: 90%;
 	margin: auto;
@@ -951,6 +956,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.entry-tags {
 	margin-right: 1rem;
 	display: inline;
+	}
+	.excerpt-thumbnail {
+	margin-top: 1rem;
 	}
 	.post,
 	.page {
