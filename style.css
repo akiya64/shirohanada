@@ -357,12 +357,12 @@ i {
 	width: 100%;
 }
 .excerpt-thumbnail > img,
-.entry-content > img,
+.entry-content img,
 .wp-caption {
 	max-width: 100%;
 }
 .excerpt-thumbnail > img,
-.entry-content > img {
+.entry-content img {
 	height: auto;
 }
 .side-widgets {
