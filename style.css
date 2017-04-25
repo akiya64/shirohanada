@@ -357,12 +357,12 @@ i {
 	width: 100%;
 }
 .excerpt-thumbnail > img,
-.entry-content > img,
+.entry-content img,
 .wp-caption {
 	max-width: 100%;
 }
 .excerpt-thumbnail > img,
-.entry-content > img {
+.entry-content img {
 	height: auto;
 }
 .side-widgets {
@@ -503,15 +503,6 @@ li + li {
 }
 .side-widgets {
 	padding: 0.1rem 1rem 0.8rem;
-}
-blockquote {
-	margin: 0.8rem 0;
-	padding: 0.2rem 0.75rem;
-	overflow-wrap: break-word;
-}
-hr {
-	margin: 2rem 0;
-	border-top: 1px solid #bbb;
 }
 /**
  * # Typograghy
@@ -682,6 +673,15 @@ ul {
 	padding-left: 0.75rem;
 	border-left: solid 3px #436fb4;
 	clear: both;
+}
+blockquote {
+	margin: 0.8rem 0;
+	padding: 0.2rem 0.75rem;
+	overflow-wrap: break-word;
+}
+hr {
+	margin: 2rem 0;
+	border-top: 1px solid #bbb;
 }
 /**
  * # WordPress Classes
