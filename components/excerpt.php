@@ -22,7 +22,9 @@
 			<?php the_excerpt(); ?>
 		</div><!--end entry-content-->
 		<div class="excerpt-thumbnail">
-			<?php the_post_thumbnail(); ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
 		</div>
 
 	<?php else : ?>
