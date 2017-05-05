@@ -14,7 +14,7 @@ before_script:
     - git clone -b master --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR
     - git clone -b master --depth 1 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $SNIFFS_DIR
     - git clone -b master --depth 1 https://github.com/wimg/PHPCompatibility.git $SNIFFS_DIR/PHPCompatibility
-    - $PHPCS_DIR/scripts/phpcs --config-set installed_paths $SNIFFS_DIR
+    - $PHPCS_DIR/bin/phpcs --config-set installed_paths $SNIFFS_DIR
     # check javascript
     - npm install -g jscs
     # @link http://jshint.com/docs/
@@ -25,8 +25,8 @@ script:
     # Search for PHP syntax errors.
     - find . \( -name '*.php' \) -exec php -lf {} \;
     - jshint .
-    - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=wordpress --extensions=php
-    - $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=wordpress --extensions=css
+    - $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=php
+    - $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=css
 
 after_success:
     - set -e
