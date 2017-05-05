@@ -20,9 +20,9 @@ before_script:
     # Pull in the WP Core jshint rules.
     - wget https://develop.svn.wordpress.org/trunk/.jshintrc
 script:
-    # Search for PHP syntax errors.
-    - find . \( -name '*.php' \) -exec php -lf {} \;
     - jshint .
+    # Search for PHP syntax errors.
+    - find . components/ -name "*.php" -maxdepth 1 -exec php -lf {} \;
     - find . components/ -name "*.php" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
     - find . components/ -name "*.css" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
 
