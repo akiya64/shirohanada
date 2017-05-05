@@ -24,11 +24,11 @@ script:
     # Search for PHP syntax errors.
     - find . \( -name '*.php' \) -exec php -lf {} \;
     - jshint .
-    - $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=php
-    - $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=css
+    # $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=php
+    # $PHPCS_DIR/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=css
 
 after_success:
-    - set -e
+    - set -e::;
     #Only Push origin
     - if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then echo "Not deploying pull requests." ; exit ; fi
     #only master branch
