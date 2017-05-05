@@ -23,8 +23,8 @@ script:
     # Search for PHP syntax errors.
     - find . \( -name '*.php' \) -exec php -lf {} \;
     - jshint .
-    - vendor/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=php
-    - vendor/bin/phpcs -p -s -v -n . --standard=wordpress --extensions=css
+    - find . components/ -name "*.php" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
+    - find . components/ -name "*.css" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
 
 after_success:
     - set -e::;
