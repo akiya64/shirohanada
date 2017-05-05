@@ -187,7 +187,7 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
  */
 function new_excerpt_more() {
 	global $post;
-	return '<a class="moretag" href="' . get_permalink( $post->ID ) . '">[...]</a>';
+	return '';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 

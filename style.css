@@ -356,12 +356,12 @@ i {
 .entry-title {
 	width: 100%;
 }
-.excerpt-thumbnail > img,
+.excerpt-thumbnail img,
 .entry-content img,
 .wp-caption {
 	max-width: 100%;
 }
-.excerpt-thumbnail > img,
+.excerpt-thumbnail img,
 .entry-content img {
 	height: auto;
 }
@@ -468,7 +468,7 @@ li + li {
 .entry-title {
 	margin-bottom: 0.6rem;
 }
-.excerpt-thumbnail > img {
+.excerpt-thumbnail img {
 	margin: 0 auto;
 	display: block;
 }
@@ -873,8 +873,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.excerpt-thumbnail {
 	width: 37%;
 	}
-	.entry-excerpt._with-thumbnail > img,
-	.excerpt-thumbnail > img {
+	.entry-excerpt._with-thumbnail img,
+	.excerpt-thumbnail img {
 	max-width: 100%;
 	margin: 0 auto;
 	display: block;

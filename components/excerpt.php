@@ -19,16 +19,18 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 
 		<div class='entry-excerpt _with-thumbnail'>
-			<?php the_excerpt(); ?>
+			<?php echo get_the_excerpt() . '  '; ?><a href="<?php echo get_permalink(); ?>">...続きを読む</a>
 		</div><!--end entry-content-->
 		<div class="excerpt-thumbnail">
-			<?php the_post_thumbnail(); ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
 		</div>
 
 	<?php else : ?>
 
 		<div class='entry-excerpt'>
-			<?php the_excerpt(); ?>
+			<?php echo get_the_excerpt() . '  ' ; ?><a href="<?php echo get_permalink(); ?>">...続きを読む</a>
 		</div><!--end entry-content-->
 
 	<?php endif ?>
