@@ -19,7 +19,7 @@ elseif ( is_search() ) :
 elseif ( is_single() ) :
 	$current_page_title = '' ;
 else :
-	/* this case is expected only RecentPost */
+	/* this case is expected only /blog */
 	$current_page_title = '<h2 class="page-title">Latest Posts</h2>';
 endif ;
 
