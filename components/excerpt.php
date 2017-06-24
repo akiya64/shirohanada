@@ -19,7 +19,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 
 		<div class='entry-excerpt _with-thumbnail'>
-			<?php echo get_the_excerpt() . '  '; ?><a href="<?php echo get_permalink(); ?>">...続きを読む</a>
+			<?php the_excerpt() . '  '; ?><a href="<?php the_permalink(); ?>">...続きを読む</a>
 		</div><!--end entry-content-->
 		<div class="excerpt-thumbnail">
 			<a href="<?php the_permalink(); ?>">
@@ -30,7 +30,7 @@
 	<?php else : ?>
 
 		<div class='entry-excerpt'>
-			<?php echo get_the_excerpt() . '  ' ; ?><a href="<?php echo get_permalink(); ?>">...続きを読む</a>
+			<?php the_excerpt() . '  ' ; ?><a href="<?php the_permalink(); ?>">...続きを読む</a>
 		</div><!--end entry-content-->
 
 	<?php endif ?>
