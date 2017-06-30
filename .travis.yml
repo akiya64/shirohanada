@@ -59,7 +59,7 @@ after_success:
     #marge release for deployment autumnsky.sakura.ne.jp
     - git checkout -b release remotes/origin/release
     - git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
-    - git push git@github.com:akiya64/shirohanada release
+    - git push https://${GH_TOKEN}@github.com/akiya64/shirohanada release
 
 env:
   global:
@@ -67,3 +67,4 @@ env:
   - GIT_COMMITTER_EMAIL=autumnsky64@gmail.com
   - GIT_AUTHOR_NAME=akiya64-in-travis
   - GIT_AUTHOR_EMAIL=autumnsky64@gmail.com
+  - secure: "WNm1gaTm7W5poik7AXFMsdZmXmbFDK1SRt7bi58k4LwFnnKlvvtW3w5s16RhiukWjKA5S6tQ8EWfdr2hoIKEMPRfI7/sJamIOo2/NYZeczQnJBDd6b0JTuO0jjjP/XgEbatMQr11Nz9hwQN5iY2gcBYE48bdL+XsHExdujdOcBsl8ERkdafUvS2+O3FUiAZR7+GLQ/ngdb8JzxCqg2c/wzczRz1q7Qk0UUtou/SUiKMgULwGwmpdo9mYzmmM3+EJUL0ma9B4Lt9KPhAjGhHPFgxVKvVh4vLWyMoh0dz6+tCoWTnR49VpOO7jbHIULpT05zYOPWl5DEuzppYTuvw7aGHw8plf3t5jKIYS5rsFUdwIXRx+7pY/veGlS2QuxmuOTXkq1wGXZUyawYYHf3zYnssLGrzp8DZVQS37ES9Y2vN3TTa0HHM9xGttdpdP4lnCaz1p+oFuSWYLDGKkvsh7vquz9V2boJpr1S025l31mlZorksYszvn6kgfMXmR0fR8mRypUJZQxJ7MMrOL/BWZ3yQRW2W9HB/5wY2t9AjVAPSDec3WploQKv6AKsP+6Yyhf4gRkGxWtnNibmUwBf54hgs5qHtjmqN2rUzCdzHfU1HWa0/RDH0FstMsHHVbQ2KYVV0H2wx8hBIfZuNeXodpz46PEydkQNVOtlHpNN3FnWo="
