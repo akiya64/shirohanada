@@ -10,7 +10,7 @@ branches:
 before_install:
 
     # set SSH settings for push GitHub
-    - openssl aes-256-cbc -K $encrypted_15f5b6818add_key -iv $encrypted_15f5b6818add_iv -in .push_github_rsa.enc -out .push_github_rsa -d
+    - openssl aes-256-cbc -K $encrypted_4305ebdbe243_key -iv $encrypted_4305ebdbe243_iv -in .push_release.enc -out .push_release -d
 
 before_script:
     #@link https://github.com/Automattic/_s/blob/master/.travis.yml
