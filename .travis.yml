@@ -53,7 +53,7 @@ after_success:
     #marge release for deployment autumnsky.sakura.ne.jp
     - git checkout -b release remotes/origin/release
     - git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
-    - git push https://${GH_TOKEN}@github.com/akiya64/shirohanada release
+    - git push https://${GH_TOKEN}@github.com/akiya64/shirohanada release >/dev/null 2>&1
 
 env:
   global:
