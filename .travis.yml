@@ -7,11 +7,6 @@ branches:
   only:
     - master
 
-before_install:
-
-    # set SSH settings for push GitHub
-    - openssl aes-256-cbc -K $encrypted_4305ebdbe243_key -iv $encrypted_4305ebdbe243_iv -in .push_release.enc -out .push_release -d
-
 before_script:
     #@link https://github.com/Automattic/_s/blob/master/.travis.yml
     - export SNIFFS_DIR=/tmp/sniffs
@@ -54,7 +49,6 @@ after_success:
     - git rm -f phpcbf-all.sh
     - git rm -f phpmd-all.sh
     - git rm -f composer.*
-    - git rm -f .push_github_rsa.enc
     - git commit -m "prepare release"
     #marge release for deployment autumnsky.sakura.ne.jp
     - git checkout -b release remotes/origin/release
