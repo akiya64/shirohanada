@@ -19,10 +19,10 @@ get_header(); ?>
 if ( is_day() ) :
 	$title_date_part = get_the_date( 'Y.m.d' );
 	$posts_piriod = array(
-	array(
-		'year' => get_the_date( 'Y' ),
-		'month' => get_the_date( 'm' ),
-		'day' => get_the_date( 'd' ),
+		array(
+			'year' => get_the_date( 'Y' ),
+			'month' => get_the_date( 'm' ),
+			'day' => get_the_date( 'd' ),
 		),
 	);
 
@@ -31,8 +31,8 @@ if ( is_day() ) :
 		$posts_piriod = array(
 			array(
 				'year' => get_the_date( 'Y' ),
-				),
-			);
+			),
+		);
 
 	else :
 		$title_date_part = get_the_date( 'Y.m' );
@@ -40,8 +40,8 @@ if ( is_day() ) :
 			array(
 				'year' => get_the_date( 'Y' ),
 				'month' => get_the_date( 'm' ),
-				),
-			);
+			),
+		);
 
 	endif ;
 ?>
@@ -54,7 +54,7 @@ if ( is_day() ) :
 		'order' => 'ASC',
 		'date_query' => $posts_piriod,
 		'ignore_sticky_posts' => 1,
-		);
+	);
 
 	$date_query = new WP_Query( $arg );
 

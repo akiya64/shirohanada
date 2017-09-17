@@ -19,13 +19,15 @@ get_header();
 
 	if ( $is_show_excerpt ) :
 
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 			get_template_part( 'components/excerpt' );
 			endwhile;
 
 	else :
 
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 			get_template_part( 'components/content' );
 			endwhile;
 

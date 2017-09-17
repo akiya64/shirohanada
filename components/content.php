@@ -12,9 +12,9 @@
 <article id="<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( is_single() ) : ?>
-		<h1 class="entry-title single" itemprop="headline"><?php the_title();?></h1>
+		<h1 class="entry-title single" itemprop="headline"><?php the_title(); ?></h1>
 	<?php else : ?>
-		<h1 class="entry-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
+		<h1 class="entry-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	<?php endif; ?>
 
 	<?php get_template_part( 'components/articleheader' ); ?>
@@ -32,7 +32,7 @@
 	<div class="entry-margin"></div>
 	<div class="entry-comments">
 
-	<?php comments_template();?>
+	<?php comments_template(); ?>
 
 	</div>
 

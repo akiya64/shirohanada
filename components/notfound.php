@@ -11,7 +11,7 @@
 
 <article class="page nomatch-contents">
 
-<?php if ( is_search() ) :  ?>
+<?php if ( is_search() ) : ?>
 <h3>記事が見つかりません</h3>
 
 <p class="reasons">検索ワード："<?php echo get_search_query( false ); ?>"を含む記事はありませんでした。<br>

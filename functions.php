@@ -38,23 +38,23 @@ function shirohanada_widgets_init() {
 
 	register_sidebar(
 		array(
-		'name' => 'Side Bar Widgets',
-		'id' => 'sidebar-widgets',
-		'before_widget' => '<section id="%1$s" class="wp-widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title' => '<h2 class="title">',
-		'after_title' => '</h2>',
+			'name' => 'Side Bar Widgets',
+			'id' => 'sidebar-widgets',
+			'before_widget' => '<section id="%1$s" class="wp-widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title' => '<h2 class="title">',
+			'after_title' => '</h2>',
 		)
 	);
 
 	register_sidebar(
 		array(
-		'name' => 'Front Page Widget',
-		'id' => 'front-widgets',
-		'before_widget' => '<section id="%1$s" class="wp-widget -front %2$s">',
-		'after_widget'  => '</section>',
-		'before_title' => '<h2 class="title">',
-		'after_title' => '</h2>',
+			'name' => 'Front Page Widget',
+			'id' => 'front-widgets',
+			'before_widget' => '<section id="%1$s" class="wp-widget -front %2$s">',
+			'after_widget'  => '</section>',
+			'before_title' => '<h2 class="title">',
+			'after_title' => '</h2>',
 		)
 	);
 
@@ -146,7 +146,8 @@ function get_first_post_year() {
 	$year = null;
 	$query1 = new WP_Query( 'posts_per_page=1&order=ASC' );
 
-	while ( $query1->have_posts() ) : $query1->the_post();
+	while ( $query1->have_posts() ) :
+		$query1->the_post();
 		$year = intval( get_the_time( 'Y' ) );
 	endwhile;
 
@@ -163,16 +164,16 @@ function select_category_icon( $category_slug = 'uncategorized' ) {
 	switch ( $category_slug ) :
 		case 'photo':
 			$icon_name = 'photo';
-		break;
+			break;
 		case 'illust':
 			$icon_name = 'illust';
-		break;
+			break;
 		case 'develop':
 			$icon_name = 'terminal';
-		break;
+			break;
 		case 'tweets':
 			$icon_name = 'quill';
-		break;
+			break;
 		default:
 			$icon_name = 'folder';
 	endswitch;

@@ -11,7 +11,9 @@ get_header(); ?>
 
 		<?php
 		// Start the loop.
-		while ( have_posts() ) : the_post(); ?>
+		while ( have_posts() ) :
+			the_post();
+		?>
 
 			<h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2>
 
@@ -24,7 +26,7 @@ get_header(); ?>
 				<p class="footer-date _text-alignright">
 					<time class="updated" pubdate="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
 					<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>">
-				<p class="footer-author _text-alignright" itemprop="author" itemscope itemtype="https://schema.org/Person">Author:<span itemprop="name"><?php the_author();?></span></p>
+				<p class="footer-author _text-alignright" itemprop="author" itemscope itemtype="https://schema.org/Person">Author:<span itemprop="name"><?php the_author(); ?></span></p>
 
 			<?php get_template_part( 'components/articlefooter' ); ?>
 
