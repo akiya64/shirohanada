@@ -26,10 +26,14 @@ get_header(); ?>
 		<h2 class="navmenu-title">Contents</h2>
 
 		<nav class="front-navmenu" role="menu">
-			<?php wp_nav_menu( array(
-				'theme_location' => 'front-page-menu',
-				'container' => '',
-			) ); ?>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'front-page-menu',
+					'container' => '',
+				)
+			);
+			?>
 		</nav>
 
 		<?php if ( is_active_sidebar( 'front-widgets' ) ) : ?>

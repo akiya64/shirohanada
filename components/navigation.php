@@ -13,14 +13,16 @@
 	/* Build pagination by WordPress embedded method. */
 	global $wp_query;
 	$big = 999999999; // need an unlikely integer.
-	$pagination = paginate_links( array(
-		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-		'format' => '?paged=%#%',
-		'current' => max( 1, get_query_var( 'paged' ) ),
-		'mid_size' => 3,
-		'total' => $wp_query->max_num_pages,
-		'prev_next' => false,
-	) );
+	$pagination = paginate_links(
+		array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var( 'paged' ) ),
+			'mid_size' => 3,
+			'total' => $wp_query->max_num_pages,
+			'prev_next' => false,
+		)
+	);
 
 	/* Title is current category name or year.month. */
 	if ( is_category() ) :
@@ -32,7 +34,7 @@
 	endif;
 ?>
 
-<?php if ( ! empty( $pagination ) ) :  ?>
+<?php if ( ! empty( $pagination ) ) : ?>
 
 <p class="pagination">
 	<?php echo wp_kses_post( $page_title ) . wp_kses_post( $pagination ); ?>

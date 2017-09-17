@@ -28,7 +28,8 @@ echo wp_kses_post( $current_page_title );
 
 if ( have_posts() ) :
 	/* Display posts Start the loop.*/
-	while ( have_posts() ) : the_post();
+	while ( have_posts() ) :
+		the_post();
 		get_template_part( 'components/content' );
 	endwhile;
 else :
