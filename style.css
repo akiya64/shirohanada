@@ -388,6 +388,9 @@ i {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.entry-content {
+	overflow-wrap: break-word;
+}
 .entry-footer.-sharelinks {
 	-webkit-box-pack: distribute;
 	-moz-box-pack: distribute;
@@ -684,7 +687,6 @@ ul {
 blockquote {
 	margin: 0.8rem 0;
 	padding: 0.2rem 0.75rem;
-	overflow-wrap: break-word;
 }
 hr {
 	margin: 2rem 0;
