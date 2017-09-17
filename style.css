@@ -981,9 +981,12 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.entry-content iframe {
 	max-width: 100%;
 	}
-	.post + .post {
+	.post + .post::before {
+	content: '';
+	border-top: solid 1px #bbb;
+	width: 100%;
+	height: 1rem;
 	padding-top: 1rem;
-	border-top: solid 1px #777;
 	}
 	.site-footer {
 	text-align: right;
