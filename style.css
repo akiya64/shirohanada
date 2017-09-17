@@ -388,6 +388,9 @@ i {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
+.entry-content {
+	overflow-wrap: break-word;
+}
 .entry-footer.-sharelinks {
 	-webkit-box-pack: distribute;
 	-moz-box-pack: distribute;
@@ -684,7 +687,6 @@ ul {
 blockquote {
 	margin: 0.8rem 0;
 	padding: 0.2rem 0.75rem;
-	overflow-wrap: break-word;
 }
 hr {
 	margin: 2rem 0;
@@ -979,9 +981,12 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	.entry-content iframe {
 	max-width: 100%;
 	}
-	.post + .post {
+	.post + .post::before {
+	content: '';
+	border-top: solid 1px #bbb;
+	width: 100%;
+	height: 1rem;
 	padding-top: 1rem;
-	border-top: solid 1px #777;
 	}
 	.site-footer {
 	text-align: right;
