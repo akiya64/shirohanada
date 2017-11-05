@@ -8,7 +8,7 @@ branches:
 
 before_script:
     #@link https://github.com/Automattic/_s/blob/master/.travis.yml
-    - export SNIFFS_DIR=/wpcs
+    - export SNIFFS_DIR=/tmp/wpcs
     - git clone -b 3.1.1 --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git
     - git clone -b master --depth 1 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $SNIFFS_DIR
     - bin/phpcs --config-set installed_paths $SNIFFS_DIR
