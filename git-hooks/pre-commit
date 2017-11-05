@@ -11,19 +11,21 @@ fi
 exec 1>&2
 
 IS_ERROR=0
-# コミットされるファイルのうち、.phpで終わるもの
-FILES=`git diff-index --name-status $against | grep -E '*(.php|.css)$' | cut -c3-`
+# コミットされるファイルのうち、.phpかcssで終わるもの
+FILES=` git status --short | grep -E "^[M|A].*(.css|.php)$" | cut -c4-`
 
 for FILE in $FILES
 do
 
-    ./vendor/bin/phpcbf --standard=wordpress $FILE
+    ./phpcs/bin/phpcbf --standard=wordpress $FILE
 
-    if ! ./vendor/bin/phpcs --standard=wordpress $FILE ; then
-        ./vendor/bin/phpcs --standard=wordpress $FILE
+    if ! ./phpcs/bin/phpcs --standard=wordpress $FILE ; then
+        ./phpcs/bin/phpcs --standard=wordpress $FILE
         IS_ERROR=1
     else
+
         git add $FILE
+
     fi
 
 done
