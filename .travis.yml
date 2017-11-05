@@ -8,12 +8,12 @@ branches:
 
 before_script:
     #@link https://github.com/Automattic/_s/blob/master/.travis.yml
-    - export SNIFFS_DIR=./wpcs
-    - export PHPCS_DIR=./phpcs
+    - export SNIFFS_DIR=/tmp/wpcs
+    - export PHPCS_DIR=/tmp/phpcs
     - git clone -b 3.1.1 --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR
     - git clone -b master --depth 1 https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $SNIFFS_DIR
     - ls -l
-    - ./phpcs/bin/phpcs --config-set installed_paths $SNIFFS_DIR
+    - /tmp/phpcs/bin/phpcs --config-set installed_paths $SNIFFS_DIR
     # check javascript
     - npm install -g jscs
     # @link http://jshint.com/docs/
@@ -24,8 +24,8 @@ script:
     - jshint .
     # Search for PHP syntax errors.
     - find . components/ -name "*.php" -maxdepth 1 -exec php -lf {} \;
-    - find . components/ -name "*.php" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
-    - find . components/ -name "*.css" -maxdepth 1 -exec ./vendor/bin/phpcs -p -s -v {} --standard=wordpress \;
+    - find . components/ -name "*.php" -maxdepth 1 -exec /tmp/phpcs/bin/phpcs -p -s -v {} --standard=wordpress \;
+    - find . components/ -name "*.css" -maxdepth 1 -exec /tmp/phpcs/bin/phpcs -p -s -v {} --standard=wordpress \;
 
 after_success:
     - set -e::;
