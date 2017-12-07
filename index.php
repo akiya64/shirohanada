@@ -11,20 +11,20 @@ get_header(); ?>
 
 <?php
 if ( is_category() ) :
-	$current_page_title = '<h2 class="page-title">' . single_cat_title( '', false ) . '</h2>';
+	$h2_title = '<h2 class="page-title">' . single_cat_title( '', false ) ;
 elseif ( is_tag() ) :
-	$current_page_title = '<h2 class="page-title">' . single_tag_title( '', false ) . '</h2>' ;
+	$h2_title = single_tag_title( '', false );
 elseif ( is_search() ) :
-	$current_page_title = '<h2 class="page-title">Search Result "' . get_search_query( false ) . '"</h2>' ;
-elseif ( is_single() ) :
-	$current_page_title = '' ;
+	$h2_title = 'Search Result "' . get_search_query( false )  ;
 else :
 	/* this case is expected only /blog */
-	$current_page_title = '<h2 class="page-title">Latest Posts</h2>';
+	$h2_title = 'Latest Posts';
 endif ;
 
-/* Display page title. */
-echo wp_kses_post( $current_page_title );
+if (! is_single() ) :
+	/* Display page title. */
+	echo '<h2 class="page-title">'.wp_kses_post( $h2_title ).'</h2>' ;
+endif ;
 
 if ( have_posts() ) :
 	/* Display posts Start the loop.*/
