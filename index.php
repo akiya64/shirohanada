@@ -11,19 +11,19 @@ get_header(); ?>
 
 <?php
 if ( is_category() ) :
-	$h2_title = '<h2 class="page-title">' . single_cat_title( '', false ) ;
+	$h2_title = single_cat_title( '', false );
 elseif ( is_tag() ) :
 	$h2_title = single_tag_title( '', false );
 elseif ( is_search() ) :
-	$h2_title = 'Search Result "' . get_search_query( false )  ;
+	$h2_title = 'Search Result "' . get_search_query( false );
 else :
 	/* this case is expected only /blog */
 	$h2_title = 'Latest Posts';
 endif ;
 
-if (! is_single() ) :
+if ( ! is_single() ) :
 	/* Display page title. */
-	echo '<h2 class="page-title">'.wp_kses_post( $h2_title ).'</h2>' ;
+	echo '<h2 class="page-title">' . wp_kses_post( $h2_title ) . '</h2>' ;
 endif ;
 
 if ( have_posts() ) :
