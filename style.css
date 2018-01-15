@@ -679,10 +679,59 @@ ul {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  margin: 2rem 0 1rem;
-  padding-left: 0.75rem;
-  border-left: solid 3px #436fb4;
+  padding: 0 0.75rem;
   clear: both;
+}
+.entry-content h1 {
+  font-size: 2.7rem;
+}
+.entry-content h2 {
+  font-size: 1.66rem;
+}
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  font-size: 1.2rem;
+}
+.entry-content h1 {
+  color: #a3d8f6;
+}
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  color: #436fb4;
+}
+.entry-content h2 {
+  border-left: solid 3px #436fb4;
+}
+.entry-content h3 {
+  border-left: double #436fb4;
+}
+.entry-content h4 {
+  border-left: solid 2px #436fb4;
+}
+.entry-content h5 {
+  border-bottom: solid 1px #436fb4;
+}
+.entry-content h1,
+.entry-content h2 {
+  margin: 2rem 0 1rem;
+}
+.entry-content h3,
+.entry-content h4 {
+  margin: 1rem 0;
+}
+.entry-content h5 {
+  margin: 0.8rem 0 0.5rem;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+.entry-content h5,
+.entry-content h6 {
+  padding: 0 0.5rem;
 }
 blockquote {
   margin: 0.8rem 0;
