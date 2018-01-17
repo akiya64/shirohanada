@@ -679,7 +679,6 @@ ul {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-  padding: 0 0.75rem;
   clear: both;
 }
 .entry-content h1 {
@@ -728,6 +727,12 @@ ul {
   margin: 0.8rem 0 0.5rem;
   width: fit-content;
   width: -moz-fit-content;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
+  padding-left: 0.75rem;
 }
 .entry-content h5,
 .entry-content h6 {

@@ -3,74 +3,113 @@ Theme Name Shirohanada
 Description Adds supoort editor style.
 */
 .mce-content-body {
-	font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
-	line-height: 1.8;
-	width: 695px;
-	margin: 0 1rem auto;
-	padding: 0 0.5rem;
+  font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  line-height: 1.8;
+  width: 695px;
+  margin: 0 1rem auto;
+  padding: 0 0.5rem;
 /* Table Style */
 /* Definition list */
 }
 .mce-content-body *:first-child {
-	margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 .mce-content-body h1,
 .mce-content-body h2,
 .mce-content-body h3,
 .mce-content-body h4,
+.mce-content-body h5,
+.mce-content-body h6 {
+  font-family: 'Ubuntu', 'Meiryo', sans-serif;
+  font-weight: normal;
+  clear: both;
+}
+.mce-content-body h1 {
+  color: #a3d8f6;
+  font-size: 2.7rem;
+  margin: 2rem 0 1rem;
+  padding: 0 0.75rem;
+}
+.mce-content-body h2 {
+  border-left: solid 3px #436fb4;
+  color: #436fb4;
+  font-size: 1.66rem;
+  margin: 2rem 0 1rem;
+  padding: 0 0.75rem;
+}
+.mce-content-body h3 {
+  border-left: double #436fb4;
+  color: #436fb4;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding: 0 0.75rem;
+}
+.mce-content-body h4 {
+  border-left: solid 2px #436fb4;
+  color: #436fb4;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding: 0 0.75rem;
+}
 .mce-content-body h5 {
-	font-family: 'Ubuntu', 'Meiryo', sans-serif;
-	font-weight: normal;
-	color: #436fb4;
-	font-size: 1.62rem;
-	margin: 2rem 0 1rem;
-	padding-left: 0.75rem;
-	border-left: solid 3px #436fb4;
-	clear: both;
+  border-bottom: solid 1px #436fb4;
+  color: #436fb4;
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.5rem;
+  padding: 0 0.5rem;
+  padding: 0 0.75rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.mce-content-body h6 {
+  color: #436fb4;
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.5rem;
+  padding: 0 0.5rem;
 }
 .mce-content-body a {
-	color: #257bcc;
+  color: #257bcc;
 }
 .mce-content-body a:hover {
-	text-decoration: dotted;
-	text-decoration-line: underline;
+  text-decoration: dotted;
+  text-decoration-line: underline;
 }
 .mce-content-body a:visited {
-	color: #800000;
+  color: #800000;
 }
 .mce-content-body p {
-	margin: 0.75rem 0;
+  margin: 0.75rem 0;
 }
 .mce-content-body blockquote {
-	border-left: solid 3px #bbb;
-	margin: 0.8rem 0;
-	padding: 0.2rem 0.75rem;
-	overflow-wrap: break-word;
+  border-left: solid 3px #bbb;
+  margin: 0.8rem 0;
+  padding: 0.2rem 0.75rem;
+  overflow-wrap: break-word;
 }
 .mce-content-body ul {
-	list-style-type: square;
+  list-style-type: square;
 }
 .mce-content-body td,
 .mce-content-body th {
-	padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.5rem;
 }
 .mce-content-body tr + tr {
-	border-top: 1px solid #777;
+  border-top: 1px solid #777;
 }
 .mce-content-body dl {
-	margin-left: 0;
+  margin-left: 0;
 }
 .mce-content-body dt {
-	display: inline-block;
-	font-weight: bold;
-	border-bottom: solid 1px #bbb;
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: solid 1px #bbb;
 }
 .mce-content-body dt + dd {
-	margin-top: 0.2rem;
-	padding-top: 0.2rem;
+  margin-top: 0.2rem;
+  padding-top: 0.2rem;
 }
 .mce-content-body dd {
-	margin-bottom: 1rem;
-	margin-left: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
 }
 /*# sourceMappingURL=editor-style.css.map */
