@@ -7,8 +7,9 @@
  * @since Shirohanada 0.10.0
  */
 
-get_header();
-?>
+get_header(); ?>
+
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
 
 <h2 class="page-title"><?php single_cat_title(); ?></h2>
 

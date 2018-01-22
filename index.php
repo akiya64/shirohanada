@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
+
 <?php
 if ( is_category() ) :
 	$h2_title = single_cat_title( '', false );
