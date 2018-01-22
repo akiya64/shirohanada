@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="article-area" role="main" itemprop="mainEntityOfPage">
+<main class="article-area" role="main" itemprop="mainEntityOfPage">
 
 <?php
 if ( is_category() ) :
@@ -45,6 +45,6 @@ endif;
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 
-</div><!--end article-area-->
+</main><!--end article-area-->
 
 <?php get_footer(); ?>
