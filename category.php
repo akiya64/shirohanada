@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="article-area" role="main" itemprop="mainEntityOfPage">
+<main class="article-area" role="main" itemprop="mainEntityOfPage">
 
 <h2 class="page-title"><?php single_cat_title(); ?></h2>
 
@@ -39,6 +39,6 @@ get_header(); ?>
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 
-</div><!--end article-area-->
+</main><!--end article-area-->
 
 <?php get_footer(); ?>

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="article-area" role="main" itemprop="mainEntityOfPage">
+<main class="article-area" role="main" itemprop="mainEntityOfPage">
 
 		<?php
 		// Start the loop.
@@ -36,6 +36,6 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-</div><!--end article-area-->
+</main><!--end article-area-->
 
 <?php get_footer(); ?>
