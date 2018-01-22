@@ -73,8 +73,4 @@ if ( is_day() ) :
 
 </div><!--end article-area-->
 
-<?php get_sidebar(); ?>
-
-</div><!--end main contents-->
-
 <?php get_footer(); ?>

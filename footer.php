@@ -8,26 +8,14 @@
  * @since Shirohanada 0.8
  */
 
-?>
+if ( ! is_front_page() ) :
 
-<?php if ( is_front_page() ) : ?>
+	get_sidebar(); ?>
 
-		<footer class="site-footer -front">
-			<p class="copyright">
-				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
-			</p>
-		</footer>
-	</div><!--End DropDownPart-->
-	</div><!--End Top Flex Container--> 
+</div><!--end main contents-->
 
-<?php else : ?>
+<footer class="site-footer">
 
-	</div><!--end article-area-->
-
-	<?php get_sidebar(); ?>
-
-	</div><!--end main contents-->
-	<footer class="site-footer">
 	<p class="copyright">
 		(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
 	</p>

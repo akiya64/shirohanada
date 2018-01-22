@@ -36,4 +36,6 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
+</div><!--end article-area-->
+
 <?php get_footer(); ?>

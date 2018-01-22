@@ -45,4 +45,6 @@ endif;
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 
+</div><!--end article-area-->
+
 <?php get_footer(); ?>
