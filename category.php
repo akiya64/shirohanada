@@ -7,8 +7,9 @@
  * @since Shirohanada 0.10.0
  */
 
-get_header();
-?>
+get_header(); ?>
+
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
 
 <h2 class="page-title"><?php single_cat_title(); ?></h2>
 
@@ -37,5 +38,7 @@ get_header();
 	<nav class="link-posts text-centering">
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
+
+</div><!--end article-area-->
 
 <?php get_footer(); ?>

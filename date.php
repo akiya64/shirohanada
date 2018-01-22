@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
+
 <?php
 
 	/*
@@ -70,9 +72,5 @@ if ( is_day() ) :
 	</nav>
 
 </div><!--end article-area-->
-
-<?php get_sidebar(); ?>
-
-</div><!--end main contents-->
 
 <?php get_footer(); ?>

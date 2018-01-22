@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
+
 <?php
 if ( is_category() ) :
 	$h2_title = single_cat_title( '', false );
@@ -42,5 +44,7 @@ endif;
 	<nav class="link-posts text-centering">
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
+
+</div><!--end article-area-->
 
 <?php get_footer(); ?>

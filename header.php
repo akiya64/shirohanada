@@ -42,6 +42,4 @@
 
 <div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
 
-<div class="article-area" role="main" itemprop="mainEntityOfPage">
-
 <?php endif; ?>

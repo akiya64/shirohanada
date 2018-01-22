@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<div class="article-area" role="main" itemprop="mainEntityOfPage">
+
 		<?php
 		// Start the loop.
 		while ( have_posts() ) :
@@ -33,5 +35,7 @@ get_header(); ?>
 			</article>
 
 		<?php endwhile; ?>
+
+</div><!--end article-area-->
 
 <?php get_footer(); ?>
