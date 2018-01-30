@@ -36,22 +36,25 @@ after_success:
     #fetch temporary origin
     - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
     - git fetch
-    #make pre-lerease branch and remove for development tools.
     - git checkout -b pre-release remotes/origin/master
-    - git rm -rf stylus
+
+    #remove files for development.
     - git rm -fr git-hooks
+    - git rm -rf stylus
     - git rm -f .gitignore
     - git rm -f .travis.yml
     - git rm -f README.md
-    - git rm -f package.json
-    - git rm -f style.css.map
+    - git rm -f composer.*
     - git rm -f editor-style.css.map
     - git rm -f fonts/icomoon.zip
+    - git rm -f package.json
     - git rm -f phpcbf-all.sh
     - git rm -f phpmd-all.sh
-    - git rm -f composer.*
-    - git commit -m "prepare release"
+    - git rm -f screenshot_frontpage.jpg
+    - git rm -f style.css.map
+
     #marge release for deployment autumnsky.sakura.ne.jp
+    - git commit -m "prepare release"
     - git checkout -b release remotes/origin/release
     - git merge pre-release -m "Travis build release $TRAVIS_COMMIT"
     - git push https://${GH_TOKEN}@github.com/akiya64/shirohanada release >/dev/null 2>&1
