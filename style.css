@@ -504,6 +504,7 @@ li + li {
 }
 .entry-content p + p {
   margin-top: 1rem;
+  clear: both;
 }
 .site-footer {
   margin: 0.5rem;
@@ -766,7 +767,8 @@ hr {
   margin: auto;
 }
 .wp-caption > p {
-  padding-top: 0.3rem;
+  margin-top: 0.2rem;
+  padding-top: 0;
 }
 .sticky {
   border: solid 1px #a3d8f6;
