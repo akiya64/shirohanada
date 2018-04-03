@@ -7,6 +7,10 @@
  * @since      Shirohanada 0.8
  */
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 690;
+}
+
 /**
  * Register enqueue stylesheet and WebFont
  *
