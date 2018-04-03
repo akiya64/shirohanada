@@ -17,13 +17,13 @@
 		<h1 class="entry-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	<?php endif; ?>
 
-	<?php get_template_part( 'components/articleheader' ); ?>
+	<?php get_template_part( 'components/content', 'header' ); ?>
 
 	<div class="entry-content" itemprop="articleBody">
 		<?php the_content(); ?>
 	</div><!--end entry-content-->
 
-	<?php get_template_part( 'components/articlefooter' ); ?>
+	<?php get_template_part( 'components/content', 'footer' ); ?>
 
 	<?php
 		/* show comment form in entry-content column, only single.php */
