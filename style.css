@@ -1,14 +1,14 @@
 /*
 Theme Name: Shirohanada
-Theme URI: http://autumnsky.sakura.ne.jp/
+Theme URI: https://github.com/akiya64/shirohanada
 Author: Kitami Akiya
 Author URI: http://autumnsky.sakura.ne.jp/
 Description: Shirohanada is flat and soft color tones WordPress theme. SHIROHANADA is color name in japanese ;like skyblue.
-Version: 0.9
+Version: 0.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blue, white, gray, right-side-widgets, fixed-layout, responsive-layout, custom-menu,
-Text Domain:
+Tags: custom-menu
+Text Domain: shirohanada
 */
 /*
 'Every Declaration Just Once'
@@ -813,11 +813,9 @@ hr {
 /* Parts Section */
 /* gravatar */
 img[src^="http://www.gravatar.com/avatar/"] {
-  -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
 }
 .entry-author > .avatar {
-  -webkit-border-radius: 50%;
   border-radius: 50%;
 }
 /**
@@ -869,7 +867,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .go-top {
   color: #fff;
   position: fixed;
-  -webkit-border-radius: 0 0.5rem 0.5rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
   background-color: #a3d8f6;
   text-decoration: none !important;
@@ -881,7 +878,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .show-menu {
   bottom: 1rem;
   padding: 0.4rem 0.7rem 0 0.7rem;
-  -webkit-border-radius: 0 0.5rem 0.5rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
@@ -1132,7 +1128,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 }
 .comment-author .avatar {
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   float: left;
   margin-right: 1rem;
@@ -1225,7 +1220,6 @@ li.comment + li.comment {
 textarea,
 input,
 .comment-reply-link {
-  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 textarea[name="comment"] {
@@ -1270,7 +1264,6 @@ textarea[name="comment"] {
 	left: 0;
 	right: 0;
 	margin: auto auto;
-	-webkit-border-radius: 20px;
 	border-radius: 20px;
 	border: solid 1px #999;
 	-webkit-box-sizing: content-box;
@@ -1281,7 +1274,6 @@ textarea[name="comment"] {
   }
   .headerimage,
   .headerimg-box {
-	-webkit-border-radius: 20px 0 0 20px;
 	border-radius: 20px 0 0 20px;
   }
 }
