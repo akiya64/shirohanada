@@ -34,7 +34,7 @@
 	<p class="site-description _inline"><?php bloginfo( 'description' ); ?></p>
 
 	<h1 class="site-name _inline">
-		<a href="<?php bloginfo( 'url' ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
+		<a href="<?php echo esc_url( home_url() ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
 	</h1>
 
 </header>
