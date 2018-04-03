@@ -48,7 +48,7 @@ get_header(); ?>
 
 		<footer class="site-footer -front">
 			<p class="copyright">
-				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
+				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
 			</p>
 		</footer>
 	</div><!--End DropDownPart-->

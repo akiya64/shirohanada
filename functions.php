@@ -7,6 +7,32 @@
  * @since      Shirohanada 0.8
  */
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 690;
+}
+
+add_editor_style();
+add_theme_support( 'title-tag' );
+
+/**
+ * Enable post thumnails.
+ *
+ * @since Shirohanada 0.9.1
+ */
+
+add_theme_support( 'post-thumbnails' );
+
+/**
+ * Remove header ,not using Shirohanada
+ *
+ * @since Shirohanada 0.8
+ */
+
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+
 /**
  * Register enqueue stylesheet and WebFont
  *
@@ -20,14 +46,6 @@ function shirohanada_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
-
-/**
- * Enable post thumnails.
- *
- * @since Shirohanada 0.9.1
- */
-
-add_theme_support( 'post-thumbnails' );
 
 /**
  * Register our sidebars and widgetized areas.
@@ -116,24 +134,6 @@ $custom_header_args = array(
 );
 
 add_theme_support( 'custom-header', $custom_header_args );
-
-/**
- * Remove header ,not using Shirohanada
- *
- * @since Shirohanada 0.8
- */
-
-remove_action( 'wp_head', 'rsd_link' );
-remove_action( 'wp_head', 'wlwmanifest_link' );
-remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
-
-/**
- * Registers an editor stylesheet for the theme.
- *
- * @since Shirohanada 0.9
- */
-add_editor_style();
 
 /**
  * Get oldest post date for copy right

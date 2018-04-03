@@ -9,16 +9,15 @@
 
 ?>
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
-
 	<?php wp_head(); ?>
 </head>
-<body>
+
+<body <?php body_class(); ?>>
 
 <?php if ( ! is_front_page() ) : ?>
 
@@ -35,7 +34,7 @@
 	<p class="site-description _inline"><?php bloginfo( 'description' ); ?></p>
 
 	<h1 class="site-name _inline">
-		<a href="<?php bloginfo( 'url' ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
+		<a href="<?php echo esc_url( home_url() ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
 	</h1>
 
 </header>

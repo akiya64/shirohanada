@@ -13,7 +13,7 @@
 
 	<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-	<?php get_template_part( 'components/articleheader' ); ?>
+	<?php get_template_part( 'components/content', 'header' ); ?>
 
 	
 	<?php if ( has_post_thumbnail() ) : ?>
