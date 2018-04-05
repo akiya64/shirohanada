@@ -358,7 +358,8 @@ i {
 }
 .excerpt-thumbnail img,
 .entry-content img,
-.wp-caption {
+.wp-caption,
+.gallery-caption {
   max-width: 100%;
 }
 .excerpt-thumbnail img,
@@ -475,34 +476,43 @@ li + li {
   margin: 0 auto;
   display: block;
 }
-.entry-content p {
+.entry-content p,
+.comment-body p {
   margin: 0.75rem 0;
 }
 .entry-content ul,
-.entry-content ol {
+.comment-body ul,
+.entry-content ol,
+.comment-body ol {
   margin: 1rem;
   margin-left: 2rem;
 }
-.entry-content dl {
+.entry-content dl,
+.comment-body dl {
   margin-left: 0;
 }
-.entry-content dt {
+.entry-content dt,
+.comment-body dt {
   display: inline-block;
   font-weight: bold;
   border-bottom: solid 1px #777;
 }
-.entry-content dt + dd {
+.entry-content dt + dd,
+.comment-body dt + dd {
   margin-top: 0.2rem;
   padding-top: 0.2rem;
 }
-.entry-content dd {
+.entry-content dd,
+.comment-body dd {
   margin-bottom: 1rem;
 }
-.entry-content img {
+.entry-content img,
+.comment-body img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-.entry-content p + p {
+.entry-content p + p,
+.comment-body p + p {
   margin-top: 1rem;
   clear: both;
 }
@@ -645,6 +655,7 @@ a:hover {
   vertical-align: -3px;
 }
 .wp-caption,
+.gallery-caption,
 .link-posts {
   text-align: center;
 }
@@ -659,14 +670,18 @@ blockquote {
 tr + tr {
   border-top: 1px solid #777;
 }
-.entry-content thead {
+.entry-content thead,
+.comment-body thead {
   background-color: #eee;
 }
 .entry-content td,
-.entry-content th {
+.comment-body td,
+.entry-content th,
+.comment-body th {
   padding: 0.2rem 0.5rem;
 }
-.entry-content caption {
+.entry-content caption,
+.comment-body caption {
   text-align: left;
 }
 /* List */
@@ -766,7 +781,7 @@ hr {
 .aligncenter {
   margin: auto;
 }
-.wp-caption > p {
+.wp-caption-text {
   margin-top: 0.2rem;
   padding-top: 0;
 }
@@ -1148,6 +1163,15 @@ label {
   display: block;
   width: 4rem;
   text-align: center;
+}
+.comments-list ul {
+  margin-left: 2rem;
+  list-style: none;
+}
+.comment-meta::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 label,
 input[type="search"],
