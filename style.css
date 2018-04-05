@@ -373,8 +373,8 @@ i {
   width: 38%;
 }
 .main-contents,
-.post,
-.page,
+.type-post,
+.type-page,
 .entry-footer.-sharelinks {
   display: -webkit-box;
   display: -moz-box;
@@ -465,8 +465,8 @@ li + li {
 .entry-author {
   margin-bottom: 0.75rem;
 }
-.post,
-.page,
+.type-post,
+.type-page,
 .widget,
 .entry-header,
 .entry-title {
@@ -598,8 +598,8 @@ h6,
 .pagination,
 .nomatch-contents,
 .link-posts > p,
-.page,
-.post {
+.type-page,
+.type-post {
   background-color: #f8fafa;
 }
 /* SNS Symbolcolor for share links */
@@ -930,8 +930,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name {
 	font-size: 72px;
   }
-  .post,
-  .page {
+  .type-post,
+  .type-page {
 	padding: 0.5rem 1rem 1rem;
   }
   .article-area,
@@ -1036,8 +1036,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .excerpt-thumbnail {
 	margin-top: 1rem;
   }
-  .post,
-  .page {
+  .type-post,
+  .type-page {
 	margin-bottom: 0;
 	padding: 0 0.5rem 1rem;
   }
@@ -1048,7 +1048,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-content iframe {
 	max-width: 100%;
   }
-  .post + .post::before {
+  .type-post + .type-post::before {
 	content: '';
 	border-top: solid 1px #bbb;
 	width: 100%;
