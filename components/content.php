@@ -21,6 +21,7 @@
 
 	<div class="entry-content" itemprop="articleBody">
 		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
 	</div><!--end entry-content-->
 
 	<?php get_template_part( 'components/content', 'footer' ); ?>

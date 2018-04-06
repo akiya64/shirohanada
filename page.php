@@ -30,7 +30,7 @@ get_header(); ?>
 					<meta itemprop="datePublished" content="<?php echo get_the_date( 'c' ); ?>">
 				<p class="footer-author _text-alignright" itemprop="author" itemscope itemtype="https://schema.org/Person">Author:<span itemprop="name"><?php the_author(); ?></span></p>
 
-			<?php get_template_part( 'components/articlefooter' ); ?>
+			<?php get_template_part( 'components/content', 'footer' ); ?>
 
 			</article>
 

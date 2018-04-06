@@ -17,7 +17,7 @@ if ( is_category() ) :
 elseif ( is_tag() ) :
 	$h2_title = single_tag_title( '', false );
 elseif ( is_search() ) :
-	$h2_title = 'Search Result "' . get_search_query( false );
+	$h2_title = 'Search Result "' . get_search_query() . '"';
 else :
 	/* this case is expected only /blog */
 	$h2_title = 'Latest Posts';
