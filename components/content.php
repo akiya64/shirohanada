@@ -33,7 +33,7 @@
 	<div class="entry-margin"></div>
 	<div class="entry-comments">
 
-	<?php comments_template(); ?>
+		<?php comments_template(); ?>
 
 	</div>
 

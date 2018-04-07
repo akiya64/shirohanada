@@ -46,14 +46,18 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
  *
  * @since Shirohanada 0.9.1
  */
-function shirohanada_enqueue_styles() {
+function shirohanada_enqueue() {
 
 	wp_enqueue_style( 'shirohanada_style', get_stylesheet_uri() );
 	wp_enqueue_style( 'ubuntu-font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
 
+	if ( is_singular() ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 }
 
-add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue' );
 
 /**
  * Register our sidebars and widgetized areas.
