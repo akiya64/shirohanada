@@ -35,7 +35,9 @@ if ( ! empty( $twitter_username ) ) {
 				</div>
 
 				<div class="entry-footer -sharelinks">
-					<a class="link" href="<?php the_permalink(); ?>#reply-title" title="Comment this post"><i class="icon icon-comment"></i></a>
+					<?php if ( comments_open() ) : ?>
+						<a class="link" href="<?php the_permalink(); ?>#reply-title" title="Comment this post"><i class="icon icon-comment"></i></a>
+					<?php endif; ?>
 					<a class="link" href="<?php echo esc_url( $share_url['twitter'] ); ?>" title="share Twitter" target="_blank"><i class="icon icon-share-twitter"></i></a>
 					<a class="link" href="<?php echo esc_url( $share_url['facebook'] ); ?>" title="share Facebook" rel="nofollow" target="_blank"><i class="icon icon-share-facebook"></i></a>
 					<a class="link" href="<?php echo esc_url( $share_url['google_plus'] ); ?>" title="+1 GooglePlus" target="_blank"><i class="icon icon-share-google-plus"></i></a>

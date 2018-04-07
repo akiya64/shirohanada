@@ -432,8 +432,7 @@ i {
   margin: 1rem 2rem;
 }
 .link-posts > p,
-.entry-comments,
-li + li {
+.entry-comments {
   margin-top: 0.6rem;
 }
 .content-footer {
@@ -684,9 +683,13 @@ tr + tr {
 .comment-body caption {
   text-align: left;
 }
-/* List */
-ul {
+.entry-content ul,
+.comment-body ul {
   list-style-type: square;
+}
+.entry-content li + li,
+.comment-body li + li {
+  margin-top: 0.6rem;
 }
 /* H tags in entry-content; WordPress Post or Page content */
 .entry-content h1,
@@ -1173,6 +1176,31 @@ label {
   display: block;
   clear: both;
 }
+.comment-body > p,
+.comment + .comment {
+  margin-top: 1rem;
+}
+.comment + .comment {
+  border-top: solid 1px #777;
+  padding-top: 1rem;
+}
+.entry-comments .page-numbers {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+.entry-comments .page-numbers li + li {
+  margin-left: 0.75rem;
+}
 label,
 input[type="search"],
 input[name="author"],
@@ -1232,14 +1260,6 @@ input.search-field {
 .comments-header,
 .reply {
   margin: 0.8rem 0 0.4rem;
-}
-.comment-body > p,
-li.comment + li.comment {
-  margin-top: 1rem;
-}
-li.comment + li.comment {
-  border-top: solid 1px #777;
-  padding-top: 1rem;
 }
 textarea,
 input,
