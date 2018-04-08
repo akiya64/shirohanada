@@ -3,8 +3,8 @@
  * Navigation part display links for move posts
  *
  * @package WordPress
- * @subpackage Shirohanada
- * @since Shirohanada 0.9
+ * @subpackage shirohanada
+ * @since shirohanada 0.9
  */
 
 ?>

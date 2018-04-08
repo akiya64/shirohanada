@@ -3,8 +3,8 @@
  * The template for displaying date archive
  *
  * @package WordPress
- * @subpackage Shirohanada
- * @since Shirohanada 0.9
+ * @subpackage shirohanada
+ * @since shirohanada 0.9
  */
 
 get_header(); ?>

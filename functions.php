@@ -1,16 +1,16 @@
 <?php
 /**
- * Shirohanada functions and definitions
+ * Functions for shirohanada theme
  *
  * @package    WordPress
- * @subpackage Shirohanada
- * @since      Shirohanada 0.8
+ * @subpackage shirohanada
+ * @since      shirohanada 0.8
  */
 
 /**
  * Set content width
  *
- * @since Shirohanada 0.11
+ * @since shirohanada 0.11
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 690;
@@ -19,7 +19,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Enable theme support feature.
  *
- * @since Shirohanada 0.9.1
+ * @since shirohanada 0.9.1
  */
 function custom_theme_setup() {
 	add_editor_style();
@@ -31,9 +31,9 @@ function custom_theme_setup() {
 add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 /**
- * Remove header ,not using Shirohanada
+ * Remove header ,not using shirohanada
  *
- * @since Shirohanada 0.8
+ * @since shirohanada 0.8
  */
 
 remove_action( 'wp_head', 'rsd_link' );
@@ -44,7 +44,7 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 /**
  * Register enqueue stylesheet and WebFont
  *
- * @since Shirohanada 0.9.1
+ * @since shirohanada 0.9.1
  */
 function shirohanada_enqueue() {
 
@@ -62,7 +62,7 @@ add_action( 'wp_enqueue_scripts', 'shirohanada_enqueue' );
 /**
  * Register our sidebars and widgetized areas.
  *
- * @since Shirohanada 0.8
+ * @since shirohanada 0.8
  */
 function shirohanada_widgets_init() {
 
@@ -95,7 +95,7 @@ add_action( 'widgets_init', 'shirohanada_widgets_init' );
 /**
  * CustomMenu for Front Page
  *
- * @since Shirohanada 0.9
+ * @since shirohanada 0.9
  */
 function register_front_menu() {
 	register_nav_menu( 'front-page-menu', 'Front Page Menu' );
@@ -106,14 +106,14 @@ add_action( 'after_setup_theme', 'register_front_menu' );
 /**
  * Custom header for Front Page
  *
- * @since Shirohanada 0.9
+ * @since shirohanada 0.9
  */
 register_default_headers(
 	array(
 
-		/*
-         * Add 3images to default header image.
-    */
+		/**
+		 * Add 3images to default header image.
+		 */
 
 		'cherry_blossom' => array(
 			'url' => get_template_directory_uri() . '/images/fukuju_bridge.jpg',
@@ -151,7 +151,7 @@ add_theme_support( 'custom-header', $custom_header_args );
  * Get oldest post date for copy right
  * ref http://nelog.jp/copyrights
  *
- * @since  Shirohanada 0.9
+ * @since  shirohanada 0.9
  * @return integer the year of oldest post
  */
 function get_first_post_year() {
@@ -169,7 +169,7 @@ function get_first_post_year() {
 /**
  * Category icon selector
  *
- * @since Shirohanada 0.9
+ * @since shirohanada 0.9
  * @param string|null $category_slug declaration in WordPress dashbord.
  */
 function select_category_icon( $category_slug = 'uncategorized' ) {
