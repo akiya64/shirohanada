@@ -3,8 +3,8 @@
  * The template part for articlefooter goto top link and sharebutton
  *
  * @package WordPress
- * @subpackage Shirohanada
- * @since Shirohanada 0.9
+ * @subpackage shirohanada
+ * @since shirohanada 0.9
  */
 
 	$encoded_url = rawurlencode( get_permalink() );

@@ -3,8 +3,8 @@
  * The main template file
  *
  * @package WordPress
- * @subpackage Shirohanada
- * @since Shirohanada 0.10.0
+ * @subpackage shirohanada
+ * @since shirohanada 0.10.0
  */
 
 get_header(); ?>
