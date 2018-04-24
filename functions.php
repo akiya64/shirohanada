@@ -23,15 +23,54 @@ if ( ! isset( $content_width ) ) {
  */
 function custom_theme_setup() {
 	add_editor_style();
+
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 
-	remove_theme_support( 'custom-background' );
+	$custom_bg_args = array(
+		'default-color' => 'f8fafa',
+		'wp-head-callback' => 'custom_background_callback',
+	);
+
+	add_theme_support( 'custom-background', $custom_bg_args );
 
 }
 
 add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+/**
+ * Apply custom backbround color for h2 title/article tag/sidebar/
+ *
+ * @sinse shirohanada 0.11
+ */
+function custom_background_callback() {
+
+	$color = get_background_color();
+
+	$style = <<<CSS
+<style type="text/css" id="custom-background-css">
+	.side-widgets,
+	.page-title,
+	.pagination,
+	.nomatch-contents,
+	.link-posts p,
+	.type-page,
+	.type-post {
+		background-color : #$color ;
+	}
+</style>
+CSS;
+
+	$allowed_style_tag = array(
+		'style' => array(
+			'type' => array(),
+			'id' => array(),
+		),
+	);
+
+	echo wp_kses( $style, $allowed_style_tag );
+}
 
 /**
  * Remove header ,not using shirohanada
