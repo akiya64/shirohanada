@@ -26,6 +26,9 @@ function custom_theme_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+
+	remove_theme_support( 'custom-background' );
+
 }
 
 add_action( 'after_setup_theme', 'custom_theme_setup' );
@@ -143,9 +146,48 @@ $custom_header_args = array(
 	'flex-height' => true,
 	'upload' => true,
 	'random-default' => true,
+	'default-text-color' => 'a3d8f6',
 );
 
 add_theme_support( 'custom-header', $custom_header_args );
+
+/**
+ * Echo custom header color by theme customizer.
+ *
+ * @since  shirohanada 0.11
+ */
+function shirohanada_custom_css_output() {
+	$color = get_header_textcolor();
+
+	$style = <<<CSS
+<style type="text/css" id="custom-theme-css">
+    .site-name .link,
+    .site-name.-front {
+        color : #$color ;
+    }
+
+    @media screen and (max-width: 768px) {
+        .site-name {
+            background-color : #$color ;
+        }
+        .site-name .link {
+            color: #fff;
+        }
+    }
+</style>
+CSS;
+
+	$allowed_style_tag = array(
+		'style' => array(
+			'type' => array(),
+			'id' => array(),
+		),
+	);
+
+	echo wp_kses( $style, $allowed_style_tag );
+
+}
+add_action( 'wp_head', 'shirohanada_custom_css_output' );
 
 /**
  * Get oldest post date for copy right
