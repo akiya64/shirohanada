@@ -1154,6 +1154,15 @@ img[src^="http://www.gravatar.com/avatar/"] {
   font-style: initial;
   font-weight: bold;
 }
+.bypostauthor > .comment-body .avatar:first-of-type {
+  border: solid 2px #436fb4;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.bypostauthor > .comment-body .fn:first-of-type {
+  color: #436fb4;
+}
 .comment-meta,
 .reply,
 .comment-notes {
@@ -1167,22 +1176,25 @@ label {
   width: 4rem;
   text-align: center;
 }
-.comments-list ul {
-  margin-left: 2rem;
-  list-style: none;
-}
 .comment-meta::after {
   content: "";
   display: block;
   clear: both;
 }
-.comment-body > p,
-.comment + .comment {
-  margin-top: 1rem;
+.comments-list > .comment {
+  border-bottom: solid 1px #777;
+  padding-bottom: 1rem;
 }
-.comment + .comment {
-  border-top: solid 1px #777;
-  padding-top: 1rem;
+.comments-list ul {
+  margin-left: 2rem;
+  list-style: none;
+}
+.comments-list .comment:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.comment-body {
+  margin: 0.75rem 0 1rem;
 }
 .entry-comments .page-numbers {
   display: -webkit-box;
@@ -1259,7 +1271,7 @@ input.search-field {
 .comment-reply-title,
 .comments-header,
 .reply {
-  margin: 0.8rem 0 0.4rem;
+  margin: 0.8rem 0;
 }
 textarea,
 input,
@@ -1332,6 +1344,7 @@ textarea[name="comment"] {
   -moz-columns: 2 10rem;
   -webkit-columns: 2 10rem;
   columns: 2 10rem;
+  overflow: auto;
 }
 .front-navmenu {
   height: auto;
