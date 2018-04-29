@@ -21,7 +21,7 @@ if ( ! isset( $content_width ) ) {
  *
  * @since shirohanada 0.9.1
  */
-function custom_theme_setup() {
+function shirohanada_setup() {
 	add_editor_style();
 
 	add_theme_support( 'title-tag' );
@@ -39,7 +39,7 @@ function custom_theme_setup() {
 
 }
 
-add_action( 'after_setup_theme', 'custom_theme_setup' );
+add_action( 'after_setup_theme', 'shirohanada_setup' );
 
 /**
  * Apply custom backbround color for h2 title/article tag/sidebar/
@@ -197,7 +197,7 @@ add_theme_support( 'custom-header', $custom_header_args );
  *
  * @since  shirohanada 0.11
  */
-function shirohanada_custom_css_output() {
+function headertextcolor_css_output() {
 	$color = get_header_textcolor();
 
 	$style = <<<CSS
@@ -207,7 +207,7 @@ function shirohanada_custom_css_output() {
         color : #$color ;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         .site-name {
             background-color : #$color ;
         }
@@ -228,7 +228,7 @@ CSS;
 	echo wp_kses( $style, $allowed_style_tag );
 
 }
-add_action( 'wp_head', 'shirohanada_custom_css_output' );
+add_action( 'wp_head', 'headertextcolor_css_output' );
 
 /**
  * Get oldest post date for copy right
