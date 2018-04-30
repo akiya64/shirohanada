@@ -32,6 +32,6 @@
 	);
 ?>
 
-<?php comment_form(); ?>
-
 <?php endif; ?>
+
+<?php comment_form(); ?>
