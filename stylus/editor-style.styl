@@ -24,9 +24,9 @@ Description Adds supoort editor style.
         h4
         h5
         h6
-                font-family 'Ubuntu', 'Meiryo', sans-serif
-                font-weight normal
-                clear both
+              font-family 'Ubuntu', 'Meiryo', sans-serif
+              font-weight normal
+              clear both
 
         h1
               color shirohanada
@@ -75,14 +75,19 @@ Description Adds supoort editor style.
                 color bright-h
 
                 &:hover
-                        text-decoration dotted
-                        text-decoration-line underline
+                            text-decoration dotted
+                            text-decoration-line underline
 
                 &:visited
-                        color maroon
+                            color maroon
 
         p
                 margin .75rem 0
+
+                &:after
+                            display block
+                            content ""
+                            clear both
 
         blockquote
                 border-left solid 3px border-hai
@@ -114,7 +119,10 @@ Description Adds supoort editor style.
                 padding-top .2rem
 
         dd
-            margin-bottom 1rem
-            margin-left 0
+                margin-bottom 1rem
+                margin-left 0
+
+        .wp-caption-dd
+                text-align center
 
 

@@ -190,6 +190,10 @@ body
 .comment-body
         p
                 margin .75rem 0
+                &:after
+                        content ""
+                        display block
+                        clear both
 
         ul
         ol
@@ -218,7 +222,6 @@ body
 
         p + p
                 margin-top 1rem
-                clear both
 
 .site-footer
         margin 0.5rem
