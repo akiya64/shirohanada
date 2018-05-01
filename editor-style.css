@@ -80,6 +80,11 @@ Description Adds supoort editor style.
 .mce-content-body p {
   margin: 0.75rem 0;
 }
+.mce-content-body p:after {
+  display: block;
+  content: "";
+  clear: both;
+}
 .mce-content-body blockquote {
   border-left: solid 3px #bbb;
   margin: 0.8rem 0;
@@ -111,5 +116,8 @@ Description Adds supoort editor style.
 .mce-content-body dd {
   margin-bottom: 1rem;
   margin-left: 0;
+}
+.mce-content-body .wp-caption-dd {
+  text-align: center;
 }
 /*# sourceMappingURL=editor-style.css.map */
