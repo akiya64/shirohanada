@@ -1318,70 +1318,76 @@ textarea[name="comment"] {
   }
   .site-header.-front,
   .dropdown-part {
-	width: 40%;
-	margin-right: 7%;
-	margin-left: 3%;
-  }
-  .site-header.-front {
-	height: 20%;
-	min-height: 160px;
+	width: 35%;
+	margin-left: 2%;
+	margin-right: 15%;
   }
   .dropdown-part {
 	height: 40%;
-  }
-  .front-navmenu {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	-moz-columns: 2 10rem;
-	-webkit-columns: 2 10rem;
-	columns: 2 10rem;
-	overflow: auto;
-  }
-  .site-header.-front {
-	text-align: right;
-  }
-  .site-header.-front,
-  .wp-widget.-front {
-	margin-bottom: 0.5rem;
-  }
-  .front-widgets {
-	max-height: 80%;
-  }
-  .wp-widget.-front ul {
-	margin-left: 1rem;
-  }
-  .wp-widget.-front li + li {
-	padding: initial;
-	margin-top: 0.5rem;
-	border: none;
   }
   .site-footer.-front {
 	position: absolute;
 	bottom: 1rem;
 	right: 7%;
-	color: #777;
-	background: none;
   }
-  .site-name.-front {
-	color: #a3d8f6;
-  }
-  .navmenu-title {
-	margin: 0 0 0.3rem 0;
-	padding-left: 0;
-	border-left: 0;
-  }
-  .menu-item {
-	color: #257bcc;
-	display: block;
-	padding: 0.2rem 1rem;
-	border-left: solid 3px #fff;
-  }
-  .menu-item:hover {
-	border-left: solid 3px #257bcc;
-  }
-  .menu-item a:hover {
-	text-decoration: none;
-  }
+}
+.front-navmenu {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  columns: 2 10rem;
+  overflow: auto;
+}
+.site-header.-front {
+  text-align: right;
+}
+.site-header.-front {
+  margin-top: 1.5rem;
+}
+.site-description {
+  font-size: 1.2rem;
+}
+.site-header.-front,
+.wp-widget.-front {
+  margin-bottom: 0.5rem;
+}
+.site-name.-front {
+  line-height: 110%;
+  word-wrap: break-word;
+}
+.front-widgets {
+  max-height: 80%;
+}
+.wp-widget.-front ul {
+  margin: 0 1rem;
+}
+.wp-widget.-front li + li {
+  padding: initial;
+  margin-top: 0.5rem;
+  border: none;
+}
+.site-footer.-front {
+  color: #777;
+  background: none;
+}
+.site-name.-front {
+  color: #a3d8f6;
+}
+.navmenu-title {
+  margin: 0 0 0.3rem 0;
+  padding-left: 0;
+  border-left: 0;
+}
+.menu-item {
+  color: #257bcc;
+  display: block;
+  padding: 0.2rem 1rem;
+  border-left: solid 3px #fff;
+}
+.menu-item:hover {
+  border-left: solid 3px #257bcc;
+}
+.menu-item a:hover {
+  text-decoration: none;
 }
 @media screen and (max-width: 600px) {
   .site-header.-front,
@@ -1407,6 +1413,9 @@ textarea[name="comment"] {
 	color: #a3d8f6;
 	text-align: right;
 	background-color: #fff;
+  }
+  .site-description {
+	font-size: 1rem;
   }
   .front-main {
 	margin: 0 auto;
