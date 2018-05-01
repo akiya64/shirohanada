@@ -11,9 +11,7 @@ get_header(); ?>
 
 <div class="front-main">
 
-	<div class="headerimg-box">
-		<img src="<?php header_image(); ?>" alt="header image" class="headerimage">
-	</div>
+	<img src="<?php header_image(); ?>" alt="header image" class="headerimage">
 
 	<header class="site-header -front">
 		<h1 class="site-name -front"><?php bloginfo( 'name' ); ?></h1>
