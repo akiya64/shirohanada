@@ -938,9 +938,11 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name {
 	font-size: 72px;
   }
-  .type-post,
-  .type-page {
+  .type-post {
 	padding: 0.5rem 1rem 1rem;
+  }
+  .type-page {
+	padding: 1.5rem 2rem 1rem;
   }
   .article-area,
   .entry-content,
