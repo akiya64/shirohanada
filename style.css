@@ -820,7 +820,7 @@ hr {
 ._no-marker {
   list-style-type: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   ._inline {
 	display: inline;
   }
@@ -922,7 +922,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
  * # Medeia Query
  *    # For Large Display
  */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .site-header {
 	margin-right: 0.75rem;
   }
@@ -985,7 +985,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 /**
  *    # For mobile
  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .article-area,
   .side-widgets,
   .entry-title,
@@ -1303,101 +1303,89 @@ textarea[name="comment"] {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
-.headerimg-box {
-  height: 700px;
-}
-.headerimg-box,
-.headerimage {
-  max-width: 700px;
-}
-@media (min-width: 960px) {
+@media (min-width: 600px) {
+  body.home {
+	max-width: 100%;
+  }
   .front-main {
-	width: 1240px;
-	height: 700px;
+	width: 100%;
+	height: 100vh;
+	min-width: 600px;
+  }
+  .headerimage {
+	width: 100vh;
+	height: 100%;
+  }
+  .site-header.-front,
+  .dropdown-part {
+	width: 40%;
+	margin-right: 7%;
+	margin-left: 3%;
+  }
+  .site-header.-front {
+	height: 20%;
+	min-height: 160px;
+  }
+  .dropdown-part {
+	height: 40%;
+  }
+  .front-navmenu {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	-moz-columns: 2 10rem;
+	-webkit-columns: 2 10rem;
+	columns: 2 10rem;
+	overflow: auto;
+  }
+  .site-header.-front {
+	text-align: right;
+  }
+  .site-header.-front,
+  .wp-widget.-front {
+	margin-bottom: 0.5rem;
+  }
+  .front-widgets {
+	max-height: 80%;
+  }
+  .wp-widget.-front ul {
+	margin-left: 1rem;
+  }
+  .wp-widget.-front li + li {
+	padding: initial;
+	margin-top: 0.5rem;
+	border: none;
+  }
+  .site-footer.-front {
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto auto;
-	border-radius: 20px;
-	border: solid 1px #999;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	-webkit-box-shadow: 9px 12px 9px 0px rgba(180,180,180,0.8);
-	box-shadow: 9px 12px 9px 0px rgba(180,180,180,0.8);
+	bottom: 1rem;
+	right: 7%;
+	color: #777;
+	background: none;
   }
-  .headerimage,
-  .headerimg-box {
-	border-radius: 20px 0 0 20px;
+  .site-name.-front {
+	color: #a3d8f6;
+  }
+  .navmenu-title {
+	margin: 0 0 0.3rem 0;
+	padding-left: 0;
+	border-left: 0;
+  }
+  .menu-item {
+	color: #257bcc;
+	display: block;
+	padding: 0.2rem 1rem;
+	border-left: solid 3px #fff;
+  }
+  .menu-item:hover {
+	border-left: solid 3px #257bcc;
+  }
+  .menu-item a:hover {
+	text-decoration: none;
   }
 }
-.site-header.-front,
-.dropdown-part,
-.top-page-footer {
-  width: 480px;
-}
-.front-navmenu {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  -moz-columns: 2 10rem;
-  -webkit-columns: 2 10rem;
-  columns: 2 10rem;
-  overflow: auto;
-}
-.front-navmenu {
-  height: auto;
-  max-height: 180px;
-}
-.site-header.-front {
-  text-align: right;
-}
-.site-header.-front,
-.wp-widget.-front {
-  margin-bottom: 0.5rem;
-}
-.site-name.-front {
-  color: #a3d8f6;
-}
-.wp-widget.-front ul {
-  margin-left: 1rem;
-}
-.wp-widget.-front li + li {
-  padding: initial;
-  margin-top: 0.5rem;
-  border: none;
-}
-.wp-widget.-front h2 ~ * {
-  max-height: 160px;
-  overflow: auto;
-}
-.navmenu-title {
-  margin: 0 0 0.3rem 0;
-  padding-left: 0;
-  border-left: 0;
-}
-.menu-item {
-  color: #257bcc;
-  display: block;
-  padding: 0.2rem 1rem;
-  border-left: solid 3px #fff;
-}
-.menu-item:hover {
-  border-left: solid 3px #257bcc;
-}
-.menu-item a:hover {
-  text-decoration: none;
-}
-.site-footer.-front {
-  color: #777;
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
   .site-header.-front,
   .front-main,
-  .headerimg-box,
   .dropdown-part,
   .front-navmenu,
   .front.widget-area ul,
@@ -1409,7 +1397,6 @@ textarea[name="comment"] {
   }
   .front-main,
   .site-header.-front,
-  .headerimg-box,
   .headerimage {
 	width: 100%;
   }
@@ -1433,7 +1420,7 @@ textarea[name="comment"] {
 	order: 1;
 	margin-right: 0.3rem;
   }
-  .headerimg-box {
+  .headerimage {
 	-webkit-box-ordinal-group: 2;
 	-moz-box-ordinal-group: 2;
 	-o-box-ordinal-group: 2;

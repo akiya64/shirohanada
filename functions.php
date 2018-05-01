@@ -181,9 +181,9 @@ register_default_headers(
 );
 
 $custom_header_args = array(
-	'width' => 700,
+	'width' => 1200,
 	'flex-width' => true,
-	'height' => 700,
+	'height' => 1200,
 	'flex-height' => true,
 	'upload' => true,
 	'random-default' => true,
@@ -207,7 +207,7 @@ function headertextcolor_css_output() {
         color : #$color ;
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 600px) {
         .site-name {
             background-color : #$color ;
         }
