@@ -979,9 +979,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-comments {
 	min-width: 550px;
   }
-  .site-footer > .copyright {
-	margin-left: 1rem;
-  }
   .show-menu {
 	display: none;
   }
@@ -1332,15 +1329,9 @@ textarea[name="comment"] {
   .dropdown-part {
 	height: 40%;
   }
-  .site-footer.-front {
-	position: absolute;
-	bottom: 1rem;
-	right: 7%;
-  }
 }
 .front-navmenu {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   columns: 2 10rem;
   overflow: auto;
 }
@@ -1354,15 +1345,14 @@ textarea[name="comment"] {
   font-size: 1.2rem;
 }
 .site-header.-front,
+.front-navmenu,
 .wp-widget.-front {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .site-name.-front {
+  font-size: 84px;
   line-height: 110%;
   word-wrap: break-word;
-}
-.front-widgets {
-  max-height: 80%;
 }
 .wp-widget.-front ul {
   margin: 0 1rem;
@@ -1371,10 +1361,6 @@ textarea[name="comment"] {
   padding: initial;
   margin-top: 0.5rem;
   border: none;
-}
-.site-footer.-front {
-  color: #777;
-  background: none;
 }
 .site-name.-front {
   color: #a3d8f6;
