@@ -456,7 +456,7 @@ i {
   margin-right: 1rem;
 }
 .site-description {
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
 }
 .footer-author {
   margin-bottom: 1rem;
@@ -1329,6 +1329,9 @@ textarea[name="comment"] {
   .dropdown-part {
 	height: 40%;
   }
+  .site-footer.-front {
+	margin-top: 2rem;
+  }
 }
 .front-navmenu {
   font-size: 1.2rem;
@@ -1341,8 +1344,9 @@ textarea[name="comment"] {
 .site-header.-front {
   margin-top: 1.5rem;
 }
-.site-description {
+.site-description.-front {
   font-size: 1.2rem;
+  margin-right: 0;
 }
 .site-header.-front,
 .front-navmenu,
@@ -1351,8 +1355,11 @@ textarea[name="comment"] {
 }
 .site-name.-front {
   font-size: 84px;
-  line-height: 110%;
   word-wrap: break-word;
+}
+.site-name.-front,
+.site-description.-front {
+  line-height: 130%;
 }
 .wp-widget.-front ul {
   margin: 0 1rem;
