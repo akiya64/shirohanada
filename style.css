@@ -1410,6 +1410,7 @@ textarea[name="comment"] {
 	height: auto;
   }
   .site-name.-front {
+	font-size: 2.8rem;
 	color: #a3d8f6;
 	text-align: right;
 	background-color: #fff;
