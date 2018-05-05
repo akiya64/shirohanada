@@ -28,15 +28,13 @@
 <a id="gotop-button" class="go-top _mobile-disiable" href="#top">
 	<i class="icon icon-angle-top"></i>
 </a>
-	
+
 <header class="site-header" role="banner">
-
-	<p class="site-description _inline"><?php bloginfo( 'description' ); ?></p>
-
-	<h1 class="site-name _inline">
+	<p class="site-description _inline">
+		<?php bloginfo( 'description' ); ?>
+	</p><h1 class="site-name _inline">
 		<a href="<?php echo esc_url( home_url() ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
 	</h1>
-
 </header>
 
 <div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
