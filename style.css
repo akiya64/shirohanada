@@ -521,7 +521,7 @@ i {
   margin-top: 1rem;
 }
 .site-footer {
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 .link-posts > p {
   padding: 0.25rem 0;
@@ -1017,12 +1017,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name > .link {
 	color: #fff;
   }
-  .site-name {
-	padding: 0.25rem 0.5rem;
-  }
-  .site-description {
-	margin: 0.25rem 0.5rem;
-  }
   .entry-title.single,
   .page-title {
 	margin: initial;
@@ -1415,11 +1409,23 @@ textarea[name="comment"] {
 	text-align: right;
 	background-color: #fff;
   }
-  .site-description {
+  .site-description,
+  .site-description.-front {
 	font-size: 1rem;
   }
-  .front-main {
+  .site-description.-front {
+	margin-top: 0.2rem;
+  }
+  .front-main,
+  .dropdown-part {
 	margin: 0 auto;
+  }
+  .site-header.-front {
+	margin: 1rem 0;
+  }
+  .site-header.-front,
+  .dropdown-part {
+	padding: 0 0.5rem;
   }
   .site-header.-front {
 	-webkit-box-ordinal-group: 1;
@@ -1428,7 +1434,6 @@ textarea[name="comment"] {
 	-ms-flex-order: 1;
 	-webkit-order: 1;
 	order: 1;
-	margin-right: 0.3rem;
   }
   .headerimage {
 	-webkit-box-ordinal-group: 2;
@@ -1446,15 +1451,11 @@ textarea[name="comment"] {
 	-webkit-order: 3;
 	order: 3;
   }
-  .dropdown-part {
-	margin: initial;
-	padding: 0 0.5rem;
-  }
   .dropdown-part h2 {
 	margin: 0.8rem 0;
   }
   .site-footer.-front {
-	padding: 0.5rem 1rem;
+	padding: 1rem 0.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
