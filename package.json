@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "style": "stylus stylus/style.styl -o ./ -u nib -m",
-    "fix": "./phpcs/bin/phpcbf --standard=wordpress style.css",
-    "compile-estyle": "stylus stylus/editor-style.styl -o ./ -u nib -m && pcs/bin/phpcbf --standard=wordpress editor-style.css"
+    "fix:css": "php phpcs/bin/phpcbf --standard=wordpress style.css",
+    "compile:style": "stylus stylus/style.styl -o ./ -u nib -m && npm run fix:css",
+    "browser-sync": ""
   },
   "repository": {
     "type": "git",
@@ -20,8 +19,8 @@
   },
   "homepage": "https://github.com/akiya64/shirohanada#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "nib": "^1.1.0",
-    "stylus": "^0.54.5"
+    "browser-sync": "",
+    "nib": "",
+    "stylus": ""
   }
 }
