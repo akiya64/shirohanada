@@ -29,7 +29,7 @@ function shirohanada_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	$custom_bg_args = array(
-		'default-color' => 'f8fafa',
+		'default-color' => 'f8faff',
 		'wp-head-callback' => 'custom_background_callback',
 	);
 
