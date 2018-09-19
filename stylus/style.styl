@@ -188,10 +188,7 @@ body
 .comment-body
         p
                 margin .75rem 0
-                &:after
-                        content ""
-                        display block
-                        clear both
+                clear both
 
         ul
         ol
@@ -446,11 +443,12 @@ hr
         margin-left 1rem
 
 .aligncenter
-        margin auto
+        margin 0 auto
 
-.wp-caption-text
-        margin-top .2rem
-        padding-top 0
+.wp-caption
+        > p
+                margin-top .2rem
+                padding-top 0
 
 .sticky
         border solid 1px shirohanada
@@ -594,7 +592,7 @@ img[src^="http://www.gravatar.com/avatar/"]
             padding .5rem 1rem 1rem
 
     .type-page
-            padding 1.5rem 2rem 1rem
+            padding 1.5rem 2rem 0
 
     .article-area
     .entry-content

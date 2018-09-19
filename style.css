@@ -477,11 +477,6 @@ i {
 .entry-content p,
 .comment-body p {
   margin: 0.75rem 0;
-}
-.entry-content p:after,
-.comment-body p:after {
-  content: "";
-  display: block;
   clear: both;
 }
 .entry-content ul,
@@ -548,7 +543,7 @@ h6,
   font-family: 'Ubuntu', 'Meiryo', sans-serif;
   font-weight: normal;
 }
-/*  font-size  */
+/* font-size */
 .page-title {
   font-size: 2.4rem;
 }
@@ -791,9 +786,9 @@ hr {
   margin-left: 1rem;
 }
 .aligncenter {
-  margin: auto;
+  margin: 0 auto;
 }
-.wp-caption-text {
+.wp-caption > p {
   margin-top: 0.2rem;
   padding-top: 0;
 }
@@ -929,7 +924,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 }
 /**
  * # Medeia Query
- *    # For Large Display
+ * # For Large Display
  */
 @media (min-width: 600px) {
   .site-header {
@@ -946,7 +941,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	padding: 0.5rem 1rem 1rem;
   }
   .type-page {
-	padding: 1.5rem 2rem 1rem;
+	padding: 1.5rem 2rem 0;
   }
   .article-area,
   .entry-content,
@@ -991,7 +986,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   }
 }
 /**
- *    # For mobile
+ * # For mobile
  */
 @media screen and (max-width: 600px) {
   .article-area,
