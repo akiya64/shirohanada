@@ -206,7 +206,6 @@ table {
   clip: auto;
 }
 body {
-  font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   line-height: 1.8;
   margin: 0 auto;
   width: 100%;
@@ -532,6 +531,11 @@ i {
 /**
  * # Typograghy
  */
+body,
+pre,
+code {
+  font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+}
 h1,
 h2,
 h3,
