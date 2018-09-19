@@ -42,6 +42,7 @@ after_success:
     - git rm -fr git-hooks
     - git rm -rf stylus
     - git rm -f .gitignore
+    - git rm -f .editorconfig
     - git rm -f .travis.yml
     - git rm -f README.md
     - git rm -f composer.*
