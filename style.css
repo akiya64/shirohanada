@@ -892,6 +892,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   border-radius: 0 0.5rem 0.5rem 0;
   background-color: #a3d8f6;
   text-decoration: none !important;
+  z-index: 99;
 }
 .show-menu,
 .show-menu:visited {
@@ -900,7 +901,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
 .show-menu {
   bottom: 1rem;
   padding: 0.4rem 0.7rem 0 0.7rem;
-  border-radius: 0 0.5rem 0.5rem 0;
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: alpha(opacity=85);
