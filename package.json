@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "fix:css": "php phpcs/bin/phpcbf --standard=wordpress style.css",
-    "compile:style": "stylus stylus/style.styl -o ./ -u nib -m && npm run fix:css",
-    "browser-sync": "browser-sync start --proxy wocker.test --files '**/*.css,**/*.php'"
+    "compile:stylus": "stylus stylus/style.styl -o ./ -u nib -m && npm run fix:css",
+    "watch:stylus": "stylus stylus/style.styl -o ./ -u nib -m -w",
+    "watch:browsersync": "browser-sync start --proxy wocker.test --files '**/*.css,**/*.php'",
+    "watch": "run-p watch:**"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akiya64/shirohanada.git"
   },
-  "author": "",
+  "author": "akiya64",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akiya64/shirohanada/issues"
@@ -21,6 +23,7 @@
   "devDependencies": {
     "browser-sync": "",
     "nib": "",
+    "npm-run-all": "",
     "stylus": ""
   }
 }
