@@ -352,7 +352,8 @@ i {
 .page > .footer-date,
 .page > .footer-author,
 .page-footer,
-.entry-title {
+.entry-title,
+.entry-meta {
   width: 100%;
 }
 .excerpt-thumbnail img,
@@ -423,6 +424,9 @@ i {
 .comment-reply-title {
   padding-left: 0;
 }
+.entry-date {
+  padding-top: 0.5rem;
+}
 .entry-content > *:first-child,
 .nomatch-contents > *:first-child {
   margin-top: 0;
@@ -440,7 +444,6 @@ i {
 .icon {
   margin-right: 0.4rem;
 }
-.entry-date > .icon,
 .entry-category > .icon,
 .entry-tags > .icon {
   margin-right: 0.6rem;
@@ -537,9 +540,11 @@ h3,
 h4,
 h5,
 h6,
+.entry-title,
 .site-description,
 .front-navmenu,
-.pagination {
+.pagination,
+.entry-date {
   font-family: 'Ubuntu', 'Meiryo', sans-serif;
   font-weight: normal;
 }
@@ -563,6 +568,9 @@ h6,
 }
 .pagination {
   font-size: 1.4rem;
+}
+.entry-date {
+  font-size: 1.25rem;
 }
 /* Font Color */
 :visited {
@@ -824,6 +832,9 @@ hr {
 ._no-marker {
   list-style-type: none;
 }
+._color-dark {
+  color: #436fb4;
+}
 @media (min-width: 600px) {
   ._inline {
 	display: inline;
@@ -941,17 +952,20 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	padding: 0.5rem 1rem 1rem;
   }
   .type-page {
-	padding: 1.5rem 2rem 0;
+	padding: 1.5rem 2rem 0.5rem;
   }
   .article-area,
   .entry-content,
   .entry-comments,
+  .entry-title,
   .entry-excerpt {
 	width: 76%;
   }
   .side-widgets,
   .entry-margin,
-  .entry-header {
+  .entry-header,
+  .entry-date,
+  .entry-meta {
 	width: 23%;
   }
   .entry-excerpt._with-thumbnail,
@@ -1022,12 +1036,27 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	font-size: 1.62rem;
   }
   .entry-title.single {
-	padding: 1rem 0;
+	padding: 0 0 1rem 0;
   }
   .page-title {
-	padding: 1rem 0.5rem;
+	padding: 0 0.5rem 1rem;
   }
-  .entry-date,
+  .entry-meta {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-o-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+  }
+  .entry-author,
   .entry-category,
   .entry-tags {
 	margin-right: 1rem;

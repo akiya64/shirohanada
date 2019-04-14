@@ -75,8 +75,8 @@ body
 .page > .footer-author
 .page-footer
 .entry-title
+.entry-meta
         width 100%
-
 
 .excerpt-thumbnail img
 .entry-content img
@@ -120,6 +120,7 @@ body
 .page-title
 .entry-title
         margin 0 0 .7rem 0
+
 .page-title
         padding 0 .5rem 0 1.5rem
 
@@ -129,6 +130,9 @@ body
 .comments-list-header
 .comment-reply-title
         padding-left 0
+
+.entry-date
+        padding-top .5rem
 
 .entry-content
 .nomatch-contents
@@ -149,7 +153,6 @@ body
 .icon
         margin-right .4rem
 
-.entry-date
 .entry-category
 .entry-tags
         > .icon
@@ -234,9 +237,11 @@ body,pre,code
         font-family Hiragino Kaku Gothic ProN,Meiryo,sans-serif
 
 h1,h2,h3,h4,h5,h6
+.entry-title
 .site-description
 .front-navmenu
 .pagination
+.entry-date
         font-family 'Ubuntu' ,'Meiryo' , sans-serif
         font-weight normal
 
@@ -256,6 +261,9 @@ h1,h2,h3,h4,h5,h6
 
 .pagination
         font-size 1.4rem
+
+.entry-date
+        font-size 1.25rem
 
 /* Font Color */
 :visited
@@ -475,6 +483,9 @@ hr
 ._no-marker
         list-style-type none
 
+._color-dark
+        color nakano-h
+
 @media (min-width:breakpoint)
         ._inline
                 display inline
@@ -592,17 +603,20 @@ img[src^="http://www.gravatar.com/avatar/"]
             padding .5rem 1rem 1rem
 
     .type-page
-            padding 1.5rem 2rem 0
+            padding 1.5rem 2rem .5rem
 
     .article-area
     .entry-content
     .entry-comments
+    .entry-title
     .entry-excerpt
             width 76%
 
     .side-widgets
     .entry-margin
     .entry-header
+    .entry-date
+    .entry-meta
             width 23%
 
     .entry-excerpt._with-thumbnail
@@ -675,12 +689,17 @@ img[src^="http://www.gravatar.com/avatar/"]
 
       /* In .post set less padding */
     .entry-title.single
-              padding 1rem 0
+              padding 0 0 1rem 0
 
     .page-title
-              padding 1rem .5rem
+              padding 0 .5rem 1rem
 
-    .entry-date
+    .entry-meta
+              display flex
+              justify-content space-between
+              margin-bottom 1rem
+
+    .entry-author
     .entry-category
     .entry-tags
               margin-right 1rem
