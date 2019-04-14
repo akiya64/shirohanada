@@ -375,7 +375,8 @@ i {
 .main-contents,
 .type-post,
 .type-page,
-.entry-footer.-sharelinks {
+.entry-footer.-sharelinks,
+.nomatch-contents > .links {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -400,8 +401,17 @@ i {
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
+.nomatch-contents > .links {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
 /* in 404.php article dont FlexBox */
-.nomatch-contents {
+.nomatch-contents,
+.nomatch-contents .link {
   display: block;
 }
 /**
@@ -431,9 +441,6 @@ i {
 .nomatch-contents > *:first-child {
   margin-top: 0;
 }
-.nomatch-contents > .reasons {
-  margin: 1rem 2rem;
-}
 .link-posts > p,
 .entry-comments {
   margin-top: 0.6rem;
@@ -460,7 +467,9 @@ i {
 .site-description {
   margin-right: 0.75rem;
 }
-.footer-author {
+.footer-author,
+.nomatch-contents .links,
+.nomatch-contents .description {
   margin-bottom: 1rem;
 }
 .entry-author {
@@ -569,6 +578,7 @@ h6,
 .pagination {
   font-size: 1.4rem;
 }
+.nomatch-contents .link,
 .entry-date {
   font-size: 1.25rem;
 }
@@ -992,11 +1002,11 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-comments {
 	min-width: 550px;
   }
-  .show-menu {
-	display: none;
-  }
   .is-pagetemplate > .entry-footer {
 	width: 50%;
+  }
+  .show-menu {
+	display: none;
   }
 }
 /**
@@ -1039,7 +1049,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	padding: 0 0 1rem 0;
   }
   .page-title {
-	padding: 0 0.5rem 1rem;
+	padding: 0.75rem 0.5rem;
   }
   .entry-meta {
 	display: -webkit-box;
