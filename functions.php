@@ -23,56 +23,13 @@ if ( ! isset( $content_width ) ) {
  */
 function shirohanada_setup() {
 	add_editor_style();
-
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
-
-	$custom_bg_args = array(
-		'default-color' => 'f8faff',
-		'wp-head-callback' => 'custom_background_callback',
-	);
-
-	add_theme_support( 'custom-background', $custom_bg_args );
-
 	load_theme_textdomain( 'shirohanada' );
-
 }
 
 add_action( 'after_setup_theme', 'shirohanada_setup' );
-
-/**
- * Apply custom backbround color for h2 title/article tag/sidebar/
- *
- * @sinse shirohanada 0.11
- */
-function custom_background_callback() {
-
-	$color = get_background_color();
-
-	$style = <<<CSS
-<style type="text/css" id="custom-background-css">
-	.side-widgets,
-	.page-title,
-	.pagination,
-	.nomatch-contents,
-	.link-posts p,
-	.type-page,
-	.type-post {
-		background-color : #$color ;
-	}
-</style>
-CSS;
-
-	$allowed_style_tag = array(
-		'style' => array(
-			'type' => array(),
-			'id' => array(),
-		),
-	);
-
-	echo wp_kses( $style, $allowed_style_tag );
-}
 
 /**
  * Remove header ,not using shirohanada
@@ -148,37 +105,34 @@ function register_front_menu() {
 add_action( 'after_setup_theme', 'register_front_menu' );
 
 /**
- * Custom header for Front Page
+ * Register Custom header / background
  *
  * @since shirohanada 0.9
  */
-register_default_headers(
-	array(
 
-		/**
-		 * Add 3images to default header image.
-		 */
+$default_images = array(
 
-		'cherry_blossom' => array(
-			'url' => get_template_directory_uri() . '/images/fukuju_bridge.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_fukuju_bridge.jpg',
-			/* translators: header image description */
-			'description' => 'cherryblossom',
-		),
-		'coast' => array(
-			'url' => get_template_directory_uri() . '/images/ochi_ishi.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ochi_ishi.jpg',
-			/* translators: header image description */
-			'description' => 'coast',
-		),
-		'tram_station' => array(
-			'url' => get_template_directory_uri() . '/images/ujina_station.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ujina_station.jpg',
-			/* translators: header image description */
-			'description' => 'station',
-		),
-	)
+	'cherry_blossom' => array(
+		'url' => get_template_directory_uri() . '/images/fukuju_bridge.jpg',
+		'thumbnail_url' => get_template_directory_uri() . '/images/thumb_fukuju_bridge.jpg',
+		/* translators: header image description */
+		'description' => 'cherryblossom',
+	),
+	'coast' => array(
+		'url' => get_template_directory_uri() . '/images/ochi_ishi.jpg',
+		'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ochi_ishi.jpg',
+		/* translators: header image description */
+		'description' => 'coast',
+	),
+	'tram_station' => array(
+		'url' => get_template_directory_uri() . '/images/ujina_station.jpg',
+		'thumbnail_url' => get_template_directory_uri() . '/images/thumb_ujina_station.jpg',
+		/* translators: header image description */
+		'description' => 'station',
+	),
 );
+
+register_default_headers( $default_images );
 
 $custom_header_args = array(
 	'width' => 1200,
@@ -192,24 +146,41 @@ $custom_header_args = array(
 
 add_theme_support( 'custom-header', $custom_header_args );
 
+$custom_bg_args = array(
+	'default-color' => 'f8faff',
+);
+
+add_theme_support( 'custom-background', $custom_bg_args );
+
 /**
  * Echo custom header color by theme customizer.
  *
  * @since  shirohanada 0.11
  */
-function headertextcolor_css_output() {
-	$color = get_header_textcolor();
+function customizer_css_output() {
+
+	$bg_color = get_background_color();
+	$header_color = get_header_textcolor();
 
 	$style = <<<CSS
-<style type="text/css" id="custom-theme-css">
+<style type="text/css" id="shirohanada-customizer">
+	.side-widgets,
+	.page-title,
+	.pagination,
+	.nomatch-contents,
+	.link-posts p,
+	.type-page,
+	.type-post {
+		background-color : #$bg_color ;
+	}
     .site-name .link,
     .site-name.-front {
-        color : #$color ;
+        color : #$header_color ;
     }
 
     @media screen and (max-width: 600px) {
         .site-name {
-            background-color : #$color ;
+            background-color : #$header_color ;
         }
         .site-name .link {
             color: #fff;
@@ -228,7 +199,7 @@ CSS;
 	echo wp_kses( $style, $allowed_style_tag );
 
 }
-add_action( 'wp_head', 'headertextcolor_css_output' );
+add_action( 'wp_head', 'customizer_css_output' );
 
 /**
  * Get oldest post date for copy right
