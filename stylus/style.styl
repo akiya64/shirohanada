@@ -98,6 +98,7 @@ body
 .type-post
 .type-page
 .entry-footer.-sharelinks
+.nomatch-contents > .links
         display flex
         flex-wrap wrap
 
@@ -107,8 +108,12 @@ body
 .entry-footer.-sharelinks
         justify-content space-around
 
+.nomatch-contents > .links
+        justify-content space-between
+
 /* in 404.php article dont FlexBox */
 .nomatch-contents
+.nomatch-contents .link
         display block
 
 /**
@@ -139,10 +144,6 @@ body
         > *:first-child
                 margin-top 0
 
-.nomatch-contents
-        > .reasons
-                margin 1rem 2rem
-
 .link-posts > p
 .entry-comments
         margin-top .6rem
@@ -171,6 +172,8 @@ body
         margin-right .75rem
 
 .footer-author
+.nomatch-contents .links
+.nomatch-contents .description
         margin-bottom 1rem
 
 .entry-author
@@ -262,6 +265,7 @@ h1,h2,h3,h4,h5,h6
 .pagination
         font-size 1.4rem
 
+.nomatch-contents .link
 .entry-date
         font-size 1.25rem
 
@@ -642,13 +646,12 @@ img[src^="http://www.gravatar.com/avatar/"]
     .entry-comments
             min-width 550px
 
-
-      /* show only in small display */
-    .show-menu
-            display none
-
     .is-pagetemplate > .entry-footer
             width 50%
+
+    /* show only in small display */
+    .show-menu
+            display none
 
 /**
  * # For mobile
