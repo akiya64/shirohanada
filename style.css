@@ -1413,7 +1413,7 @@ textarea[name="comment"] {
   color: #257bcc;
   display: block;
   padding: 0.2rem 1rem;
-  border-left: solid 3px #fff;
+  border-left: solid 3px rgba(255,255,255,0);
 }
 .menu-item:hover {
   border-left: solid 3px #257bcc;
