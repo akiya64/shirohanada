@@ -13,7 +13,7 @@
  * @since shirohanada 0.11
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 690;
+	$content_width = 1200;
 }
 
 /**
@@ -147,10 +147,37 @@ $custom_header_args = array(
 add_theme_support( 'custom-header', $custom_header_args );
 
 $custom_bg_args = array(
-	'default-color' => 'f8faff',
+	'default-color' => '#fff',
 );
 
 add_theme_support( 'custom-background', $custom_bg_args );
+
+/**
+ * Regist contents background color customize
+ *
+ * @since shirohanada 0.12
+ * @param object $wp_customize WordPress global variable.
+ */
+function contents_bg_customize_register( $wp_customize ) {
+	$wp_customize->add_setting(
+		'contents_bg_color', array(
+			'default' => '#f8faff',
+			'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize, 'contents_bg_color', array(
+				'label' => 'コンテンツ背景色',
+				'section' => 'colors',
+				'settings' => 'contents_bg_color',
+			)
+		)
+	);
+};
+add_action( 'customize_register', 'contents_bg_customize_register' );
 
 /**
  * Echo custom header color by theme customizer.
@@ -161,9 +188,12 @@ function customizer_css_output() {
 
 	$bg_color = get_background_color();
 	$header_color = get_header_textcolor();
+	$contents_bg_color = get_theme_mod( 'contents_bg_color', '#f8faff' );
 
 	$style = <<<CSS
 <style type="text/css" id="shirohanada-customizer">
+	body { background-color : #$bg_color; }
+
 	.side-widgets,
 	.page-title,
 	.pagination,
@@ -171,8 +201,9 @@ function customizer_css_output() {
 	.link-posts p,
 	.type-page,
 	.type-post {
-		background-color : #$bg_color ;
+		background-color : $contents_bg_color ;
 	}
+
     .site-name .link,
     .site-name.-front {
         color : #$header_color ;
