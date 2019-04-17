@@ -81,6 +81,7 @@ body
 
 .excerpt-thumbnail img
 .entry-content img
+.entry-content iframe
 .wp-caption
 .gallery-caption
         max-width 100%
@@ -224,6 +225,12 @@ body
                 cite::before
                       content "\2014"
                       margin-right .25rem
+
+                p
+                      margin 0
+
+                p + p
+                      margin-top 1rem
 
 .site-footer
         margin .5rem 0
@@ -730,7 +737,6 @@ img[src^="http://www.gravatar.com/avatar/"]
               padding-bottom .75rem
 
               img
-              iframe
                         max-width 100%
 
     .type-post + .type-post::before
@@ -765,17 +771,16 @@ img[src^="http://www.gravatar.com/avatar/"]
               animation-name slideup
               animation-duration 0.3s
 
-      @keyframes slideup
-              0%
-                        width 100%
-                        position absolute
-                        top 100%
-                        width 60%
+              @keyframes slideup
+                      0%
+                                width 100%
+                                position absolute
+                                top 100%
+                                width 60%
 
-              100%
-                        top 4px
-                        right 3px
-
+                      100%
+                                top 4px
+                                right 3px
 
     .side-widgets #wp-calendar td
               padding .4rem .2rem .1rem
