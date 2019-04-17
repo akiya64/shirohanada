@@ -29,6 +29,7 @@ ref 'http://rscss.io/index.html'
 # Typograghy
 # HTMLTags in Post
 # WordPress Classes
+# Gutenberg Classes
 # Helper Classes
 # Widget
 # IconButton
@@ -486,21 +487,24 @@ i {
   margin: 0 auto;
   display: block;
 }
+.entry-content dd,
+.comment-body dd,
+.entry-content pre,
+.comment-body pre,
 .entry-content p,
-.comment-body p {
-  margin: 0.75rem 0;
+.comment-body p,
+.entry-content ul,
+.comment-body ul,
+.entry-content ol,
+.comment-body ol {
+  margin: 0 auto 1.5rem;
   clear: both;
 }
 .entry-content ul,
 .comment-body ul,
 .entry-content ol,
 .comment-body ol {
-  margin: 1rem;
   margin-left: 2rem;
-}
-.entry-content dl,
-.comment-body dl {
-  margin-left: 0;
 }
 .entry-content dt,
 .comment-body dt {
@@ -513,18 +517,19 @@ i {
   margin-top: 0.2rem;
   padding-top: 0.2rem;
 }
-.entry-content dd,
-.comment-body dd {
-  margin-bottom: 1rem;
-}
 .entry-content img,
 .comment-body img {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
-.entry-content p + p,
-.comment-body p + p {
-  margin-top: 1rem;
+.entry-content blockquote,
+.comment-body blockquote {
+  padding: 1rem;
+}
+.entry-content blockquote cite::before,
+.comment-body blockquote cite::before {
+  content: "\2014";
+  margin-right: 0.5rem;
 }
 .site-footer {
   margin: 0.5rem 0;
@@ -588,7 +593,8 @@ h6,
 }
 a,
 .icon-eject,
-.entry-title {
+.entry-title,
+.entry-meta i {
   color: #257bcc;
 }
 h1,
@@ -605,7 +611,6 @@ h6,
 .pagination {
   color: #436fb4;
 }
-.entry-header i,
 .site-footer,
 .site-description {
   color: #777;
@@ -820,6 +825,18 @@ hr {
   display: none;
 }
 /**
+ * # Gutenberg Classes
+ */
+.entry-content .blocks-gallery-item {
+  -webkit-box-flex: unset;
+  -moz-box-flex: unset;
+  -o-box-flex: unset;
+  -ms-box-flex: unset;
+  box-flex: unset;
+  -webkit-flex-grow: unset;
+  flex-grow: unset;
+}
+/**
  * # Helper Classes
  */
 .clearfix {
@@ -839,8 +856,10 @@ hr {
 ._text-centering {
   text-align: center;
 }
-._no-marker {
+ul._no-marker,
+ol._no-marker {
   list-style-type: none;
+  margin-left: 0;
 }
 ._color-dark {
   color: #436fb4;
@@ -962,7 +981,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	padding: 0.5rem 1rem 1rem;
   }
   .type-page {
-	padding: 1.5rem 2rem 0.5rem;
+	padding: 1.5rem 2rem 1rem;
   }
   .article-area,
   .entry-content,
