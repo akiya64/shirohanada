@@ -32,7 +32,7 @@
 		?>
 		<span class="author-name fn" itemprop="name"><?php the_author_meta( 'display_name' ); ?></span>
 	<p class="entry-category">
-		<i class="icon icon-<?php select_category_icon( get_the_category()[0]->slug ); ?> _color-dark"></i><?php the_category( ', ' ); ?>
+		<i class="icon icon-<?php select_category_icon( get_the_category()[0]->slug ); ?>"></i><?php the_category( ', ' ); ?>
 	</p>
 	<?php the_tags( '<p class="entry-tags"><i class="icon icon-tag"></i>', ', ' ,'</p>' ); ?>
 </div>
