@@ -529,7 +529,7 @@ i {
 .entry-content blockquote cite::before,
 .comment-body blockquote cite::before {
   content: "\2014";
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
 }
 .site-footer {
   margin: 0.5rem 0;
@@ -593,8 +593,7 @@ h6,
 }
 a,
 .icon-eject,
-.entry-title,
-.entry-meta i {
+.entry-title {
   color: #257bcc;
 }
 h1,
@@ -607,6 +606,7 @@ h6,
 .page-title,
 .comment-reply-title,
 .comments-list-header,
+.entry-meta i,
 .wp-widget > .title,
 .pagination {
   color: #436fb4;
