@@ -5,18 +5,10 @@ Description Adds supoort editor style.
 
 @import "_color"
 
-.mce-content-body
-
+.wp-block
+        width 690px
         font-family Hiragino Kaku Gothic ProN, Meiryo, sans-serif
         line-height 1.8
-
-        width 695px
-        margin  0 1rem auto
-        padding  0 0.5rem
-
-        *:first-child
-
-                margin-top 0.5rem
 
         h1
         h2
@@ -81,27 +73,34 @@ Description Adds supoort editor style.
                 &:visited
                             color maroon
 
-        p
-                margin .75rem 0
-
-                &:after
-                            display block
-                            content ""
-                            clear both
-
-        blockquote
+        .wp-block-quote
                 border-left solid 3px border-hai
                 margin 0.8rem 0
                 padding 0.2rem 0.75rem
                 overflow-wrap break-word
+                padding 1rem
+
+                &__citation::before
+                    content "\2014"
+                    margin-right .25rem
+
+              p
+                    margin 0
+
+              p + p
+                    margin-top 1rem
 
         ul
                 list-style-type square
 
-        /* Table Style */
-        td,th
-                padding .2rem .5rem
+        ul._no-marker
+        ol._no-marker
+                list-style-type none
+                margin-left 0
 
+        /* Table Style */
+        td
+                border none
         tr + tr
                 border-top 1px solid hai
 
@@ -122,7 +121,12 @@ Description Adds supoort editor style.
                 margin-bottom 1rem
                 margin-left 0
 
+        /* For blocks */
         .wp-caption-dd
                 text-align center
 
+        .blocks-gallery-item
+                flex-grow unset
 
+        .wp-block-pullquote blockquote
+                border-color hai

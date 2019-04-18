@@ -2,56 +2,52 @@
 Theme Name Shirohanada
 Description Adds supoort editor style.
 */
-.mce-content-body {
+.wp-block {
+  width: 690px;
   font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
   line-height: 1.8;
-  width: 695px;
-  margin: 0 1rem auto;
-  padding: 0 0.5rem;
 /* Table Style */
 /* Definition list */
+/* For blocks */
 }
-.mce-content-body *:first-child {
-  margin-top: 0.5rem;
-}
-.mce-content-body h1,
-.mce-content-body h2,
-.mce-content-body h3,
-.mce-content-body h4,
-.mce-content-body h5,
-.mce-content-body h6 {
+.wp-block h1,
+.wp-block h2,
+.wp-block h3,
+.wp-block h4,
+.wp-block h5,
+.wp-block h6 {
   font-family: 'Ubuntu', 'Meiryo', sans-serif;
   font-weight: normal;
   clear: both;
 }
-.mce-content-body h1 {
+.wp-block h1 {
   color: #a3d8f6;
   font-size: 2.7rem;
   margin: 2rem 0 1rem;
   padding: 0 0.75rem;
 }
-.mce-content-body h2 {
+.wp-block h2 {
   border-left: solid 3px #436fb4;
   color: #436fb4;
   font-size: 1.66rem;
   margin: 2rem 0 1rem;
   padding: 0 0.75rem;
 }
-.mce-content-body h3 {
+.wp-block h3 {
   border-left: double #436fb4;
   color: #436fb4;
   font-size: 1.2rem;
   margin: 1rem 0;
   padding: 0 0.75rem;
 }
-.mce-content-body h4 {
+.wp-block h4 {
   border-left: solid 2px #436fb4;
   color: #436fb4;
   font-size: 1.2rem;
   margin: 1rem 0;
   padding: 0 0.75rem;
 }
-.mce-content-body h5 {
+.wp-block h5 {
   border-bottom: solid 1px #436fb4;
   color: #436fb4;
   font-size: 1.2rem;
@@ -61,63 +57,76 @@ Description Adds supoort editor style.
   width: -moz-fit-content;
   width: fit-content;
 }
-.mce-content-body h6 {
+.wp-block h6 {
   color: #436fb4;
   font-size: 1.2rem;
   margin: 0.8rem 0 0.5rem;
   padding: 0 0.5rem;
 }
-.mce-content-body a {
+.wp-block a {
   color: #257bcc;
 }
-.mce-content-body a:hover {
+.wp-block a:hover {
   text-decoration: dotted;
   text-decoration-line: underline;
 }
-.mce-content-body a:visited {
+.wp-block a:visited {
   color: #800000;
 }
-.mce-content-body p {
-  margin: 0.75rem 0;
-}
-.mce-content-body p:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-.mce-content-body blockquote {
+.wp-block .wp-block-quote {
   border-left: solid 3px #bbb;
   margin: 0.8rem 0;
   padding: 0.2rem 0.75rem;
   overflow-wrap: break-word;
+  padding: 1rem;
 }
-.mce-content-body ul {
+.wp-block .wp-block-quote__citation::before {
+  content: "\2014";
+  margin-right: 0.25rem;
+}
+.wp-block p {
+  margin: 0;
+}
+.wp-block p + p {
+  margin-top: 1rem;
+}
+.wp-block ul {
   list-style-type: square;
 }
-.mce-content-body td,
-.mce-content-body th {
-  padding: 0.2rem 0.5rem;
-}
-.mce-content-body tr + tr {
-  border-top: 1px solid #777;
-}
-.mce-content-body dl {
+.wp-block ul._no-marker,
+.wp-block ol._no-marker {
+  list-style-type: none;
   margin-left: 0;
 }
-.mce-content-body dt {
+.wp-block td {
+  border: none;
+}
+.wp-block tr + tr {
+  border-top: 1px solid #777;
+}
+.wp-block dl {
+  margin-left: 0;
+}
+.wp-block dt {
   display: inline-block;
   font-weight: bold;
   border-bottom: solid 1px #bbb;
 }
-.mce-content-body dt + dd {
+.wp-block dt + dd {
   margin-top: 0.2rem;
   padding-top: 0.2rem;
 }
-.mce-content-body dd {
+.wp-block dd {
   margin-bottom: 1rem;
   margin-left: 0;
 }
-.mce-content-body .wp-caption-dd {
+.wp-block .wp-caption-dd {
   text-align: center;
 }
-/*# sourceMappingURL=editor-style.css.map */
+.wp-block .blocks-gallery-item {
+  flex-grow: unset;
+}
+.wp-block .wp-block-pullquote blockquote {
+  border-color: #777;
+}
+/*# sourceMappingURL=gutenberg-style.css.map */

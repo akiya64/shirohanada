@@ -845,6 +845,11 @@ hr {
   -webkit-flex-grow: unset;
   flex-grow: unset;
 }
+.entry-content .wp-block-pullquote blockquote {
+  border-width: 4px 0;
+  border-color: #777;
+  padding: 3rem 0;
+}
 /**
  * # Helper Classes
  */

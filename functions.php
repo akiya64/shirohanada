@@ -22,7 +22,8 @@ if ( ! isset( $content_width ) ) {
  * @since shirohanada 0.9.1
  */
 function shirohanada_setup() {
-	add_editor_style();
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'gutenberg-style.css' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );

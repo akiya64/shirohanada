@@ -7,6 +7,8 @@
     "fix:css": "php phpcs/bin/phpcbf --standard=wordpress style.css",
     "compile:stylus": "stylus stylus/style.styl -o ./ -u nib -m",
     "watch:stylus": "stylus stylus/style.styl -o ./ -u nib -m -w",
+    "compile:editor-stylus": "stylus stylus/gutenberg-style.styl -o ./ -u nib -m",
+    "watch:editor-stylus": "stylus stylus/gutenberg-style.styl -o ./ -u nib -m -w",
     "watch:browsersync": "browser-sync start --proxy wocker.test --files **/*",
     "watch": "run-p watch:**"
   },
