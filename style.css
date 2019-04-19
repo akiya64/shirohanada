@@ -436,9 +436,6 @@ i {
 .comment-reply-title {
   padding-left: 0;
 }
-.entry-date {
-  padding-top: 0.5rem;
-}
 .entry-content > *:first-child,
 .nomatch-contents > *:first-child {
   margin-top: 0;
@@ -487,58 +484,6 @@ i {
 .excerpt-thumbnail img {
   margin: 0 auto;
   display: block;
-}
-.entry-content dd,
-.comment-body dd,
-.entry-content pre,
-.comment-body pre,
-.entry-content p,
-.comment-body p,
-.entry-content ul,
-.comment-body ul,
-.entry-content ol,
-.comment-body ol {
-  margin: 0 auto 1.5rem;
-  clear: both;
-}
-.entry-content ul,
-.comment-body ul,
-.entry-content ol,
-.comment-body ol {
-  margin-left: 2rem;
-}
-.entry-content dt,
-.comment-body dt {
-  display: inline-block;
-  font-weight: bold;
-  border-bottom: solid 1px #777;
-}
-.entry-content dt + dd,
-.comment-body dt + dd {
-  margin-top: 0.2rem;
-  padding-top: 0.2rem;
-}
-.entry-content img,
-.comment-body img {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
-.entry-content blockquote,
-.comment-body blockquote {
-  padding: 1rem;
-}
-.entry-content blockquote cite::before,
-.comment-body blockquote cite::before {
-  content: "\2014";
-  margin-right: 0.25rem;
-}
-.entry-content blockquote p,
-.comment-body blockquote p {
-  margin: 0;
-}
-.entry-content blockquote p + p,
-.comment-body blockquote p + p {
-  margin-top: 1rem;
 }
 .site-footer {
   margin: 0.5rem 0;
@@ -694,16 +639,66 @@ a:hover {
 .link-posts {
   text-align: center;
 }
-/**
- * # For HTMLTags
- */
-/* Quates */
-blockquote {
-  border-left: solid 3px #bbb;
-}
 /* Table */
 tr + tr {
   border-top: 1px solid #777;
+}
+/**
+ * Inner Contets
+ */
+.entry-content dd,
+.comment-body dd,
+.entry-content pre,
+.comment-body pre,
+.entry-content p,
+.comment-body p {
+  clear: both;
+  margin: 0 auto 1.5rem;
+}
+.entry-content ul,
+.comment-body ul,
+.entry-content ol,
+.comment-body ol {
+  margin: 1rem 0 1rem 2rem;
+}
+.entry-content dt,
+.comment-body dt {
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: solid 1px #777;
+}
+.entry-content dt + dd,
+.comment-body dt + dd {
+  margin-top: 0.2rem;
+  padding-top: 0.2rem;
+}
+.entry-content img,
+.comment-body img {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.entry-content blockquote,
+.comment-body blockquote {
+  border-left: solid 3px #bbb;
+  margin: 0.8rem 0;
+  padding: 1rem;
+}
+.entry-content blockquote cite::before,
+.comment-body blockquote cite::before {
+  content: "\2014";
+  margin-right: 0.25rem;
+}
+.entry-content blockquote p,
+.comment-body blockquote p {
+  margin: 0;
+}
+.entry-content blockquote p + p,
+.comment-body blockquote p + p {
+  margin-top: 1rem;
+}
+.entry-content > *:last-child,
+.comment-body > *:last-child {
+  margin-bottom: 1rem;
 }
 .entry-content thead,
 .comment-body thead {
@@ -727,79 +722,124 @@ tr + tr {
 .comment-body li + li {
   margin-top: 0.6rem;
 }
-/* H tags in entry-content; WordPress Post or Page content */
+.entry-content hr,
+.comment-body hr {
+  margin: 2rem 0;
+  border-top: 1px solid #bbb;
+}
+.entry-content .blocks-gallery-item,
+.comment-body .blocks-gallery-item {
+  -webkit-box-flex: unset;
+  -moz-box-flex: unset;
+  -o-box-flex: unset;
+  -ms-box-flex: unset;
+  box-flex: unset;
+  -webkit-flex-grow: unset;
+  flex-grow: unset;
+}
+.entry-content .wp-block-pullquote blockquote,
+.comment-body .wp-block-pullquote blockquote {
+  border-width: 4px 0;
+  border-color: #bbb;
+  padding: 3rem 0;
+}
 .entry-content h1,
+.comment-body h1,
 .entry-content h2,
+.comment-body h2,
 .entry-content h3,
+.comment-body h3,
 .entry-content h4,
+.comment-body h4,
 .entry-content h5,
-.entry-content h6 {
+.comment-body h5,
+.entry-content h6,
+.comment-body h6 {
   clear: both;
 }
-.entry-content h1 {
+.entry-content h1,
+.comment-body h1 {
   font-size: 2.7rem;
 }
-.entry-content h2 {
+.entry-content h2,
+.comment-body h2 {
   font-size: 1.66rem;
 }
 .entry-content h3,
+.comment-body h3,
 .entry-content h4,
+.comment-body h4,
 .entry-content h5,
-.entry-content h6 {
+.comment-body h5,
+.entry-content h6,
+.comment-body h6 {
   font-size: 1.2rem;
 }
-.entry-content h1 {
+.entry-content h1,
+.comment-body h1 {
   color: #a3d8f6;
 }
 .entry-content h2,
+.comment-body h2,
 .entry-content h3,
+.comment-body h3,
 .entry-content h4,
+.comment-body h4,
 .entry-content h5,
-.entry-content h6 {
+.comment-body h5,
+.entry-content h6,
+.comment-body h6 {
   color: #436fb4;
 }
-.entry-content h2 {
+.entry-content h2,
+.comment-body h2 {
   border-left: solid 3px #436fb4;
 }
-.entry-content h3 {
+.entry-content h3,
+.comment-body h3 {
   border-left: double #436fb4;
 }
-.entry-content h4 {
+.entry-content h4,
+.comment-body h4 {
   border-left: solid 2px #436fb4;
 }
-.entry-content h5 {
+.entry-content h5,
+.comment-body h5 {
   border-bottom: solid 1px #436fb4;
 }
 .entry-content h1,
-.entry-content h2 {
+.comment-body h1,
+.entry-content h2,
+.comment-body h2 {
   margin: 2rem 0 1rem;
 }
 .entry-content h3,
-.entry-content h4 {
+.comment-body h3,
+.entry-content h4,
+.comment-body h4 {
   margin: 1rem 0;
 }
-.entry-content h5 {
+.entry-content h5,
+.comment-body h5 {
   margin: 0.8rem 0 0.5rem;
   width: fit-content;
   width: -moz-fit-content;
 }
 .entry-content h1,
+.comment-body h1,
 .entry-content h2,
+.comment-body h2,
 .entry-content h3,
-.entry-content h4 {
+.comment-body h3,
+.entry-content h4,
+.comment-body h4 {
   padding-left: 0.75rem;
 }
 .entry-content h5,
-.entry-content h6 {
+.comment-body h5,
+.entry-content h6,
+.comment-body h6 {
   padding: 0 0.5rem;
-}
-blockquote {
-  margin: 0.8rem 0;
-  padding: 0.2rem 0.75rem;
-}
-hr {
-  margin: 2rem 0;
-  border-top: 1px solid #bbb;
 }
 /**
  * # WordPress Classes
@@ -832,23 +872,6 @@ hr {
 }
 .screen-reader-text {
   display: none;
-}
-/**
- * # Gutenberg Classes
- */
-.entry-content .blocks-gallery-item {
-  -webkit-box-flex: unset;
-  -moz-box-flex: unset;
-  -o-box-flex: unset;
-  -ms-box-flex: unset;
-  box-flex: unset;
-  -webkit-flex-grow: unset;
-  flex-grow: unset;
-}
-.entry-content .wp-block-pullquote blockquote {
-  border-width: 4px 0;
-  border-color: #777;
-  padding: 3rem 0;
 }
 /**
  * # Helper Classes
@@ -981,6 +1004,20 @@ img[src^="http://www.gravatar.com/avatar/"] {
  * # For Large Display
  */
 @media (min-width: 600px) {
+  .entry-date {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-o-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
   .site-header {
 	margin-right: 0.75rem;
   }
@@ -991,8 +1028,11 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name {
 	font-size: 72px;
   }
+  .entry-title {
+	font-size: 2.4rem;
+  }
   .type-post {
-	padding: 0.5rem 1rem 1rem;
+	padding: 0 1rem 1rem;
   }
   .type-page {
 	padding: 1.5rem 2rem 1rem;
@@ -1028,8 +1068,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .excerpt-thumbnail {
 	margin-left: 1%;
   }
-  .site-description {
-	margin-bottom: 0.3rem;
+  .site-description,
+  .entry-title {
+	margin-bottom: 0.5rem;
   }
   .entry-content,
   .entry-comments {
@@ -1073,13 +1114,22 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .site-name > .link {
 	color: #fff;
   }
-  .entry-title.single,
+  .entry-title,
   .page-title {
 	margin: initial;
-	font-size: 1.62rem;
+	font-size: 2rem;
   }
-  .entry-title.single {
-	padding: 0 0 1rem 0;
+  .entry-title {
+	-webkit-box-ordinal-group: -1;
+	-moz-box-ordinal-group: -1;
+	-o-box-ordinal-group: -1;
+	-ms-flex-order: -1;
+	-webkit-order: -1;
+	order: -1;
+  }
+  .entry-date {
+	font-size: 1rem;
+	margin-bottom: 0.75rem;
   }
   .page-title {
 	padding: 0.75rem 0.5rem;
@@ -1097,6 +1147,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	-ms-flex-pack: justify;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
+  }
+  .entry-meta {
 	margin-bottom: 1rem;
   }
   .entry-author,
@@ -1111,7 +1163,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .type-post,
   .type-page {
 	margin-bottom: 0;
-	padding: 0 0.5rem 1rem;
+	padding: 0 0.5rem 1.5rem;
   }
   .entry-content {
 	padding-bottom: 0.75rem;
@@ -1119,11 +1171,8 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-content img {
 	max-width: 100%;
   }
-  .type-post + .type-post::before {
-	content: '';
+  .type-post + .type-post {
 	border-top: solid 1px #bbb;
-	width: 100%;
-	height: 1rem;
 	padding-top: 1rem;
   }
   .site-footer {

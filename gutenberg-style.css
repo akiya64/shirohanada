@@ -136,4 +136,7 @@ Description Adds supoort editor style.
 .wp-block .wp-block-pullquote blockquote {
   border-color: #777;
 }
+.wp-block .wp-block-media-text p {
+  width: initial;
+}
 /*# sourceMappingURL=gutenberg-style.css.map */
