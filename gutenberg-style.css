@@ -2,6 +2,13 @@
 Theme Name Shirohanada
 Description Adds supoort editor style.
 */
+/* title */
+.editor-post-title__input {
+  font-family: 'Ubuntu', 'Meiryo', sans-serif;
+  font-weight: normal;
+  color: #436fb4;
+}
+/* contents blocks */
 .wp-block {
   width: 690px;
   font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
@@ -128,5 +135,8 @@ Description Adds supoort editor style.
 }
 .wp-block .wp-block-pullquote blockquote {
   border-color: #777;
+}
+.wp-block .wp-block-media-text p {
+  width: initial;
 }
 /*# sourceMappingURL=gutenberg-style.css.map */
