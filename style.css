@@ -698,7 +698,7 @@ tr + tr {
 }
 .entry-content > *:last-child,
 .comment-body > *:last-child {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .entry-content thead,
 .comment-body thead {
