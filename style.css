@@ -744,7 +744,9 @@ tr + tr {
   padding: 3rem 0;
 }
 .entry-content h1,
-.comment-body h1,
+.comment-body h1 {
+  font-size: 2rem;
+}
 .entry-content h2,
 .comment-body h2,
 .entry-content h3,
@@ -758,13 +760,9 @@ tr + tr {
   clear: both;
 }
 .entry-content h1,
-.comment-body h1 {
-  font-size: 2.7rem;
-}
+.comment-body h1,
 .entry-content h2,
-.comment-body h2 {
-  font-size: 1.66rem;
-}
+.comment-body h2,
 .entry-content h3,
 .comment-body h3,
 .entry-content h4,
@@ -773,7 +771,7 @@ tr + tr {
 .comment-body h5,
 .entry-content h6,
 .comment-body h6 {
-  font-size: 1.2rem;
+  font-size: 1.2857rem;
 }
 .entry-content h1,
 .comment-body h1 {
@@ -1029,7 +1027,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	font-size: 72px;
   }
   .entry-title {
-	font-size: 2.4rem;
+	font-size: 2rem;
+	line-height: 1.4;
+	margin: 0.5rem 0;
   }
   .type-post {
 	padding: 0 1rem 1rem;
@@ -1068,8 +1068,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .excerpt-thumbnail {
 	margin-left: 1%;
   }
-  .site-description,
-  .entry-title {
+  .site-description {
 	margin-bottom: 0.5rem;
   }
   .entry-content,
