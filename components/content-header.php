@@ -18,7 +18,12 @@
 <?php if ( is_single() ) : ?>
 	<h1 class="entry-title single" itemprop="headline"><?php the_title(); ?></h1>
 <?php else : ?>
-	<h1 class="entry-title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<h1 class="entry-title 
+	<?php
+	if ( get_query_var( 'is_show_excerpt' ) ) {
+		echo 'excerpt';}
+?>
+ " itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <?php endif; ?>
 
 <div class="entry-meta">

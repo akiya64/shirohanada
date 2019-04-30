@@ -16,9 +16,10 @@ get_header(); ?>
 	<?php
 		$excerpt_flags = get_option( 'shirohanada_category_flags' );
 		$key = 'cat_' . get_query_var( 'cat' );
-		$is_show_excerpt = get_theme_mod( $key );
+		/* Set query var for components/content-header switch entry-title class. */
+		set_query_var( 'is_show_excerpt', get_theme_mod( $key ) );
 
-	if ( $is_show_excerpt ) :
+	if ( get_query_var( 'is_show_excerpt' ) ) :
 
 		while ( have_posts() ) :
 			the_post();
