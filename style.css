@@ -1031,6 +1031,9 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	line-height: 1.4;
 	margin: 0.5rem 0;
   }
+  .entry-title.excerpt {
+	font-size: 1.62rem;
+  }
   .type-post {
 	padding: 0 1rem 1rem;
   }
