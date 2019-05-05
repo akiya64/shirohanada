@@ -170,10 +170,11 @@ function contents_bg_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
-			$wp_customize, 'contents_bg_color', array(
+			$wp_customize,
+			'contents_bg_color',
+			array(
 				'label' => 'コンテンツ背景色',
 				'section' => 'colors',
-				'settings' => 'contents_bg_color',
 			)
 		)
 	);
