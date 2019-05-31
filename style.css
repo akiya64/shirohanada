@@ -808,14 +808,12 @@ tr + tr {
 .entry-content h1,
 .comment-body h1,
 .entry-content h2,
-.comment-body h2 {
-  margin: 2rem 0 1rem;
-}
+.comment-body h2,
 .entry-content h3,
 .comment-body h3,
 .entry-content h4,
 .comment-body h4 {
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
 }
 .entry-content h5,
 .comment-body h5 {
@@ -832,6 +830,11 @@ tr + tr {
 .entry-content h4,
 .comment-body h4 {
   padding-left: 0.75rem;
+}
+.entry-content h2,
+.comment-body h2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .entry-content h5,
 .comment-body h5,
