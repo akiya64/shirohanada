@@ -916,11 +916,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 /**
  * # Widget
  */
-.side-widgets {
-/* On chrome overflow long text, example url ,1byte japanese kana */
-  word-break: break-all;
-}
-.side-widgets .wp-widget {
+.side-widgets word-break break-all {
   margin-bottom: 1rem;
 }
 /* side-widgets skin */
@@ -954,12 +950,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
  * # IconButton
  */
 .show-menu,
-.go-top,
 .hide-menu {
   font-size: 2.4rem;
 }
-.show-menu,
-.go-top {
+.show-menu {
   color: #fff;
   position: fixed;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -977,10 +971,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: alpha(opacity=85);
-}
-.go-top {
-  bottom: 3rem;
-  padding: 0.6rem 0.8rem 0 1rem;
 }
 .hide-menu {
   color: #436fb4;
@@ -1079,9 +1069,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .is-pagetemplate > .entry-footer {
 	width: 50%;
   }
-  .show-menu {
-	display: none;
-  }
   .side-widgets {
 	width: 100%;
 	display: -webkit-box;
@@ -1103,8 +1090,34 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	-webkit-justify-content: space-around;
 	justify-content: space-around;
   }
-  .side-widgets section {
+  .side-widgets > .wp-widget {
+	margin-top: 1rem;
 	width: 22%;
+  }
+  .side-widgets.-ontop {
+	display: inline;
+	position: sticky;
+	top: 0;
+	-webkit-box-ordinal-group: -1;
+	-moz-box-ordinal-group: -1;
+	-o-box-ordinal-group: -1;
+	-ms-flex-order: -1;
+	-webkit-order: -1;
+	order: -1;
+	height: 0;
+	width: 22%;
+  }
+  .side-widgets.-ontop > .wp-widget {
+	width: 100%;
+	padding: 1rem;
+	margin: 0;
+  }
+  .show-menu {
+	bottom: 3rem;
+	padding: 0.6rem 0.8rem 0 1rem;
+  }
+  ._large_view-disiable {
+	display: none;
   }
 }
 /**
@@ -1232,6 +1245,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	-o-animation-duration: 0.3s;
 	-ms-animation-duration: 0.3s;
 	animation-duration: 0.3s;
+	padding: 1rem 0.5rem 2rem;
   }
 @-moz-keyframes slideup {
 	0% {
@@ -1281,6 +1295,12 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	  right: 3px;
 	}
 }
+  .wp-widget + .wp-widget {
+	margin-top: 1rem;
+  }
+  .side-widgets {
+	padding: 1rem 1rem 2rem;
+  }
   .side-widgets #wp-calendar td {
 	padding: 0.4rem 0.2rem 0.1rem;
 	font-size: 0.9rem;

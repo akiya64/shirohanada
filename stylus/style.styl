@@ -511,7 +511,6 @@ img[src^="http://www.gravatar.com/avatar/"]
 
         /* On chrome overflow long text, example url ,1byte japanese kana */
         word-break break-all
-        .wp-widget
                 margin-bottom 1rem
 
 /* side-widgets skin */
@@ -546,12 +545,10 @@ img[src^="http://www.gravatar.com/avatar/"]
  * # IconButton
  */
 .show-menu
-.go-top
 .hide-menu
       font-size 2.4rem
 
 .show-menu
-.go-top
       color white
       position fixed
       border-radius 0 .5rem .5rem 0
@@ -567,11 +564,6 @@ img[src^="http://www.gravatar.com/avatar/"]
       bottom 1rem
       padding .4rem .7rem 0 .7rem
       opacity 0.85
-
-.go-top
-      bottom 3rem
-      padding .6rem .8rem 0 1rem
-
 
 .hide-menu
       color nakano-h
@@ -660,19 +652,36 @@ img[src^="http://www.gravatar.com/avatar/"]
     .is-pagetemplate > .entry-footer
             width 50%
 
-    /* show only in small display */
-    .show-menu
-            display none
-
     .side-widgets
             width 100%
             display flex
             flex-wrap wrap
             justify-content space-around
 
-            section
+            > .wp-widget
+                  margin-top 1rem
                   width 22%
 
+            &.-ontop
+                  display inline
+                  position sticky
+                  top 0
+                  order -1
+                  height 0
+                  width 22%
+
+                  > .wp-widget
+                        width 100%
+                        padding 1rem
+                        margin 0
+
+    .show-menu
+          bottom 3rem
+          padding .6rem .8rem 0 1rem
+
+
+    ._large_view-disiable
+              display none
 /**
  * # For mobile
  */
@@ -774,6 +783,7 @@ img[src^="http://www.gravatar.com/avatar/"]
               width 60%
               animation-name slideup
               animation-duration 0.3s
+              padding 1rem .5rem 2rem
 
               @keyframes slideup
                       0%
@@ -786,9 +796,15 @@ img[src^="http://www.gravatar.com/avatar/"]
                                 top 4px
                                 right 3px
 
-    .side-widgets #wp-calendar td
-              padding .4rem .2rem .1rem
-              font-size .9rem
+    .wp-widget + .wp-widget
+        margin-top 1rem
+
+    .side-widgets
+              padding 1rem 1rem 2rem
+
+              #wp-calendar td
+                      padding .4rem .2rem .1rem
+                      font-size .9rem
 
 @import "_comment-form"
 @import "_front-page"
