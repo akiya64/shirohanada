@@ -368,9 +368,6 @@ i {
 .entry-content img {
   height: auto;
 }
-.side-widgets {
-  margin-left: 1%;
-}
 .entry-footer {
   width: 38%;
 }
@@ -441,7 +438,8 @@ i {
   margin-top: 0;
 }
 .link-posts > p,
-.entry-comments {
+.entry-comments,
+.side-widgets {
   margin-top: 0.6rem;
 }
 .content-footer {
@@ -490,9 +488,6 @@ i {
 }
 .link-posts > p {
   padding: 0.25rem 0;
-}
-.side-widgets {
-  padding: 0.1rem 1rem 0.8rem;
 }
 /**
  * # Typograghy
@@ -1032,7 +1027,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-title {
 	font-size: 2rem;
 	line-height: 1.4;
-	margin: 0.5rem 0;
+	margin: 1rem 0;
   }
   .entry-title.excerpt {
 	font-size: 1.62rem;
@@ -1043,19 +1038,19 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .type-page {
 	padding: 1.5rem 2rem 1rem;
   }
-  .article-area,
-  .entry-content,
   .entry-comments,
   .entry-title,
   .entry-excerpt {
 	width: 76%;
   }
-  .side-widgets,
   .entry-margin,
   .entry-header,
   .entry-date,
   .entry-meta {
-	width: 23%;
+	width: 20%;
+  }
+  .entry-content {
+	width: 70%;
   }
   .entry-excerpt._with-thumbnail,
   .excerpt-thumbnail {
@@ -1086,6 +1081,30 @@ img[src^="http://www.gravatar.com/avatar/"] {
   }
   .show-menu {
 	display: none;
+  }
+  .side-widgets {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-lines: multiple;
+	-moz-box-lines: multiple;
+	-o-box-lines: multiple;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: distribute;
+	-moz-box-pack: distribute;
+	-o-box-pack: distribute;
+	-ms-flex-pack: distribute;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+  }
+  .side-widgets section {
+	width: 22%;
   }
 }
 /**

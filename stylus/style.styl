@@ -90,9 +90,6 @@ body
 .entry-content img
         height auto
 
-.side-widgets
-        margin-left 1%
-
 .entry-footer
         width 38%
 
@@ -145,6 +142,7 @@ body
 
 .link-posts > p
 .entry-comments
+.side-widgets
         margin-top .6rem
 
 .content-footer
@@ -194,9 +192,6 @@ body
 
 .link-posts > p
         padding .25rem 0
-
-.side-widgets
-        padding .1rem 1rem .8rem
 
 /**
  * # Typograghy
@@ -614,7 +609,7 @@ img[src^="http://www.gravatar.com/avatar/"]
     .entry-title
             font-size 2rem
             line-height 1.4
-            margin .5rem 0
+            margin 1rem 0
             &.excerpt
                 font-size 1.62rem
 
@@ -624,19 +619,20 @@ img[src^="http://www.gravatar.com/avatar/"]
     .type-page
             padding 1.5rem 2rem 1rem
 
-    .article-area
-    .entry-content
     .entry-comments
     .entry-title
     .entry-excerpt
             width 76%
 
-    .side-widgets
     .entry-margin
     .entry-header
     .entry-date
     .entry-meta
-            width 23%
+            width 20%
+
+    .entry-content
+            width 70%
+
 
     .entry-excerpt._with-thumbnail
     .excerpt-thumbnail
@@ -667,6 +663,15 @@ img[src^="http://www.gravatar.com/avatar/"]
     /* show only in small display */
     .show-menu
             display none
+
+    .side-widgets
+            width 100%
+            display flex
+            flex-wrap wrap
+            justify-content space-around
+
+            section
+                  width 22%
 
 /**
  * # For mobile
