@@ -52,10 +52,12 @@ if ( is_day() ) :
 
 	<?php
 	/* Set query */
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$arg = array(
 		'order' => 'ASC',
 		'date_query' => $posts_piriod,
 		'ignore_sticky_posts' => 1,
+		'paged' => $paged,
 	);
 
 	$date_query = new WP_Query( $arg );

@@ -25,10 +25,6 @@
 	<i class="icon icon-list"></i>
 </a>
 
-<a id="gotop-button" class="go-top _mobile-disiable" href="#top">
-	<i class="icon icon-angle-top"></i>
-</a>
-
 <header class="site-header" role="banner">
 	<p class="site-description _inline">
 		<?php bloginfo( 'description' ); ?>

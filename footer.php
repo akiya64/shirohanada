@@ -43,7 +43,10 @@ function hideMenu(){
 	sideBar.classList.remove('-ontop');
 }
 
-showMenuBtn.href= '#top'
+if ( window.matchMedia('(max-width:600px)').matches){
+	showMenuBtn.href= '#top'
+}
+
 showMenuBtn.addEventListener('click',showMenu);
 
 </script>

@@ -368,9 +368,6 @@ i {
 .entry-content img {
   height: auto;
 }
-.side-widgets {
-  margin-left: 1%;
-}
 .entry-footer {
   width: 38%;
 }
@@ -441,7 +438,8 @@ i {
   margin-top: 0;
 }
 .link-posts > p,
-.entry-comments {
+.entry-comments,
+.side-widgets {
   margin-top: 0.6rem;
 }
 .content-footer {
@@ -490,9 +488,6 @@ i {
 }
 .link-posts > p {
   padding: 0.25rem 0;
-}
-.side-widgets {
-  padding: 0.1rem 1rem 0.8rem;
 }
 /**
  * # Typograghy
@@ -808,14 +803,12 @@ tr + tr {
 .entry-content h1,
 .comment-body h1,
 .entry-content h2,
-.comment-body h2 {
-  margin: 2rem 0 1rem;
-}
+.comment-body h2,
 .entry-content h3,
 .comment-body h3,
 .entry-content h4,
 .comment-body h4 {
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
 }
 .entry-content h5,
 .comment-body h5 {
@@ -832,6 +825,11 @@ tr + tr {
 .entry-content h4,
 .comment-body h4 {
   padding-left: 0.75rem;
+}
+.entry-content h2,
+.comment-body h2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .entry-content h5,
 .comment-body h5,
@@ -918,11 +916,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 /**
  * # Widget
  */
-.side-widgets {
-/* On chrome overflow long text, example url ,1byte japanese kana */
-  word-break: break-all;
-}
-.side-widgets .wp-widget {
+.side-widgets word-break break-all {
   margin-bottom: 1rem;
 }
 /* side-widgets skin */
@@ -956,12 +950,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
  * # IconButton
  */
 .show-menu,
-.go-top,
 .hide-menu {
   font-size: 2.4rem;
 }
-.show-menu,
-.go-top {
+.show-menu {
   color: #fff;
   position: fixed;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -979,10 +971,6 @@ img[src^="http://www.gravatar.com/avatar/"] {
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: alpha(opacity=85);
-}
-.go-top {
-  bottom: 3rem;
-  padding: 0.6rem 0.8rem 0 1rem;
 }
 .hide-menu {
   color: #436fb4;
@@ -1029,7 +1017,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .entry-title {
 	font-size: 2rem;
 	line-height: 1.4;
-	margin: 0.5rem 0;
+	margin: 1rem 0;
   }
   .entry-title.excerpt {
 	font-size: 1.62rem;
@@ -1040,19 +1028,19 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .type-page {
 	padding: 1.5rem 2rem 1rem;
   }
-  .article-area,
-  .entry-content,
   .entry-comments,
   .entry-title,
   .entry-excerpt {
 	width: 76%;
   }
-  .side-widgets,
   .entry-margin,
   .entry-header,
   .entry-date,
   .entry-meta {
-	width: 23%;
+	width: 20%;
+  }
+  .entry-content {
+	width: 70%;
   }
   .entry-excerpt._with-thumbnail,
   .excerpt-thumbnail {
@@ -1081,7 +1069,54 @@ img[src^="http://www.gravatar.com/avatar/"] {
   .is-pagetemplate > .entry-footer {
 	width: 50%;
   }
+  .side-widgets {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-lines: multiple;
+	-moz-box-lines: multiple;
+	-o-box-lines: multiple;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: distribute;
+	-moz-box-pack: distribute;
+	-o-box-pack: distribute;
+	-ms-flex-pack: distribute;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+  }
+  .side-widgets > .wp-widget {
+	margin-top: 1rem;
+	width: 22%;
+  }
+  .side-widgets.-ontop {
+	display: inline;
+	position: sticky;
+	top: 0;
+	-webkit-box-ordinal-group: -1;
+	-moz-box-ordinal-group: -1;
+	-o-box-ordinal-group: -1;
+	-ms-flex-order: -1;
+	-webkit-order: -1;
+	order: -1;
+	height: 0;
+	width: 22%;
+  }
+  .side-widgets.-ontop > .wp-widget {
+	width: 100%;
+	padding: 1rem;
+	margin: 0;
+  }
   .show-menu {
+	bottom: 3rem;
+	padding: 0.6rem 0.8rem 0 1rem;
+  }
+  ._large_view-disiable {
 	display: none;
   }
 }
@@ -1210,6 +1245,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	-o-animation-duration: 0.3s;
 	-ms-animation-duration: 0.3s;
 	animation-duration: 0.3s;
+	padding: 1rem 0.5rem 2rem;
   }
 @-moz-keyframes slideup {
 	0% {
@@ -1259,6 +1295,12 @@ img[src^="http://www.gravatar.com/avatar/"] {
 	  right: 3px;
 	}
 }
+  .wp-widget + .wp-widget {
+	margin-top: 1rem;
+  }
+  .side-widgets {
+	padding: 1rem 1rem 2rem;
+  }
   .side-widgets #wp-calendar td {
 	padding: 0.4rem 0.2rem 0.1rem;
 	font-size: 0.9rem;
