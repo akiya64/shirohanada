@@ -2,9 +2,9 @@ on:
   push:
     branches:
     - master
-name: Build
+name: build
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,3 +33,22 @@ jobs:
           git checkout release
           git merge pre-release -m "Release ${GITHUB_SHA}" --allow-unrelated-histories
           git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada release
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout release
+        run: |
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+          git checkout -b release origin/release
+      - name: Import ssh key
+        run: echo "$SSH_KEY" > key && chmod 600 key
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+      - name: Deploy
+        run: rsync -acvz --exclude ".git/" --exclude key -e "ssh -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" . $SSH_USER@$SSH_HOST:$THEME_PATH
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          THEME_PATH: ${{ secrets.THEME_PATH }}
