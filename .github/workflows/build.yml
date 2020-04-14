@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+    - master
+name: Build
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare working branch
+        run: |
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+          git checkout -b pre-release
+      - name: Remove file for develop
+        run: |
+          find ./* -maxdepth 1 -type d -not -name fonts -and -not -name images -and -not -name components | xargs --no-run-if-empty rm -rf
+          find . -maxdepth 1 -type d -path "*/.*" | grep -v ".*/\.git$" | xargs --no-run-if-empty rm -rf
+          find . -maxdepth 1 -type f -not -name \*.php -and -not -name \*.css -not -name screenshot.png -not -name readme.txt | xargs --no-run-if-empty rm
+          find components -type f -not -name \*.php | xargs --no-run-if-empty rm
+          find images -type f -not -name \*.jpg | xargs --no-run-if-empty rm
+      - name: Git commit
+        run: |
+          git config --global user.email "autumnsky64@gmail.com"
+          git config --global user.name "Akiya in GitHub Actions"
+          git add -A
+          git commit -m "Build for deploy."
+
+      - name: Push GitHub release
+        env:
+          ACCESS_TOKEN:  ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          git checkout release
+          git merge pre-release -m "Release ${GITHUB_SHA}" --allow-unrelated-histories
+          git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada release
