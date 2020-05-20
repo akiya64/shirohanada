@@ -635,9 +635,14 @@ img[src^="http://www.gravatar.com/avatar/"]
                     margin 0 auto
                     display block
 
+    .entry-date
+    .entry-meta
     .entry-margin
-    .entry-header
-            margin-right 1%
+    .entry-tags
+            margin-right 1rem
+
+    .entry-category
+        margin 0.5rem 0
 
     .excerpt-thumbnail
             margin-left 1%
@@ -647,7 +652,8 @@ img[src^="http://www.gravatar.com/avatar/"]
 
     .entry-content
     .entry-comments
-            min-width 550px
+            width 40em
+            min-width 700px
 
     .is-pagetemplate > .entry-footer
             width 50%
@@ -659,16 +665,27 @@ img[src^="http://www.gravatar.com/avatar/"]
             justify-content space-around
 
             > .wp-widget
-                  margin-top 1rem
+                  margin 1rem 0 2rem
                   width 22%
 
             &.-ontop
+                  width 20%
                   display inline
                   position sticky
                   top 0
                   order -1
                   height 0
-                  width 22%
+                  z-index 999
+                  animation sidebar .5s ease-out
+
+                  @keyframes sidebar
+                          0%
+                                position fixed
+                                top 100%
+                          1%
+                                position sticky
+                          100%
+                                top 0
 
                   > .wp-widget
                         width 100%
