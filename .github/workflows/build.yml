@@ -32,9 +32,8 @@ jobs:
         env:
           ACCESS_TOKEN:  ${{ secrets.ACCESS_TOKEN }}
         run: |
-          git fetch --prune
-          git branch -r
-          git checkout -b release origin/release
+          git fetch --prune --no-tags
+          git checkout release
           git merge pre-release -m "Merged build ${GITHUB_SHA}" --allow-unrelated-histories
           git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada release
   deploy:
