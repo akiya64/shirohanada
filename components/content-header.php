@@ -30,7 +30,7 @@
 	<p class="entry-author vcard author" itemprop="author" itemscope itemtype="https://schema.org/Person">
 		<?php
 			echo get_avatar(
-				get_the_author_meta( 'ID' ),'64', 'mm', 'avatar', array(
+				get_the_author_meta( 'ID' ),'54', 'mm', 'avatar', array(
 					'extra_attr' => 'itemprop="image"',
 				)
 			);
