@@ -954,6 +954,13 @@ ol._no-marker {
 /* gravatar */
 img[src*="gravatar.com"] {
   border-radius: 50%;
+  width: 2rem;
+  height: auto;
+}
+@media (min-width: 600px) {
+  img[src*="gravatar.com"] {
+    width: 2.5rem;
+  }
 }
 /**
  * # Widget

@@ -18,7 +18,7 @@
 <?php if ( is_single() ) : ?>
 	<h1 class="entry-title single" itemprop="headline"><?php the_title(); ?></h1>
 <?php else : ?>
-	<h1 class="entry-title 
+	<h1 class="entry-title
 	<?php
 	if ( get_query_var( 'is_show_excerpt' ) ) {
 		echo 'excerpt';}
@@ -30,7 +30,7 @@
 	<p class="entry-author vcard author" itemprop="author" itemscope itemtype="https://schema.org/Person">
 		<?php
 			echo get_avatar(
-				get_the_author_meta( 'ID' ),'32', 'mm', 'avatar', array(
+				get_the_author_meta( 'ID' ),'64', 'mm', 'avatar', array(
 					'extra_attr' => 'itemprop="image"',
 				)
 			);
