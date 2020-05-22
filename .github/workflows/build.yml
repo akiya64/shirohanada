@@ -34,8 +34,9 @@ jobs:
         run: |
           git fetch --prune --no-tags
           git branch release origin/release
+          git branch pre-release origin/pre-release
           git checkout release
-          git merge pre-release/origin -m "Merged build ${GITHUB_SHA}"
+          git merge pre-release -m "Merged build ${GITHUB_SHA}"
           git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada release
   deploy:
     needs: build
