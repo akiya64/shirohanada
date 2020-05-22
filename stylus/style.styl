@@ -56,7 +56,6 @@ breakpoint = 600px
 @import "_sanitize"
 
 body
-        line-height 1.8
         margin 0 auto
         width 100%
         max-width 1240px
@@ -159,6 +158,8 @@ body
 .icon-angle-right
         margin-left .4rem
 
+.author-name
+        margin-left .5rem
 .page-numbers
         margin-left .75rem
 
@@ -197,7 +198,10 @@ body
  * # Typograghy
  */
 body,pre,code
-        font-family Hiragino Kaku Gothic ProN,Meiryo,sans-serif
+        font-feature-settings "pwid" 1
+        font-family "游ゴシック", sans-serif
+        font-weight 500
+        line-height 2
 
 h1,h2,h3,h4,h5,h6
 .entry-title
@@ -205,11 +209,18 @@ h1,h2,h3,h4,h5,h6
 .front-navmenu
 .pagination
 .entry-date
-        font-family 'Ubuntu' ,'Meiryo' , sans-serif
+        font-family 'Ubuntu' ,sans-serif
         font-weight normal
 
-
 /* font-size */
+html:root
+        @media screen and (min-width:601px)
+                font-size calc(0.285vw+12.348px)
+
+        @media screen and (min-width:1981px)
+                font-size 18px
+
+
 .page-title
         font-size 2.4rem
 
@@ -236,6 +247,7 @@ h1,h2,h3,h4,h5,h6
 a
 .icon-eject
 .entry-title
+.author-name
         color bright-h
 
 h1,h2,h3,h4,h5,h6
@@ -337,6 +349,14 @@ tr + tr
                 p + p
                       margin-top 1rem
 
+        cite
+                display block
+                text-align right
+                margin-top 0.75rem
+
+        iframe[src^="https://www.youtube.com"]
+                height: 360px;
+
         > *:last-child
                   margin-bottom 2rem
 
@@ -355,6 +375,9 @@ tr + tr
         ul
                 list-style-type square
 
+                .wp-block-gallery
+                        margin 0
+
         li + li
                 margin-top 0.6rem
 
@@ -370,6 +393,18 @@ tr + tr
                 border-width 4px 0
                 border-color border-hai
                 padding 3rem 0
+
+        .wp-block-quote
+        .wp-block-media-text
+                margin-bottom 1.5rem
+
+        .wp-block-code
+                background-color #eee
+
+                code
+                      padding 1rem
+                      display block
+                      background-color initial
 
         /* H tags in entry-content; WordPress Post or Page content */
         & h1
@@ -498,10 +533,7 @@ ol._no-marker
 
 /* Parts Section */
 /* gravatar */
-img[src^="http://www.gravatar.com/avatar/"]
-        border-radius .5rem
-
-.entry-author > .avatar
+img[src*="gravatar.com"]
         border-radius 50%
 
 /**
@@ -596,7 +628,7 @@ img[src^="http://www.gravatar.com/avatar/"]
             text-align right
 
     .site-name
-            font-size 72px
+            font-size 4rem
 
     .entry-title
             font-size 2rem
@@ -604,6 +636,9 @@ img[src^="http://www.gravatar.com/avatar/"]
             margin 1rem 0
             &.excerpt
                 font-size 1.62rem
+            &:not(.excerpt)
+                margin-top 1rem
+                margin-bottom 2rem
 
     .type-post
             padding 0 1rem 1rem

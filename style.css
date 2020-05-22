@@ -99,7 +99,6 @@ textarea {
 * {
   background-color: inherit;
   font-size: inherit;
-  line-height: inherit;
   margin: 0;
   padding: 0;
 }
@@ -207,7 +206,6 @@ table {
   clip: auto;
 }
 body {
-  line-height: 1.8;
   margin: 0 auto;
   width: 100%;
   max-width: 1240px;
@@ -455,6 +453,9 @@ i {
 .icon-angle-right {
   margin-left: 0.4rem;
 }
+.author-name {
+  margin-left: 0.5rem;
+}
 .page-numbers {
   margin-left: 0.75rem;
 }
@@ -495,7 +496,10 @@ i {
 body,
 pre,
 code {
-  font-family: Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  font-feature-settings: "pwid" 1;
+  font-family: "游ゴシック", sans-serif;
+  font-weight: 500;
+  line-height: 2;
 }
 h1,
 h2,
@@ -508,10 +512,20 @@ h6,
 .front-navmenu,
 .pagination,
 .entry-date {
-  font-family: 'Ubuntu', 'Meiryo', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
 }
 /* font-size */
+@media screen and (min-width: 601px) {
+  html:root {
+    font-size: calc(0.285vw + 12.348px);
+  }
+}
+@media screen and (min-width: 1981px) {
+  html:root {
+    font-size: 18px;
+  }
+}
 .page-title {
   font-size: 2.4rem;
 }
@@ -542,7 +556,8 @@ h6,
 }
 a,
 .icon-eject,
-.entry-title {
+.entry-title,
+.author-name {
   color: #257bcc;
 }
 h1,
@@ -691,6 +706,16 @@ tr + tr {
 .comment-body blockquote p + p {
   margin-top: 1rem;
 }
+.entry-content cite,
+.comment-body cite {
+  display: block;
+  text-align: right;
+  margin-top: 0.75rem;
+}
+.entry-content iframe[src^="https://www.youtube.com"],
+.comment-body iframe[src^="https://www.youtube.com"] {
+  height: 360px;
+}
 .entry-content > *:last-child,
 .comment-body > *:last-child {
   margin-bottom: 2rem;
@@ -712,6 +737,10 @@ tr + tr {
 .entry-content ul,
 .comment-body ul {
   list-style-type: square;
+}
+.entry-content ul .wp-block-gallery,
+.comment-body ul .wp-block-gallery {
+  margin: 0;
 }
 .entry-content li + li,
 .comment-body li + li {
@@ -737,6 +766,22 @@ tr + tr {
   border-width: 4px 0;
   border-color: #bbb;
   padding: 3rem 0;
+}
+.entry-content .wp-block-quote,
+.comment-body .wp-block-quote,
+.entry-content .wp-block-media-text,
+.comment-body .wp-block-media-text {
+  margin-bottom: 1.5rem;
+}
+.entry-content .wp-block-code,
+.comment-body .wp-block-code {
+  background-color: #eee;
+}
+.entry-content .wp-block-code code,
+.comment-body .wp-block-code code {
+  padding: 1rem;
+  display: block;
+  background-color: initial;
 }
 .entry-content h1,
 .comment-body h1 {
@@ -907,10 +952,7 @@ ol._no-marker {
 }
 /* Parts Section */
 /* gravatar */
-img[src^="http://www.gravatar.com/avatar/"] {
-  border-radius: 0.5rem;
-}
-.entry-author > .avatar {
+img[src*="gravatar.com"] {
   border-radius: 50%;
 }
 /**
@@ -1012,7 +1054,7 @@ img[src^="http://www.gravatar.com/avatar/"] {
     text-align: right;
   }
   .site-name {
-    font-size: 72px;
+    font-size: 4rem;
   }
   .entry-title {
     font-size: 2rem;
@@ -1021,6 +1063,10 @@ img[src^="http://www.gravatar.com/avatar/"] {
   }
   .entry-title.excerpt {
     font-size: 1.62rem;
+  }
+  .entry-title:not(.excerpt) {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
   .type-post {
     padding: 0 1rem 1rem;
