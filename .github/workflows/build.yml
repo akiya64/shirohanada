@@ -19,12 +19,15 @@ jobs:
           find . -maxdepth 1 -type f -not -name \*.php -and -not -name \*.css -not -name screenshot.png -not -name readme.txt | xargs --no-run-if-empty rm
           find components -type f -not -name \*.php | xargs --no-run-if-empty rm
           find images -type f -not -name \*.jpg | xargs --no-run-if-empty rm
-      - name: Git commit
+      - name: Git commit & push pre-release
+        env:
+          ACCESS_TOKEN:  ${{ secrets.ACCESS_TOKEN }}
         run: |
           git config --global user.email "autumnsky64@gmail.com"
           git config --global user.name "Akiya in GitHub Actions"
           git add -A
           git commit -m "Build for deploy."
+          git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada pre-release
 
       - name: Push GitHub release
         env:
