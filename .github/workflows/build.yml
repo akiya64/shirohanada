@@ -35,7 +35,8 @@ jobs:
           git fetch --prune --no-tags
           git branch release origin/release
           git checkout release
-          git merge pre-release -m "Merged build ${GITHUB_SHA}"
+          git merge pre-release -m "Merged build ${GITHUB_SHA}" --allow-unrelated-histories
+          git push --delete origin pre-release
           git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada release
   deploy:
     needs: build
