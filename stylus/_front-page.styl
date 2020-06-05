@@ -19,22 +19,41 @@
                 width 100%
                 height 100vh
                 min-width breakpoint
+                flex-flow column wrap-reverse
 
         .headerimage
+                order 3
+                position fixed
                 width 100vh
                 height 100%
 
         .site-header.-front
         .dropdown-part
                 width 35%
-                margin-left 2%
-                margin-right 15%
+                margin 0
+                z-index 999
+
+        .site-header.-front
+        .dropdown-part > *
+                margin 0
+                padding 0 3rem 0rem
+                margin-left 0
+
+        .site-header.-front
+                order 1
+                height 10rem
 
         .dropdown-part
-                height 40%
+                order 2
+                height calc( 100% - 10rem)
+                h2
+                        padding-top .75rem
 
         .site-footer.-front
-                margin-top 2rem
+                padding-top 1.5rem
+
+        .-front .site-name
+                font-size 5vw
 
 /* Skin for front page. */
 .front-navmenu
@@ -45,25 +64,15 @@
 .site-header.-front
         text-align right
 
-.site-header.-front
-        margin-top 1.5rem
-
 .site-description.-front
         font-size 1.2rem
-        margin-right 0
-
-.site-header.-front
-.front-navmenu
-.wp-widget.-front
-        margin-bottom 1rem
 
 .site-name.-front
-        font-size 84px
         word-wrap break-word
 
 .site-name.-front
 .site-description.-front
-        line-height 130%
+        line-height 150%
 
 .wp-widget.-front
         ul
@@ -77,11 +86,6 @@
 .site-name.-front
         color shirohanada
 
-.navmenu-title
-        margin 0 0 .3rem 0
-        padding-left 0
-        border-left 0
-
 .menu-item
         color bright-h
         display block
@@ -93,6 +97,29 @@
 
         & a:hover
                 text-decoration none
+@media screen and (min-width: 600px) and (max-width: 1119px)
+        .site-header.-front
+        .dropdown-part
+                margin 0
+
+        .-front .site-name
+                font-size 3rem
+
+@media screen and (min-width: 1200px)
+        .site-header.-front
+        .dropdown-part
+                margin 0 2% 0 2%
+
+        .site-header.-front
+                padding-top 1rem
+
+@media screen and (min-width: 1800px)
+        .site-header.-front
+        .dropdown-part
+                margin 0 15% 0 5%
+
+        .-front .site-name
+                font-size 5rem
 
 /* layout for small display ;1column layout */
 
