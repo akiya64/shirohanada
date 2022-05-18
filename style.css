@@ -10,1783 +10,303 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-menu
 Text Domain: shirohanada
 */
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
 /*
-'Every Declaration Just Once'
-ref 'https://developers.google.com/speed/articles/optimizing-css'
-
-Naming rule is 'RSCSS'
-ref 'https://github.com/rstacruz/rscss'
-ref 'http://rscss.io/index.html'
-
->>> Table of Contents
-# BreakPoint Declaration
-# IconFont
-# Color Declaration
-    # Link Color
-# Normarize
-# Layout
-# Margin and Padding
-# Typograghy
-# HTMLTags in Post
-# WordPress Classes
-# Gutenberg Classes
-# Helper Classes
-# Widget
-# IconButton
-# Medeia Query
-    # For Large Display
-    # For Mobile
-# Comment
-# Forms
-# Front Page
+Document
+========
 */
-/*
- * BreakPoint Declaration
- */
+
 /**
- * # Normarize
- */
-/* sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
-pre,
-textarea {
-  overflow: auto;
-}
-:root,
-[aria-disabled] {
-  cursor: default;
-}
-[hidden],
-audio:not([controls]),
-template {
-  display: none;
-}
-button {
-  overflow: visible;
-}
-details,
-main,
-summary {
-  display: block;
-}
-input[type=number] {
-  width: auto;
-}
-input[type=search] {
-  -webkit-appearance: textfield;
-}
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-progress {
-  display: inline-block;
-}
-small {
-  font-size: 75%;
-}
-textarea {
-  resize: vertical;
-}
+Use a better box model (opinionated).
+*/
+
 *,
-::after,
-::before {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-  border-style: solid;
-  border-width: 0;
+::before,
+::after {
+	box-sizing: border-box;
 }
-* {
-  background-color: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-}
-::after,
-::before {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font: 1pc/1.5 sans-serif;
-  text-rendering: optimizeLegibility;
-}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
 html {
-  background-color: #fff;
-  color: #000;
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
-a {
-  text-decoration: none;
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
 }
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+	margin: 0;
 }
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  color: inherit;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: inherit;
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
 }
-[type=number],
-[type=search],
-[type=submit],
-[type=tel],
-[type=text],
-[type=time],
-[type=url],
-[type=week],
-[type=button],
-[type=date],
-[type=datetime],
-[type=datetime-local],
-[type=email],
-[type=month],
-[type=password],
-[type=reset],
-button,
-select,
-textarea {
-  min-height: 1.5em;
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
 }
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
 code,
 kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
-nav ol,
-nav ul {
-  list-style: none;
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
 }
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
-select::-ms-expand {
-  display: none;
+
+sub {
+	bottom: -0.25em;
 }
-select::-ms-value {
-  color: currentColor;
+
+sup {
+	top: -0.5em;
 }
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
 }
-::selection {
-  background-color: #b3d4fc;
-  text-shadow: none;
-}
-[aria-busy=true] {
-  cursor: progress;
-}
-[aria-controls] {
-  cursor: pointer;
-}
-[hidden][aria-hidden=false] {
-  clip: rect(0 0 0 0);
-  display: inherit;
-  position: absolute;
-}
-[hidden][aria-hidden=false]:focus {
-  clip: auto;
-}
-body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1240px;
-}
+
+/*
+Forms
+=====
+*/
+
 /**
- * Color variant.
- */
-@font-face {
-  font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?40c2va");
-  src: url("fonts/icomoon.eot?40c2va#iefix") format('embedded-opentype'), url("fonts/icomoon.ttf?40c2va") format('truetype'), url("fonts/icomoon.woff?40c2va") format('woff'), url("fonts/icomoon.svg?40c2va#icomoon") format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-i {
-/* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-/* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-circle-up:before {
-  content: "\ea41";
-}
-.icon-share-google-plus:before {
-  content: "\ea8d";
-}
-.icon-git:before {
-  content: "\eae7";
-}
-.icon-search:before {
-  content: "\e900";
-}
-.icon-checkmark:before {
-  content: "\e901";
-}
-.icon-exit:before {
-  content: "\e904";
-}
-.icon-eject:before {
-  content: "\e902";
-}
-.icon-eject {
-  vertical-align: -2px;
-}
-.icon-list:before {
-  content: "\f061";
-}
-.icon-quill:before {
-  content: "\e610";
-}
-.icon-folder:before {
-  content: "\e60e";
-}
-.icon-tag:before {
-  content: "\e600";
-}
-.icon-time:before {
-  content: "\e60f";
-}
-.icon-comment:before {
-  content: "\e800";
-}
-.icon-terminal:before {
-  content: "\e612";
-}
-.icon-share:before {
-  content: "\e613";
-}
-.icon-share-facebook:before {
-  content: "\e604";
-}
-.icon-twitter:before {
-  content: "\e606";
-}
-.icon-share-twitter:before {
-  content: "\e607";
-}
-.icon-youtube:before {
-  content: "\e608";
-}
-.icon-github:before {
-  content: "\e801";
-}
-.icon-wordpress:before {
-  content: "\e60a";
-}
-.icon-tumblr:before {
-  content: "\e802";
-}
-.icon-html5:before {
-  content: "\e60c";
-}
-.icon-css3:before {
-  content: "\e60d";
-}
-.icon-hatebu:before {
-  content: "\e804";
-}
-.icon-illust:before {
-  content: "\e803";
-}
-.icon-photo:before {
-  content: "\f083";
-}
-.icon-fighter-jet:before {
-  content: "\f0fb";
-}
-.icon-angle-top:before {
-  content: "\f106";
-}
-.icon-angle-left:before {
-  content: "\f104";
-}
-.icon-angle-right:before {
-  content: "\f105";
-}
-.icon-ellipsis-v:before {
-  content: "\f142";
-}
-.icon-instagram:before {
-  content: "\f16d";
-}
-.icon-flickr:before {
-  content: "\f16e";
-}
-.icon-deviantart:before {
-  content: "\f1bd";
-}
-.icon-get-pocket:before {
-  content: "\f265";
-}
-/**
- * # Layout
- */
-.page > .entry-content,
-.page > .footer-date,
-.page > .footer-author,
-.page-footer,
-.entry-title,
-.entry-meta {
-  width: 100%;
-}
-.excerpt-thumbnail img,
-.entry-content img,
-.entry-content iframe,
-.wp-caption,
-.gallery-caption {
-  max-width: 100%;
-}
-.excerpt-thumbnail img,
-.entry-content img {
-  height: auto;
-}
-.entry-footer {
-  width: 38%;
-}
-.main-contents,
-.type-post,
-.type-page,
-.entry-footer.-sharelinks,
-.nomatch-contents > .links {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.entry-content {
-  overflow-wrap: break-word;
-}
-.entry-footer.-sharelinks {
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  -o-box-pack: distribute;
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-.nomatch-contents > .links {
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-/* in 404.php article dont FlexBox */
-.nomatch-contents,
-.nomatch-contents .link {
-  display: block;
-}
-/**
- * # Margin and Padding
- */
-.site-name {
-  margin: 0;
-}
-.page-title,
-.entry-title {
-  margin: 0 0 0.7rem 0;
-}
-.page-title {
-  padding: 0 0.5rem 0 1.5rem;
-}
-.entry-title {
-  padding: 0;
-}
-.comments-list-header,
-.comment-reply-title {
-  padding-left: 0;
-}
-.entry-content > *:first-child,
-.nomatch-contents > *:first-child {
-  margin-top: 0;
-}
-.link-posts > p,
-.entry-comments,
-.side-widgets {
-  margin-top: 0.6rem;
-}
-.content-footer {
-  margin-top: 1rem;
-}
-.icon {
-  margin-right: 0.4rem;
-}
-.entry-category > .icon,
-.entry-tags > .icon {
-  margin-right: 0.6rem;
-}
-.icon-angle-right {
-  margin-left: 0.4rem;
-}
-.author-name {
-  margin-left: 0.5rem;
-}
-.page-numbers {
-  margin-left: 0.75rem;
-}
-.link-posts > .movedate a:first-child {
-  margin-right: 1rem;
-}
-.site-description {
-  margin-right: 0.75rem;
-}
-.footer-author,
-.nomatch-contents .links,
-.nomatch-contents .description {
-  margin-bottom: 1rem;
-}
-.entry-author {
-  margin-bottom: 0.75rem;
-}
-.type-post,
-.type-page,
-.widget,
-.entry-header,
-.entry-title {
-  margin-bottom: 0.6rem;
-}
-.excerpt-thumbnail img {
-  margin: 0 auto;
-  display: block;
-}
-.site-footer {
-  margin: 0.5rem 0;
-}
-.link-posts > p {
-  padding: 0.25rem 0;
-}
-/**
- * # Typograghy
- */
-body,
-pre,
-code {
-  font-feature-settings: "pwid" 1;
-  font-family: "游ゴシック", sans-serif;
-  font-weight: 500;
-  line-height: 2;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.entry-title,
-.site-description,
-.front-navmenu,
-.pagination,
-.entry-date {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: normal;
-}
-/* font-size */
-@media screen and (min-width: 601px) {
-  html:root {
-    font-size: calc(0.285vw + 12.348px);
-  }
-}
-@media screen and (min-width: 1981px) {
-  html:root {
-    font-size: 18px;
-  }
-}
-.page-title {
-  font-size: 2.4rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.navmenu-title,
-.entry-title,
-.wp-widget > .title,
-.entry-footer > .link,
-.comments-list-header,
-.comment-reply-title {
-  font-size: 1.62rem;
-}
-.pagination {
-  font-size: 1.4rem;
-}
-.nomatch-contents .link,
-.entry-date {
-  font-size: 1.25rem;
-}
-/* Font Color */
-:visited {
-  color: #800000;
-}
-a,
-.icon-eject,
-.entry-title,
-.author-name {
-  color: #257bcc;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.navmenu-title,
-.page-title,
-.comment-reply-title,
-.comments-list-header,
-.entry-meta i,
-.wp-widget > .title,
-.pagination {
-  color: #436fb4;
-}
-.site-footer,
-.site-description {
-  color: #777;
-}
-.site-name > .link,
-.entry-footer > .link {
-  color: #a3d8f6;
-}
-.side-widgets,
-.page-title,
-.pagination,
-.nomatch-contents,
-.link-posts > p,
-.type-page,
-.type-post {
-  background-color: #f8fafa;
-}
-/* SNS Symbolcolor for share links */
-a[href^="https://github.com/"] > i {
-  color: #333;
-}
-a[href^="https://twitter.com/"] > i {
-  color: #55acee;
-}
-a[href^="https://facebook.com/"] > i {
-  color: #3b5998;
-}
-a[href^="https://plus.google.com/"] > i {
-  color: #dd4b39;
-}
-a[href^="https://b.hatena.ne.jp/"] > i {
-  color: #1a99cd;
-}
-a[href*="wordpress.org"] > i {
-  color: #21759b;
-}
-a[href^="https://getpocket.com/"] > i {
-  color: #ef4056;
-}
-a[href^="https://instagram.com/"] > i {
-  color: #3f729b;
-}
-a[href^="https://www.flickr.com/"] > i {
-  color: #0063dc;
-}
-a[href^="http://k-akiya.deviantart.com/"] > i {
-  color: #05cc47;
-}
-a[href*=".tumblr.com"] > i {
-  color: #35465c;
-}
-/* Text Decolation */
-a:hover,
-.page-numbers.current {
-  text-decoration-line: underline;
-}
-a:hover {
-  text-decoration-style: dotted;
-}
-.page-numbers.current {
-  text-decoration-style: solid;
-}
-.site-name > .link,
-.entry-footer > .link {
-  text-decoration: none;
-}
-.author-name {
-  vertical-align: -3px;
-}
-.wp-caption,
-.gallery-caption,
-.link-posts {
-  text-align: center;
-}
-/* Table */
-tr + tr {
-  border-top: 1px solid #777;
-}
-/**
- * Inner Contets
- */
-.entry-content dd,
-.comment-body dd,
-.entry-content pre,
-.comment-body pre,
-.entry-content p,
-.comment-body p {
-  clear: both;
-  margin: 0 auto 1.5rem;
-}
-.entry-content ul,
-.comment-body ul,
-.entry-content ol,
-.comment-body ol {
-  margin: 1rem 0 1rem 2rem;
-}
-.entry-content dt,
-.comment-body dt {
-  display: inline-block;
-  font-weight: bold;
-  border-bottom: solid 1px #777;
-}
-.entry-content dt + dd,
-.comment-body dt + dd {
-  margin-top: 0.2rem;
-  padding-top: 0.2rem;
-}
-.entry-content img,
-.comment-body img {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
-.entry-content blockquote,
-.comment-body blockquote {
-  border-left: solid 3px #bbb;
-  margin: 0.8rem 0;
-  padding: 1rem;
-}
-.entry-content blockquote cite::before,
-.comment-body blockquote cite::before {
-  content: "\2014";
-  margin-right: 0.25rem;
-}
-.entry-content blockquote p,
-.comment-body blockquote p {
-  margin: 0;
-}
-.entry-content blockquote p + p,
-.comment-body blockquote p + p {
-  margin-top: 1rem;
-}
-.entry-content cite,
-.comment-body cite {
-  display: block;
-  text-align: right;
-  margin-top: 0.75rem;
-}
-.entry-content iframe[src^="https://www.youtube.com"],
-.comment-body iframe[src^="https://www.youtube.com"] {
-  height: 360px;
-}
-.entry-content > *:last-child,
-.comment-body > *:last-child {
-  margin-bottom: 2rem;
-}
-.entry-content thead,
-.comment-body thead {
-  background-color: #eee;
-}
-.entry-content td,
-.comment-body td,
-.entry-content th,
-.comment-body th {
-  padding: 0.2rem 0.5rem;
-}
-.entry-content caption,
-.comment-body caption {
-  text-align: left;
-}
-.entry-content ul,
-.comment-body ul {
-  list-style-type: square;
-}
-.entry-content ul .wp-block-gallery,
-.comment-body ul .wp-block-gallery {
-  margin: 0;
-}
-.entry-content li + li,
-.comment-body li + li {
-  margin-top: 0.6rem;
-}
-.entry-content hr,
-.comment-body hr {
-  margin: 2rem 0;
-  border-top: 1px solid #bbb;
-}
-.entry-content .blocks-gallery-item,
-.comment-body .blocks-gallery-item {
-  -webkit-box-flex: unset;
-  -moz-box-flex: unset;
-  -o-box-flex: unset;
-  -ms-box-flex: unset;
-  box-flex: unset;
-  -webkit-flex-grow: unset;
-  flex-grow: unset;
-}
-.entry-content .wp-block-pullquote blockquote,
-.comment-body .wp-block-pullquote blockquote {
-  border-width: 4px 0;
-  border-color: #bbb;
-  padding: 3rem 0;
-}
-.entry-content .wp-block-quote,
-.comment-body .wp-block-quote,
-.entry-content .wp-block-media-text,
-.comment-body .wp-block-media-text {
-  margin-bottom: 1.5rem;
-}
-.entry-content .wp-block-code,
-.comment-body .wp-block-code {
-  background-color: #eee;
-}
-.entry-content .wp-block-code code,
-.comment-body .wp-block-code code {
-  padding: 1rem;
-  display: block;
-  background-color: initial;
-}
-.entry-content h1,
-.comment-body h1 {
-  font-size: 2rem;
-}
-.entry-content h2,
-.comment-body h2,
-.entry-content h3,
-.comment-body h3,
-.entry-content h4,
-.comment-body h4,
-.entry-content h5,
-.comment-body h5,
-.entry-content h6,
-.comment-body h6 {
-  clear: both;
-}
-.entry-content h1,
-.comment-body h1,
-.entry-content h2,
-.comment-body h2,
-.entry-content h3,
-.comment-body h3,
-.entry-content h4,
-.comment-body h4,
-.entry-content h5,
-.comment-body h5,
-.entry-content h6,
-.comment-body h6 {
-  font-size: 1.2857rem;
-}
-.entry-content h1,
-.comment-body h1 {
-  color: #a3d8f6;
-}
-.entry-content h2,
-.comment-body h2,
-.entry-content h3,
-.comment-body h3,
-.entry-content h4,
-.comment-body h4,
-.entry-content h5,
-.comment-body h5,
-.entry-content h6,
-.comment-body h6 {
-  color: #436fb4;
-}
-.entry-content h2,
-.comment-body h2 {
-  border-left: solid 3px #436fb4;
-}
-.entry-content h3,
-.comment-body h3 {
-  border-left: double #436fb4;
-}
-.entry-content h4,
-.comment-body h4 {
-  border-left: solid 2px #436fb4;
-}
-.entry-content h5,
-.comment-body h5 {
-  border-bottom: solid 1px #436fb4;
-}
-.entry-content h1,
-.comment-body h1,
-.entry-content h2,
-.comment-body h2,
-.entry-content h3,
-.comment-body h3,
-.entry-content h4,
-.comment-body h4 {
-  margin: 2rem 0 1rem;
-}
-.entry-content h5,
-.comment-body h5 {
-  margin: 0.8rem 0 0.5rem;
-  width: fit-content;
-  width: -moz-fit-content;
-}
-.entry-content h1,
-.comment-body h1,
-.entry-content h2,
-.comment-body h2,
-.entry-content h3,
-.comment-body h3,
-.entry-content h4,
-.comment-body h4 {
-  padding-left: 0.75rem;
-}
-.entry-content h2,
-.comment-body h2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.entry-content h5,
-.comment-body h5,
-.entry-content h6,
-.comment-body h6 {
-  padding: 0 0.5rem;
-}
-/**
- * # WordPress Classes
- */
-.aligncenter,
-.alignleft,
-.alignright {
-  display: block;
-}
-.alignleft {
-  float: left;
-  margin-right: 1rem;
-}
-.alignright {
-  float: right;
-  margin-left: 1rem;
-}
-.aligncenter {
-  margin: 0 auto;
-}
-.wp-caption > p {
-  margin-top: 0.2rem;
-  padding-top: 0;
-}
-.sticky {
-  border: solid 1px #a3d8f6;
-}
-.comment-reply-list {
-  list-style-type: none;
-}
-.screen-reader-text {
-  display: none;
-}
-/**
- * # Helper Classes
- */
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-._text-alignright {
-  text-align: right;
-}
-._text-centering {
-  text-align: center;
-}
-ul._no-marker,
-ol._no-marker {
-  list-style-type: none;
-  margin-left: 0;
-}
-._color-dark {
-  color: #436fb4;
-}
-@media (min-width: 600px) {
-  ._inline {
-    display: inline;
-  }
-  ._halfwidth-inlarge {
-    width: 50%;
-  }
-}
-/* Parts Section */
-/* gravatar */
-img[src*="gravatar.com"] {
-  border-radius: 50%;
-  width: 2rem;
-  height: auto;
-}
-@media (min-width: 600px) {
-  img[src*="gravatar.com"] {
-    width: 2.5rem;
-  }
-}
-/**
- * # Widget
- */
-.side-widgets word-break break-all {
-  margin-bottom: 1rem;
-}
-/* side-widgets skin */
-.wp-widget > .title {
-  margin: 0 0 0.25rem 0;
-  padding-left: 0;
-}
-.wp-widget ul {
-  list-style-type: none;
-}
-.wp-widget li + li {
-  padding-top: 0.7rem;
-  margin-top: 0.4rem;
-  border-top: solid 1px #777;
-}
-.wp-widget #wp-calendar {
-  width: 90%;
-  margin: 0 auto;
-  word-break: keep-all;
-}
-.wp-widget #wp-calendar th {
-  font-size: 0.875rem;
-  font-weight: normal;
-  background-color: none;
-}
-.wp-widget #wp-calendar td {
-  padding: 0.4rem 0.3rem 0.1rem;
-  text-align: center;
-}
-/**
- * # IconButton
- */
-.show-menu,
-.hide-menu {
-  font-size: 2.4rem;
-}
-.show-menu {
-  color: #fff;
-  position: fixed;
-  border-radius: 0 0.5rem 0.5rem 0;
-  background-color: #a3d8f6;
-  text-decoration: none !important;
-  z-index: 99;
-}
-.show-menu,
-.show-menu:visited {
-  color: #fff;
-}
-.show-menu {
-  bottom: 1rem;
-  padding: 0.4rem 0.7rem 0 0.7rem;
-  opacity: 0.85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(opacity=85);
-}
-.hide-menu {
-  color: #436fb4;
-  padding-top: 0.5rem;
-  display: none;
-  width: 100%;
-  text-align: right;
-}
-.-show {
-  display: block;
-}
-.-hide {
-  display: none;
-}
-/**
- * # Medeia Query
- * # For Large Display
- */
-@media (min-width: 600px) {
-  .entry-date {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -o-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-  .site-header {
-    margin-right: 0.75rem;
-  }
-  .site-header,
-  .site-footer {
-    text-align: right;
-  }
-  .site-name {
-    font-size: 4rem;
-  }
-  .entry-title {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin: 1rem 0;
-  }
-  .entry-title.excerpt {
-    font-size: 1.62rem;
-  }
-  .entry-title:not(.excerpt) {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  .type-post {
-    padding: 0 1rem 1rem;
-  }
-  .type-page {
-    padding: 1.5rem 2rem 1rem;
-  }
-  .entry-comments,
-  .entry-title,
-  .entry-excerpt {
-    width: 76%;
-  }
-  .entry-margin,
-  .entry-header,
-  .entry-date,
-  .entry-meta {
-    width: 20%;
-  }
-  .entry-content {
-    width: 70%;
-  }
-  .entry-excerpt._with-thumbnail,
-  .excerpt-thumbnail {
-    width: 37%;
-  }
-  .entry-excerpt._with-thumbnail img,
-  .excerpt-thumbnail img {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-  }
-  .entry-date,
-  .entry-meta,
-  .entry-margin,
-  .entry-tags {
-    margin-right: 1rem;
-  }
-  .entry-category {
-    margin: 0.5rem 0;
-  }
-  .excerpt-thumbnail {
-    margin-left: 1%;
-  }
-  .site-description {
-    margin-bottom: 0.5rem;
-  }
-  .entry-content,
-  .entry-comments {
-    width: 40em;
-    min-width: 700px;
-  }
-  .is-pagetemplate > .entry-footer {
-    width: 50%;
-  }
-  .side-widgets {
-    width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -o-box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: distribute;
-    -moz-box-pack: distribute;
-    -o-box-pack: distribute;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-  }
-  .side-widgets > .wp-widget {
-    margin: 1rem 0 2rem;
-    width: 22%;
-  }
-  .side-widgets.-ontop {
-    width: 20%;
-    display: inline;
-    position: sticky;
-    top: 0;
-    -webkit-box-ordinal-group: -1;
-    -moz-box-ordinal-group: -1;
-    -o-box-ordinal-group: -1;
-    -ms-flex-order: -1;
-    -webkit-order: -1;
-    order: -1;
-    height: 0;
-    z-index: 999;
-    -webkit-animation: sidebar 0.5s ease-out;
-    -moz-animation: sidebar 0.5s ease-out;
-    -o-animation: sidebar 0.5s ease-out;
-    -ms-animation: sidebar 0.5s ease-out;
-    animation: sidebar 0.5s ease-out;
-  }
-  .side-widgets.-ontop > .wp-widget {
-    width: 100%;
-    padding: 1rem;
-    margin: 0;
-  }
-@-moz-keyframes sidebar {
-    0% {
-      position: fixed;
-      top: 100%;
-    }
-    1% {
-      position: sticky;
-    }
-    100% {
-      top: 0;
-    }
-}
-@-webkit-keyframes sidebar {
-    0% {
-      position: fixed;
-      top: 100%;
-    }
-    1% {
-      position: sticky;
-    }
-    100% {
-      top: 0;
-    }
-}
-@-o-keyframes sidebar {
-    0% {
-      position: fixed;
-      top: 100%;
-    }
-    1% {
-      position: sticky;
-    }
-    100% {
-      top: 0;
-    }
-}
-@keyframes sidebar {
-    0% {
-      position: fixed;
-      top: 100%;
-    }
-    1% {
-      position: sticky;
-    }
-    100% {
-      top: 0;
-    }
-}
-  .show-menu {
-    bottom: 3rem;
-    padding: 0.6rem 0.8rem 0 1rem;
-  }
-  ._large_view-disiable {
-    display: none;
-  }
-}
-/**
- * # For mobile
- */
-@media screen and (max-width: 600px) {
-  .article-area,
-  .side-widgets,
-  .entry-title,
-  .entry-header,
-  .entry-content {
-    width: 100%;
-  }
-  .return-articletop {
-    width: 23%;
-    margin: initial;
-    margin-left: 0.5rem;
-  }
-  .excerpt-thumbnail,
-  .entry-footer {
-    width: 90%;
-    margin: auto;
-  }
-  .site-name {
-    font-size: 2.8rem;
-  }
-  .site-name {
-    text-align: center;
-    background-color: #a3d8f6;
-  }
-  .site-name > .link {
-    color: #fff;
-  }
-  .entry-title,
-  .page-title {
-    margin: initial;
-    font-size: 2rem;
-  }
-  .entry-title {
-    -webkit-box-ordinal-group: -1;
-    -moz-box-ordinal-group: -1;
-    -o-box-ordinal-group: -1;
-    -ms-flex-order: -1;
-    -webkit-order: -1;
-    order: -1;
-  }
-  .entry-date {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-  }
-  .page-title {
-    padding: 0.75rem 0.5rem;
-  }
-  .entry-meta {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -o-box-pack: justify;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-  }
-  .entry-meta {
-    margin-bottom: 1rem;
-  }
-  .entry-author,
-  .entry-category,
-  .entry-tags {
-    margin-right: 1rem;
-    display: inline;
-  }
-  .excerpt-thumbnail {
-    margin-top: 1rem;
-  }
-  .type-post,
-  .type-page {
-    margin-bottom: 0;
-    padding: 0 0.5rem 1.5rem;
-  }
-  .entry-content {
-    padding-bottom: 0.75rem;
-  }
-  .entry-content img {
-    max-width: 100%;
-  }
-  .type-post + .type-post {
-    border-top: solid 1px #bbb;
-    padding-top: 1rem;
-  }
-  .site-footer {
-    text-align: right;
-    width: 90%;
-    margin-left: 9%;
-  }
-  .site-footer.-front {
-    text-align: left;
-    width: 100%;
-    margin-left: 0;
-  }
-  ._mobile-disiable {
-    display: none;
-  }
-  .article-area {
-    margin-bottom: 1rem;
-  }
-  .-ontop {
-    position: absolute;
-    -webkit-box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-    box-shadow: -1px 1px 1px 2px rgba(0,0,0,0.2);
-    top: 4px;
-    right: 3px;
-    width: 60%;
-    -webkit-animation-name: slideup;
-    -moz-animation-name: slideup;
-    -o-animation-name: slideup;
-    -ms-animation-name: slideup;
-    animation-name: slideup;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
-    -o-animation-duration: 0.3s;
-    -ms-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    padding: 1rem 0.5rem 2rem;
-  }
-@-moz-keyframes slideup {
-    0% {
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      width: 60%;
-    }
-    100% {
-      top: 4px;
-      right: 3px;
-    }
-}
-@-webkit-keyframes slideup {
-    0% {
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      width: 60%;
-    }
-    100% {
-      top: 4px;
-      right: 3px;
-    }
-}
-@-o-keyframes slideup {
-    0% {
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      width: 60%;
-    }
-    100% {
-      top: 4px;
-      right: 3px;
-    }
-}
-@keyframes slideup {
-    0% {
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      width: 60%;
-    }
-    100% {
-      top: 4px;
-      right: 3px;
-    }
-}
-  .wp-widget + .wp-widget {
-    margin-top: 1rem;
-  }
-  .side-widgets {
-    padding: 1rem 1rem 2rem;
-  }
-  .side-widgets #wp-calendar td {
-    padding: 0.4rem 0.2rem 0.1rem;
-    font-size: 0.9rem;
-  }
-}
-.comment-author .avatar {
-  border-radius: 50%;
-  float: left;
-  margin-right: 1rem;
-}
-.comment-author .fn {
-  font-style: initial;
-  font-weight: bold;
-}
-.bypostauthor > .comment-body .avatar:first-of-type {
-  border: solid 2px #436fb4;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.bypostauthor > .comment-body .fn:first-of-type {
-  color: #436fb4;
-}
-.comment-meta,
-.reply,
-.comment-notes {
-  font-size: 0.9rem;
-}
-label {
-  display: inline-block;
-}
-.comment-reply-link {
-  display: block;
-  width: 4rem;
-  text-align: center;
-}
-.comment-meta::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.comments-list > .comment {
-  border-bottom: solid 1px #777;
-  padding-bottom: 1rem;
-}
-.comments-list ul {
-  margin-left: 2rem;
-  list-style: none;
-}
-.comments-list .comment:last-child {
-  border: none;
-  padding-bottom: 0;
-}
-.comment-body {
-  margin: 0.75rem 0 1rem;
-}
-.entry-comments .page-numbers {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  list-style: none;
-  margin: 0 auto;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
-  font-size: 1.2rem;
-}
-.entry-comments .page-numbers li + li {
-  margin-left: 0.75rem;
-}
-label,
-input[type="search"],
-input[name="author"],
-input[name="email"],
-input[name="url"],
-textarea[name="comment"],
-select {
-  width: 100%;
-}
-.comment-reply-link:link,
-.comment-reply-link:visited,
-.comment-reply-link:active {
-  text-decoration: none;
-  color: #000;
-}
-.comment-reply-link,
-input[type="submit"] {
-  background: #eee;
-}
-select,
-textarea,
-input {
-  background-color: #fff;
-  border: solid 1px #a3d8f6;
-}
-.comment-reply-link:hover,
-input[type="submit"]:hover {
-  background-color: #fff;
-  border: solid 1px #257bcc;
-  color: #257bcc;
-}
-input[type="submit"],
-.comment-reply-link {
-  padding: 0.1rem 0.5rem;
-  border: solid 1px #777;
-}
-input[type="submit"] {
-  margin: 0.2rem 0;
-}
-input[type="submit"].search-submit {
-  padding: 4px 1rem 0 1rem;
-  float: right;
-}
-select,
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
 input,
+optgroup,
+select,
 textarea {
-  padding: 0.2rem 0.5rem;
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
 }
-.comment-notes,
-input {
-  margin: 0.3rem 0 0.8rem;
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select { /* 1 */
+	text-transform: none;
 }
-input.search-field {
-  margin-bottom: 0.2rem;
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
 }
-.comment-reply-title,
-.comments-header,
-.reply {
-  margin: 0.8rem 0;
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
 }
-textarea,
-input,
-.comment-reply-link {
-  border-radius: 2px;
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
 }
-textarea[name="comment"] {
-  margin-bottom: 0.75rem;
-  padding: 0.3rem;
-  height: 10em;
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+	box-shadow: none;
 }
-.form-submit {
-  text-align: right;
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
 }
-.front-main {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -o-box-orient: vertical;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
 }
-@media (min-width: 600px) {
-  body.home {
-    max-width: 100%;
-  }
-  .front-main {
-    width: 100%;
-    height: 100vh;
-    min-width: 600px;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -o-box-orient: vertical;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -o-box-lines: multiple;
-    -webkit-flex-flow: column wrap-reverse;
-    -ms-flex-flow: column wrap-reverse;
-    flex-flow: column wrap-reverse;
-  }
-  .headerimage {
-    -webkit-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -o-box-ordinal-group: 3;
-    -ms-flex-order: 3;
-    -webkit-order: 3;
-    order: 3;
-    position: fixed;
-    width: 100vh;
-    height: 100%;
-  }
-  .site-header.-front,
-  .dropdown-part {
-    width: 35%;
-    margin: 0;
-    z-index: 999;
-  }
-  .site-header.-front,
-  .dropdown-part > * {
-    margin: 0;
-    padding: 0 3rem 0rem;
-    margin-left: 0;
-  }
-  .site-header.-front {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -o-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;
-    height: 10rem;
-  }
-  .dropdown-part {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -o-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
-    height: calc(100% - 10rem);
-  }
-  .dropdown-part h2 {
-    padding-top: 0.75rem;
-  }
-  .site-footer.-front {
-    padding-top: 1.5rem;
-  }
-  .-front .site-name {
-    font-size: 5vw;
-  }
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
 }
-.front-navmenu {
-  font-size: 1.2rem;
-  columns: 2 10rem;
-  overflow: auto;
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
 }
-.site-header.-front {
-  text-align: right;
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
-.site-description.-front {
-  font-size: 1.2rem;
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
 }
-.site-name.-front {
-  word-wrap: break-word;
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
 }
-.site-name.-front,
-.site-description.-front {
-  line-height: 150%;
-}
-.wp-widget.-front ul {
-  margin: 0 1rem;
-}
-.wp-widget.-front li + li {
-  padding: initial;
-  margin-top: 0.5rem;
-  border: none;
-}
-.site-name.-front {
-  color: #a3d8f6;
-}
-.menu-item {
-  color: #257bcc;
-  display: block;
-  padding: 0.2rem 1rem;
-  border-left: solid 3px rgba(255,255,255,0);
-}
-.menu-item:hover {
-  border-left: solid 3px #257bcc;
-}
-.menu-item a:hover {
-  text-decoration: none;
-}
-@media screen and (min-width: 600px) and (max-width: 1119px) {
-  .site-header.-front,
-  .dropdown-part {
-    margin: 0;
-  }
-  .-front .site-name {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .site-header.-front,
-  .dropdown-part {
-    margin: 0 2% 0 2%;
-  }
-  .site-header.-front {
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .site-header.-front,
-  .dropdown-part {
-    margin: 0 15% 0 5%;
-  }
-  .-front .site-name {
-    font-size: 5rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .site-header.-front,
-  .front-main,
-  .dropdown-part,
-  .front-navmenu,
-  .front.widget-area ul,
-  .wp-widget.-front h2 ~ * {
-    width: initial;
-    height: initial;
-    max-width: initial;
-    max-height: initial;
-  }
-  .front-main,
-  .site-header.-front,
-  .headerimage {
-    width: 100%;
-  }
-  .headerimage {
-    height: auto;
-  }
-  .site-name.-front {
-    font-size: 2.8rem;
-    color: #a3d8f6;
-    text-align: right;
-    background-color: #fff;
-  }
-  .site-description,
-  .site-description.-front {
-    font-size: 1rem;
-  }
-  .site-description.-front {
-    margin-top: 0.2rem;
-  }
-  .front-main,
-  .dropdown-part {
-    margin: 0 auto;
-  }
-  .site-header.-front {
-    margin: 1rem 0;
-  }
-  .site-header.-front,
-  .dropdown-part {
-    padding: 0 0.5rem;
-  }
-  .site-header.-front {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -o-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;
-  }
-  .headerimage {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -o-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
-  }
-  .dropdown-part {
-    -webkit-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -o-box-ordinal-group: 3;
-    -ms-flex-order: 3;
-    -webkit-order: 3;
-    order: 3;
-  }
-  .dropdown-part h2 {
-    margin: 0.8rem 0;
-  }
-  .site-footer.-front {
-    padding: 1rem 0.5rem;
-  }
-}
+
 /*# sourceMappingURL=style.css.map */
