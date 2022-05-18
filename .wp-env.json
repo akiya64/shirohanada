@@ -1,0 +1,16 @@
+{
+  "themes": [ "." ],
+  "plugins": [
+    "../plugins/akismet",
+    "../plugins/gallery-image-link-post",
+    "../plugins/hello.php",
+    "../plugins/prismjs",
+    "../plugins/recent-tweets-widget",
+    "../plugins/twitter-digest",
+    "../plugins/wp-multibyte-patch"
+  ],
+  "mappings": {
+    "wp-content/uploads": "./uploads",
+    "imports.sql": "./autumn64_wordpress-2022-05-15-5d298e0.sql"
+  }
+}
