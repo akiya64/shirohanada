@@ -309,4 +309,8 @@ summary {
 	display: list-item;
 }
 
+body {
+  max-width: 40em;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
