@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<main class="article-area" role="main" itemprop="mainEntityOfPage">
+<main role="main" itemprop="mainEntityOfPage">
 
 <?php
 
@@ -48,7 +48,7 @@ if ( is_day() ) :
 	endif ;
 ?>
 
-	<h2 class="page-title">Archives <?php echo wp_kses_post( $title_date_part ); ?></h2>
+	<h2>Archives <?php echo wp_kses_post( $title_date_part ); ?></h2>
 
 	<?php
 	/* Set query */
@@ -69,7 +69,7 @@ if ( is_day() ) :
 	endwhile;
 	?>
 
-	<nav class="link-posts text-centering">
+	<nav>
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 

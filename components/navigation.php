@@ -36,7 +36,7 @@
 
 <?php if ( ! empty( $pagination ) ) : ?>
 
-<p class="pagination">
+<p>
 	<?php echo wp_kses_post( $page_title ) . wp_kses_post( $pagination ); ?>
 </p>
 
@@ -58,10 +58,10 @@ if ( is_month() ) {
 
 	$now_month = new DateTime();
 
-	$posts_link = '<a href="' . $before_month_link . '"><i class="icon icon-angle-left"></i>' . $before_post_month->format( 'Y.m' ) . '</a>';
+	$posts_link = '<a href="' . $before_month_link . '"><i></i>' . $before_post_month->format( 'Y.m' ) . '</a>';
 
 	if ( $after_post_month <= $now_month ) {
-		$posts_link .= '&nbsp;<a href="' . $after_month_link . '">' . $after_post_month->format( 'Y.m' ) . '<i class="icon icon-angle-right"></i></a>';
+		$posts_link .= '&nbsp;<a href="' . $after_month_link . '">' . $after_post_month->format( 'Y.m' ) . '<i></i></a>';
 	}
 } elseif ( is_date() ) {
 	/* Previous - Next Date Nav. */
@@ -73,10 +73,10 @@ if ( is_month() ) {
 
 	$now_date = new DateTime();
 
-	$posts_link = '<a href="' . $before_date_link . '"><i class="icon icon-angle-left"></i>' . $before_post_date->format( 'Y.m.d' ) . '</a>';
+	$posts_link = '<a href="' . $before_date_link . '"><i></i>' . $before_post_date->format( 'Y.m.d' ) . '</a>';
 
 	if ( $after_post_date < $now_date ) {
-		$posts_link .= '&nbsp;<a href="' . $after_date_link . '">' . $after_post_date->format( 'Y.m.d' ) . '<i class="icon icon-angle-right"></i></a>';
+		$posts_link .= '&nbsp;<a href="' . $after_date_link . '">' . $after_post_date->format( 'Y.m.d' ) . '<i></i></a>';
 	}
 }
 
@@ -88,7 +88,7 @@ if ( is_single() ) :
 
 elseif ( isset( $posts_link ) ) :
 
-	echo '<p class="movedate">';
+	echo '<p>';
 	echo wp_kses_post( $posts_link );
 	echo '</p>';
 

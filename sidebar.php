@@ -9,8 +9,8 @@
 
 ?>
 
-<aside id="side-bar" class="side-widgets">
-	<button id="hide-menu-button" class="button hide-menu _large_view-disiable"><i class="icon icon-exit"></i></button>
+<aside id="side-bar">
+	<button id="hide-menu-button"><i></i></button>
 
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
 

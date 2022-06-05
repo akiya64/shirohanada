@@ -72,9 +72,9 @@ function shirohanada_widgets_init() {
 		array(
 			'name' => 'Side Bar Widgets',
 			'id' => 'sidebar-widgets',
-			'before_widget' => '<section id="%1$s" class="wp-widget %2$s">',
+			'before_widget' => '<section id="%1$s">',
 			'after_widget'  => '</section>',
-			'before_title' => '<h2 class="title">',
+			'before_title' => '<h2>',
 			'after_title' => '</h2>',
 		)
 	);
@@ -83,9 +83,9 @@ function shirohanada_widgets_init() {
 		array(
 			'name' => 'Front Page Widget',
 			'id' => 'front-widgets',
-			'before_widget' => '<section id="%1$s" class="wp-widget -front %2$s">',
+			'before_widget' => '<section id="%1$s">',
 			'after_widget'  => '</section>',
-			'before_title' => '<h2 class="title">',
+			'before_title' => '<h2>',
 			'after_title' => '</h2>',
 		)
 	);
@@ -306,7 +306,7 @@ function extra_category_fields( $tag ) {
 		$is_show_excerpt = get_theme_mod( $key );
 	}
 ?>
-	<tr class="form-field">
+	<tr>
 	<th><label for="extra_text">抜粋を表示</label></th>
 	<td>
 		<input type="hidden" id="show_excerpt_nonce" name="show_excerpt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'post_excerpt_flag' ) ); ?>">
@@ -319,7 +319,7 @@ function extra_category_fields( $tag ) {
 			<option value="no" selected>いいえ</option>
 	<?php endif; ?>
 		</select>
-		<p class="description">カテゴリー表示の時、抜粋を表示します。</p>
+		<p>カテゴリー表示の時、抜粋を表示します。</p>
 	</td>
 	</tr>
 

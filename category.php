@@ -9,9 +9,9 @@
 
 get_header(); ?>
 
-<main class="article-area" role="main" itemprop="mainEntityOfPage">
+<main role="main" itemprop="mainEntityOfPage">
 
-<h2 class="page-title"><?php single_cat_title(); ?></h2>
+<h2><?php single_cat_title(); ?></h2>
 
 	<?php
 		$excerpt_flags = get_option( 'shirohanada_category_flags' );
@@ -36,7 +36,7 @@ get_header(); ?>
 	endif;
 	?>
 
-	<nav class="link-posts text-centering">
+	<nav>
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 

@@ -9,9 +9,9 @@
 
 get_header(); ?>
 
-<main class="article-area" role="main" itemprop="mainEntityOfPage">
+<main role="main" itemprop="mainEntityOfPage">
 
-	<h2 class="page-title">
+	<h2>
 		404 Not Found
 	</h2>
 

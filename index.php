@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<main class="article-area" role="main" itemprop="mainEntityOfPage">
+<main role="main" itemprop="mainEntityOfPage">
 
 	<?php
 	if ( is_category() ) :
@@ -25,7 +25,7 @@ get_header(); ?>
 
 	if ( ! is_single() ) :
 		/* Display page title. */
-		echo '<h2 class="page-title">' . wp_kses_post( $h2_title ) . '</h2>' ;
+		echo '<h2>' . wp_kses_post( $h2_title ) . '</h2>' ;
 	endif ;
 
 	if ( have_posts() ) :
@@ -41,7 +41,7 @@ get_header(); ?>
 
 	?>
 
-	<nav class="link-posts text-centering">
+	<nav>
 		<?php get_template_part( 'components/navigation' ); ?>
 	</nav>
 

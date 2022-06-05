@@ -14,7 +14,7 @@
 
 	<?php get_template_part( 'components/content', 'header' ); ?>
 
-	<div class="entry-content" itemprop="articleBody">
+	<div itemprop="articleBody">
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 	</div><!--end entry-content-->
@@ -25,8 +25,8 @@
 		/* show comment form in entry-content column, only single.php */
 	if ( is_single() ) :
 	?>
-	<div class="entry-margin"></div>
-	<div class="entry-comments">
+	<div></div>
+	<div>
 
 		<?php comments_template(); ?>
 

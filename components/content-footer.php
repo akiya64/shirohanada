@@ -26,18 +26,18 @@ if ( ! empty( $twitter_username ) ) {
 ?>
 
 				<?php if ( ! is_page() ) : ?>
-					<div class="entry-margin"></div>
+					<div></div>
 				<?php endif; ?>
 
-				<div class="entry-footer -jumppostheader _mobile-disiable">
-					<a href="#<?php the_ID(); ?>" class="link" title="Return This Post Top"><i class="icon icon-eject"></i></a>
+				<div>
+					<a href="#<?php the_ID(); ?>" title="Return This Post Top"><i></i></a>
 				</div>
 
-				<div class="entry-footer -sharelinks">
+				<div>
 					<?php if ( comments_open() ) : ?>
-						<a class="link" href="<?php the_permalink(); ?>#reply-title" title="Comment this post"><i class="icon icon-comment"></i></a>
+						<a href="<?php the_permalink(); ?>#reply-title" title="Comment this post"><i></i></a>
 					<?php endif; ?>
-					<a class="link" href="<?php echo esc_url( $share_url['twitter'] ); ?>" title="share Twitter" target="_blank"><i class="icon icon-share-twitter"></i></a>
-					<a class="link" href="<?php echo esc_url( $share_url['facebook'] ); ?>" title="share Facebook" rel="nofollow" target="_blank"><i class="icon icon-share-facebook"></i></a>
-					<a class="link" href="<?php echo esc_url( $share_url['pocket'] ); ?>" title="Get Pocket"><i class="icon icon-get-pocket"></i></a>
+					<a href="<?php echo esc_url( $share_url['twitter'] ); ?>" title="share Twitter" target="_blank"><i></i></a>
+					<a href="<?php echo esc_url( $share_url['facebook'] ); ?>" title="share Facebook" rel="nofollow" target="_blank"><i></i></a>
+					<a href="<?php echo esc_url( $share_url['pocket'] ); ?>" title="Get Pocket"><i></i></a>
 				</div>

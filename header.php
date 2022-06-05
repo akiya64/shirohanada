@@ -21,18 +21,18 @@
 
 <?php if ( ! is_front_page() ) : ?>
 
-<a id="menu-button" class="show-menu" href="#side-menu">
-	<i class="icon icon-list"></i>
+<a id="menu-button" href="#side-menu">
+	<i></i>
 </a>
 
-<header class="site-header" role="banner">
-	<p class="site-description _inline">
+<header role="banner">
+	<p>
 		<?php bloginfo( 'description' ); ?>
-	</p><h1 class="site-name _inline">
-		<a href="<?php echo esc_url( home_url() ); ?>" class="link"><?php bloginfo( 'name' ); ?></a>
+	</p><h1>
+		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 	</h1>
 </header>
 
-<div class="main-contents" itemscope itemtype="schema.org/BlogPosting">
+<div itemscope itemtype="schema.org/BlogPosting">
 
 <?php endif; ?>

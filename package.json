@@ -25,7 +25,6 @@
   "devDependencies": {
     "browser-sync": "",
     "nib": "",
-    "npm-run-all": "",
-    "stylus": ""
+    "npm-run-all": ""
   }
 }

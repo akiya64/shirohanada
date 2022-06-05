@@ -18,7 +18,7 @@
 		<div class='entry-excerpt _with-thumbnail'>
 			<?php the_excerpt() . '  '; ?><a href="<?php the_permalink(); ?>">...続きを読む</a>
 		</div><!--end entry-content-->
-		<div class="excerpt-thumbnail">
+		<div>
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>

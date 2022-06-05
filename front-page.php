@@ -9,21 +9,21 @@
 
 get_header(); ?>
 
-<div class="front-main">
+<div>
 
-	<img src="<?php header_image(); ?>" alt="header image" class="headerimage">
+	<img src="<?php header_image(); ?>" alt="header image">
 
-	<header class="site-header -front">
-		<h1 class="site-name -front"><?php bloginfo( 'name' ); ?></h1>
-		<p class="site-description -front"><?php bloginfo( 'description' ); ?></p>
+	<header>
+		<h1><?php bloginfo( 'name' ); ?></h1>
+		<p><?php bloginfo( 'description' ); ?></p>
 	</header>
 
 
-	<div class="dropdown-part">
+	<div>
 
-		<h2 class="navmenu-title">Contents</h2>
+		<h2>Contents</h2>
 
-		<nav class="front-navmenu" role="menu">
+		<nav role="menu">
 			<?php
 			wp_nav_menu(
 				array(
@@ -36,7 +36,7 @@ get_header(); ?>
 
 		<?php if ( is_active_sidebar( 'front-widgets' ) ) : ?>
 
-		<div class="front-widgets" role="complementary">
+		<div role="complementary">
 
 			<?php dynamic_sidebar( 'front-widgets' ); ?>
 
@@ -44,9 +44,9 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<footer class="site-footer -front">
-			<p class="copyright">
-				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i class="icon icon-wordpress"></i>WordPress</a>
+		<footer>
+			<p>
+				(c) <?php echo intval( get_first_post_year() ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> / Powered by <a href="http://wordpress.org/"><i></i>WordPress</a>
 			</p>
 		</footer>
 	</div><!--End DropDownPart-->

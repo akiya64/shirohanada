@@ -12,9 +12,9 @@
 
 <?php if ( have_comments() ) : ?>
 
-	<h3 class="comments-list-header">Comments</h3>
+	<h3>Comments</h3>
 
-	<ul class="comments-list _no-marker">
+	<ul>
 		<?php
 		wp_list_comments(
 			array(
