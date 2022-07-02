@@ -303,23 +303,18 @@ function extra_category_fields( $tag ) {
 	if ( isset( $flags ) ) {
 		$cid = $tag -> term_id;
 		$key = "cat_$cid";
-		$is_show_excerpt = get_theme_mod( $key );
+		$is_show_content = get_theme_mod( $key );
 	}
 ?>
 	<tr class="form-field">
-	<th><label for="extra_text">抜粋を表示</label></th>
+	<th><label for="extra_text"><?php echo __('Show full contents', 'shirohanada'); ?></label></th>
 	<td>
-		<input type="hidden" id="show_excerpt_nonce" name="show_excerpt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'post_excerpt_flag' ) ); ?>">
-		<select name="show_excerpt" id="show_excerpt">
-	<?php if ( $is_show_excerpt ) : ?>
-			<option value="yes" selected>はい</option>
-			<option value="no">いいえ</option>
-	<?php else : ?>
-			<option value="yes">はい</option>
-			<option value="no" selected>いいえ</option>
-	<?php endif; ?>
+		<input type="hidden" id="show_is_show_content_nonce" name="show_is_show_content_nonce" value="<?php echo esc_attr( wp_create_nonce( 'post_is_show_content_flag' ) ); ?>">
+		<select name="show_content" id="show_content">
+		<option value="yes"<?php echo is_show_content ? ' selected' : ''; ?>><?php echo __('Yes', 'shirohanada'); ?></option>
+		<option value="no"<?php echo is_show_content ? ' selected' : ''; ?>><?php echo __('No', 'shirohanada'); ?></option>
 		</select>
-		<p class="description">カテゴリー表示の時、抜粋を表示します。</p>
+		<p class="description"><?php echo __('Show full content at category archive', 'shirohanada'); ?></p>
 	</td>
 	</tr>
 
@@ -328,22 +323,22 @@ function extra_category_fields( $tag ) {
 add_action( 'category_edit_form_fields', 'extra_category_fields' );
 
 /**
- * Save flag show excerpt or content.
+ * Save flag show content or excerpt.
  *
  * @param integer $term_id WordPress core passes.
  * @since shirohanada 0.10.0
  */
-function save_category_show_excerpt( $term_id ) {
+function save_category_show_content( $term_id ) {
 	/* Check Nonce value. */
-	if ( isset( $_POST['show_excerpt_nonce'], $_POST['show_excerpt'] ) && ! wp_verify_nonce( sanitize_key( $_POST['show_excerpt_nonce'] ), 'post_excerpt_flag' ) ) {
+	if ( isset( $_POST['show_content_nonce'], $_POST['show_content'] ) && ! wp_verify_nonce( sanitize_key( $_POST['show_content_nonce'] ), 'post_content_flag' ) ) {
 
 		exit( 'check-security' );
 
 	}
 
-	/* Check show_excerpt value. */
-	if ( ! empty( $_POST['show_excerpt'] ) ) {
-		$flag = sanitize_key( $_POST['show_excerpt'] );
+	/* Check show_content value. */
+	if ( ! empty( $_POST['show_content'] ) ) {
+		$flag = sanitize_key( $_POST['show_content'] );
 	}
 
 	$cat_id = "cat_$term_id";
@@ -351,9 +346,9 @@ function save_category_show_excerpt( $term_id ) {
 	if ( 'yes' === $flag ) {
 		set_theme_mod( $cat_id, true );
 	} else {
-		set_theme_mod( $cat_id, false );
+		remove_theme_mod( $cat_id );
 	}
 
 }
-add_action( 'edited_category', 'save_category_show_excerpt' );
+add_action( 'edited_category', 'save_category_show_content' );
 ?>
