@@ -26,6 +26,7 @@ jobs:
           git config --global user.name "Akiya in GitHub Actions"
           git add -A
           git commit -m "Build for deploy."
+          git fetch --prune --no-tags
           git push https://x-access-token:${ACCESS_TOKEN}@github.com/akiya64/shirohanada pre-release
 
       - name: Push GitHub release
