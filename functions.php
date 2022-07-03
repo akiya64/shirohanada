@@ -351,4 +351,20 @@ function save_category_show_content( $term_id ) {
 
 }
 add_action( 'edited_category', 'save_category_show_content' );
+
+function should_show_content( $categories ){
+	$flg = array_filter( $categories, function($cat){
+		$id = $cat->cat_ID;
+		return get_theme_mod( 'cat_' . $id );
+	});
+
+	return $flg ? true: false;
+}
+
+function asc_order_date_archive( $query ){
+	if( !is_date() || is_admin() ){ return; }
+	$query->set('order', 'ASC');
+}
+add_action( 'pre_get_posts', 'asc_order_date_archive' );
+
 ?>

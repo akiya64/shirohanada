@@ -19,6 +19,7 @@ get_header(); ?>
 		$should_show_content = get_theme_mod( $key );
 
 	if ( $should_show_content ) :
+
 		while ( have_posts() ) :
 			the_post();
 			get_template_part( 'components/content' );
