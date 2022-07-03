@@ -23,17 +23,15 @@
 
 	<?php
 		/* show comment form in entry-content column, only single.php */
-	if ( is_single() ) :
+		if ( is_single() ) :
 	?>
+
 	<div class="entry-margin"></div>
+
 	<div class="entry-comments">
-
 		<?php comments_template(); ?>
-
-
-
 	</div>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
 </article>
