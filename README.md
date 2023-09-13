@@ -4,7 +4,7 @@
 
 Shirohanada is japanese ancient times color name, like skyblue.
 This is minimal, flat, responsive WordPress theme based Shirohanada color.
-Use in my Blog : [Autumnsky](http://autumnsky.sakura.ne.jp "Autumnsky")
+Use in my Blog : [Autumnsky](https://autumnsky.jp "Autumnsky")
 
 ![Shirohanada frontpage](https://github.com/akiya64/shirohanada/blob/master/screenshot_frontpage.jpg
 "shirohanada frontpage")
